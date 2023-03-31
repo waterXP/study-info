@@ -1,0 +1,32 @@
+weight(v = 500)
+  if v == 500
+    font-family PingFangSC-Medium, PingFang SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif
+    font-weight 500
+  else if v == 600
+    font-family PingFangSC-Semibold, PingFang SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif
+    font-weight 600
+  else
+    font-family PingFangSC-Regular, PingFang SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif
+    font-weight 400
+getColor(v)
+  color rgba(0, 0, 0, v)
+getFont(v, f = 14, l = f)
+  color rgba(0, 0, 0, v)
+  font-size unit(f, px)
+  line-height unit(l, px)
+f(fontColor, f = 14, l = f)
+  color fontColor
+  font-size unit(f, px)
+  line-height unit(l, px)
+ellipsis(rows = 0)
+  if rows == 0
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+  else
+    display -webkit-box
+    overflow hidden
+    -webkit-box-orient vertical
+    -webkit-line-clamp rows
+    white-space normal
+    word-break break-all

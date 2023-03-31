@@ -107,7 +107,7 @@ module.exports = function (webpackEnv) {
   const shouldUseReactRefresh = env.raw.FAST_REFRESH;
 
   // common function to get style loaders
-  const getStyleLoaders = (cssOptions, preProcessor) => {
+  const getStyleLoaders = (cssOptions, preProcessor, preOptions) => {
     const loaders = [
       isEnvDevelopment && require.resolve('style-loader'),
       isEnvProduction && {
@@ -179,9 +179,9 @@ module.exports = function (webpackEnv) {
         },
         {
           loader: require.resolve(preProcessor),
-          options: {
-            sourceMap: true,
-          },
+          options: preOptions
+            ? { sourceMap: true, ...preOptions }
+            : { sourceMap: true }
         }
       );
     }
@@ -559,7 +559,13 @@ module.exports = function (webpackEnv) {
                     mode: 'icss',
                   },
                 },
-                'stylus-loader'
+                'stylus-loader',
+                {
+                  stylusOptions: {
+                    use: 'nib',
+                    import: ['nib', path.resolve('src/var.styl')]
+                  }
+                }
               ),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -582,7 +588,13 @@ module.exports = function (webpackEnv) {
                     getLocalIdent: getCSSModuleLocalIdent,
                   },
                 },
-                'stylus-loader'
+                'stylus-loader',
+                {
+                  stylusOptions: {
+                    use: 'nib',
+                    import: ['nib', path.resolve('src/var.styl')]
+                  }
+                }
               ),
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.

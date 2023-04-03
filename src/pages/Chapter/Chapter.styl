@@ -17,12 +17,14 @@
 .pg-chapter--placeholder
   getFont(.45, 18, 24)
 .pg-chapter--bottom
-  box-sizing border-box
   position fixed
-  width 100vw
   bottom 0
+  left 0
+  z-index 2
+  box-sizing border-box
   box-sizing border-box
   padding-top 16px
+  width 100vw
   height 80px
   background-color #ea4436
   color #fff
@@ -30,10 +32,9 @@
   font-size 30px
   cursor pointer
   user-select none
-  z-index 2
   &.in-reading
     background-color #4284f4
   &.in-second
+    z-index 1
     height 150px
     background-color #34a853
-    z-index 1

@@ -13,9 +13,9 @@ const Breadcrumb = ({ to = '/', children }) => {
     },
     [to, navigate]
   )
-  return <div className='com-breadcrumb'>
+  return <div className='com-breadcrumb' onClick={onClick}>
     <span>&lt;&nbsp;</span>
-    <TextButton onClick={onClick}>{ children }</TextButton>
+    <TextButton>{ children }</TextButton>
   </div>
 }
 Breadcrumb.propTypes = {

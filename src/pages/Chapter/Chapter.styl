@@ -1,12 +1,24 @@
 .pg-chapter
+  display flex
+  flex-direction column
+  overflow hidden
   box-sizing border-box
-  padding 24px 32px
-  min-width 100vw
-  min-height 100vh
+  width 100vw
+  height 100vh
   user-select none
   .ant-btn + .ant-btn
     margin-left 8px
+.pg-chapter--content
+  display flex
+  flex auto
+  flex-direction column
+  overflow hidden
+  box-sizing border-box
+  padding 24px 32px
 .pg-chapter--section
+  flex auto
+  overflow auto
+  padding-bottom 32px
   min-height 200px
 .pg-chapter--item-pre
   getFont(.25, 14, 18)
@@ -16,25 +28,27 @@
   margin-bottom 8px
 .pg-chapter--placeholder
   getFont(.45, 18, 24)
-.pg-chapter--bottom
-  position fixed
+.pg-chapter--footer
+  display flex
+  flex none
+  flex-direction column
+  overflow hidden
+.pg-chapter--button
   bottom 0
   left 0
-  z-index 2
+  flex none
   box-sizing border-box
-  box-sizing border-box
-  padding-top 16px
+  padding 16px 0 8px
   width 100vw
-  height 80px
   background-color #ea4436
   color #fff
   text-align center
   font-size 30px
   cursor pointer
   user-select none
+  &:last-child
+    padding-bottom 16px
   &.in-reading
     background-color #4284f4
   &.in-second
-    z-index 1
-    height 150px
     background-color #34a853

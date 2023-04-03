@@ -90,49 +90,53 @@ const Chapter = () => {
   )
   if (data) {
     return <div className='pg-chapter' onClick={onClickContent}>
-      <Breadcrumb>返回</Breadcrumb>
-      <Title>{ data.realm }</Title>
-      <div className='pg-chapter--section'>
-        {
-          disp.length > 0
-            ? disp.map(
-              ({ text, id, pre }) =>
-                pre
-                  ? <Fragment key={id}>
-                    <p className='pg-chapter--item-pre'>{ pre }</p>
-                    <p className='pg-chapter--item'>
+      <div className='pg-chapter--content'>
+        <Breadcrumb>返回</Breadcrumb>
+        <Title>{ data.realm }</Title>
+        <div className='pg-chapter--section'>
+          {
+            disp.length > 0
+              ? disp.map(
+                ({ text, id, pre }) =>
+                  pre
+                    ? <Fragment key={id}>
+                      <p className='pg-chapter--item-pre'>{ pre }</p>
+                      <p className='pg-chapter--item'>
+                        { text }
+                      </p>
+                    </Fragment>
+                    :  <p key={id} className='pg-chapter--item'>
                       { text }
                     </p>
-                  </Fragment>
-                  :  <p key={id} className='pg-chapter--item'>
-                    { text }
-                  </p>
-            )
-            : <p className='pg-chapter--placeholder'>点击空白处显示下一条</p>
+              )
+              : <p className='pg-chapter--placeholder'>点击空白处显示下一条</p>
+          }
+        </div>
+      </div>
+      <div className='pg-chapter--footer'>
+        {
+          showAll
+            ? <div
+              className='pg-chapter--button in-reading'
+              onClick={onModeClick}
+            >
+              阅读模式
+            </div>
+            : <>
+              <div className='pg-chapter--button in-second' onClick={onRefresh}>
+                刷新
+              </div>
+              <div className='pg-chapter--button' onClick={onModeClick}>
+                背诵模式
+              </div>
+            </>
         }
       </div>
-      {
-        showAll
-          ? <div
-            className='pg-chapter--bottom in-reading'
-            onClick={onModeClick}
-          >
-            阅读模式
-          </div>
-          : <>
-            <div className='pg-chapter--bottom in-second' onClick={onRefresh}>
-              刷新
-            </div>
-            <div className='pg-chapter--bottom' onClick={onModeClick}>
-              背诵模式
-            </div>
-          </>
-      }
     </div>
   }
   return <div className='pg-chapter'>
     <Breadcrumb>返回</Breadcrumb>
-    <p>loading</p>
+    <p>加载中</p>
   </div>
 }
 Chapter.propTypes = {

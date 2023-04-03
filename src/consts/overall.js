@@ -64,7 +64,7 @@ export const process = {
 export const cost = {
   id: 'cost',
   realm: '成本管理',
-  inPlan: ['规划成本管理', '估计成本', '制定预算'],
+  inPlan: ['规划成本管理', '估算成本', '制定预算'],
   inMonitor: ['控制成本']
 }
 

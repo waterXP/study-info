@@ -1,0 +1,39 @@
+.pg-chapter
+  box-sizing border-box
+  padding 24px 32px
+  min-width 100vw
+  min-height 100vh
+  user-select none
+  .ant-btn + .ant-btn
+    margin-left 8px
+.pg-chapter--section
+  min-height 200px
+.pg-chapter--item-pre
+  getFont(.25, 14, 18)
+  margin-bottom 4px
+.pg-chapter--item
+  getFont(.65, 18, 24)
+  margin-bottom 8px
+.pg-chapter--placeholder
+  getFont(.45, 18, 24)
+.pg-chapter--bottom
+  box-sizing border-box
+  position fixed
+  width 100vw
+  bottom 0
+  box-sizing border-box
+  padding-top 16px
+  height 80px
+  background-color #ea4436
+  color #fff
+  text-align center
+  font-size 30px
+  cursor pointer
+  user-select none
+  z-index 2
+  &.in-reading
+    background-color #4284f4
+  &.in-second
+    height 150px
+    background-color #34a853
+    z-index 1

@@ -6,21 +6,26 @@ import Main from '@/pages/Main'
 import Personal from '@/pages/Personal'
 import Chapter from '@/pages/Chapter'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Main />
-  }, {
-    path: 'chapter',
-    element: <Chapter />
-  }, {
-    path: 'personal',
-    element: <Personal />
-  }, {
-    path: '*',
-    element: <Navigate to='/' replace />
-  }
-])
+const { PUBLIC_URL } = process.env
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Main />
+    }, {
+      path: 'chapter',
+      element: <Chapter />
+    }, {
+      path: 'personal',
+      element: <Personal />
+    }, {
+      path: '*',
+      element: <Navigate to='/' replace />
+    }
+  ],
+  { basename: PUBLIC_URL || '' }
+)
 
 const MainRouter = () => <RouterProvider router={router} />
 

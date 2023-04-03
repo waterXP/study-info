@@ -64,7 +64,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build",
+    "build": "PUBLIC_URL=/study node scripts/build",
     "test": "node scripts/test"
   },
   "browserslist": {

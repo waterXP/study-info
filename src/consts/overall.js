@@ -1,29 +1,36 @@
 export const columns = [
   {
     dataIndex: 'realm',
-    title: '知识领域'
+    title: '知识领域',
+    fixed: 'left',
+    width: 110
   }, {
     title: '项目管理过程组',
     children: [
       {
         dataIndex: 'inStart',
         title: '启动过程组',
+        width: 110,
         render: v => v && v.map((v, i) => <p key={`start-${i}`}>{ v }</p>)
       }, {
         dataIndex: 'inPlan',
         title: '规划过程组',
+        width: 138,
         render: v => v && v.map((v, i) => <p key={`plan-${i}`}>{ v }</p>)
       }, {
         dataIndex: 'inExec',
         title: '执行过程组',
+        width: 152,
         render: v => v && v.map((v, i) => <p key={`exec-${i}`}>{ v }</p>)
       }, {
         dataIndex: 'inMonitor',
         title: '监控过程组',
+        width: 138,
         render: v => v && v.map((v, i) => <p key={`monitor-${i}`}>{ v }</p>)
       }, {
         dataIndex: 'inEnd',
         title: '收尾过程组',
+        width: 124,
         render: v => v && v.map((v, i) => <p key={`end-${i}`}>{ v }</p>)
       }
     ]

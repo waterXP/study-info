@@ -11,7 +11,6 @@ import Title from '@com/Title'
 const Chapter = () => {
   const viewMode = useSelector(({ viewMode }) => viewMode)
   const dispatch = useDispatch()
-  console.log('viewMode', viewMode)
   const [flag, setFlag] = useState(0)
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)

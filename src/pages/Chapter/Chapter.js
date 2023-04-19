@@ -1,6 +1,7 @@
 import React, { memo, useEffect, useState, useMemo, useCallback, Fragment } from 'react'
 // import PropTypes from 'prop-types'
 import './Chapter.styl'
+import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 import { message } from 'antd'
 import { dataMap } from '@/consts/overall'
@@ -8,14 +9,16 @@ import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 
 const Chapter = () => {
-  const [showAll, setShowAll] = useState(false)
+  const viewMode = useSelector(({ viewMode }) => viewMode)
+  const dispatch = useDispatch()
+  console.log('viewMode', viewMode)
   const [flag, setFlag] = useState(0)
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)
   const onModeClick = useCallback(
     e => {
       e.stopPropagation()
-      setShowAll(showAll => !showAll)
+      dispatch({ type: 'changeViewMode' })
       setFlag(0)
     }, []
   )
@@ -63,7 +66,7 @@ const Chapter = () => {
   )
   const onClickContent = useCallback(
     () => {
-      if (data && !showAll) {
+      if (data && viewMode === 'recite') {
         const len = (data.contents || []).length
         if (flag >= len) {
           message.error('已经到底了')
@@ -71,7 +74,7 @@ const Chapter = () => {
           setFlag(flag => flag + 1)
         }
       }
-    }, [flag, data, showAll]
+    }, [flag, data, viewMode]
   )
   const onRefresh = useCallback(
     e => {
@@ -82,11 +85,11 @@ const Chapter = () => {
   )
   const disp = useMemo(
     () => data
-      ? showAll
+      ? viewMode === 'reading'
         ? data.contents
         : (data.contents || []).filter((_v, i) => i < flag)
       : null,
-    [data, flag, showAll]
+    [data, flag, viewMode]
   )
   if (data) {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
@@ -117,7 +120,7 @@ const Chapter = () => {
       </div>
       <div className='pg-chapter--footer'>
         {
-          showAll
+          viewMode === 'reading'
             ? <div
               className='pg-chapter--button in-reading'
               onClick={onModeClick}

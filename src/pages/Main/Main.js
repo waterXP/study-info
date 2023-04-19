@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { Table } from 'antd'
 import { columns, dataSource } from '@/consts/overall'
 
-const scroll = { x: 772, y: 'calc(100vh - 128px)' }
+const scroll = { x: 772, y: 'calc(100vh - 167px)' }
 
 const Main = () => {
   const navigate = useNavigate()

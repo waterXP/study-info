@@ -2,13 +2,14 @@ import React, { memo, useEffect, useState, useMemo, useCallback, Fragment } from
 // import PropTypes from 'prop-types'
 import './Chapter.styl'
 import { useSelector, useDispatch } from 'react-redux'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { message } from 'antd'
-import { dataMap } from '@/consts/overall'
+import { dataMap, dataSource } from '@/consts/overall'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 
 const Chapter = () => {
+  const navigate = useNavigate()
   const viewMode = useSelector(({ viewMode }) => viewMode)
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(0)
@@ -20,6 +21,35 @@ const Chapter = () => {
       dispatch({ type: 'changeViewMode' })
       setFlag(0)
     }, []
+  )
+  console.log(data)
+  console.log('lll', dataSource)
+  const onPrevClick = useCallback(
+    e => {
+      e.stopPropagation()
+      const index = dataSource.findIndex(v => v.id === data.id)
+      if (index === 0) {
+        navigate(`/chapter?id=${dataSource[dataSource.length - 1].id}`)
+      } else if (index > 0) {
+        navigate(`/chapter?id=${dataSource[index - 1].id}`)
+      }
+    },
+    [data, navigate]
+  )
+  const onNextClick = useCallback(
+    e => {
+      e.stopPropagation()
+      const index = dataSource.findIndex(v => v.id === data.id)
+      const len = dataSource.length
+      if (~index) {
+        if (index === len - 1) {
+          navigate(`/chapter?id=${dataSource[0].id}`)
+        } else if (index < len - 1) {
+          navigate(`/chapter?id=${dataSource[index + 1].id}`)
+        }
+      }
+    },
+    [data]
   )
   useEffect(
     () => {
@@ -118,6 +148,14 @@ const Chapter = () => {
         </div>
       </div>
       <div className='pg-chapter--footer'>
+        <div className='pg-chapter--buttons'>
+          <div className='pg-chapter--corner-button' onClick={onPrevClick}>
+            上一个
+          </div>
+          <div className='pg-chapter--corner-button is-right' onClick={onNextClick}>
+            下一个
+          </div>
+        </div>
         {
           viewMode === 'reading'
             ? <div

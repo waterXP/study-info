@@ -1,0 +1,49 @@
+.pg-itto
+  display flex
+  flex-direction column
+  overflow hidden
+  box-sizing border-box
+  width 100vw
+  height 100vh
+  user-select none
+.pg-itto--content
+  display flex
+  flex auto
+  flex-direction column
+  overflow hidden
+  box-sizing border-box
+  padding 24px 32px 0
+.pg-itto--items
+  padding-bottom 32px
+.pg-itto--item-pre
+  getFont(.25, 14, 18)
+  margin-bottom 4px
+.pg-itto--item
+  getFont(.65, 18, 24)
+  margin-bottom 8px
+  &.is-important
+    color cd
+.pg-itto--placeholder
+  getFont(.45, 18, 24)
+.pg-itto--footer
+  display flex
+  flex none
+  flex-direction column
+  overflow hidden
+.pg-itto--button
+  flex none
+  box-sizing border-box
+  padding 16px 0 0
+  width 100vw
+  background-color cd
+  color #fff
+  text-align center
+  font-size 30px
+  cursor pointer
+  user-select none
+  &:last-child
+    padding-bottom 16px
+  &.in-reading
+    background-color cp
+  &.in-second
+    background-color cs

@@ -10,7 +10,9 @@ import Title from '@com/Title'
 
 const Chapter = () => {
   const navigate = useNavigate()
-  const viewMode = useSelector(({ viewMode }) => viewMode)
+  const { showTip, viewMode } = useSelector(
+    ({ viewMode, showTip }) => ({ showTip, viewMode })
+  )
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(0)
   const [searchParams] = useSearchParams()
@@ -22,8 +24,6 @@ const Chapter = () => {
       setFlag(0)
     }, []
   )
-  console.log(data)
-  console.log('lll', dataSource)
   const onPrevClick = useCallback(
     e => {
       e.stopPropagation()
@@ -35,6 +35,13 @@ const Chapter = () => {
       }
     },
     [data, navigate]
+  )
+  const gotoITTO = useCallback(
+    (e, id) => {
+      e.stopPropagation()
+      navigate(`/itto?id=${id}`)
+    },
+    [navigate]
   )
   const onNextClick = useCallback(
     e => {
@@ -54,44 +61,51 @@ const Chapter = () => {
   useEffect(
     () => {
       const queryId = searchParams.get('id')
-      const data = dataMap[queryId] || dataMap.intergration
+      const data = dataMap[queryId] || dataMap.integration
       const {
-        id, realm, inStart, inPlan, inExec, inMonitor, inEnd
+        id, realm, inStart, inPlan, inExec, inMonitor, inEnd, short
       } = data || {}
       setFlag(0)
       setData({
         id,
         realm,
+        short,
         contents: [
           ...(inStart || []).map(
             (v, i) => i === 0
-              ? ({ id: `${realm}-start-${i}`, text: v, pre: '启动过程组' })
-              : ({ id: `${realm}-start-${i}`, text: v })
+              ? ({ id: v.id, text: v.text, pre: '启动过程组' })
+              : ({ id: v.id, text: v.text })
           ),
           ...(inPlan || []).map(
             (v, i) => i === 0
-              ? ({ id: `${realm}-plan-${i}`, text: v, pre: '规划过程组' })
-              : ({ id: `${realm}-plan-${i}`, text: v })
+              ? ({ id: v.id, text: v.text, pre: '规划过程组' })
+              : ({ id: v.id, text: v.text })
           ),
           ...(inExec || []).map(
             (v, i) => i === 0
-              ? ({ id: `${realm}-exec-${i}`, text: v, pre: '执行过程组' })
-              : ({ id: `${realm}-exec-${i}`, text: v })
+              ? ({ id: v.id, text: v.text, pre: '执行过程组' })
+              : ({ id: v.id, text: v.text })
           ),
           ...(inMonitor || []).map(
             (v, i) => i === 0
-              ? ({ id: `${realm}-monitor-${i}`, text: v, pre: '监控过程组' })
-              : ({ id: `${realm}-monitor-${i}`, text: v })
+              ? ({ id: v.id, text: v.text, pre: '监控过程组' })
+              : ({ id: v.id, text: v.text })
           ),
           ...(inEnd || []).map(
             (v, i) => i === 0
-              ? ({ id: `${realm}-end-${i}`, text: v, pre: '收尾过程组' })
-              : ({ id: `${realm}-end-${i}`, text: v })
+              ? ({ id: v.id, text: v.text, pre: '收尾过程组' })
+              : ({ id: v.id, text: v.text })
           ),
         ]
       })
     },
     [searchParams]
+  )
+  const toggleShort = useCallback(
+    e => {
+      e.stopPropagation()
+      dispatch({ type: 'changeShortTip' })
+    }, []
   )
   const onClickContent = useCallback(
     () => {
@@ -124,7 +138,13 @@ const Chapter = () => {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
       <div className='pg-chapter--content'>
         <Breadcrumb>返回</Breadcrumb>
-        <Title>{ data.realm }</Title>
+        <Title>
+          <span>{ data.realm }</span>
+          {
+            showTip &&
+            <span className='pg-chapter--short'>{ `（${data.short}）` }</span>
+          }
+        </Title>
         <div className='pg-chapter--section'>
           <div className='pg-chapter--items'>
             {
@@ -134,11 +154,18 @@ const Chapter = () => {
                     pre
                       ? <Fragment key={id}>
                         <p className='pg-chapter--item-pre'>{ pre }</p>
-                        <p className='pg-chapter--item'>
+                        <p
+                          className='pg-chapter--item'
+                          onClick={e => { gotoITTO(e, id) }}
+                        >
                           { text }
                         </p>
                       </Fragment>
-                      :  <p key={id} className='pg-chapter--item'>
+                      :  <p
+                        key={id}
+                        className='pg-chapter--item'
+                        onClick={e => { gotoITTO(e, id) }}
+                      >
                         { text }
                       </p>
                 )
@@ -149,10 +176,22 @@ const Chapter = () => {
       </div>
       <div className='pg-chapter--footer'>
         <div className='pg-chapter--buttons'>
-          <div className='pg-chapter--corner-button' onClick={onPrevClick}>
+          <div
+            className='pg-chapter--corner-button is-clickable'
+            onClick={onPrevClick}
+          >
             上一个
           </div>
-          <div className='pg-chapter--corner-button is-right' onClick={onNextClick}>
+          <div
+            className='pg-chapter--corner-center is-clickable'
+            onClick={toggleShort}
+          >
+            { showTip ? '隐藏提示' : '显示提示' }
+          </div>
+          <div
+            className='pg-chapter--corner-button is-right is-clickable'
+            onClick={onNextClick}
+          >
             下一个
           </div>
         </div>

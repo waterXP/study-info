@@ -6,8 +6,6 @@
   width 100vw
   height 100vh
   user-select none
-  .ant-btn + .ant-btn
-    margin-left 8px
 .pg-chapter--content
   display flex
   flex auto
@@ -15,6 +13,9 @@
   overflow hidden
   box-sizing border-box
   padding 24px 32px 0
+.pg-chapter--short
+  getFont(.45, 14, 16)
+  font-style italic
 .pg-chapter--section
   flex auto
   overflow auto
@@ -41,6 +42,15 @@
   align-items center
   box-sizing border-box
   width 100vw
+.pg-chapter--corner-center
+  flex auto
+  margin 0 2px
+  padding 16px 0 0
+  background-color cw
+  color #fff
+  text-align center
+  font-size 24px
+  border-radius 20px 20px 0 0
 .pg-chapter--corner-button
   flex none
   padding 16px 0 0

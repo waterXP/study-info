@@ -154,19 +154,19 @@ const Chapter = () => {
                     pre
                       ? <Fragment key={id}>
                         <p className='pg-chapter--item-pre'>{ pre }</p>
-                        <p
-                          className='pg-chapter--item'
-                          onClick={e => { gotoITTO(e, id) }}
-                        >
-                          { text }
+                        <p className='pg-chapter--item'>
+                          <span onClick={e => { gotoITTO(e, id) }}>
+                            { text }
+                          </span>
                         </p>
                       </Fragment>
                       :  <p
                         key={id}
                         className='pg-chapter--item'
-                        onClick={e => { gotoITTO(e, id) }}
                       >
-                        { text }
+                        <span onClick={e => { gotoITTO(e, id) }}>
+                          { text }
+                        </span>
                       </p>
                 )
                 : <p className='pg-chapter--placeholder'>点击空白处显示下一条</p>

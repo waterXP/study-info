@@ -2,14 +2,16 @@ import React, { memo, useEffect, useState, useMemo, useCallback, Fragment } from
 // import PropTypes from 'prop-types'
 import './ITTO.styl'
 import { useSelector, useDispatch } from 'react-redux'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { message } from 'antd'
+import { dataSource } from '@/consts/overall'
 import itto from '@/consts/itto'
 import nouns from '@/consts/nouns'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 
 const ITTO = () => {
+  const navigate = useNavigate()
   const { viewMode } = useSelector(
     ({ viewMode }) => ({ viewMode })
   )
@@ -31,7 +33,22 @@ const ITTO = () => {
       const content = itto[queryId]
       if (content) {
         const { title, i, tt, o } = content
+        const top = dataSource.find(
+          v => {
+            const { inStart, inPlan, inExec, inMonitor, inEnd } = v
+            return [
+              ...(inStart || []),
+              ...(inPlan || []),
+              ...(inExec || []),
+              ...(inMonitor || []),
+              ...(inEnd || [])
+            ].find(
+              ({ id }) => id === queryId
+            )
+          }
+        )
         setData({
+          top,
           title,
           contents: [
             ...i.map(
@@ -82,12 +99,29 @@ const ITTO = () => {
     },
     []
   )
+  const gotoTop = useCallback(
+    () => {
+      navigate(`/chapter?id=${data.top.id}`)
+    },
+    [navigate, data]
+  )
 
   if (data) {
     return <div className='pg-itto hide-scroll' onClick={onClickContent}>
       <div className='pg-itto--content'>
         <Breadcrumb>返回</Breadcrumb>
-        <Title>{ data.title }</Title>
+        <Title>
+          {
+            data.top &&
+            <span
+              className='is-clickable'
+              onClick={gotoTop}
+            >
+              { `${data.top.realm}/` }
+            </span>
+          }
+          <span>{ data.title }</span>
+        </Title>
         <div className='pg-itto--items'>
           {
             disp.length > 0
@@ -98,7 +132,7 @@ const ITTO = () => {
                       <p className='pg-itto--item-pre'>{ pre }</p>
                       <p
                         className={
-                          nouns[id].important
+                          nouns[id] && nouns[id].important
                             ? 'pg-itto--item is-important'
                             : 'pg-itto--item'
                         }
@@ -109,7 +143,7 @@ const ITTO = () => {
                     :  <p
                       key={id}
                       className={
-                        nouns[id].important
+                        nouns[id] && nouns[id].important
                           ? 'pg-itto--item is-important'
                           : 'pg-itto--item'
                       }

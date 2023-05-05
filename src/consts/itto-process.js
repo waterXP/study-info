@@ -1,6 +1,6 @@
 export default {
   '3-1': {
-    title: '规划范围管理',
+    title: '规划进度管理',
     i: [
       {
         id: '3-1-1',

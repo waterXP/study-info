@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default {
   '3-1': {
     content: [
@@ -279,13 +281,13 @@ export default {
   '3-4-8': {
     content: [
       '当历史数据不充分时，通过考虑估算中的不确定性和风险，可以提高活动持续时间估算的准确性。使用三点估算有助于界定活动持续时间的近似区间:',
-      '①乐观时间(OptimisticTime,To):在任何事情都顺利的情况下，完成某项工作的时间。',
-      '②最可能时间(MostlikelyTime,TM):正常情况下，完成某项工作的时间。',
-      '③悲观时间(PessimisticTime,TP,):最不利的情况下，完成某项工作的时间。',
+      <>①乐观时间(OptimisticTime,T<sub>o</sub>):在任何事情都顺利的情况下，完成某项工作的时间。</>,
+      <>②最可能时间(MostlikelyTime,T<sub>M</sub>):正常情况下，完成某项工作的时间。</>,
+      <>③悲观时间(PessimisticTime,T<sub>P</sub>):最不利的情况下，完成某项工作的时间。</>,
       '基于持续时间在三种估算值区间内的假定分布情况，可计算期望持续时间TE。如果三个估算值服从三角分布，则:',
-      'TE=(To+TM+Tp)/3',
+      <>T<sub>E</sub>=(T<sub>o</sub>+T<sub>M</sub>+T<sub>p</sub>)/3</>,
       '如果三个估算值服从β分布，则:',
-      'TE=(To+4TM+Tp)/6'
+      <>T<sub>E</sub>=(T<sub>o</sub>+4T<sub>M</sub>+T<sub>p</sub>)/6</>
     ],
     important: true
   },
@@ -427,9 +429,9 @@ export default {
   '3-5-12': {
     content: [
       '计划评审技术(ProgramEvaluationandReviewTechnique,PERT)，又称为三点估算技术，其理论基础是假设项目持续时间以及整个项目完成时间是随机的，且服从某种概率分布。PERT可以估计整个项目在某个时间内完成的概率。PERT和CPM在项目进度规划中应用非常广，本文通过实例来对此技术加以说明。(1)活动的时间估计。PERT对各项目活动的完成时间按照3种不同情况估计:',
-      '①乐观时间(OptimisticTime,TO):在任何事情都顺利的情况下，完成某项工作的时间。',
-      '②最可能时间(MostlikelyTime,TM):正常情况下，完成某项工作的时间。',
-      '③悲观时间(PessimisticTime,Tp):最不利的情况下，完成某项工作的时间。'
+      <>①乐观时间(OptimisticTime,T<sub>O</sub>):在任何事情都顺利的情况下，完成某项工作的时间。</>,
+      <>②最可能时间(MostlikelyTime,T<sub>M</sub>):正常情况下，完成某项工作的时间。</>,
+      <>③悲观时间(PessimisticTime,T<sub>p</sub>):最不利的情况下，完成某项工作的时间。</>
     ],
     important: true
   },

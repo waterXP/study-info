@@ -21,23 +21,3 @@ export default {
   ...nounPurchase,
   ...nounPeople
 }
-
-/*
-const a = (l, m, n) => {
-  const r = [
-    `'${l}-${m}': {
-  content: [
-  ],
-},
-`]
-  return r.concat(
-    '0'.repeat(n).split('').map(
-      (_, i) => `'${l}-${m}-${i + 1}': {
-  content: [
-  ],
-},
-`)).join('')
-}
-
-console.log(x.replace(/ /g, ''))
-*/

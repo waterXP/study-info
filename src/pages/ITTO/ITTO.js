@@ -8,12 +8,13 @@ import { dataSource } from '@/consts/overall'
 import itto from '@/consts/itto'
 import nouns from '@/consts/nouns'
 import Breadcrumb from '@com/Breadcrumb'
+import Detail from '@com/Detail'
 import Title from '@com/Title'
 
 const ITTO = () => {
   const navigate = useNavigate()
-  const { viewMode } = useSelector(
-    ({ viewMode }) => ({ viewMode })
+  const { viewMode, showDetail } = useSelector(
+    ({ viewMode, showDetail }) => ({ viewMode, showDetail })
   )
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)
@@ -31,6 +32,7 @@ const ITTO = () => {
     () => {
       const queryId = searchParams.get('id')
       const content = itto[queryId]
+      setFlag(0)
       if (content) {
         const { title, i, tt, o } = content
         const top = dataSource.find(
@@ -105,11 +107,97 @@ const ITTO = () => {
     },
     [navigate, data]
   )
+  const onPrevClick = useCallback(
+    e => {
+      e.stopPropagation()
+      const queryId = searchParams.get('id')
+      if (data && data.top) {
+        const {
+          inStart,
+          inPlan,
+          inExec,
+          inMonitor,
+          inEnd
+        } = data.top
+        const ids = [
+          ...(inStart || []),
+          ...(inPlan || []),
+          ...(inExec || []),
+          ...(inMonitor || []),
+          ...(inEnd || [])
+        ]
+        const index = ids.findIndex(v => v.id === queryId)
+        if (~index) {
+          if (index > 0) {
+            navigate(`/itto?id=${ids[index - 1].id}`)
+          } else {
+            message.error('已经是第一个了')
+          }
+        }
+      }
+    },
+    [data, searchParams]
+  )
+  const toggleDetail = useCallback(
+    e => {
+      e.stopPropagation()
+      dispatch({ type: 'changeShowDetail' })
+    },
+    []
+  )
+  const onNextClick = useCallback(
+    e => {
+      e.stopPropagation()
+      const queryId = searchParams.get('id')
+      if (data && data.top) {
+        const {
+          inStart,
+          inPlan,
+          inExec,
+          inMonitor,
+          inEnd
+        } = data.top
+        const ids = [
+          ...(inStart || []),
+          ...(inPlan || []),
+          ...(inExec || []),
+          ...(inMonitor || []),
+          ...(inEnd || [])
+        ]
+        const index = ids.findIndex(v => v.id === queryId)
+        const len = ids.length
+        if (~index) {
+          if (index < len - 1) {
+            navigate(`/itto?id=${ids[index + 1].id}`)
+          } else {
+            message.error('已经是最后一个了')
+          }
+        }
+      }
+    },
+    [data, searchParams]
+  )
+
+  const gotoNoun = useCallback(
+    e => {
+      e.stopPropagation()
+      const queryId = searchParams.get('id')
+      navigate(`/noun?id=${queryId}`)
+    },
+    [searchParams]
+  )
+
+  const gotoDetail = useCallback(
+    (e, id) => {
+      e.stopPropagation()
+      navigate(`/noun?id=${id}`)
+    }
+  )
 
   if (data) {
     return <div className='pg-itto hide-scroll' onClick={onClickContent}>
       <div className='pg-itto--content'>
-        <Breadcrumb>返回</Breadcrumb>
+        <Breadcrumb to={-1}>返回</Breadcrumb>
         <Title>
           {
             data.top &&
@@ -120,43 +208,66 @@ const ITTO = () => {
               { `${data.top.realm}/` }
             </span>
           }
-          <span>{ data.title }</span>
+          <span onClick={gotoNoun}>{ data.title }</span>
         </Title>
         <div className='pg-itto--items'>
           {
             disp.length > 0
               ? disp.map(
                 ({ text, id, pre }) =>
-                  pre
-                    ? <Fragment key={id}>
-                      <p className='pg-itto--item-pre'>{ pre }</p>
-                      <p
-                        className={
-                          nouns[id] && nouns[id].important
-                            ? 'pg-itto--item is-important'
-                            : 'pg-itto--item'
-                        }
-                      >
-                        { text }
-                      </p>
-                    </Fragment>
-                    :  <p
-                      key={id}
-                      className={
-                        nouns[id] && nouns[id].important
-                          ? 'pg-itto--item is-important'
-                          : 'pg-itto--item'
-                      }
-                    >
-                      { text }
-                    </p>
+                  <Fragment key={id}>
+                    {
+                      pre
+                        ? <>
+                            <p className='pg-itto--item-pre'>{ pre }</p>
+                            <p
+                              className={
+                                nouns[id] && nouns[id].important
+                                  ? 'pg-itto--item is-important'
+                                  : 'pg-itto--item'
+                              }
+                            >
+                              <span onClick={e => { gotoDetail(e, id) }}>
+                                { text }
+                              </span>
+                            </p>
+                            {
+                              showDetail &&
+                              <Detail
+                                id={id}
+                                important={nouns[id] && nouns[id].important}
+                              />
+                            }
+                          </>
+                          : <>
+                            <p
+                              className={
+                                nouns[id] && nouns[id].important
+                                  ? 'pg-itto--item is-important'
+                                  : 'pg-itto--item'
+                              }
+                            >
+                              <span onClick={e => { gotoDetail(e, id) }}>
+                                { text }
+                              </span>
+                            </p>
+                            {
+                              showDetail &&
+                              <Detail
+                                id={id}
+                                important={nouns[id] && nouns[id].important}
+                              />
+                            }
+                          </>
+                    }
+                  </Fragment>
               )
               : <p className='pg-itto--placeholder'>点击空白处显示下一条</p>
           }
         </div>
       </div>
       <div className='pg-itto--footer'>
-        {/* <div className='pg-itto--buttons'>
+        <div className='pg-itto--buttons'>
           <div
             className='pg-itto--corner-button is-clickable'
             onClick={onPrevClick}
@@ -165,9 +276,9 @@ const ITTO = () => {
           </div>
           <div
             className='pg-itto--corner-center is-clickable'
-            onClick={toggleShort}
+            onClick={toggleDetail}
           >
-            { showTip ? '隐藏提示' : '显示提示' }
+            { showDetail ? '隐藏详细' : '显示详细' }
           </div>
           <div
             className='pg-itto--corner-button is-right is-clickable'
@@ -175,7 +286,7 @@ const ITTO = () => {
           >
             下一个
           </div>
-        </div> */}
+        </div>
         {
           viewMode === 'reading'
             ? <div

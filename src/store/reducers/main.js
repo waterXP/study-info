@@ -1,6 +1,7 @@
 const initialStates = {
   viewMode: 'recite',
-  showTip: true
+  shortTip: true,
+  showDetail: false
 }
 
 export default function mainReducer(state = initialStates, action) {
@@ -14,7 +15,13 @@ export default function mainReducer(state = initialStates, action) {
     case 'changeShortTip': {
       return {
         ...state,
-        showTip: !state.showTip
+        shortTip: !state.shortTip
+      }
+    }
+    case 'changeShowDetail': {
+      return {
+        ...state,
+        showDetail: !state.showDetail
       }
     }
     default:

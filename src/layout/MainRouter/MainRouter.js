@@ -6,6 +6,7 @@ import Main from '@/pages/Main'
 import Personal from '@/pages/Personal'
 import Chapter from '@/pages/Chapter'
 import ITTO from '@/pages/ITTO'
+import Noun from '@/pages/Noun'
 
 const { PUBLIC_URL } = process.env
 
@@ -23,6 +24,9 @@ const router = createBrowserRouter(
     }, {
       path: 'itto',
       element: <ITTO />
+    }, {
+      path: 'noun',
+      element: <Noun />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

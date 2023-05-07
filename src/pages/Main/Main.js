@@ -9,8 +9,8 @@ import { getColumns, dataSource } from '@/consts/overall'
 const scroll = { x: 772, y: 'calc(100vh - 215px)' }
 
 const Main = () => {
-  const { showTip, viewMode } = useSelector(
-    ({ viewMode, showTip }) => ({ showTip, viewMode })
+  const { shortTip, viewMode } = useSelector(
+    ({ viewMode, shortTip }) => ({ shortTip, viewMode })
   )
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -47,7 +47,7 @@ const Main = () => {
     <div className='pg-main--header'>
       <p className='pg-main--title'>五组十域表</p>
       {
-        showTip &&
+        shortTip &&
         <p
           className='pg-main--short'
           onClick={toggleShort}

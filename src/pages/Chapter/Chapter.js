@@ -10,8 +10,8 @@ import Title from '@com/Title'
 
 const Chapter = () => {
   const navigate = useNavigate()
-  const { showTip, viewMode } = useSelector(
-    ({ viewMode, showTip }) => ({ showTip, viewMode })
+  const { shortTip, viewMode } = useSelector(
+    ({ viewMode, shortTip }) => ({ shortTip, viewMode })
   )
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(0)
@@ -137,11 +137,11 @@ const Chapter = () => {
   if (data) {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
       <div className='pg-chapter--content'>
-        <Breadcrumb>返回</Breadcrumb>
+        <Breadcrumb to={-1}>返回</Breadcrumb>
         <Title>
           <span>{ data.realm }</span>
           {
-            showTip &&
+            shortTip &&
             <span className='pg-chapter--short'>{ `（${data.short}）` }</span>
           }
         </Title>
@@ -186,7 +186,7 @@ const Chapter = () => {
             className='pg-chapter--corner-center is-clickable'
             onClick={toggleShort}
           >
-            { showTip ? '隐藏提示' : '显示提示' }
+            { shortTip ? '隐藏提示' : '显示提示' }
           </div>
           <div
             className='pg-chapter--corner-button is-right is-clickable'
@@ -216,7 +216,7 @@ const Chapter = () => {
     </div>
   }
   return <div className='pg-chapter'>
-    <Breadcrumb>返回</Breadcrumb>
+    <Breadcrumb to={-1}>返回</Breadcrumb>
     <p>加载中</p>
   </div>
 }

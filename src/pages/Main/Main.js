@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { Table } from 'antd'
 import { getColumns, dataSource } from '@/consts/overall'
+import Voice from '@com/Voice'
 
 const scroll = { x: 772, y: 'calc(100vh - 215px)' }
 
@@ -43,7 +44,40 @@ const Main = () => {
     ),
     [navigate]
   )
+  const voices = useMemo(
+    () => {
+      const r = ['五组十域表。']
+      dataSource.forEach(
+        v => {
+          r.push(v.realm + '。')
+          if (v.inStart) {
+            r.push('启动过程组。')
+            v.inStart.forEach(v => r.push(v.text + '。'))
+          }
+          if (v.inPlan) {
+            r.push('规划过程组。')
+            v.inPlan.forEach(v => r.push(v.text + '。'))
+          }
+          if (v.inExec) {
+            r.push('执行过程组。')
+            v.inExec.forEach(v => r.push(v.text + '。'))
+          }
+          if (v.inMonitor) {
+            r.push('监控过程组。')
+            v.inMonitor.forEach(v => r.push(v.text + '。'))
+          }
+          if (v.inEnd) {
+            r.push('收尾过程组。')
+            v.inEnd.forEach(v => r.push(v.text + '。'))
+          }
+        }
+      )
+      return r
+    },
+    []
+  )
   return <div className='pg-main'>
+    <Voice messages={voices} />
     <div className='pg-main--header'>
       <p className='pg-main--title'>五组十域表</p>
       {

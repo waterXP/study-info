@@ -13,10 +13,21 @@ const Breadcrumb = ({ to = '/', children }) => {
     },
     [to, navigate]
   )
-  return <div className='com-breadcrumb' onClick={onClick}>
-    <span>&lt;&nbsp;</span>
-    <TextButton>{ children }</TextButton>
-  </div>
+  const onHome = useCallback(
+    e => {
+      e.stopPropagation()
+      navigate('/')
+    },
+    [to, navigate]
+  )
+  return <>
+    <div className='com-breadcrumb'>
+      <span>&lt;&nbsp;</span>
+      <TextButton onClick={onHome}>首页</TextButton>
+      <span>&nbsp;/&nbsp;</span>
+      <TextButton onClick={onClick}>{ children }</TextButton>
+    </div>
+  </>
 }
 Breadcrumb.propTypes = {
 }

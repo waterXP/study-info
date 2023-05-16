@@ -7,6 +7,9 @@ import { message } from 'antd'
 import { dataMap, dataSource } from '@/consts/overall'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
+import Detail from '@com/Detail'
+import Voice from '@com/Voice'
+import nouns from '@/consts/nouns'
 
 const Chapter = () => {
   const navigate = useNavigate()
@@ -134,10 +137,34 @@ const Chapter = () => {
       : null,
     [data, flag, viewMode]
   )
+
+  const voices = useMemo(
+    () => {
+      const r = []
+      if (data) {
+        r.push(data.realm + '。')
+        if (data.contents) {
+          data.contents.forEach(
+            ({ text, pre, id }) => {
+              pre && r.push(pre + '。')
+              text && r.push(text + '。')
+              if (shortTip && nouns[id] && nouns[id].content) {
+                r.push(nouns[id].content)
+              }
+            }
+          )
+        }
+      }
+      return r
+    },
+    [data, shortTip]
+  )
+
   if (data) {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
       <div className='pg-chapter--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Voice messages={voices} />
         <Title>
           <span>{ data.realm }</span>
           {
@@ -159,6 +186,9 @@ const Chapter = () => {
                             { text }
                           </span>
                         </p>
+                        {
+                          shortTip && <Detail id={id} />
+                        }
                       </Fragment>
                       :  <p
                         key={id}

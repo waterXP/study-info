@@ -10,6 +10,7 @@ import nouns from '@/consts/nouns'
 import Breadcrumb from '@com/Breadcrumb'
 import Detail from '@com/Detail'
 import Title from '@com/Title'
+import Voice from '@com/Voice'
 
 const ITTO = () => {
   const navigate = useNavigate()
@@ -50,6 +51,7 @@ const ITTO = () => {
           }
         )
         setData({
+          queryId,
           top,
           title,
           contents: [
@@ -194,10 +196,41 @@ const ITTO = () => {
     }
   )
 
+  const voices = useMemo(
+    () => {
+      const r = []
+      if (data) {
+        if (data.top) {
+          r.push(data.top.realm + '。')
+        }
+        r.push(data.title + '。')
+        if (showDetail && data && data.queryId && nouns[data.queryId]) {
+          r.push(nouns[data.queryId].content)
+        }
+
+        if (data.contents) {
+          data.contents.forEach(
+            ({ text, id, pre }) => {
+              pre && r.push(pre + '。')
+              text && r.push(text + '。')
+              if (showDetail && nouns[id]) {
+                r.push(nouns[id].content)
+              }
+            }
+          )
+        }
+
+      }
+      return r
+    },
+    [data, showDetail]
+  )
+
   if (data) {
     return <div className='pg-itto hide-scroll' onClick={onClickContent}>
       <div className='pg-itto--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Voice messages={voices} />
         <Title>
           {
             data.top &&
@@ -209,6 +242,10 @@ const ITTO = () => {
             </span>
           }
           <span onClick={gotoNoun}>{ data.title }</span>
+          {
+            (showDetail && data && data.queryId) &&
+            <Detail id={data.queryId} />
+          }
         </Title>
         <div className='pg-itto--items'>
           {

@@ -6,6 +6,7 @@ import itto from '@/consts/itto'
 import { useSearchParams } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
+import Voice from '@com/Voice'
 
 const Noun = ({ id }) => {
   const [searchParams] = useSearchParams()
@@ -47,10 +48,30 @@ const Noun = ({ id }) => {
     [searchParams]
   )
 
+  const voices = useMemo(
+    () => {
+      const r = []
+      if (data) {
+        r.push(data.title + '。')
+        if (data.content) {
+          data.content.forEach(
+            v => {
+              v && r.push(v)
+            }
+          )
+        }
+
+      }
+      return r
+    },
+    [data]
+  )
+
   if (data) {
     return <div className='pg-noun hide-scroll'>
       <div className='pg-itto--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Voice messages={voices} />
         <Title>
           <span
             className={

@@ -197,6 +197,9 @@ const Chapter = () => {
                         <span onClick={e => { gotoITTO(e, id) }}>
                           { text }
                         </span>
+                        {
+                          shortTip && <Detail id={id} />
+                        }
                       </p>
                 )
                 : <p className='pg-chapter--placeholder'>点击空白处显示下一条</p>

@@ -7,6 +7,8 @@ import Personal from '@/pages/Personal'
 import Chapter from '@/pages/Chapter'
 import ITTO from '@/pages/ITTO'
 import Noun from '@/pages/Noun'
+import Menu from '@/pages/Menu'
+import Point from '@/pages/Point'
 
 const { PUBLIC_URL } = process.env
 
@@ -27,6 +29,12 @@ const router = createBrowserRouter(
     }, {
       path: 'noun',
       element: <Noun />
+    }, {
+      path: 'menu',
+      element: <Menu />
+    }, {
+      path: 'point',
+      element: <Point />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

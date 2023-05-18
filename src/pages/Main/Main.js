@@ -10,8 +10,8 @@ import Voice from '@com/Voice'
 const scroll = { x: 772, y: 'calc(100vh - 215px)' }
 
 const Main = () => {
-  const { shortTip, viewMode } = useSelector(
-    ({ viewMode, shortTip }) => ({ shortTip, viewMode })
+  const { shortTip } = useSelector(
+    ({ shortTip }) => ({ shortTip })
   )
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -29,10 +29,10 @@ const Main = () => {
       dispatch({ type: 'changeShortTip' })
     }, []
   )
-  const toggleMode = useCallback(
+  const gotoMenu = useCallback(
     e => {
       e.stopPropagation()
-      dispatch({ type: 'changeViewMode' })
+      navigate(`/menu`)
     }, []
   )
   const columns = useMemo(
@@ -90,14 +90,10 @@ const Main = () => {
         </p>
       }
       <div
-        className={
-          viewMode === 'recite'
-            ? 'pg-main--mode is-clickable'
-            : 'pg-main--mode is-clickable is-mode-reading'
-        }
-        onClick={toggleMode}
+        className='pg-main--mode is-clickable'
+        onClick={gotoMenu}
       >
-        { viewMode === 'recite' ? '背诵模式' : '阅读模式' }
+        菜单
       </div>
     </div>
     <Table

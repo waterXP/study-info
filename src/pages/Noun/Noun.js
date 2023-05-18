@@ -1,9 +1,9 @@
 import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import './Noun.styl'
+import { useSearchParams } from 'react-router-dom'
 import nouns from '@/consts/nouns'
 import itto from '@/consts/itto'
-import { useSearchParams } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
@@ -69,21 +69,21 @@ const Noun = ({ id }) => {
 
   if (data) {
     return <div className='pg-noun hide-scroll'>
-      <div className='pg-itto--content'>
+      <div className='pg-noun--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
         <Title>
           <span
             className={
               data.important
-                ? 'pg-itto--important-title'
+                ? 'pg-noun--important-title'
                 : ''
             }
           >
             { data.title }
           </span>
         </Title>
-        <div className='pg-itto--detail'>
+        <div className='pg-noun--detail'>
           {
             data.content.map(
               (v, i) => <p key={`${id}--${i}`} className='pg-noun--item'>

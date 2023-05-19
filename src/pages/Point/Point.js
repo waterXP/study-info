@@ -29,7 +29,7 @@ const Point = () => {
         </Title>
         {
           data.texts.map(
-            (v, i) => <p key={i} class='pg-point--texts'>{ v }</p>
+            (v, i) => <p key={i} className='pg-point--texts'>{ v }</p>
           )
         }
       </div>

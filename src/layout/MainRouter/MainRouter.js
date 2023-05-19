@@ -9,6 +9,8 @@ import ITTO from '@/pages/ITTO'
 import Noun from '@/pages/Noun'
 import Menu from '@/pages/Menu'
 import Point from '@/pages/Point'
+import Cases from '@/pages/Cases'
+import Case from '@/pages/Case'
 
 const { PUBLIC_URL } = process.env
 
@@ -35,6 +37,12 @@ const router = createBrowserRouter(
     }, {
       path: 'point',
       element: <Point />
+    }, {
+      path: 'cases',
+      element: <Cases />
+    }, {
+      path: 'case',
+      element: <Case />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

@@ -16,7 +16,7 @@ const Breadcrumb = ({ to = '/', children }) => {
   const onHome = useCallback(
     e => {
       e.stopPropagation()
-      navigate('/')
+      navigate('/menu')
     },
     [to, navigate]
   )

@@ -35,6 +35,13 @@ const Menu = () => {
     [navigate]
   )
 
+  const openCasePage = useCallback(
+    () => {
+      navigate('/cases')
+    },
+    [navigate]
+  )
+
   const openPage = useCallback(
     key => {
       navigate(`/point?id=${key}`)
@@ -49,6 +56,12 @@ const Menu = () => {
         onClick={() => { openMainPage() }}
       >
         五组十域表
+      </p>
+      <p
+        className='pg-menu--item is-clickable'
+        onClick={() => { openCasePage() }}
+      >
+        案例分析
       </p>
       {
         menus.map(v =>

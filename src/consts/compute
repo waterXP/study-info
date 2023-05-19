@@ -90,9 +90,6 @@ Tg = (To + 4Tm + Tp) / 6
 标准差 Standard deviation，用以说明估算值（期望持续时间Te）的离散度和不确定区间，
 计算公式 δ = (Tp - To) / 6
 
-
-
-
 计算概率
 PERT 公式
 Et = (O + 4ML + P) / 6

@@ -37,7 +37,7 @@ const Case = () => {
                       key={i}
                       className='pg-case--image'
                       style={v.style}
-                      src={`../../assets/${v.name}`}
+                      src={`assets/${v.name}`}
                     />
                   }
                   return <p key={i} className='pg-case--explain'>{ v }</p>
@@ -55,7 +55,7 @@ const Case = () => {
                         key={i}
                         className='pg-case--image'
                         style={v.style}
-                        src={`../../assets/${v.name}`}
+                        src={`assets/${v.name}`}
                       />
                     }
                     return <p key={i} className='pg-case--q'>{ v }</p>
@@ -68,7 +68,7 @@ const Case = () => {
                         key={i}
                         className='pg-case--image'
                         style={v.style}
-                        src={`../../assets/${v.name}`}
+                        src={`assets/${v.name}`}
                       />
                     }
                     return <p key={i} className='pg-case--a'>{ v }</p>

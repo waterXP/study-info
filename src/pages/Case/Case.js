@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom'
 import caseMap from '@/consts/case'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
+import Voice from '@com/Voice'
 
 const Case = () => {
   const [searchParams] = useSearchParams()
@@ -20,10 +21,47 @@ const Case = () => {
     [searchParams]
   )
 
+  const voices = useMemo(
+    () => {
+      const r = []
+      if (data) {
+        r.push(data.title + '。')
+        data.explains.forEach(
+          v => {
+            if (typeof v === 'string') {
+              r.push(v + '。')
+            }
+          }
+        )
+        data.contents.forEach(
+          ({ q, a }) => {
+            q.map(
+              v => {
+                if (typeof v === 'string') {
+                  r.push(v + '。')
+                }
+              }
+            )
+            a.map(
+              v => {
+                if (typeof v === 'string') {
+                  r.push(v + '。')
+                }
+              }
+            )
+          }
+        )
+      }
+      return r
+    },
+    [data]
+  )
+
   if (data) {
     return <div className='pg-case hide-scroll'>
       <div className='pg-case--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Voice messages={voices} />
         <div className='pg-case--body'>
           <Title>
             { data.title }
@@ -47,7 +85,7 @@ const Case = () => {
           </div>
           {
             data.contents.map(
-              ({ q, a }, i) => <div className='pg-case-content' key={i}>
+              ({ q, a }, i) => <div className='pg-case-item' key={i}>
                 {
                   q.map((v, i) => {
                     if (v && v.type === 'image') {

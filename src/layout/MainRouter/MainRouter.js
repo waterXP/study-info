@@ -11,6 +11,8 @@ import Menu from '@/pages/Menu'
 import Point from '@/pages/Point'
 import Cases from '@/pages/Cases'
 import Case from '@/pages/Case'
+import Papers from '@/pages/Papers'
+import Paper from '@/pages/Paper'
 
 const { PUBLIC_URL } = process.env
 
@@ -43,6 +45,12 @@ const router = createBrowserRouter(
     }, {
       path: 'case',
       element: <Case />
+    }, {
+      path: 'papers',
+      element: <Papers />
+    }, {
+      path: 'paper',
+      element: <Paper />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

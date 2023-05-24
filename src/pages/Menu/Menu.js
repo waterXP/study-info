@@ -42,6 +42,13 @@ const Menu = () => {
     [navigate]
   )
 
+  const openPaperPage = useCallback(
+    () => {
+      navigate('/papers')
+    },
+    [navigate]
+  )
+
   const openPage = useCallback(
     key => {
       navigate(`/point?id=${key}`)
@@ -62,6 +69,12 @@ const Menu = () => {
         onClick={() => { openCasePage() }}
       >
         案例分析
+      </p>
+      <p
+        className='pg-menu--item is-clickable'
+        onClick={() => { openPaperPage() }}
+      >
+        论文相关
       </p>
       {
         menus.map(v =>

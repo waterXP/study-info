@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom'
 import points from '@/consts/points'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
+import Voice from '@com/Voice'
 
 const Point = () => {
   const [searchParams] = useSearchParams()
@@ -20,10 +21,29 @@ const Point = () => {
     [searchParams]
   )
 
+  const voices = useMemo(
+    () => {
+      const r = []
+      if (data) {
+        r.push(data.title + '。')
+        data.texts.forEach(
+          v => {
+            if (typeof v === 'string') {
+              r.push(v + '。')
+            }
+          }
+        )
+      }
+      return r
+    },
+    [data]
+  )
+
   if (data) {
     return <div className='pg-point hide-scroll'>
       <div className='pg-point--content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Voice messages={voices} />
         <Title>
           { data.title }
         </Title>

@@ -33,7 +33,8 @@ const Voice = ({ messages }) => {
         speechSynthesis.speak(msg)
         msg.addEventListener(
           'end', () => {
-            setInSpeaking(false)
+            // setInSpeaking(false)
+            speechSynthesis.speak(msg)
           }
         )
       }

@@ -448,8 +448,8 @@ Estimated Monetary Value，EMV，预期货币价值：把每个可能结果的�
     texts: [
       `现值 Present Value, PV
 未来值 Future Value, FV
-FV = PV * (1 + i)<sup>n</sup>
-i 为贴现率/折现率，n为年数
+FV 等于 PV 乘以 (1 加上 i)的n次
+i为贴现率除以折现率，n为年数
 
 静态投资回收期 Static Payback Period 不考虑货币的时间价值【不计利息】
 动态投资回收期 Dynamic Payback Period 考虑货币的时间价值【计复利】`

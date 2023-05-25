@@ -38,6 +38,13 @@ const Menu = () => {
     [navigate]
   )
 
+  const openWashPage = useCallback(
+    () => {
+      navigate('/wash')
+    },
+    [navigate]
+  )
+
   const openCasePage = useCallback(
     () => {
       navigate('/cases')
@@ -61,6 +68,12 @@ const Menu = () => {
 
   return <div className='pg-menu'>
     <div className='pg-menu--content'>
+      <p
+        className='pg-menu--item is-clickable'
+        onClick={() => { openWashPage() }}
+      >
+        洗脑
+      </p>
       <p
         className='pg-menu--item is-clickable'
         onClick={() => { openMainPage() }}

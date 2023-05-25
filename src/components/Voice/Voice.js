@@ -22,6 +22,7 @@ const Voice = ({ messages }) => {
   const onClick = useCallback(
     e => {
       e.stopPropagation()
+      navigator.clipboard.writeText(messages.join('\n'))
       if (inSpeaking) {
         setInSpeaking(false)
         speechSynthesis.cancel()
@@ -33,7 +34,6 @@ const Voice = ({ messages }) => {
         speechSynthesis.speak(msg)
         msg.addEventListener(
           'end', () => {
-            // setInSpeaking(false)
             speechSynthesis.speak(msg)
           }
         )

@@ -22,7 +22,10 @@ const menus = [
   'payback',
   'channel',
   'edition',
-  'nouns'
+  'nouns',
+  'tech',
+  'math',
+  'searn'
 ]
 
 const Menu = () => {

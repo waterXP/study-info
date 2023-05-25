@@ -55,13 +55,23 @@ const Wash = () => {
         placeholder='请输入文本'
       />
     </div>
-    <div
-      className='pg-wash--button is-clickable'
-      type='primary'
-      onClick={onVoice}
-    >
-      { inSpeaking ? '停止洗脑' : '开始洗脑' }
-    </div>
+    {
+      inSpeaking
+        ? <div
+          className='pg-wash--button is-clickable is-washing'
+          type='primary'
+          onClick={onVoice}
+        >
+          停止洗脑
+        </div>
+        : <div
+          className='pg-wash--button is-clickable'
+          type='primary'
+          onClick={onVoice}
+        >
+          开始洗脑
+        </div>
+    }
   </div>
 }
 Wash.propTypes = {

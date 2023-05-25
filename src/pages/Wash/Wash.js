@@ -52,7 +52,7 @@ const Wash = () => {
       <TextArea
         className='pg-wash--text-area'
         onInput={onInput}
-        placeholer='请输入文本'
+        placeholder='请输入文本'
       />
       <Button
         className='pg-wash--button'

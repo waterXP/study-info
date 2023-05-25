@@ -538,7 +538,7 @@ RAID Redundant Arrays of Inexpensive Disks`
       '3：再次用最少直线覆盖所有0',
       '悲观准则[最大最小准则]MaxMin',
       '先求每种策略的最小收益，再收所得最小收益中取最大值',
-      '乐观准备MaxMax',
+      '乐观准则MaxMax',
       '从最大收益中找最大值',
     ]
   },

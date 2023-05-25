@@ -1,7 +1,7 @@
 import React, { memo, useState, useEffect, useCallback, useRef } from 'react'
 // import PropTypes from 'prop-types'
 import './Wash.styl'
-import { Input, Button } from 'antd'
+import { Input } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
 
 const { TextArea } = Input
@@ -54,13 +54,13 @@ const Wash = () => {
         onInput={onInput}
         placeholder='请输入文本'
       />
-      <Button
-        className='pg-wash--button'
-        type='primary'
-        onClick={onVoice}
-      >
-        开始洗脑
-      </Button>
+    </div>
+    <div
+      className='pg-wash--button is-clickable'
+      type='primary'
+      onClick={onVoice}
+    >
+      开始洗脑
     </div>
   </div>
 }

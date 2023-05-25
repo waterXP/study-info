@@ -60,7 +60,7 @@ const Wash = () => {
       type='primary'
       onClick={onVoice}
     >
-      开始洗脑
+      { inSpeaking ? '停止洗脑' : '开始洗脑' }
     </div>
   </div>
 }

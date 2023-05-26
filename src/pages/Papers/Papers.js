@@ -17,6 +17,21 @@ const papers = [
   }, {
     id: 'integration',
     name: '整合管理'
+  }, {
+    id: 's-risk',
+    name: '风险管理主线'
+  }, {
+    id: 's-resource',
+    name: '资源管理主线'
+  }, {
+    id: 's-integration',
+    name: '整合管理主线'
+  }, {
+    id: 's-cost',
+    name: '成本管理主线'
+  }, {
+    id: 's-process',
+    name: '进度管理主线'
   }
 ]
 

@@ -162,26 +162,26 @@ const Chapter = () => {
 
   if (data) {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
-      <div className='pg-chapter--content'>
+      <div className='pg-chapter_content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
         <Title>
           <span>{ data.realm }</span>
           {
             shortTip &&
-            <span className='pg-chapter--short'>{ `（${data.short}）` }</span>
+            <span className='pg-chapter_short'>{ `（${data.short}）` }</span>
           }
         </Title>
-        <div className='pg-chapter--section'>
-          <div className='pg-chapter--items'>
+        <div className='pg-chapter_section'>
+          <div className='pg-chapter_items'>
             {
               disp.length > 0
                 ? disp.map(
                   ({ text, id, pre }) =>
                     pre
                       ? <Fragment key={id}>
-                        <p className='pg-chapter--item-pre'>{ pre }</p>
-                        <p className='pg-chapter--item'>
+                        <p className='pg-chapter_item-pre'>{ pre }</p>
+                        <p className='pg-chapter_item'>
                           <span onClick={e => { gotoITTO(e, id) }}>
                             { text }
                           </span>
@@ -192,7 +192,7 @@ const Chapter = () => {
                       </Fragment>
                       :  <p
                         key={id}
-                        className='pg-chapter--item'
+                        className='pg-chapter_item'
                       >
                         <span onClick={e => { gotoITTO(e, id) }}>
                           { text }
@@ -202,27 +202,27 @@ const Chapter = () => {
                         }
                       </p>
                 )
-                : <p className='pg-chapter--placeholder'>点击空白处显示下一条</p>
+                : <p className='pg-chapter_placeholder'>点击空白处显示下一条</p>
             }
           </div>
         </div>
       </div>
-      <div className='pg-chapter--footer'>
-        <div className='pg-chapter--buttons'>
+      <div className='pg-chapter_footer'>
+        <div className='pg-chapter_buttons'>
           <div
-            className='pg-chapter--corner-button is-clickable'
+            className='pg-chapter_corner-button is-clickable'
             onClick={onPrevClick}
           >
             上一个
           </div>
           <div
-            className='pg-chapter--corner-center is-clickable'
+            className='pg-chapter_corner-center is-clickable'
             onClick={toggleShort}
           >
             { shortTip ? '隐藏提示' : '显示提示' }
           </div>
           <div
-            className='pg-chapter--corner-button is-right is-clickable'
+            className='pg-chapter_corner-button is-right is-clickable'
             onClick={onNextClick}
           >
             下一个
@@ -231,16 +231,16 @@ const Chapter = () => {
         {
           viewMode === 'reading'
             ? <div
-              className='pg-chapter--button in-reading'
+              className='pg-chapter_button in-reading'
               onClick={onModeClick}
             >
               阅读模式
             </div>
             : <>
-              <div className='pg-chapter--button in-second' onClick={onRefresh}>
+              <div className='pg-chapter_button in-second' onClick={onRefresh}>
                 刷新
               </div>
-              <div className='pg-chapter--button' onClick={onModeClick}>
+              <div className='pg-chapter_button' onClick={onModeClick}>
                 背诵模式
               </div>
             </>

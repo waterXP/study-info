@@ -24,13 +24,13 @@ const Cases = () => {
     [navigate]
   )
   return <div className='pg-cases'>
-    <div className='pg-cases--content'>
+    <div className='pg-cases_content'>
       <Breadcrumb to={-1}>返回</Breadcrumb>
       {
         cases.map(v =>
           <p
             key={v}
-            className='pg-cases--item is-clickable'
+            className='pg-cases_item is-clickable'
             onClick={() => { openPage(v) }}
           >
             { caseMap[v].title }

@@ -15,7 +15,7 @@ const Detail = ({ id, important }) => {
   )
 
   const cItemName = useMemo(
-    () => important ? 'com-detail--item is-important' : 'com-detail--item',
+    () => important ? 'com-detail_item is-important' : 'com-detail_item',
     [important]
   )
 

@@ -33,7 +33,7 @@ const Menu = () => {
 
   const openMainPage = useCallback(
     () => {
-      navigate('/main')
+      navigate('/overview')
     },
     [navigate]
   )
@@ -67,27 +67,27 @@ const Menu = () => {
   )
 
   return <div className='pg-menu'>
-    <div className='pg-menu--content'>
+    <div className='pg-menu_content'>
       <p
-        className='pg-menu--item is-clickable'
+        className='pg-menu_item is-clickable'
         onClick={() => { openWashPage() }}
       >
         洗脑
       </p>
       <p
-        className='pg-menu--item is-clickable'
+        className='pg-menu_item is-clickable'
         onClick={() => { openMainPage() }}
       >
         五组十域表
       </p>
       <p
-        className='pg-menu--item is-clickable'
+        className='pg-menu_item is-clickable'
         onClick={() => { openCasePage() }}
       >
         案例分析
       </p>
       <p
-        className='pg-menu--item is-clickable'
+        className='pg-menu_item is-clickable'
         onClick={() => { openPaperPage() }}
       >
         论文相关
@@ -96,7 +96,7 @@ const Menu = () => {
         menus.map(v =>
           <p
             key={v}
-            className='pg-menu--item is-clickable'
+            className='pg-menu_item is-clickable'
             onClick={() => { openPage(v) }}
           >
             { nouns[v].title }

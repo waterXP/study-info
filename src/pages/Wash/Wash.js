@@ -47,10 +47,10 @@ const Wash = () => {
     [inSpeaking]
   )
   return <div className='pg-wash hide-scroll'>
-    <div className='pg-wash--content'>
+    <div className='pg-wash_content'>
       <Breadcrumb to={-1}>返回</Breadcrumb>
       <TextArea
-        className='pg-wash--text-area'
+        className='pg-wash_text-area'
         onInput={onInput}
         placeholder='请输入文本'
       />
@@ -58,14 +58,14 @@ const Wash = () => {
     {
       inSpeaking
         ? <div
-          className='pg-wash--button is-clickable is-washing'
+          className='pg-wash_button is-clickable is-washing'
           type='primary'
           onClick={onVoice}
         >
           停止洗脑
         </div>
         : <div
-          className='pg-wash--button is-clickable'
+          className='pg-wash_button is-clickable'
           type='primary'
           onClick={onVoice}
         >

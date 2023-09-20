@@ -41,20 +41,20 @@ const Paper = () => {
 
   if (data) {
     return <div className='pg-paper hide-scroll'>
-      <div className='pg-paper--content'>
+      <div className='pg-paper_content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
-        <div className='pg-paper--body'>
+        <div className='pg-paper_body'>
           {
             data.map(
               ({ id, title, contents }) => <div key={id}>
                 <Title>
                   { title }
                 </Title>
-                <div className='pg-paper--list'>
+                <div className='pg-paper_list'>
                   {
                     contents.map(
-                      (v, i) => <p key={i} className='pg-paper--item'>{ v }</p>
+                      (v, i) => <p key={i} className='pg-paper_item'>{ v }</p>
                     )
                   }
                 </div>

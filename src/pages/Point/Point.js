@@ -41,16 +41,16 @@ const Point = () => {
 
   if (data) {
     return <div className='pg-point hide-scroll'>
-      <div className='pg-point--content'>
+      <div className='pg-point_content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
         <Title>
           { data.title }
         </Title>
-        <div className='pg-point--texts'>
+        <div className='pg-point_texts'>
           {
             data.texts.map(
-              (v, i) => <p key={i} className='pg-point--text'>{ v }</p>
+              (v, i) => <p key={i} className='pg-point_text'>{ v }</p>
             )
           }
         </div>

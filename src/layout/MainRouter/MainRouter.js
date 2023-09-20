@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import './MainRouter.styl'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Main from '@/pages/Main'
-import Personal from '@/pages/Personal'
+import Overview from '@/pages/Overview'
 import Chapter from '@/pages/Chapter'
 import ITTO from '@/pages/ITTO'
 import Noun from '@/pages/Noun'
@@ -14,6 +14,7 @@ import Case from '@/pages/Case'
 import Papers from '@/pages/Papers'
 import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
+import Books from '@/pages/Books'
 
 const { PUBLIC_URL } = process.env
 
@@ -23,11 +24,11 @@ const router = createBrowserRouter(
       path: '/',
       element: <Main />
     }, {
+      path: 'overview',
+      element: <Overview />
+    }, {
       path: 'chapter',
       element: <Chapter />
-    }, {
-      path: 'personal',
-      element: <Personal />
     }, {
       path: 'itto',
       element: <ITTO />
@@ -55,6 +56,9 @@ const router = createBrowserRouter(
     }, {
       path: 'wash',
       element: <Wash />
+    }, {
+      path: 'books',
+      element: <Books />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

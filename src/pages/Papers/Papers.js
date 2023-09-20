@@ -45,13 +45,13 @@ const Papers = () => {
     [navigate]
   )
   return <div className='pg-papers'>
-    <div className='pg-papers--content'>
+    <div className='pg-papers_content'>
       <Breadcrumb to={-1}>返回</Breadcrumb>
       {
         papers.map(({ id, name }) =>
           <p
             key={id}
-            className='pg-papers--item is-clickable'
+            className='pg-papers_item is-clickable'
             onClick={() => { openPage(id) }}
           >
             { name }

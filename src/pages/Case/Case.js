@@ -59,26 +59,26 @@ const Case = () => {
 
   if (data) {
     return <div className='pg-case hide-scroll'>
-      <div className='pg-case--content'>
+      <div className='pg-case_content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
-        <div className='pg-case--body'>
+        <div className='pg-case_body'>
           <Title>
             { data.title }
           </Title>
-          <div className='pg-case--explains'>
+          <div className='pg-case_explains'>
             {
               data.explains.map(
                 (v, i) => {
                   if (v && v.type === 'image') {
                     return <img
                       key={i}
-                      className='pg-case--image'
+                      className='pg-case_image'
                       style={v.style}
                       src={`assets/${v.name}`}
                     />
                   }
-                  return <p key={i} className='pg-case--explain'>{ v }</p>
+                  return <p key={i} className='pg-case_explain'>{ v }</p>
                 }
               )
             }
@@ -91,12 +91,12 @@ const Case = () => {
                     if (v && v.type === 'image') {
                       return <img
                         key={i}
-                        className='pg-case--image'
+                        className='pg-case_image'
                         style={v.style}
                         src={`assets/${v.name}`}
                       />
                     }
-                    return <p key={i} className='pg-case--q'>{ v }</p>
+                    return <p key={i} className='pg-case_q'>{ v }</p>
                   })
                 }
                 {
@@ -104,12 +104,12 @@ const Case = () => {
                     if (v && v.type === 'image') {
                       return <img
                         key={i}
-                        className='pg-case--image'
+                        className='pg-case_image'
                         style={v.style}
                         src={`assets/${v.name}`}
                       />
                     }
-                    return <p key={i} className='pg-case--a'>{ v }</p>
+                    return <p key={i} className='pg-case_a'>{ v }</p>
                   })
                 }
               </div>

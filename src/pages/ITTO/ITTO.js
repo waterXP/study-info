@@ -228,7 +228,7 @@ const ITTO = () => {
 
   if (data) {
     return <div className='pg-itto hide-scroll' onClick={onClickContent}>
-      <div className='pg-itto--content'>
+      <div className='pg-itto_content'>
         <Breadcrumb to={-1}>返回</Breadcrumb>
         <Voice messages={voices} />
         <Title>
@@ -247,7 +247,7 @@ const ITTO = () => {
             <Detail id={data.queryId} />
           }
         </Title>
-        <div className='pg-itto--items'>
+        <div className='pg-itto_items'>
           {
             disp.length > 0
               ? disp.map(
@@ -256,12 +256,12 @@ const ITTO = () => {
                     {
                       pre
                         ? <>
-                            <p className='pg-itto--item-pre'>{ pre }</p>
+                            <p className='pg-itto_item-pre'>{ pre }</p>
                             <p
                               className={
                                 nouns[id] && nouns[id].important
-                                  ? 'pg-itto--item is-important'
-                                  : 'pg-itto--item'
+                                  ? 'pg-itto_item is-important'
+                                  : 'pg-itto_item'
                               }
                             >
                               <span onClick={e => { gotoDetail(e, id) }}>
@@ -280,8 +280,8 @@ const ITTO = () => {
                             <p
                               className={
                                 nouns[id] && nouns[id].important
-                                  ? 'pg-itto--item is-important'
-                                  : 'pg-itto--item'
+                                  ? 'pg-itto_item is-important'
+                                  : 'pg-itto_item'
                               }
                             >
                               <span onClick={e => { gotoDetail(e, id) }}>
@@ -299,26 +299,26 @@ const ITTO = () => {
                     }
                   </Fragment>
               )
-              : <p className='pg-itto--placeholder'>点击空白处显示下一条</p>
+              : <p className='pg-itto_placeholder'>点击空白处显示下一条</p>
           }
         </div>
       </div>
-      <div className='pg-itto--footer'>
-        <div className='pg-itto--buttons'>
+      <div className='pg-itto_footer'>
+        <div className='pg-itto_buttons'>
           <div
-            className='pg-itto--corner-button is-clickable'
+            className='pg-itto_corner-button is-clickable'
             onClick={onPrevClick}
           >
             上一个
           </div>
           <div
-            className='pg-itto--corner-center is-clickable'
+            className='pg-itto_corner-center is-clickable'
             onClick={toggleDetail}
           >
             { showDetail ? '隐藏详细' : '显示详细' }
           </div>
           <div
-            className='pg-itto--corner-button is-right is-clickable'
+            className='pg-itto_corner-button is-right is-clickable'
             onClick={onNextClick}
           >
             下一个
@@ -327,16 +327,16 @@ const ITTO = () => {
         {
           viewMode === 'reading'
             ? <div
-              className='pg-itto--button in-reading'
+              className='pg-itto_button in-reading'
               onClick={onModeClick}
             >
               阅读模式
             </div>
             : <>
-              <div className='pg-itto--button in-second' onClick={onRefresh}>
+              <div className='pg-itto_button in-second' onClick={onRefresh}>
                 刷新
               </div>
-              <div className='pg-itto--button' onClick={onModeClick}>
+              <div className='pg-itto_button' onClick={onModeClick}>
                 背诵模式
               </div>
             </>

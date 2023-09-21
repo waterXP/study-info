@@ -1,6 +1,38 @@
 .pg-books
   padding 32px 32px 64px
 .pg-books_item
+  display inline-flex
   margin-bottom 8px
+  cursor pointer
+  &:hover
+    .pg-books_cover
+      margin-top 0
+      margin-left 0
+      width 232px
+      height 232px
+    .pg-books_info
+      padding-left 16px
 .pg-books_title
   getFont(.65, 16, 24)
+.pg-books_cover-wrap
+  position relative
+  width 240px
+  height 240px
+.pg-books_cover
+  margin-top 16px
+  margin-left 16px
+  width 200px
+  height 200px
+  box-shadow 5px 5px 3px 1px #aaa
+  transition all .3s ease
+.pg-books_info
+  padding 16px 0
+  transition all .3s ease
+.pg-books_title
+  getFont(.85, 24, 32)
+  weight(600)
+  margin-bottom 16px
+.pg-books_author, .pg-books_illustrator
+  getFont(.65, 16, 24)
+  margin-bottom 8px
+  font-style italic

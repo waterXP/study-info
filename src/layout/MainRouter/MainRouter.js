@@ -15,6 +15,7 @@ import Papers from '@/pages/Papers'
 import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
 import Books from '@/pages/Books'
+import Book from '@/pages/Book'
 
 const { PUBLIC_URL } = process.env
 
@@ -59,6 +60,9 @@ const router = createBrowserRouter(
     }, {
       path: 'books',
       element: <Books />
+    }, {
+      path: 'book',
+      element: <Book />
     }, {
       path: '*',
       element: <Navigate to='/' replace />

@@ -131,7 +131,15 @@ const Book = () => {
                   className='pg-book_page-texts'
                 >
                   <p className='pg-book_page-text-wrap'>
-                    <span className='pg-book_page-text'>{ text }</span>
+                    <span
+                      className={
+                        inSpeaking === text
+                          ? 'pg-book_page-text is-active'
+                          : 'pg-book_page-text'
+                      }
+                    >
+                      { text }
+                    </span>
                     {
                       showVoice &&
                       <Icon

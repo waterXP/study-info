@@ -23,7 +23,9 @@ const Books = () => {
               onClick={() => { openBook(id) }}
             >
               <div className='pg-books_cover-wrap'>
-                <img className='pg-books_cover' src={cover} alt='cover' />
+                <div className='pg-books_cover-offset'>
+                  <img className='pg-books_cover' src={cover} alt='cover' />
+                </div>
               </div>
               <div className='pg-books_info'>
                 <p className='pg-books_title'>{ title }</p>

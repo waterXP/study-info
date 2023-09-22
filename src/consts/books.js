@@ -1,7 +1,17 @@
+import theFirstJourney from './book/the-first-journey'
+import dreamsAreCalling from './book/dreams-are-calling'
 import theSnowyDay from './book/the-snowy-day'
+import pebble from './book/pebble'
+import lookAndSeeABC from './book/look-and-see-abc'
+import hickoryDickoryDock from './book/hickory-dickory-dock'
 
 export const bookMap = {
-  'the-snowy-day': theSnowyDay
+  'dreams-are-calling': dreamsAreCalling,
+  'the-first-journey': theFirstJourney,
+  'the-snowy-day': theSnowyDay,
+  pebble,
+  'look-and-see-abc': lookAndSeeABC,
+  'hickory-dickory-dock': hickoryDickoryDock
 }
 
 export default [

@@ -2,8 +2,7 @@ export default {
   title: 'The Snowy Day',
   translate: '下雪天',
   cover: 'assets/books/the-snowy-day/1.jpg',
-  author: 'Phùng Nguyên Quang',
-  illustrator: 'Huynh Kim Liên',
+  author: 'Ezra Jack Keats',
   pages: [
     {
       src: 'assets/books/the-snowy-day/2.jpg',
@@ -36,8 +35,8 @@ export default {
       src: 'assets/books/the-snowy-day/5.jpg',
       content: [
         {
-          text: 'Then he dragged his feet s-l-o-w-l-y to make tracks',
-          translate:  '然后，他拖着脚s-l-o-w-l-y做足迹'
+          text: 'Then he dragged his feet slowly to make tracks',
+          translate:  '然后他慢慢地拖着脚走'
         }, {
           text: 'And he found something sticking out of the snow that made a new track.',
           translate:  '他发现雪中有东西伸出，形成了一条新的轨迹。'

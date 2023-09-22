@@ -1,11 +1,12 @@
 import React, { memo, useEffect, useState, useMemo, useCallback } from 'react'
 // import PropTypes from 'prop-types'
 import './Book.styl'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { bookMap } from '@/consts/books'
 import Icon from '@/components/Icon'
 
 const Book = () => {
+  const navigate = useNavigate()
   const [inSpeaking, setInSpeaking] = useState(null)
   const showVoice = useMemo(
     () => {
@@ -80,6 +81,12 @@ const Book = () => {
   const toggleFull = useCallback(
     () => {
       setIsFull(isFull => !isFull)
+    },
+    []
+  )
+  const gotoMenu = useCallback(
+    () => {
+      navigate(`/books`)
     },
     []
   )
@@ -163,6 +170,11 @@ const Book = () => {
             className='pg-book_option is-clickable'
             type={isFull ? 'icon-quxiaoquanping' : 'icon-quanping'}
             onClick={toggleFull}
+          />
+          <Icon
+            className='pg-book_option is-clickable'
+            type='icon-category'
+            onClick={gotoMenu}
           />
         </div>
         <span className='pg-book_page-no'>{ pageNo + 1 }</span>

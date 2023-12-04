@@ -4,6 +4,8 @@ import './MainRouter.styl'
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Main from '@/pages/Main'
 import Overview from '@/pages/Overview'
+import HealthList from '@/pages/HealthList'
+import Health from '@/pages/Health'
 import Chapter from '@/pages/Chapter'
 import ITTO from '@/pages/ITTO'
 import Noun from '@/pages/Noun'
@@ -24,6 +26,12 @@ const router = createBrowserRouter(
     {
       path: '/',
       element: <Main />
+    }, {
+      path: 'health-list',
+      element: <HealthList />
+    }, {
+      path: 'health',
+      element: <Health />
     }, {
       path: 'overview',
       element: <Overview />

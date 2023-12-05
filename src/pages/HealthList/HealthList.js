@@ -13,25 +13,29 @@ const HealthList = () => {
     },
     []
   )
-  return <div className='health-list'>
-    {
-      texts.map(
-        ({ id, title, content }) => <div key={id}>
-          <p>{ title }</p>
-          {
-            content.map(
-              ({ id, ask }) => <div
-                key={id}
-                className='is-clickable'
-                onClick={e => { gotoHealth(e, id) }}
-              >
-                <p>{ ask }</p>
-              </div>
-            )
-          }
-        </div>
-      )
-    }
+  return <div className='pg-health-list'>
+    <div className='pg-health-list_content'>
+      {
+        texts.map(
+          ({ id, title, content }) => <div key={id}>
+            <p className='pg-health-list_title'>{ title }</p>
+            <div className='pg-health-list_answers'>
+              {
+                content.map(
+                  ({ id, ask }) => <div
+                    key={id}
+                    className='pg-health-list_item is-clickable'
+                    onClick={e => { gotoHealth(e, id) }}
+                  >
+                    <p>{ ask[0] }</p>
+                  </div>
+                )
+              }
+            </div>
+          </div>
+        )
+      }
+    </div>
   </div>
 }
 HealthList.propTypes = {

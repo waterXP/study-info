@@ -64,7 +64,7 @@ const Health = () => {
   const voices = useMemo(
     () => {
       if (data) {
-        return data.answers
+        return data.answer
       }
       return []
     },

@@ -31,33 +31,21 @@ const menus = [
 const Menu = () => {
   const navigate = useNavigate()
 
-  const openMainPage = useCallback(
-    () => {
-      navigate('/overview')
-    },
-    [navigate]
-  )
+  const openMainPage = useCallback(() => {
+    navigate('/overview')
+  }, [navigate])
 
-  const openWashPage = useCallback(
-    () => {
-      navigate('/wash')
-    },
-    [navigate]
-  )
+  const openWashPage = useCallback(() => {
+    navigate('/wash')
+  }, [navigate])
 
-  const openCasePage = useCallback(
-    () => {
-      navigate('/cases')
-    },
-    [navigate]
-  )
+  const openCasePage = useCallback(() => {
+    navigate('/cases')
+  }, [navigate])
 
-  const openPaperPage = useCallback(
-    () => {
-      navigate('/papers')
-    },
-    [navigate]
-  )
+  const openPaperPage = useCallback(() => {
+    navigate('/papers')
+  }, [navigate])
 
   const openPage = useCallback(
     key => {
@@ -65,48 +53,71 @@ const Menu = () => {
     },
     [navigate]
   )
+  const gotoMenu = useCallback(
+    key => {
+      navigate('/')
+    },
+    [navigate]
+  )
 
-  return <div className='pg-menu'>
-    <div className='pg-menu_content'>
-      <p
-        className='pg-menu_item is-clickable'
-        onClick={() => { openWashPage() }}
-      >
-        洗脑
-      </p>
-      <p
-        className='pg-menu_item is-clickable'
-        onClick={() => { openMainPage() }}
-      >
-        五组十域表
-      </p>
-      <p
-        className='pg-menu_item is-clickable'
-        onClick={() => { openCasePage() }}
-      >
-        案例分析
-      </p>
-      <p
-        className='pg-menu_item is-clickable'
-        onClick={() => { openPaperPage() }}
-      >
-        论文相关
-      </p>
-      {
-        menus.map(v =>
+  return (
+    <div className='pg-menu'>
+      <div className='pg-menu_content'>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            gotoMenu()
+          }}
+        >
+          目录
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openWashPage()
+          }}
+        >
+          洗脑
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openMainPage()
+          }}
+        >
+          五组十域表
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openCasePage()
+          }}
+        >
+          案例分析
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openPaperPage()
+          }}
+        >
+          论文相关
+        </p>
+        {menus.map(v => (
           <p
             key={v}
             className='pg-menu_item is-clickable'
-            onClick={() => { openPage(v) }}
+            onClick={() => {
+              openPage(v)
+            }}
           >
-            { nouns[v].title }
+            {nouns[v].title}
           </p>
-        )
-      }
+        ))}
+      </div>
     </div>
-  </div>
+  )
 }
-Menu.propTypes = {
-}
+Menu.propTypes = {}
 
 export default memo(Menu)

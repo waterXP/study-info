@@ -16,6 +16,8 @@ import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
 import Books from '@/pages/Books'
 import Book from '@/pages/Book'
+import Exams from '@/pages/Exams'
+import Exam from '@/pages/Exam'
 
 const { PUBLIC_URL } = process.env
 
@@ -24,46 +26,68 @@ const router = createBrowserRouter(
     {
       path: '/',
       element: <Main />
-    }, {
+    },
+    {
       path: 'overview',
       element: <Overview />
-    }, {
+    },
+    {
       path: 'chapter',
       element: <Chapter />
-    }, {
+    },
+    {
       path: 'itto',
       element: <ITTO />
-    }, {
+    },
+    {
       path: 'noun',
       element: <Noun />
-    }, {
+    },
+    {
       path: 'menu',
       element: <Menu />
-    }, {
+    },
+    {
       path: 'point',
       element: <Point />
-    }, {
+    },
+    {
       path: 'cases',
       element: <Cases />
-    }, {
+    },
+    {
       path: 'case',
       element: <Case />
-    }, {
+    },
+    {
       path: 'papers',
       element: <Papers />
-    }, {
+    },
+    {
       path: 'paper',
       element: <Paper />
-    }, {
+    },
+    {
       path: 'wash',
       element: <Wash />
-    }, {
+    },
+    {
       path: 'books',
       element: <Books />
-    }, {
+    },
+    {
       path: 'book',
       element: <Book />
-    }, {
+    },
+    {
+      path: 'exams',
+      element: <Exams />
+    },
+    {
+      path: 'exam',
+      element: <Exam />
+    },
+    {
       path: '*',
       element: <Navigate to='/' replace />
     }

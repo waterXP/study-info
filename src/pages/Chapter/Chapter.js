@@ -167,7 +167,7 @@ const Chapter = () => {
   if (data) {
     return <div className='pg-chapter hide-scroll' onClick={onClickContent}>
       <div className='pg-chapter_content'>
-        <Breadcrumb to={-1}>返回</Breadcrumb>
+        <Breadcrumb to='/overview'>五组十域表</Breadcrumb>
         <Voice messages={voices} />
         <Title>
           <span>{ data.realm }</span>

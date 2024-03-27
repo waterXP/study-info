@@ -32,8 +32,10 @@ const Chapter = () => {
       e.stopPropagation()
       const index = dataSource.findIndex(v => v.id === data.id)
       if (index === 0) {
+        setData(null)
         navigate(`/chapter?id=${dataSource[dataSource.length - 1].id}`)
       } else if (index > 0) {
+        setData(null)
         navigate(`/chapter?id=${dataSource[index - 1].id}`)
       }
     },
@@ -53,8 +55,10 @@ const Chapter = () => {
       const len = dataSource.length
       if (~index) {
         if (index === len - 1) {
+          setData(null)
           navigate(`/chapter?id=${dataSource[0].id}`)
         } else if (index < len - 1) {
+          setData(null)
           navigate(`/chapter?id=${dataSource[index + 1].id}`)
         }
       }

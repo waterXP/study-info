@@ -25,6 +25,7 @@ const Exam = () => {
   const onPrevClick = useCallback(() => {
     const index = list.findIndex(({ id }) => id === data.id)
     if (~index) {
+      setData(null)
       const nextIndex = index === 0 ? list.length - 1 : index - 1
       const target = exams[list[nextIndex].id]
       const { id, q, a } = target
@@ -34,6 +35,7 @@ const Exam = () => {
   const onNextClick = useCallback(() => {
     const index = list.findIndex(({ id }) => id === data.id)
     if (~index) {
+      setData(null)
       const nextIndex = index === list.length - 1 ? 0 : index + 1
       const target = exams[list[nextIndex].id]
       const { id, q, a } = target

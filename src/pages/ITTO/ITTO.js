@@ -131,6 +131,7 @@ const ITTO = () => {
         const index = ids.findIndex(v => v.id === queryId)
         if (~index) {
           if (index > 0) {
+            setData(null)
             navigate(`/itto?id=${ids[index - 1].id}`)
           } else {
             message.error('已经是第一个了')
@@ -170,6 +171,7 @@ const ITTO = () => {
         const len = ids.length
         if (~index) {
           if (index < len - 1) {
+            setData(null)
             navigate(`/itto?id=${ids[index + 1].id}`)
           } else {
             message.error('已经是最后一个了')

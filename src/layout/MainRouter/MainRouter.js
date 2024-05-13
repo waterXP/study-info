@@ -16,8 +16,7 @@ import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
 import Books from '@/pages/Books'
 import Book from '@/pages/Book'
-import Exams from '@/pages/Exams'
-import Exam from '@/pages/Exam'
+import ActiveITTO from '@/pages/ActiveITTO'
 
 const { PUBLIC_URL } = process.env
 
@@ -38,6 +37,10 @@ const router = createBrowserRouter(
     {
       path: 'itto',
       element: <ITTO />
+    },
+    {
+      path: 'active-itto',
+      element: <ActiveITTO />
     },
     {
       path: 'noun',
@@ -78,14 +81,6 @@ const router = createBrowserRouter(
     {
       path: 'book',
       element: <Book />
-    },
-    {
-      path: 'exams',
-      element: <Exams />
-    },
-    {
-      path: 'exam',
-      element: <Exam />
     },
     {
       path: '*',

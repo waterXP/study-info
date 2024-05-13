@@ -8,22 +8,16 @@ const Main = () => {
   const gotoBooks = useCallback(() => {
     navigate('/books')
   }, [navigate])
-  const gotoOverview = useCallback(() => {
-    navigate('/overview')
-  }, [navigate])
-  const gotoExams = useCallback(() => {
-    navigate('/exams')
+  const gotoMenu = useCallback(() => {
+    navigate('/menu')
   }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link is-clickable' onClick={gotoBooks}>
         绘本
       </div>
-      <div className='pg-main_link is-clickable' onClick={gotoOverview}>
+      <div className='pg-main_link is-clickable' onClick={gotoMenu}>
         软考
-      </div>
-      <div className='pg-main_link is-clickable' onClick={gotoExams}>
-        计算机等级
       </div>
     </div>
   )

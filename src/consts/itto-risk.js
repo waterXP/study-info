@@ -1,6 +1,7 @@
 export default {
   '8-1': {
     title: '规划风险管理',
+    phase: '规划',
     i: [
       {
         id: '8-1-1',
@@ -40,6 +41,7 @@ export default {
   },
   '8-2': {
     title: '识别风险',
+    phase: '规划',
     i: [
       {
         id: '8-2-1',
@@ -97,6 +99,7 @@ export default {
   },
   '8-3': {
     title: '实施定性风险分析',
+    phase: '规划',
     i: [
       {
         id: '8-3-1',
@@ -145,6 +148,7 @@ export default {
   },
   '8-4': {
     title: '实施定量风险分析',
+    phase: '规划',
     i: [
       {
         id: '8-4-1',
@@ -187,6 +191,7 @@ export default {
   },
   '8-5': {
     title: '规划风险应对',
+    phase: '规划',
     i: [
       {
         id: '8-5-1',
@@ -247,6 +252,7 @@ export default {
   },
   '8-6': {
     title: '实施风险应对',
+    phase: '执行',
     i: [
       {
         id: '8-6-1',
@@ -283,6 +289,7 @@ export default {
   },
   '8-7': {
     title: '监督风险',
+    phase: '控制',
     i: [
       {
         id: '8-7-1',

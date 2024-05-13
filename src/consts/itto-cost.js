@@ -1,6 +1,7 @@
 export default {
   '4-1': {
     title: '规划成本管理',
+    phase: '规划',
     i: [
       {
         id: '4-1-1',
@@ -37,6 +38,7 @@ export default {
   },
   '4-2': {
     title: '估算成本',
+    phase: '规划',
     i: [
       {
         id: '4-2-1',
@@ -94,6 +96,7 @@ export default {
   },
   '4-3': {
     title: '制定预算',
+    phase: '规划',
     i: [
       {
         id: '4-3-1',
@@ -151,6 +154,7 @@ export default {
   },
   '4-4': {
     title: '控制成本',
+    phase: '监控',
     i: [
       {
         id: '4-4-1',

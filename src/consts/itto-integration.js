@@ -1,6 +1,7 @@
 export default {
   '1-1': {
     title: '制定项目章程',
+    phase: '启动',
     i: [
       {
         id: '1-1-1',
@@ -43,6 +44,7 @@ export default {
   },
   '1-2': {
     title: '制订项目管理计划',
+    phase: '规划',
     i: [
       {
         id: '1-2-1',
@@ -82,6 +84,7 @@ export default {
   },
   '1-3': {
     title: '指导与管理项目工作',
+    phase: '执行',
     i: [
       {
         id: '1-3-1',
@@ -139,6 +142,7 @@ export default {
   },
   '1-4': {
     title: '管理项目知识',
+    phase: '执行',
     i: [
       {
         id: '1-4-1',
@@ -187,6 +191,7 @@ export default {
   },
   '1-5': {
     title: '监控项目工作',
+    phase: '监控',
     i: [
       {
         id: '1-5-1',
@@ -241,6 +246,7 @@ export default {
   },
   '1-6': {
     title: '实施整体变更控制',
+    phase: '监控',
     i: [
       {
         id: '1-6-1',
@@ -295,6 +301,7 @@ export default {
   },
   '1-7': {
     title: '结束项目或阶段',
+    phase: '收尾',
     i: [
       {
         id: '1-7-1',

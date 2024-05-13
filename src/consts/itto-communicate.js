@@ -1,6 +1,7 @@
 export default {
   '7-1': {
     title: '规划沟通管理',
+    phase: '规划',
     i: [
       {
         id: '7-1-1',
@@ -61,6 +62,7 @@ export default {
   },
   '7-2': {
     title: '管理沟通',
+    phase: '执行',
     i: [
       {
         id: '7-2-1',
@@ -121,6 +123,7 @@ export default {
   },
   '7-3': {
     title: '监督沟通',
+    phase: '监控',
     i: [
       {
         id: '7-3-1',

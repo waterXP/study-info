@@ -9,6 +9,19 @@ import ittoRisk from '@/consts/itto-risk'
 import ittoPurchase from '@/consts/itto-purchase'
 import ittoPeople from '@/consts/itto-people'
 
+export const datas = [
+  ittoIntegration,
+  ittoRange,
+  ittoProcess,
+  ittoCost,
+  ittoQuality,
+  ittoResource,
+  ittoCommunicate,
+  ittoRisk,
+  ittoPurchase,
+  ittoPeople
+]
+
 export default {
   ...ittoIntegration,
   ...ittoRange,

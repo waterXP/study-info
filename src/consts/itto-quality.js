@@ -1,6 +1,7 @@
 export default {
   '5-1': {
     title: '规划质量管理',
+    phase: '规划',
     i: [
       {
         id: '5-1-1',
@@ -61,6 +62,7 @@ export default {
   },
   '5-2': {
     title: '管理质量',
+    phase: '执行',
     i: [
       {
         id: '5-2-1',
@@ -121,6 +123,7 @@ export default {
   },
   '5-3': {
     title: '控制质量',
+    phase: '监控',
     i: [
       {
         id: '5-3-1',

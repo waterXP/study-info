@@ -35,6 +35,10 @@ const Menu = () => {
     navigate('/overview')
   }, [navigate])
 
+  const openITTOPage = useCallback(() => {
+    navigate('/active-itto')
+  }, [navigate])
+
   const openWashPage = useCallback(() => {
     navigate('/wash')
   }, [navigate])
@@ -86,6 +90,14 @@ const Menu = () => {
           }}
         >
           五组十域表
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openITTOPage()
+          }}
+        >
+          ITTO
         </p>
         <p
           className='pg-menu_item is-clickable'

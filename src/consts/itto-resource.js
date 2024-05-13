@@ -1,6 +1,7 @@
 export default {
   '6-1': {
     title: '规划资源管理',
+    phase: '规划',
     i: [
       {
         id: '6-1-1',
@@ -49,6 +50,7 @@ export default {
   },
   '6-2': {
     title: '估算活动资源',
+    phase: '规划',
     i: [
       {
         id: '6-2-1',
@@ -106,6 +108,7 @@ export default {
   },
   '6-3': {
     title: '获取资源',
+    phase: '执行',
     i: [
       {
         id: '6-3-1',
@@ -166,6 +169,7 @@ export default {
   },
   '6-4': {
     title: '建设团队',
+    phase: '执行',
     i: [
       {
         id: '6-4-1',
@@ -232,6 +236,7 @@ export default {
   },
   '6-5': {
     title: '管理团队',
+    phase: '执行',
     i: [
       {
         id: '6-5-1',
@@ -280,6 +285,7 @@ export default {
   },
   '6-6': {
     title: '控制资源',
+    phase: '监控',
     i: [
       {
         id: '6-6-1',

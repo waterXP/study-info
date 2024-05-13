@@ -1,6 +1,7 @@
 export default {
   '9-1': {
     title: '规划采购管理',
+    phase: '规划',
     i: [
       {
         id: '9-1-1',
@@ -76,6 +77,7 @@ export default {
   },
   '9-2': {
     title: '实施采购',
+    phase: '执行',
     i: [
       {
         id: '9-2-1',
@@ -139,6 +141,7 @@ export default {
   },
   '9-3': {
     title: '控制采购',
+    phase: '监控',
     i: [
       {
         id: '9-3-1',

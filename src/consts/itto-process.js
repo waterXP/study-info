@@ -1,6 +1,7 @@
 export default {
   '3-1': {
     title: '规划进度管理',
+    phase: '规划',
     i: [
       {
         id: '3-1-1',
@@ -37,6 +38,7 @@ export default {
   },
   '3-2': {
     title: '定义活动',
+    phase: '规划',
     i: [
       {
         id: '3-2-1',
@@ -85,6 +87,7 @@ export default {
   },
   '3-3': {
     title: '排列活动顺序',
+    phase: '规划',
     i: [
       {
         id: '3-3-1',
@@ -130,6 +133,7 @@ export default {
   },
   '3-4': {
     title: '估算活动持续时间',
+    phase: '规划',
     i: [
       {
         id: '3-4-1',
@@ -187,6 +191,7 @@ export default {
   },
   '3-5': {
     title: '制订进度计划',
+    phase: '规划',
     i: [
       {
         id: '3-5-1',
@@ -262,6 +267,7 @@ export default {
   },
   '3-6': {
     title: '控制进度',
+    phase: '监控',
     i: [
       {
         id: '3-6-1',

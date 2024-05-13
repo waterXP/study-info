@@ -1,6 +1,7 @@
 export default {
   '10-1': {
     title: '识别干系人',
+    phase: '启动',
     i: [
       {
         id: '10-1-1',
@@ -61,6 +62,7 @@ export default {
   }, 
   '10-2': {
     title: '规划干系人参与',
+    phase: '规划',
     i: [
       {
         id: '10-2-1',
@@ -112,6 +114,7 @@ export default {
   }, 
   '10-3': {
     title: '管理干系人参与',
+    phase: '执行',
     i: [
       {
         id: '10-3-1',
@@ -160,6 +163,7 @@ export default {
   }, 
   '10-4': {
     title: '监督干系人参与',
+    phase: '监控',
     i: [
       {
         id: '10-4-1',

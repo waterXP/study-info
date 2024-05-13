@@ -1,6 +1,7 @@
 export default {
   '2-1': {
     title: '规划范围管理',
+    phase: '规划',
     i: [
       {
         id: '2-1-1',
@@ -40,6 +41,7 @@ export default {
   },
   '2-2': {
     title: '收集需求',
+    phase: '规划',
     i: [
       {
         id: '2-2-1',
@@ -103,6 +105,7 @@ export default {
   },
   '2-3': {
     title: '定义范围',
+    phase: '规划',
     i: [
       {
         id: '2-3-1',
@@ -151,6 +154,7 @@ export default {
   },
   '2-4': {
     title: '创建WBS',
+    phase: '规划',
     i: [
       {
         id: '2-4-1',
@@ -187,6 +191,7 @@ export default {
   },
   '2-5': {
     title: '确认范围',
+    phase: '监控',
     i: [
       {
         id: '2-5-1',
@@ -229,6 +234,7 @@ export default {
   },
   '2-6': {
     title: '控制范围',
+    phase: '监控',
     i: [
       {
         id: '2-6-1',

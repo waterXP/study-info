@@ -45,9 +45,9 @@ const Performance = () => {
         if (~index) {
           if (index < performanceList.length - 1) {
             setData(null)
-            navigate(`/itto?id=${performanceList[index + 1].id}`)
+            navigate(`/performance?id=${performanceList[index + 1].id}`)
           } else {
-            navigate(`/itto?id=${performanceList[0].id}`)
+            navigate(`/performance?id=${performanceList[0].id}`)
           }
         }
       }

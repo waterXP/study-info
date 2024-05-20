@@ -16,6 +16,8 @@ import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
 import Books from '@/pages/Books'
 import Book from '@/pages/Book'
+import Others from '@/pages/Others'
+import Performance from '@/pages/Performance'
 import ActiveITTO from '@/pages/ActiveITTO'
 
 const { PUBLIC_URL } = process.env
@@ -81,6 +83,14 @@ const router = createBrowserRouter(
     {
       path: 'book',
       element: <Book />
+    },
+    {
+      path: 'others',
+      element: <Others />
+    },
+    {
+      path: 'performance',
+      element: <Performance />
     },
     {
       path: '*',

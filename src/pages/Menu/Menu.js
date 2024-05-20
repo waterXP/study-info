@@ -63,6 +63,16 @@ const Menu = () => {
     },
     [navigate]
   )
+  const openOthersPage = useCallback(
+    () => {
+      navigate('/others?id=security')
+    },[navigate]
+  )
+  const openPerformancePage = useCallback(
+    () => {
+      navigate('/performance?id=people')
+    },[navigate]
+  )
 
   return (
     <div className='pg-menu'>
@@ -74,6 +84,22 @@ const Menu = () => {
           }}
         >
           目录
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openOthersPage()
+          }}
+        >
+          论文
+        </p>
+        <p
+          className='pg-menu_item is-clickable'
+          onClick={() => {
+            openPerformancePage()
+          }}
+        >
+          八大绩效域
         </p>
         <p
           className='pg-menu_item is-clickable'

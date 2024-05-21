@@ -4,6 +4,7 @@ import { useSearchParams, useNavigate } from 'react-router-dom'
 import others, { otherList } from '@/consts/others'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
+import Topic from '@com/Topic'
 
 const Others = () => {
   const navigate = useNavigate()
@@ -41,9 +42,9 @@ const Others = () => {
         if (~index) {
           if (index < otherList.length - 1) {
             setData(null)
-            navigate(`/itto?id=${otherList[index + 1].id}`)
+            navigate(`/others?id=${otherList[index + 1].id}`)
           } else {
-            navigate(`/itto?id=${otherList[0].id}`)
+            navigate(`/others?id=${otherList[0].id}`)
           }
         }
       }
@@ -57,6 +58,7 @@ const Others = () => {
           <Breadcrumb top={-1}>返回</Breadcrumb>
           <Title>{data.title}</Title>
           <div className='pg-others_items'>
+            <Topic title='写作要点' content={data.point} />
             {data.point.map((v, i) => (
               <p key={i} className='pg-others_item'>
                 {v}

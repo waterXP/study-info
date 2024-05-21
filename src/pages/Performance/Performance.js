@@ -4,6 +4,13 @@ import { useSearchParams, useNavigate } from 'react-router-dom'
 import performance, { performanceList } from '@/consts/performance'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
+import Topic from '@com/Topic'
+import Paragraph from '@com/Paragraph'
+
+const columns = [
+  { title: '预期目标', dataIndex: 'text' },
+  { title: '检查指标', dataIndex: 'check' }
+]
 
 const Performance = () => {
   const navigate = useNavigate()
@@ -59,30 +66,17 @@ const Performance = () => {
       <div className='pg-performance hide-scroll'>
         <div className='pg-performance_content'>
           <Breadcrumb top={-1}>返回</Breadcrumb>
-          <Title>{data.title}</Title>
-          <Title>{data.intro}</Title>
+          <Title intro={data.intro}>{data.title}</Title>
           <div className='pg-performance_items'>
-          <p className='pg-performance_item'>frame</p>
-            {data.frame.map((v, i) => (
-              <p key={i} className='pg-performance_item'>
-                {v}
-              </p>
-            ))}
-            <p className='pg-performance_item'>point</p>
-            {data.point.map((v, i) => (
-              <p key={i} className='pg-performance_item'>
-                {v}
-              </p>
-            ))}
-            <p className='pg-performance_item'>aim</p>
-            {data.aim.map((v, i) => (
-              <Fragment key={i}>
-                <p className='pg-performance_item'>{v.text}</p>
-                <p className='pg-performance_item'>{`check${v.check}`}</p>
-              </Fragment>
-            ))}
-            <p className='pg-performance_item'>refer</p>
-            <p className='pg-performance_item'>{data.refer}</p>
+            <Topic title='写作框架' content={data.frame} />
+            <Topic title='绩效要点' content={data.point} />
+            <Topic title='对应五组十域表' content={data.refer} />
+            <Topic
+              title='预期目标/检查指标要'
+              content={data.aim}
+              columns={columns}
+            />
+            <Paragraph title='写作指南' content={data.sample} />
           </div>
         </div>
         <div className='pg-performance_footer'>

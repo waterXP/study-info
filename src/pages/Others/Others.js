@@ -5,6 +5,7 @@ import others, { otherList } from '@/consts/others'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
 import Topic from '@com/Topic'
+import Paragraph from '@com/Paragraph'
 
 const Others = () => {
   const navigate = useNavigate()
@@ -58,6 +59,7 @@ const Others = () => {
           <Breadcrumb top={-1}>返回</Breadcrumb>
           <Title>{data.title}</Title>
           <div className='pg-others_items'>
+            <Paragraph title='写作指南' content={data.sample} />
             <Topic title='写作要点' content={data.point} />
             {data.point.map((v, i) => (
               <p key={i} className='pg-others_item'>

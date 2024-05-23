@@ -68,6 +68,7 @@ const Performance = () => {
           <Breadcrumb top={-1}>返回</Breadcrumb>
           <Title intro={data.intro}>{data.title}</Title>
           <div className='pg-performance_items'>
+            <Paragraph title='写作指南' content={data.sample} />
             <Topic title='写作框架' content={data.frame} />
             <Topic title='绩效要点' content={data.point} />
             <Topic title='对应五组十域表' content={data.refer} />
@@ -76,7 +77,6 @@ const Performance = () => {
               content={data.aim}
               columns={columns}
             />
-            <Paragraph title='写作指南' content={data.sample} />
           </div>
         </div>
         <div className='pg-performance_footer'>

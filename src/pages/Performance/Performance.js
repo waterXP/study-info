@@ -1,6 +1,7 @@
 import React, { memo, useState, useEffect, useCallback, Fragment } from 'react'
 import './Performance.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import performance, { performanceList } from '@/consts/performance'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
@@ -14,6 +15,12 @@ const columns = [
 
 const Performance = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { shortTip } = useSelector(({ shortTip }) => ({ shortTip }))
+  const toggleShort = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeShortTip' })
+  }, [])
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)
   useEffect(() => {
@@ -68,7 +75,11 @@ const Performance = () => {
           <Breadcrumb top={-1}>返回</Breadcrumb>
           <Title intro={data.intro}>{data.title}</Title>
           <div className='pg-performance_items'>
-            <Paragraph title='写作指南' content={data.sample} />
+            <Paragraph
+              title='写作指南'
+              content={data.sample}
+              shortTip={shortTip}
+            />
             <Topic title='写作框架' content={data.frame} />
             <Topic title='绩效要点' content={data.point} />
             <Topic title='对应五组十域表' content={data.refer} />
@@ -86,6 +97,12 @@ const Performance = () => {
               onClick={onPrevClick}
             >
               上一个
+            </div>
+            <div
+              className='pg-performance_corner-center is-clickable'
+              onClick={toggleShort}
+            >
+              {shortTip ? '隐藏范文' : '显示范文'}
             </div>
             <div
               className='pg-performance_corner-button is-right is-clickable'

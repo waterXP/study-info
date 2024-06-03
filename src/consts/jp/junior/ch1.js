@@ -422,7 +422,329 @@ export default [
         grammar: [],
         word: [
           {
-            kana: '',
+            kana: 'ほん',
+            mana: '本',
+            type: '名',
+            cn: '书'
+          },
+          {
+            kana: 'かばん',
+            mana: '',
+            type: '名',
+            cn: '包，公文包'
+          },
+          {
+            kana: 'ノート',
+            mana: '',
+            type: '名',
+            cn: '笔记本，本子'
+          },
+          {
+            kana: 'えんぴつ',
+            mana: '鉛筆',
+            type: '名',
+            cn: '铅笔'
+          },
+          {
+            kana: 'かさ',
+            mana: '傘',
+            type: '名',
+            cn: '伞'
+          },
+          {
+            kana: 'くつ',
+            mana: '靴',
+            type: '名',
+            cn: '鞋'
+          },
+          {
+            kana: 'しんぶん',
+            mana: '新聞',
+            type: '名',
+            cn: '报纸'
+          },
+          {
+            kana: 'ざっし',
+            mana: '雑誌',
+            type: '名',
+            cn: '杂志'
+          },
+          {
+            kana: 'じしょ',
+            mana: '辞書',
+            type: '名',
+            cn: '词典'
+          },
+          {
+            kana: 'カメラ',
+            mana: '',
+            type: '名',
+            cn: '照相机'
+          },
+          {
+            kana: 'テレビ',
+            mana: '',
+            type: '名',
+            cn: '电视机'
+          },
+          {
+            kana: 'パソコン',
+            mana: '',
+            type: '名',
+            cn: '个人电脑'
+          },
+          {
+            kana: 'ラジオ',
+            mana: '',
+            type: '名',
+            cn: '收音机'
+          },
+          {
+            kana: 'でんわ',
+            mana: '電話',
+            type: '名',
+            cn: '电话'
+          },
+          {
+            kana: 'つくえ',
+            mana: '机',
+            type: '名',
+            cn: '桌子，书桌'
+          },
+          {
+            kana: 'いす',
+            mana: '',
+            type: '名',
+            cn: '椅子'
+          },
+          {
+            kana: 'かぎ',
+            mana: '',
+            type: '名',
+            cn: '钥匙，锁'
+          },
+          {
+            kana: 'とけい',
+            mana: '時計',
+            type: '名',
+            cn: '钟，表'
+          },
+          {
+            kana: 'てちょう',
+            mana: '手帳',
+            type: '名',
+            cn: '记事本'
+          },
+          {
+            kana: 'しゃしん',
+            mana: '写真',
+            type: '名',
+            cn: '照片'
+          },
+          {
+            kana: 'くるま',
+            mana: '車',
+            type: '名',
+            cn: '车'
+          },
+          {
+            kana: 'じてんしゃ',
+            mana: '自転車',
+            type: '名',
+            cn: '自行车'
+          },
+          {
+            kana: 'おみやげ',
+            mana: 'お土産',
+            type: '名',
+            cn: '礼物'
+          },
+          {
+            kana: 'めいさんひん',
+            mana: '名産品',
+            type: '名',
+            cn: '特产，名产'
+          },
+          {
+            kana: 'シルク',
+            mana: '',
+            type: '名',
+            cn: '丝绸'
+          },
+          {
+            kana: 'ハンカチ',
+            mana: '',
+            type: '名',
+            cn: '手绢'
+          },
+          {
+            kana: 'かいしゃ',
+            mana: '会社',
+            type: '名',
+            cn: '公司'
+          },
+          {
+            kana: 'かた',
+            mana: '方',
+            type: '名',
+            cn: '（敬称）位，人'
+          },
+          {
+            kana: 'ひと',
+            mana: '人',
+            type: '名',
+            cn: '人'
+          },
+          {
+            kana: 'かぞく',
+            mana: '家族',
+            type: '名',
+            cn: '家属，亲人'
+          },
+          {
+            kana: 'はは',
+            mana: '母',
+            type: '名',
+            cn: '（我）母亲'
+          },
+          {
+            kana: 'おかあさん',
+            mana: 'お母さん',
+            type: '名',
+            cn: '母亲'
+          },
+          {
+            kana: 'にほんご',
+            mana: '日本語',
+            type: '名',
+            cn: '日语'
+          },
+          {
+            kana: 'ちゅうごくご',
+            mana: '中国語',
+            type: '名',
+            cn: '汉语，中文'
+          },
+          {
+            kana: 'これ',
+            mana: '',
+            type: '代',
+            cn: '这，这个'
+          },
+          {
+            kana: 'それ',
+            mana: '',
+            type: '代',
+            cn: '那，那个'
+          },
+          {
+            kana: 'あれ',
+            mana: '',
+            type: '代',
+            cn: '那，那个'
+          },
+          {
+            kana: 'どれ',
+            mana: '',
+            type: '疑',
+            cn: '哪个'
+          },
+          {
+            kana: 'なん',
+            mana: '何',
+            type: '疑',
+            cn: '什么'
+          },
+          {
+            kana: 'だれ',
+            mana: '',
+            type: '疑',
+            cn: '谁'
+          },
+          {
+            kana: 'どなた',
+            mana: '',
+            type: '疑',
+            cn: '哪位'
+          },
+          {
+            kana: 'この',
+            mana: '',
+            type: '连体',
+            cn: '这，这个'
+          },
+          {
+            kana: 'その',
+            mana: '',
+            type: '连体',
+            cn: '那，那个'
+          },
+          {
+            kana: 'あの',
+            mana: '',
+            type: '连体',
+            cn: '那，那个'
+          },
+          {
+            kana: 'どの',
+            mana: '',
+            type: '连体',
+            cn: '哪个'
+          },
+          {
+            kana: 'えっ',
+            mana: '',
+            type: '叹',
+            cn: '啊'
+          },
+          {
+            kana: 'わあ',
+            mana: '',
+            type: '叹',
+            cn: '哇'
+          },
+          {
+            kana: 'ええ',
+            mana: '',
+            type: '叹',
+            cn: '应答（嗯，是）'
+          },
+          {
+            kana: 'ながしま',
+            mana: '長島',
+            type: '专',
+            cn: '长岛'
+          },
+          {
+            kana: 'にほん',
+            mana: '日本',
+            type: '专',
+            cn: '日本'
+          },
+          {
+            kana: 'スワトウ',
+            mana: '',
+            type: '专',
+            cn: '汕头'
+          },
+          {
+            kana: 'ロンドン',
+            mana: '',
+            type: '专',
+            cn: '伦敦'
+          }
+        ],
+        phrase: [
+          {
+            kana: 'ありがとうございます',
+            mana: '',
+            cn: '谢谢'
+          },{
+            kana: 'おいくつ',
+            mana: '',
+            cn: '多大'
+          },{
+            kana: '何〜｜〜歳',
             mana: '',
             cn: ''
           }
@@ -436,7 +758,225 @@ export default [
         grammar: [],
         word: [
           {
-            kana: '',
+            kana: 'デパート',
+            mana: '',
+            type: '名',
+            cn: '百货商店'
+          },{
+            kana: 'しょくどう',
+            mana: '食堂',
+            type: '名',
+            cn: '食堂'
+          },{
+            kana: 'ゆうびんきょく',
+            mana: '郵便局',
+            type: '名',
+            cn: '邮局'
+          },{
+            kana: 'ぎんこう',
+            mana: '銀行',
+            type: '名',
+            cn: '银行'
+          },{
+            kana: 'としょかん',
+            mana: '図書館',
+            type: '名',
+            cn: '图书馆'
+          },{
+            kana: 'マンジョン',
+            mana: '',
+            type: '名',
+            cn: '（高级）公寓'
+          },{
+            kana: 'ホテル',
+            mana: '',
+            type: '名',
+            cn: '宾馆'
+          },{
+            kana: 'コンビニ',
+            mana: '',
+            type: '名',
+            cn: '便利店'
+          },{
+            kana: 'きっさてん',
+            mana: '喫茶店',
+            type: '名',
+            cn: '咖啡馆'
+          },{
+            kana: 'びょういん',
+            mana: '病院',
+            type: '名',
+            cn: '医院'
+          },{
+            kana: 'ほんや',
+            mana: '本屋',
+            type: '名',
+            cn: '书店'
+          },{
+            kana: 'レストラン',
+            mana: '',
+            type: '名',
+            cn: '餐馆，西餐馆'
+          },{
+            kana: 'ビル',
+            mana: '',
+            type: '名',
+            cn: '大楼，大厦'
+          },{
+            kana: 'たてもの',
+            mana: '建物',
+            type: '名',
+            cn: '大楼，建筑物'
+          },{
+            kana: 'うりば',
+            mana: '売り場',
+            type: '名',
+            cn: '柜台，出售处'
+          },{
+            kana: 'トイレ',
+            mana: '',
+            type: '名',
+            cn: '厕所，盥洗室'
+          },{
+            kana: 'いりぐち',
+            mana: '入り口',
+            type: '名',
+            cn: '入口'
+          },{
+            kana: 'じむしょ',
+            mana: '事務所',
+            type: '名',
+            cn: '事务所，办事处'
+          },{
+            kana: 'うけつけ',
+            mana: '受付',
+            type: '名',
+            cn: '接待处'
+          },{
+            kana: 'バーゲンかいじょう',
+            mana: 'バーゲン会場',
+            type: '名',
+            cn: '降价处理大卖场'
+          },{
+            kana: 'エスカレーター',
+            mana: '',
+            type: '名',
+            cn: '自动扶梯'
+          },{
+            kana: 'ふく',
+            mana: '服',
+            type: '名',
+            cn: '衣服'
+          },{
+            kana: 'コート',
+            mana: '',
+            type: '名',
+            cn: '风衣，大衣'
+          },{
+            kana: 'デジカメ',
+            mana: '',
+            type: '名',
+            cn: '数码相机'
+          },{
+            kana: 'くに',
+            mana: '国',
+            type: '名',
+            cn: '国，国家'
+          },{
+            kana: 'ちず',
+            mana: '地図',
+            type: '名',
+            cn: '地图'
+          },{
+            kana: 'となり',
+            mana: '隣',
+            type: '名',
+            cn: '旁边'
+          },{
+            kana: 'しゅうへん',
+            mana: '周辺',
+            type: '名',
+            cn: '附近，周边'
+          },{
+            kana: 'きょう',
+            mana: '今日',
+            type: '名',
+            cn: '今天'
+          },{
+            kana: 'すいようび',
+            mana: '水曜日',
+            type: '名',
+            cn: '星期三'
+          },{
+            kana: 'もくようび',
+            mana: '木曜日',
+            type: '名',
+            cn: '星期四'
+          },{
+            kana: 'ここ',
+            mana: '',
+            type: '代',
+            cn: '这里，这儿'
+          },{
+            kana: 'そこ',
+            mana: '',
+            type: '代',
+            cn: '那里，那儿'
+          },{
+            kana: 'あそこ',
+            mana: '',
+            type: '代',
+            cn: '那里，那儿'
+          },{
+            kana: 'こちら',
+            mana: '',
+            type: '代',
+            cn: '这儿，这边'
+          },{
+            kana: 'そちら',
+            mana: '',
+            type: '代',
+            cn: '那儿，那边'
+          },{
+            kana: 'あちら',
+            mana: '',
+            type: '代',
+            cn: '那儿，那边'
+          },{
+            kana: 'とこ',
+            mana: '',
+            type: '疑',
+            cn: '哪里，哪儿'
+          },{
+            kana: 'どちら',
+            mana: '',
+            type: '疑',
+            cn: '哪儿，哪边'
+          },{
+            kana: 'あのう',
+            mana: '',
+            type: '叹',
+            cn: '请问，对不起'
+          },{
+            kana: 'シャンハイ',
+            mana: '',
+            type: '专',
+            cn: '上海'
+          },{
+            kana: 'とうきょう',
+            mana: '',
+            type: '专',
+            cn: '东京'
+          }
+        ],
+        phrase: [
+          {
+            kana: 'いくら',
+            mana: '',
+            cn: '多少钱'
+          },
+          {
+            kana: 'お〜｜〜階｜〜円｜〜曜日',
             mana: '',
             cn: ''
           }
@@ -449,6 +989,14 @@ export default [
         utilization: [],
         grammar: [],
         word: [
+          {
+            kana: '',
+            mana: '',
+            type: '',
+            cn: ''
+          }
+        ],
+        phrase: [
           {
             kana: '',
             mana: '',

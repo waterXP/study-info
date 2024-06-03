@@ -14,8 +14,6 @@ import Case from '@/pages/Case'
 import Papers from '@/pages/Papers'
 import Paper from '@/pages/Paper'
 import Wash from '@/pages/Wash'
-import Books from '@/pages/Books'
-import Book from '@/pages/Book'
 import Others from '@/pages/Others'
 import Performance from '@/pages/Performance'
 import ActiveITTO from '@/pages/ActiveITTO'
@@ -75,14 +73,6 @@ const router = createBrowserRouter(
     {
       path: 'wash',
       element: <Wash />
-    },
-    {
-      path: 'books',
-      element: <Books />
-    },
-    {
-      path: 'book',
-      element: <Book />
     },
     {
       path: 'others',

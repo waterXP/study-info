@@ -1,13 +1,23 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
 import './Others.styl'
+import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import others, { otherList } from '@/consts/others'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
 import Topic from '@com/Topic'
+import Paragraph from '@com/Paragraph'
 
 const Others = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { shortTip } = useSelector(({ shortTip }) => ({ shortTip }))
+  const toggleShort = useCallback(
+    e => {
+      e.stopPropagation()
+      dispatch({ type: 'changeShortTip' })
+    }, []
+  )
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)
   useEffect(() => {
@@ -58,12 +68,8 @@ const Others = () => {
           <Breadcrumb top={-1}>返回</Breadcrumb>
           <Title>{data.title}</Title>
           <div className='pg-others_items'>
+            <Paragraph title='写作指南' content={data.sample} shortTip={shortTip} />
             <Topic title='写作要点' content={data.point} />
-            {data.point.map((v, i) => (
-              <p key={i} className='pg-others_item'>
-                {v}
-              </p>
-            ))}
           </div>
         </div>
         <div className='pg-others_footer'>
@@ -73,6 +79,12 @@ const Others = () => {
               onClick={onPrevClick}
             >
               上一个
+            </div>
+            <div
+              className='pg-others_corner-center is-clickable'
+              onClick={toggleShort}
+            >
+              {shortTip ? '隐藏范文' : '显示范文'}
             </div>
             <div
               className='pg-others_corner-button is-right is-clickable'

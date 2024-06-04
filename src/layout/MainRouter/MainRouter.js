@@ -17,6 +17,10 @@ import Wash from '@/pages/Wash'
 import Others from '@/pages/Others'
 import Performance from '@/pages/Performance'
 import ActiveITTO from '@/pages/ActiveITTO'
+import JP from '@/pages/JP'
+import JPWordsList from '@/pages/JPWordsList'
+import JPWords from '@/pages/JPWords'
+import JPCourse from '@/pages/JPCourse'
 
 const { PUBLIC_URL } = process.env
 
@@ -81,6 +85,22 @@ const router = createBrowserRouter(
     {
       path: 'performance',
       element: <Performance />
+    },
+    {
+      path: 'jp-words-list',
+      element: <JPWordsList />
+    },
+    {
+      path: 'jp-words',
+      element: <JPWords />
+    },
+    {
+      path: 'jp-course',
+      element: <JPCourse />
+    },
+    {
+      path: 'jp',
+      element: <JP />
     },
     {
       path: '*',

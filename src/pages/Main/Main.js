@@ -8,10 +8,16 @@ const Main = () => {
   const gotoMenu = useCallback(() => {
     navigate('/menu')
   }, [navigate])
+  const gotoJapanese = useCallback(() => {
+    navigate('/jp')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link is-clickable' onClick={gotoMenu}>
         软考
+      </div>
+      <div className='pg-main_link is-clickable' onClick={gotoJapanese}>
+        日语
       </div>
     </div>
   )

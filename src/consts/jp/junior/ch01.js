@@ -927,7 +927,7 @@ export default {
           cn: '那儿，那边'
         },
         {
-          kana: 'とこ',
+          kana: 'どこ',
           mana: '',
           type: '疑',
           cn: '哪里，哪儿'

@@ -9,25 +9,19 @@ export default {
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        },
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        }
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: '', mana: '', cn: '' },
+        { kana: '', mana: '', cn: '' }
       ]
     },
     {
@@ -37,25 +31,19 @@ export default {
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        },
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        }
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: '', mana: '', cn: '' },
+        { kana: '', mana: '', cn: '' }
       ]
     },
     {
@@ -65,25 +53,19 @@ export default {
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        },
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        }
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: '', mana: '', cn: '' },
+        { kana: '', mana: '', cn: '' }
       ]
     },
     {
@@ -93,25 +75,19 @@ export default {
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        },
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        }
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' },
+        { kana: '', mana: '', type: '', cn: '' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: '', mana: '', cn: '' },
+        { kana: '', mana: '', cn: '' }
       ]
     }
   ]

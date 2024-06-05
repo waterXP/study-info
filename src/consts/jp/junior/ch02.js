@@ -373,23 +373,266 @@ export default {
       grammar: [],
       word: [
         {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
+          kana: 'らいげつ',
+          mana: '来月',
+          type: '名',
+          cn: '下个月'
         },
         {
-          kana: '',
+          kana: 'せんげつ',
+          mana: '先月',
+          type: '名',
+          cn: '上个月'
+        },
+        {
+          kana: 'よなか',
+          mana: '夜中',
+          type: '名',
+          cn: '午夜，半夜'
+        },
+        {
+          kana: 'ゆうべ',
           mana: '',
-          type: '',
-          cn: ''
+          type: '名',
+          cn: '昨天晚上'
+        },
+        {
+          kana: 'コンサート',
+          mana: '',
+          type: '名',
+          cn: '音乐会'
+        },
+        {
+          kana: 'クリスマス',
+          mana: '',
+          type: '名',
+          cn: '圣诞节'
+        },
+        {
+          kana: 'たんじょうび',
+          mana: '誕生部',
+          type: '名',
+          cn: '生日'
+        },
+        {
+          kana: 'こどものひ',
+          mana: 'こどもの日',
+          type: '名',
+          cn: '儿童节'
+        },
+        {
+          kana: 'なつやすみ',
+          mana: '夏休み',
+          type: '名',
+          cn: '暑假'
+        },
+        {
+          kana: 'こうつうきかん',
+          mana: '交通機関',
+          type: '名',
+          cn: '交通工具'
+        },
+        {
+          kana: 'しんかんせん',
+          mana: '新幹線',
+          type: '名',
+          cn: '新干线'
+        },
+        {
+          kana: 'ひこうき',
+          mana: '飛行機',
+          type: '名',
+          cn: '飞机'
+        },
+        {
+          kana: 'フェリー',
+          mana: '',
+          type: '名',
+          cn: '渡轮'
+        },
+        {
+          kana: 'でんしゃ',
+          mana: '電車',
+          type: '名',
+          cn: '电车'
+        },
+        {
+          kana: 'バス',
+          mana: '',
+          type: '名',
+          cn: '公共汽车'
+        },
+        {
+          kana: 'タクシー',
+          mana: '',
+          type: '名',
+          cn: '出租车'
+        },
+        {
+          kana: 'びじゅつかん',
+          mana: '美術館',
+          type: '名',
+          cn: '美术馆'
+        },
+        {
+          kana: 'アパート',
+          mana: '',
+          type: '名',
+          cn: '公寓'
+        },
+        {
+          kana: 'うち',
+          mana: '',
+          type: '名',
+          cn: '家'
+        },
+        {
+          kana: 'プール',
+          mana: '',
+          type: '名',
+          cn: '游泳池'
+        },
+        {
+          kana: 'ともだち',
+          mana: '友達',
+          type: '名',
+          cn: '朋友'
+        },
+        {
+          kana: 'おとうと',
+          mana: '弟',
+          type: '名',
+          cn: '弟弟'
+        },
+        {
+          kana: 'いきます',
+          mana: '行きます',
+          type: '动1',
+          cn: '去'
+        },
+        {
+          kana: 'かえります',
+          mana: '帰ります',
+          type: '动1',
+          cn: '回来，回去'
+        },
+        {
+          kana: 'きます',
+          mana: '来ます',
+          type: '动3',
+          cn: '来'
+        },
+        {
+          kana: 'たしか',
+          mana: '',
+          type: '副',
+          cn: '好像是，大概；的确'
+        },
+        {
+          kana: 'まっすぐ',
+          mana: '',
+          type: '副',
+          cn: '径直，笔直'
+        },
+        {
+          kana: 'いっしょに',
+          mana: '',
+          type: '副',
+          cn: '一起'
+        },
+        {
+          kana: 'さとう',
+          mana: '佐藤',
+          type: '专',
+          cn: '佐藤'
+        },
+        {
+          kana: 'ペキン',
+          mana: '北京',
+          type: '专',
+          cn: '北京'
+        },
+        {
+          kana: 'アメリカ',
+          mana: '',
+          type: '专',
+          cn: '美国'
+        },
+        {
+          kana: 'かんこく',
+          mana: '韓国',
+          type: '专',
+          cn: '韩国'
+        },
+        {
+          kana: 'フランス',
+          mana: '',
+          type: '专',
+          cn: '法国'
+        },
+        {
+          kana: 'ひろしま',
+          mana: '広島',
+          type: '专',
+          cn: '广岛'
+        },
+        {
+          kana: 'きょうと',
+          mana: '京都',
+          type: '专',
+          cn: '京都'
+        },
+        {
+          kana: 'ほっかいどう',
+          mana: '北海道',
+          type: '专',
+          cn: '北海道'
+        },
+        {
+          kana: 'はこね',
+          mana: '箱根',
+          type: '专',
+          cn: '箱根'
+        },
+        {
+          kana: 'ぎんざ',
+          mana: '銀座',
+          type: '专',
+          cn: '银座'
+        },
+        {
+          kana: 'しぶや',
+          mana: '渋谷',
+          type: '专',
+          cn: '涩谷'
+        },
+        {
+          kana: 'しんじゅく',
+          mana: '新宿',
+          type: '专',
+          cn: '新宿'
         }
       ],
       phrase: [
         {
-          kana: '',
-          mana: '',
-          cn: ''
+          kana: 'おつかれさまでした',
+          mana: 'お疲れ様でした',
+          cn: '够累的'
+        },
+        {
+          kana: 'おさきにしつれいします',
+          mana: 'お先に失礼します',
+          cn: '我先走了，我先行告辞了'
+        },
+        {
+          kana: 'あるいて',
+          mana: '歩いて',
+          cn: '步行'
+        },
+        {
+          kana: 'たいへんですね',
+          mana: '大変ですね',
+          cn: '真不容易，够受的，不得了'
         }
       ]
     },
@@ -401,24 +644,71 @@ export default {
       grammar: [],
       word: [
         {
-          kana: '',
+          kana: 'コーヒー',
           mana: '',
-          type: '',
-          cn: ''
+          type: '名',
+          cn: '咖啡'
         },
         {
-          kana: '',
+          kana: 'コーラ',
           mana: '',
-          type: '',
-          cn: ''
-        }
+          type: '名',
+          cn: '可乐'
+        },
+        { kana: 'おちゃ', mana: 'お茶', type: '名', cn: '茶' },
+        { kana: 'ワイン', mana: '', type: '名', cn: '葡萄酒' },
+        { kana: 'パン', mana: '', type: '名', cn: '面包' },
+        { kana: 'ケーキ', mana: '', type: '名', cn: '蛋糕' },
+        { kana: 'おかゆ', mana: 'お粥', type: '名', cn: '粥' },
+        { kana: 'ひるごはん', mana: '昼ご飯', type: '名', cn: '午饭' },
+        { kana: 'おべんとう', mana: 'お弁当', type: '名', cn: '盒饭' },
+        { kana: 'そば', mana: '', type: '名', cn: '荞麦面' },
+        { kana: 'うどん', mana: '', type: '名', cn: '面条' },
+        { kana: 'おやこどん', mana: '親子丼', type: '名', cn: '鸡肉鸡蛋盖饭' },
+        { kana: 'カレー', mana: '', type: '名', cn: '咖喱（饭）' },
+        { kana: 'たまご', mana: '卵', type: '名', cn: '鸡蛋' },
+        { kana: 'チーズ', mana: '', type: '名', cn: '干酪' },
+        { kana: 'リンゴ', mana: '', type: '名', cn: '苹果' },
+        { kana: 'イチゴ', mana: '', type: '名', cn: '草莓' },
+        { kana: 'そばや', mana: 'そば屋', type: '名', cn: '荞麦面馆' },
+        { kana: 'テニス', mana: '', type: '名', cn: '网球' },
+        { kana: 'ジョギング', mana: '', type: '名', cn: '慢跑，跑步' },
+        { kana: 'サッカー', mana: '', type: '名', cn: '足球' },
+        { kana: 'やきゅう', mana: '野球', type: '名', cn: '棒球' },
+        { kana: 'もうしこみしょ', mana: '申込書', type: '名', cn: '申请书' },
+        { kana: 'てがみ', mana: '手紙', type: '名', cn: '信' },
+        { kana: 'シーディー', mana: 'CD', type: '名', cn: 'CD' },
+        { kana: 'おんがく', mana: '音楽', type: '名', cn: '音乐' },
+        { kana: 'えいが', mana: '映画', type: '名', cn: '电影' },
+        { kana: 'どうぶつえん', mana: '動物園', type: '名', cn: '动物园' },
+        { kana: 'パンダ', mana: '', type: '名', cn: '熊猫' },
+        { kana: 'のみます', mana: '飲みます', type: '动1', cn: '喝' },
+        { kana: 'かいます', mana: '買います', type: '动1', cn: '买' },
+        { kana: 'とります', mana: '撮ります', type: '动1', cn: '拍照，拍摄' },
+        { kana: 'かきます', mana: '書きます', type: '动1', cn: '写' },
+        { kana: 'よみます', mana: '読みます', type: '动1', cn: '读' },
+        { kana: 'ききます', mana: '聞きます', type: '动1', cn: '听' },
+        { kana: 'たべます', mana: '食べます', type: '动2', cn: '吃' },
+        { kana: 'みます', mana: '見ます', type: '动2', cn: '看' },
+        { kana: 'します', mana: '', type: '动3', cn: '干，做' },
+        { kana: 'そうじします', mana: '掃除します', type: '动3', cn: '打扫，扫除' },
+        { kana: 'これから', mana: '', type: '副', cn: '从现在起，今后' },
+        { kana: 'じゃあ', mana: '', type: '连', cn: '那么' },
+        { kana: 'では', mana: '', type: '连', cn: '那么' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: 'いらっしゃいませ', mana: '', cn: '欢迎光临' },
+        { kana: 'しつれいします', mana: '失礼します', cn: '告辞了，我走了' },
+        { kana: 'しつれいしました', mana: '失礼しました', cn: '打搅了，失礼了' },
+        { kana: 'いってまいります', mana: '', cn: '我走了' },
+        { kana: 'いってきます', mana: '', cn: '我走了' },
+        { kana: 'いってらっしゃい', mana: '', cn: '你走好' },
+        { kana: 'ただいま', mana: '', cn: '我回来了' },
+        { kana: 'おかえりなさい', mana: 'お帰りなさい', cn: '你回来了' },
+        { kana: 'かしこまりました', mana: '', cn: '我知道了' },
+        { kana: 'おじゃまします', mana: 'お邪魔します', cn: '打扰了' },
+        { kana: 'ください', mana: '', cn: '给我' },
+        { kana: 'ごぜんちゅう', mana: '午前中', cn: '上午' }
       ]
     },
     {
@@ -428,25 +718,67 @@ export default {
       utilization: [],
       grammar: [],
       word: [
+        { kana: 'プレゼント', mana: '', type: '名', cn: '礼物' },
+        { kana: 'チケット', mana: '', type: '名', cn: '票' },
+        { kana: 'パンフレット', mana: '', type: '名', cn: '小册子' },
+        { kana: 'きねんひん', mana: '記念品', type: '名', cn: '纪念品' },
         {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
+          kana: 'スケジュールひょう',
+          mana: 'スケジュール表',
+          type: '名',
+          cn: '日程表'
         },
-        {
-          kana: '',
-          mana: '',
-          type: '',
-          cn: ''
-        }
+        { kana: 'しゃしんしゅう', mana: '写真集', type: '名', cn: '影集' },
+        { kana: 'はな', mana: '花', type: '名', cn: '花' },
+        { kana: 'おかね', mana: 'お金', type: '名', cn: '钱，金钱' },
+        { kana: 'ボールペン', mana: '', type: '名', cn: '圆珠笔' },
+        { kana: 'しゅくだい', mana: '宿題', type: '名', cn: '作业' },
+        { kana: 'こうくうびん', mana: '航空便', type: '名', cn: '航空邮件' },
+        { kana: 'そくたつ', mana: '速達', type: '名', cn: '速递，快件' },
+        { kana: 'ファックス', mana: '', type: '名', cn: '传真' },
+        { kana: 'メール', mana: '', type: '名', cn: '邮件' },
+        { kana: 'でんわばんごう', mana: '電話番号', type: '名', cn: '电话号码' },
+        { kana: 'じゅうしょ', mana: '住所', type: '名', cn: '住址' },
+        { kana: 'なまえ', mana: '名前', type: '名', cn: '姓名' },
+        { kana: 'けん', mana: '件', type: '名', cn: '事件，事情' },
+        { kana: 'しんぶんし', mana: '新聞紙', type: '名', cn: '报纸' },
+        { kana: 'かみひこうき', mana: '紙飛行機', type: '名', cn: '纸折的飞机' },
+        { kana: 'チョコレート', mana: '', type: '名', cn: '巧克力' },
+        { kana: 'アイスクリーム', mana: '', type: '名', cn: '冰激凌' },
+        { kana: 'こむぎこ', mana: '小麦粉', type: '名', cn: '面粉' },
+        { kana: 'はし', mana: '', type: '名', cn: '筷子' },
+        { kana: 'スプーン', mana: '', type: '名', cn: '勺子' },
+        { kana: 'おにいさん', mana: 'お兄さん', type: '名', cn: '哥哥' },
+        { kana: 'かんこくご', mana: '韓国語', type: '名', cn: '韩语' },
+        { kana: 'ゆうがた', mana: '夕方', type: '名', cn: '傍晚' },
+        { kana: 'ひるやすみ', mana: '昼休み', type: '名', cn: '午休' },
+        { kana: 'もらいます', mana: '', type: '动1', cn: '拿到，得到' },
+        { kana: 'あいます', mana: '会います', type: '动1', cn: '见' },
+        { kana: 'おくります', mana: '送ります', type: '动1', cn: '寄' },
+        { kana: 'つくります', mana: '作ります', type: '动1', cn: '做，制造' },
+        { kana: 'ふとります', mana: '太ります', type: '动1', cn: '胖' },
+        { kana: 'だします', mana: '出します', type: '动1', cn: '寄（信）' },
+        { kana: 'とどきます', mana: '届きます', type: '动1', cn: '收到，送到，寄到' },
+        { kana: 'かきます', mana: '', type: '动1', cn: '画' },
+        { kana: 'かします', mana: '貸します', type: '动1', cn: '借出，借给' },
+        { kana: 'ならいます', mana: '習います', type: '动1', cn: '学习' },
+        { kana: 'あげます', mana: '', type: '动2', cn: '给' },
+        { kana: 'かけます', mana: '', type: '动2', cn: '打（电话）' },
+        { kana: 'かります', mana: '借ります', type: '动2', cn: '（向别人）借' },
+        { kana: 'おしえます', mana: '教えます', type: '动2', cn: '教' },
+        { kana: 'もう', mana: '', type: '副', cn: '已经' },
+        { kana: 'さっき', mana: '', type: '副', cn: '刚才' },
+        { kana: 'たったいま', mana: 'たった今', type: '副', cn: '刚刚' },
+        { kana: 'もういちど', mana: 'もう一度', type: '副', cn: '再一次' },
+        { kana: 'まえに', mana: '前に', type: '副', cn: '以前' },
+        { kana: 'ちん', mana: '陳', type: '专', cn: '陈' }
       ],
       phrase: [
-        {
-          kana: '',
-          mana: '',
-          cn: ''
-        }
+        { kana: 'どうですか', mana: '', cn: '怎样，如何' },
+        { kana: 'おねがいします', mana: 'お願いします', cn: '拜托了' },
+        { kana: 'わかりました', mana: '分かりました', cn: '明白了' },
+        { kana: 'よかったです', mana: '', cn: '太好了' },
+        { kana: '〜様', mana: '', cn: '' }
       ]
     }
   ]

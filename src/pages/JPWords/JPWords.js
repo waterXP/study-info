@@ -68,12 +68,14 @@ const JPWords = () => {
   }, [detail, chapter])
   const course = useMemo(() => (list && list[index]) || null, [list, index])
   const onPrevClick = useCallback(() => {
+    setShowResult(false)
     setIndex(index => {
       const nextIndex = index - 1
       return list[nextIndex] ? nextIndex : list.length - 1
     })
   }, [list])
   const onNextClick = useCallback(() => {
+    setShowResult(false)
     setIndex(index => {
       const nextIndex = index + 1
       return list[nextIndex] ? nextIndex : 0
@@ -112,6 +114,7 @@ const JPWords = () => {
       if (~index) {
         const prev = index > 0 ? index - 1 : len - 1
         const { ch, no } = allList[prev]
+        setShowResult(false)
         navigate(`/jp-words?ch=${ch}&no=${no}`)
       }
     }
@@ -123,17 +126,16 @@ const JPWords = () => {
       if (~index) {
         const next = index < len - 1 ? index + 1 : 0
         const { ch, no } = allList[next]
+        setShowResult(false)
         navigate(`/jp-words?ch=${ch}&no=${no}`)
       }
     }
   }, [navigate, allList, detail])
-  useEffect(() => {
-    setShowResult(false)
-  }, [course])
   const toggleShwoResult = useCallback(() => {
     setShowResult(showResult => !showResult)
   }, [])
   const onSwtichsChange = useCallback(type => {
+    setShowResult(false)
     setSwitches(switches => ({
       ...switches,
       [type]: !switches[type]

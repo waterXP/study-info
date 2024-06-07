@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 21,
-      topic: '',
+      topic: 'わたしはすき焼きを食べたことがあります',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 22,
-      topic: '',
+      topic: '森さんは毎晩テレビを見る',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 23,
-      topic: '',
+      topic: '休みの日、散歩したり買い物に行ったりします',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 24,
-      topic: '',
+      topic: '李さんはもうすぐ来ると思います',
       basic: [],
       utilization: [],
       grammar: [],

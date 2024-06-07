@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 25,
-      topic: '',
+      topic: 'これは明日会議で使う資料です',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 26,
-      topic: '',
+      topic: '自転車に２人で乗るのは危ないです',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 27,
-      topic: '',
+      topic: '子供の時、大きな地震がありました',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 28,
-      topic: '',
+      topic: '馬さんはわたしに地図をくれました',
       basic: [],
       utilization: [],
       grammar: [],

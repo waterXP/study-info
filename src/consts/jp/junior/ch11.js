@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 41,
-      topic: '',
+      topic: '李さんは部長にほめられました',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 42,
-      topic: '',
+      topic: 'テレビをつけたまま、出かけてしまいました',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 43,
-      topic: '',
+      topic: '陳さんは息子をアメリカに留学させます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 44,
-      topic: '',
+      topic: '玄関のところにだれかいるようです',
       basic: [],
       utilization: [],
       grammar: [],

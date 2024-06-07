@@ -4,257 +4,52 @@ export default {
   lesson: [
     {
       no: 1,
-      topic: '李さんは　中国人です',
+      topic: '李さんは中国人です',
       basic: [],
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: 'ちゅうごくじん',
-          mana: '中国人',
-          type: '名',
-          cn: '中国人'
-        },
-        {
-          kana: 'にほんじん',
-          mana: '日本人',
-          type: '名',
-          cn: '日本人'
-        },
-        {
-          kana: 'かんこくじん',
-          mana: '韓国人',
-          type: '名',
-          cn: '韩国人'
-        },
-        {
-          kana: 'アメリカじん',
-          mana: 'アメリカ人',
-          type: '名',
-          cn: '美国人'
-        },
-        {
-          kana: 'フランスじん',
-          mana: 'フランス人',
-          type: '名',
-          cn: '法国人'
-        },
-        {
-          kana: 'がくせい',
-          mana: '学生',
-          type: '名',
-          cn: '（大）学生'
-        },
-        {
-          kana: 'せんせい',
-          mana: '先生',
-          type: '名',
-          cn: '老师'
-        },
-        {
-          kana: 'りゅうがくせい',
-          mana: '留学生',
-          type: '名',
-          cn: '留学生'
-        },
-        {
-          kana: 'きょうじゅ',
-          mana: '教授',
-          type: '名',
-          cn: '教授'
-        },
-        {
-          kana: 'しゃいん',
-          mana: '社員',
-          type: '名',
-          cn: '职员'
-        },
-        {
-          kana: 'かいしゃいん',
-          mana: '会社員',
-          type: '名',
-          cn: '公司职员'
-        },
-        {
-          kana: 'てんいん',
-          mana: '店員',
-          type: '名',
-          cn: '店员'
-        },
-        {
-          kana: 'けんしゅうせい',
-          mana: '研修生',
-          type: '名',
-          cn: '进修生'
-        },
-        {
-          kana: 'きぎょう',
-          mana: '企業',
-          type: '名',
-          cn: '企业'
-        },
-        {
-          kana: 'だいがく',
-          mana: '大学',
-          type: '名',
-          cn: '大学'
-        },
-        {
-          kana: 'ちち',
-          mana: '父',
-          type: '名',
-          cn: '（我）父亲'
-        },
-        {
-          kana: 'かちょう',
-          mana: '課長',
-          type: '名',
-          cn: '科长'
-        },
-        {
-          kana: 'しゃちょう',
-          mana: '社長',
-          type: '名',
-          cn: '总经理，社长'
-        },
-        {
-          kana: 'でむかえ',
-          mana: '出迎え',
-          type: '名',
-          cn: '迎接'
-        },
-        {
-          kana: 'あのひと',
-          mana: 'あの人',
-          type: '名',
-          cn: '那个人'
-        },
-        {
-          kana: 'わたし',
-          mana: '',
-          type: '代',
-          cn: '我'
-        },
-        {
-          kana: 'あなた',
-          mana: '',
-          type: '代',
-          cn: '你'
-        },
-        {
-          kana: 'どうも',
-          mana: '',
-          type: '副',
-          cn: '非常，很'
-        },
-        {
-          kana: 'はい',
-          mana: '',
-          type: '叹',
-          cn: '哎，是（应答）；是的'
-        },
-        {
-          kana: 'いいえ',
-          mana: '',
-          type: '叹',
-          cn: '不，不是'
-        },
-        {
-          kana: 'あっ',
-          mana: '',
-          type: '叹',
-          cn: '哎，哎呀'
-        },
-        {
-          kana: 'り',
-          mana: '李',
-          type: '专',
-          cn: '李'
-        },
-        {
-          kana: 'おう',
-          mana: '王',
-          type: '专',
-          cn: '王'
-        },
-        {
-          kana: 'ちょう',
-          mana: '張',
-          type: '专',
-          cn: '张'
-        },
-        {
-          kana: 'もり',
-          mana: '森',
-          type: '专',
-          cn: '森'
-        },
-        {
-          kana: 'はやし',
-          mana: '林',
-          type: '专',
-          cn: '林'
-        },
-        {
-          kana: 'おの',
-          mana: '小野',
-          type: '专',
-          cn: '小野'
-        },
-        {
-          kana: 'よしだ',
-          mana: '吉田',
-          type: '专',
-          cn: '吉田'
-        },
-        {
-          kana: 'たなか',
-          mana: '田中',
-          type: '专',
-          cn: '田中'
-        },
-        {
-          kana: 'なかむら',
-          mana: '中村',
-          type: '专',
-          cn: '中村'
-        },
-        {
-          kana: 'たろう',
-          mana: '太郎',
-          type: '专',
-          cn: '太郎'
-        },
-        {
-          kana: 'キム',
-          mana: '金',
-          type: '专',
-          cn: '金'
-        },
-        {
-          kana: 'ヂュポン',
-          mana: '',
-          type: '专',
-          cn: '迪蓬'
-        },
-        {
-          kana: 'スミス',
-          mana: '',
-          type: '专',
-          cn: '史密斯'
-        },
-        {
-          kana: 'ジョンソン',
-          mana: '',
-          type: '专',
-          cn: '约翰逊'
-        },
-        {
-          kana: 'ちゅうごく',
-          mana: '中国',
-          type: '专',
-          cn: '中国'
-        },
+        { kana: 'ちゅうごくじん', mana: '中国人', type: '名', cn: '中国人' },
+        { kana: 'にほんじん', mana: '日本人', type: '名', cn: '日本人' },
+        { kana: 'かんこくじん', mana: '韓国人', type: '名', cn: '韩国人' },
+        { kana: 'アメリカじん', mana: 'アメリカ人', type: '名', cn: '美国人' },
+        { kana: 'フランスじん', mana: 'フランス人', type: '名', cn: '法国人' },
+        { kana: 'がくせい', mana: '学生', type: '名', cn: '（大）学生' },
+        { kana: 'せんせい', mana: '先生', type: '名', cn: '老师' },
+        { kana: 'りゅうがくせい', mana: '留学生', type: '名', cn: '留学生' },
+        { kana: 'きょうじゅ', mana: '教授', type: '名', cn: '教授' },
+        { kana: 'しゃいん', mana: '社員', type: '名', cn: '职员' },
+        { kana: 'かいしゃいん', mana: '会社員', type: '名', cn: '公司职员' },
+        { kana: 'てんいん', mana: '店員', type: '名', cn: '店员' },
+        { kana: 'けんしゅうせい', mana: '研修生', type: '名', cn: '进修生' },
+        { kana: 'きぎょう', mana: '企業', type: '名', cn: '企业' },
+        { kana: 'だいがく', mana: '大学', type: '名', cn: '大学' },
+        { kana: 'ちち', mana: '父', type: '名', cn: '（我）父亲' },
+        { kana: 'かちょう', mana: '課長', type: '名', cn: '科长' },
+        { kana: 'しゃちょう', mana: '社長', type: '名', cn: '总经理，社长' },
+        { kana: 'でむかえ', mana: '出迎え', type: '名', cn: '迎接' },
+        { kana: 'あのひと', mana: 'あの人', type: '名', cn: '那个人' },
+        { kana: 'わたし', mana: '', type: '代', cn: '我' },
+        { kana: 'あなた', mana: '', type: '代', cn: '你' },
+        { kana: 'どうも', mana: '', type: '副', cn: '非常，很' },
+        { kana: 'はい', mana: '', type: '叹', cn: '哎，是（应答）；是的' },
+        { kana: 'いいえ', mana: '', type: '叹', cn: '不，不是' },
+        { kana: 'あっ', mana: '', type: '叹', cn: '哎，哎呀' },
+        { kana: 'り', mana: '李', type: '专', cn: '李' },
+        { kana: 'おう', mana: '王', type: '专', cn: '王' },
+        { kana: 'ちょう', mana: '張', type: '专', cn: '张' },
+        { kana: 'もり', mana: '森', type: '专', cn: '森' },
+        { kana: 'はやし', mana: '林', type: '专', cn: '林' },
+        { kana: 'おの', mana: '小野', type: '专', cn: '小野' },
+        { kana: 'よしだ', mana: '吉田', type: '专', cn: '吉田' },
+        { kana: 'たなか', mana: '田中', type: '专', cn: '田中' },
+        { kana: 'なかむら', mana: '中村', type: '专', cn: '中村' },
+        { kana: 'たろう', mana: '太郎', type: '专', cn: '太郎' },
+        { kana: 'キム', mana: '金', type: '专', cn: '金' },
+        { kana: 'ヂュポン', mana: '', type: '专', cn: '迪蓬' },
+        { kana: 'スミス', mana: '', type: '专', cn: '史密斯' },
+        { kana: 'ジョンソン', mana: '', type: '专', cn: '约翰逊' },
+        { kana: 'ちゅうごく', mana: '中国', type: '专', cn: '中国' },
         {
           kana: 'とうきょうだいがく',
           mana: '東京大学',
@@ -286,1014 +81,190 @@ export default {
           cn: '日中商社'
         }
       ],
-      phrase: [
-        {
-          kana: 'こんにちは',
-          mana: '',
-          cn: '你好'
-        },
-        {
-          kana: 'すみません',
-          mana: '',
-          cn: '对不起，请问'
-        },
-        {
-          kana: 'どうぞ',
-          mana: '',
-          cn: '请'
-        },
-        {
-          kana: 'よろしくおねがいします',
-          mana: 'よろしくお願いします',
-          cn: '请多关照'
-        },
-        {
-          kana: 'はじめまして',
-          mana: '',
-          cn: '初次见面'
-        },
-        {
-          kana: 'こちらこそ',
-          mana: '',
-          cn: '我才要（请您～）'
-        },
-        {
-          kana: 'そうです',
-          mana: '',
-          cn: '是（这样）'
-        },
-        {
-          kana: 'ちがいます',
-          mana: '',
-          cn: '不是'
-        },
-        {
-          kana: 'わかりません',
-          mana: '分かりません',
-          cn: '不知道'
-        },
-        {
-          kana: 'どうもすみません',
-          mana: '',
-          cn: '实在对不起'
-        },
-        {
-          kana: '〜さん',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜ちゃん',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜君',
-          mana: '',
-          cn: ''
-        }
-      ]
+      phrase: [{ kana: '〜君', mana: '', cn: '' }]
     },
     {
       no: 2,
-      topic: 'これは　本です',
+      topic: 'これは本です',
       basic: [],
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: 'ほん',
-          mana: '本',
-          type: '名',
-          cn: '书'
-        },
-        {
-          kana: 'かばん',
-          mana: '',
-          type: '名',
-          cn: '包，公文包'
-        },
-        {
-          kana: 'ノート',
-          mana: '',
-          type: '名',
-          cn: '笔记本，本子'
-        },
-        {
-          kana: 'えんぴつ',
-          mana: '鉛筆',
-          type: '名',
-          cn: '铅笔'
-        },
-        {
-          kana: 'かさ',
-          mana: '傘',
-          type: '名',
-          cn: '伞'
-        },
-        {
-          kana: 'くつ',
-          mana: '靴',
-          type: '名',
-          cn: '鞋'
-        },
-        {
-          kana: 'しんぶん',
-          mana: '新聞',
-          type: '名',
-          cn: '报纸'
-        },
-        {
-          kana: 'ざっし',
-          mana: '雑誌',
-          type: '名',
-          cn: '杂志'
-        },
-        {
-          kana: 'じしょ',
-          mana: '辞書',
-          type: '名',
-          cn: '词典'
-        },
-        {
-          kana: 'カメラ',
-          mana: '',
-          type: '名',
-          cn: '照相机'
-        },
-        {
-          kana: 'テレビ',
-          mana: '',
-          type: '名',
-          cn: '电视机'
-        },
-        {
-          kana: 'パソコン',
-          mana: '',
-          type: '名',
-          cn: '个人电脑'
-        },
-        {
-          kana: 'ラジオ',
-          mana: '',
-          type: '名',
-          cn: '收音机'
-        },
-        {
-          kana: 'でんわ',
-          mana: '電話',
-          type: '名',
-          cn: '电话'
-        },
-        {
-          kana: 'つくえ',
-          mana: '机',
-          type: '名',
-          cn: '桌子，书桌'
-        },
-        {
-          kana: 'いす',
-          mana: '',
-          type: '名',
-          cn: '椅子'
-        },
-        {
-          kana: 'かぎ',
-          mana: '',
-          type: '名',
-          cn: '钥匙，锁'
-        },
-        {
-          kana: 'とけい',
-          mana: '時計',
-          type: '名',
-          cn: '钟，表'
-        },
-        {
-          kana: 'てちょう',
-          mana: '手帳',
-          type: '名',
-          cn: '记事本'
-        },
-        {
-          kana: 'しゃしん',
-          mana: '写真',
-          type: '名',
-          cn: '照片'
-        },
-        {
-          kana: 'くるま',
-          mana: '車',
-          type: '名',
-          cn: '车'
-        },
-        {
-          kana: 'じてんしゃ',
-          mana: '自転車',
-          type: '名',
-          cn: '自行车'
-        },
-        {
-          kana: 'おみやげ',
-          mana: 'お土産',
-          type: '名',
-          cn: '礼物'
-        },
-        {
-          kana: 'めいさんひん',
-          mana: '名産品',
-          type: '名',
-          cn: '特产，名产'
-        },
-        {
-          kana: 'シルク',
-          mana: '',
-          type: '名',
-          cn: '丝绸'
-        },
-        {
-          kana: 'ハンカチ',
-          mana: '',
-          type: '名',
-          cn: '手绢'
-        },
-        {
-          kana: 'かいしゃ',
-          mana: '会社',
-          type: '名',
-          cn: '公司'
-        },
-        {
-          kana: 'かた',
-          mana: '方',
-          type: '名',
-          cn: '（敬称）位，人'
-        },
-        {
-          kana: 'ひと',
-          mana: '人',
-          type: '名',
-          cn: '人'
-        },
-        {
-          kana: 'かぞく',
-          mana: '家族',
-          type: '名',
-          cn: '家属，亲人'
-        },
-        {
-          kana: 'はは',
-          mana: '母',
-          type: '名',
-          cn: '（我）母亲'
-        },
-        {
-          kana: 'おかあさん',
-          mana: 'お母さん',
-          type: '名',
-          cn: '母亲'
-        },
-        {
-          kana: 'にほんご',
-          mana: '日本語',
-          type: '名',
-          cn: '日语'
-        },
-        {
-          kana: 'ちゅうごくご',
-          mana: '中国語',
-          type: '名',
-          cn: '汉语，中文'
-        },
-        {
-          kana: 'これ',
-          mana: '',
-          type: '代',
-          cn: '这，这个'
-        },
-        {
-          kana: 'それ',
-          mana: '',
-          type: '代',
-          cn: '那，那个'
-        },
-        {
-          kana: 'あれ',
-          mana: '',
-          type: '代',
-          cn: '那，那个'
-        },
-        {
-          kana: 'どれ',
-          mana: '',
-          type: '疑',
-          cn: '哪个'
-        },
-        {
-          kana: 'なん',
-          mana: '何',
-          type: '疑',
-          cn: '什么'
-        },
-        {
-          kana: 'だれ',
-          mana: '',
-          type: '疑',
-          cn: '谁'
-        },
-        {
-          kana: 'どなた',
-          mana: '',
-          type: '疑',
-          cn: '哪位'
-        },
-        {
-          kana: 'この',
-          mana: '',
-          type: '连体',
-          cn: '这，这个'
-        },
-        {
-          kana: 'その',
-          mana: '',
-          type: '连体',
-          cn: '那，那个'
-        },
-        {
-          kana: 'あの',
-          mana: '',
-          type: '连体',
-          cn: '那，那个'
-        },
-        {
-          kana: 'どの',
-          mana: '',
-          type: '连体',
-          cn: '哪个'
-        },
-        {
-          kana: 'えっ',
-          mana: '',
-          type: '叹',
-          cn: '啊'
-        },
-        {
-          kana: 'わあ',
-          mana: '',
-          type: '叹',
-          cn: '哇'
-        },
-        {
-          kana: 'ええ',
-          mana: '',
-          type: '叹',
-          cn: '应答（嗯，是）'
-        },
-        {
-          kana: 'ながしま',
-          mana: '長島',
-          type: '专',
-          cn: '长岛'
-        },
-        {
-          kana: 'にほん',
-          mana: '日本',
-          type: '专',
-          cn: '日本'
-        },
-        {
-          kana: 'スワトウ',
-          mana: '',
-          type: '专',
-          cn: '汕头'
-        },
-        {
-          kana: 'ロンドン',
-          mana: '',
-          type: '专',
-          cn: '伦敦'
-        }
+        { kana: 'ほん', mana: '本', type: '名', cn: '书' },
+        { kana: 'かばん', mana: '', type: '名', cn: '包，公文包' },
+        { kana: 'ノート', mana: '', type: '名', cn: '笔记本，本子' },
+        { kana: 'えんぴつ', mana: '鉛筆', type: '名', cn: '铅笔' },
+        { kana: 'かさ', mana: '傘', type: '名', cn: '伞' },
+        { kana: 'くつ', mana: '靴', type: '名', cn: '鞋' },
+        { kana: 'しんぶん', mana: '新聞', type: '名', cn: '报纸' },
+        { kana: 'ざっし', mana: '雑誌', type: '名', cn: '杂志' },
+        { kana: 'じしょ', mana: '辞書', type: '名', cn: '词典' },
+        { kana: 'カメラ', mana: '', type: '名', cn: '照相机' },
+        { kana: 'テレビ', mana: '', type: '名', cn: '电视机' },
+        { kana: 'パソコン', mana: '', type: '名', cn: '个人电脑' },
+        { kana: 'ラジオ', mana: '', type: '名', cn: '收音机' },
+        { kana: 'でんわ', mana: '電話', type: '名', cn: '电话' },
+        { kana: 'つくえ', mana: '机', type: '名', cn: '桌子，书桌' },
+        { kana: 'いす', mana: '', type: '名', cn: '椅子' },
+        { kana: 'かぎ', mana: '', type: '名', cn: '钥匙，锁' },
+        { kana: 'とけい', mana: '時計', type: '名', cn: '钟，表' },
+        { kana: 'てちょう', mana: '手帳', type: '名', cn: '记事本' },
+        { kana: 'しゃしん', mana: '写真', type: '名', cn: '照片' },
+        { kana: 'くるま', mana: '車', type: '名', cn: '车' },
+        { kana: 'じてんしゃ', mana: '自転車', type: '名', cn: '自行车' },
+        { kana: 'おみやげ', mana: 'お土産', type: '名', cn: '礼物' },
+        { kana: 'めいさんひん', mana: '名産品', type: '名', cn: '特产，名产' },
+        { kana: 'シルク', mana: '', type: '名', cn: '丝绸' },
+        { kana: 'ハンカチ', mana: '', type: '名', cn: '手绢' },
+        { kana: 'かいしゃ', mana: '会社', type: '名', cn: '公司' },
+        { kana: 'かた', mana: '方', type: '名', cn: '（敬称）位，人' },
+        { kana: 'ひと', mana: '人', type: '名', cn: '人' },
+        { kana: 'かぞく', mana: '家族', type: '名', cn: '家属，亲人' },
+        { kana: 'はは', mana: '母', type: '名', cn: '（我）母亲' },
+        { kana: 'おかあさん', mana: 'お母さん', type: '名', cn: '母亲' },
+        { kana: 'にほんご', mana: '日本語', type: '名', cn: '日语' },
+        { kana: 'ちゅうごくご', mana: '中国語', type: '名', cn: '汉语，中文' },
+        { kana: 'これ', mana: '', type: '代', cn: '这，这个' },
+        { kana: 'それ', mana: '', type: '代', cn: '那，那个' },
+        { kana: 'あれ', mana: '', type: '代', cn: '那，那个' },
+        { kana: 'どれ', mana: '', type: '疑', cn: '哪个' },
+        { kana: 'なん', mana: '何', type: '疑', cn: '什么' },
+        { kana: 'だれ', mana: '', type: '疑', cn: '谁' },
+        { kana: 'どなた', mana: '', type: '疑', cn: '哪位' },
+        { kana: 'この', mana: '', type: '连体', cn: '这，这个' },
+        { kana: 'その', mana: '', type: '连体', cn: '那，那个' },
+        { kana: 'あの', mana: '', type: '连体', cn: '那，那个' },
+        { kana: 'どの', mana: '', type: '连体', cn: '哪个' },
+        { kana: 'えっ', mana: '', type: '叹', cn: '啊' },
+        { kana: 'わあ', mana: '', type: '叹', cn: '哇' },
+        { kana: 'ええ', mana: '', type: '叹', cn: '应答（嗯，是）' },
+        { kana: 'ながしま', mana: '長島', type: '专', cn: '长岛' },
+        { kana: 'にほん', mana: '日本', type: '专', cn: '日本' },
+        { kana: 'スワトウ', mana: '', type: '专', cn: '汕头' },
+        { kana: 'ロンドン', mana: '', type: '专', cn: '伦敦' }
       ],
-      phrase: [
-        {
-          kana: 'ありがとうございます',
-          mana: '',
-          cn: '谢谢'
-        },
-        {
-          kana: 'おいくつ',
-          mana: '',
-          cn: '多大'
-        },
-        {
-          kana: '何〜',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜歳',
-          mana: '',
-          cn: ''
-        }
-      ]
+      phrase: [{ kana: '〜歳', mana: '', cn: '' }]
     },
     {
       no: 3,
-      topic: 'ここは　デパートです',
+      topic: 'ここはデパートです',
       basic: [],
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: 'デパート',
-          mana: '',
-          type: '名',
-          cn: '百货商店'
-        },
-        {
-          kana: 'しょくどう',
-          mana: '食堂',
-          type: '名',
-          cn: '食堂'
-        },
-        {
-          kana: 'ゆうびんきょく',
-          mana: '郵便局',
-          type: '名',
-          cn: '邮局'
-        },
-        {
-          kana: 'ぎんこう',
-          mana: '銀行',
-          type: '名',
-          cn: '银行'
-        },
-        {
-          kana: 'としょかん',
-          mana: '図書館',
-          type: '名',
-          cn: '图书馆'
-        },
-        {
-          kana: 'マンジョン',
-          mana: '',
-          type: '名',
-          cn: '（高级）公寓'
-        },
-        {
-          kana: 'ホテル',
-          mana: '',
-          type: '名',
-          cn: '宾馆'
-        },
-        {
-          kana: 'コンビニ',
-          mana: '',
-          type: '名',
-          cn: '便利店'
-        },
-        {
-          kana: 'きっさてん',
-          mana: '喫茶店',
-          type: '名',
-          cn: '咖啡馆'
-        },
-        {
-          kana: 'びょういん',
-          mana: '病院',
-          type: '名',
-          cn: '医院'
-        },
-        {
-          kana: 'ほんや',
-          mana: '本屋',
-          type: '名',
-          cn: '书店'
-        },
-        {
-          kana: 'レストラン',
-          mana: '',
-          type: '名',
-          cn: '餐馆，西餐馆'
-        },
-        {
-          kana: 'ビル',
-          mana: '',
-          type: '名',
-          cn: '大楼，大厦'
-        },
-        {
-          kana: 'たてもの',
-          mana: '建物',
-          type: '名',
-          cn: '大楼，建筑物'
-        },
-        {
-          kana: 'うりば',
-          mana: '売り場',
-          type: '名',
-          cn: '柜台，出售处'
-        },
-        {
-          kana: 'トイレ',
-          mana: '',
-          type: '名',
-          cn: '厕所，盥洗室'
-        },
-        {
-          kana: 'いりぐち',
-          mana: '入り口',
-          type: '名',
-          cn: '入口'
-        },
-        {
-          kana: 'じむしょ',
-          mana: '事務所',
-          type: '名',
-          cn: '事务所，办事处'
-        },
-        {
-          kana: 'うけつけ',
-          mana: '受付',
-          type: '名',
-          cn: '接待处'
-        },
+        { kana: 'デパート', mana: '', type: '名', cn: '百货商店' },
+        { kana: 'しょくどう', mana: '食堂', type: '名', cn: '食堂' },
+        { kana: 'ゆうびんきょく', mana: '郵便局', type: '名', cn: '邮局' },
+        { kana: 'ぎんこう', mana: '銀行', type: '名', cn: '银行' },
+        { kana: 'としょかん', mana: '図書館', type: '名', cn: '图书馆' },
+        { kana: 'マンジョン', mana: '', type: '名', cn: '（高级）公寓' },
+        { kana: 'ホテル', mana: '', type: '名', cn: '宾馆' },
+        { kana: 'コンビニ', mana: '', type: '名', cn: '便利店' },
+        { kana: 'きっさてん', mana: '喫茶店', type: '名', cn: '咖啡馆' },
+        { kana: 'びょういん', mana: '病院', type: '名', cn: '医院' },
+        { kana: 'ほんや', mana: '本屋', type: '名', cn: '书店' },
+        { kana: 'レストラン', mana: '', type: '名', cn: '餐馆，西餐馆' },
+        { kana: 'ビル', mana: '', type: '名', cn: '大楼，大厦' },
+        { kana: 'たてもの', mana: '建物', type: '名', cn: '大楼，建筑物' },
+        { kana: 'うりば', mana: '売り場', type: '名', cn: '柜台，出售处' },
+        { kana: 'トイレ', mana: '', type: '名', cn: '厕所，盥洗室' },
+        { kana: 'いりぐち', mana: '入り口', type: '名', cn: '入口' },
+        { kana: 'じむしょ', mana: '事務所', type: '名', cn: '事务所，办事处' },
+        { kana: 'うけつけ', mana: '受付', type: '名', cn: '接待处' },
         {
           kana: 'バーゲンかいじょう',
           mana: 'バーゲン会場',
           type: '名',
           cn: '降价处理大卖场'
         },
-        {
-          kana: 'エスカレーター',
-          mana: '',
-          type: '名',
-          cn: '自动扶梯'
-        },
-        {
-          kana: 'ふく',
-          mana: '服',
-          type: '名',
-          cn: '衣服'
-        },
-        {
-          kana: 'コート',
-          mana: '',
-          type: '名',
-          cn: '风衣，大衣'
-        },
-        {
-          kana: 'デジカメ',
-          mana: '',
-          type: '名',
-          cn: '数码相机'
-        },
-        {
-          kana: 'くに',
-          mana: '国',
-          type: '名',
-          cn: '国，国家'
-        },
-        {
-          kana: 'ちず',
-          mana: '地図',
-          type: '名',
-          cn: '地图'
-        },
-        {
-          kana: 'となり',
-          mana: '隣',
-          type: '名',
-          cn: '旁边'
-        },
-        {
-          kana: 'しゅうへん',
-          mana: '周辺',
-          type: '名',
-          cn: '附近，周边'
-        },
-        {
-          kana: 'きょう',
-          mana: '今日',
-          type: '名',
-          cn: '今天'
-        },
-        {
-          kana: 'すいようび',
-          mana: '水曜日',
-          type: '名',
-          cn: '星期三'
-        },
-        {
-          kana: 'もくようび',
-          mana: '木曜日',
-          type: '名',
-          cn: '星期四'
-        },
-        {
-          kana: 'ここ',
-          mana: '',
-          type: '代',
-          cn: '这里，这儿'
-        },
-        {
-          kana: 'そこ',
-          mana: '',
-          type: '代',
-          cn: '那里，那儿'
-        },
-        {
-          kana: 'あそこ',
-          mana: '',
-          type: '代',
-          cn: '那里，那儿'
-        },
-        {
-          kana: 'こちら',
-          mana: '',
-          type: '代',
-          cn: '这儿，这边'
-        },
-        {
-          kana: 'そちら',
-          mana: '',
-          type: '代',
-          cn: '那儿，那边'
-        },
-        {
-          kana: 'あちら',
-          mana: '',
-          type: '代',
-          cn: '那儿，那边'
-        },
-        {
-          kana: 'どこ',
-          mana: '',
-          type: '疑',
-          cn: '哪里，哪儿'
-        },
-        {
-          kana: 'どちら',
-          mana: '',
-          type: '疑',
-          cn: '哪儿，哪边'
-        },
-        {
-          kana: 'あのう',
-          mana: '',
-          type: '叹',
-          cn: '请问，对不起'
-        },
-        {
-          kana: 'シャンハイ',
-          mana: '',
-          type: '专',
-          cn: '上海'
-        },
-        {
-          kana: 'とうきょう',
-          mana: '',
-          type: '专',
-          cn: '东京'
-        }
+        { kana: 'エスカレーター', mana: '', type: '名', cn: '自动扶梯' },
+        { kana: 'ふく', mana: '服', type: '名', cn: '衣服' },
+        { kana: 'コート', mana: '', type: '名', cn: '风衣，大衣' },
+        { kana: 'デジカメ', mana: '', type: '名', cn: '数码相机' },
+        { kana: 'くに', mana: '国', type: '名', cn: '国，国家' },
+        { kana: 'ちず', mana: '地図', type: '名', cn: '地图' },
+        { kana: 'となり', mana: '隣', type: '名', cn: '旁边' },
+        { kana: 'しゅうへん', mana: '周辺', type: '名', cn: '附近，周边' },
+        { kana: 'きょう', mana: '今日', type: '名', cn: '今天' },
+        { kana: 'すいようび', mana: '水曜日', type: '名', cn: '星期三' },
+        { kana: 'もくようび', mana: '木曜日', type: '名', cn: '星期四' },
+        { kana: 'ここ', mana: '', type: '代', cn: '这里，这儿' },
+        { kana: 'そこ', mana: '', type: '代', cn: '那里，那儿' },
+        { kana: 'あそこ', mana: '', type: '代', cn: '那里，那儿' },
+        { kana: 'こちら', mana: '', type: '代', cn: '这儿，这边' },
+        { kana: 'そちら', mana: '', type: '代', cn: '那儿，那边' },
+        { kana: 'あちら', mana: '', type: '代', cn: '那儿，那边' },
+        { kana: 'どこ', mana: '', type: '疑', cn: '哪里，哪儿' },
+        { kana: 'どちら', mana: '', type: '疑', cn: '哪儿，哪边' },
+        { kana: 'あのう', mana: '', type: '叹', cn: '请问，对不起' },
+        { kana: 'シャンハイ', mana: '', type: '专', cn: '上海' },
+        { kana: 'とうきょう', mana: '', type: '专', cn: '东京' }
       ],
-      phrase: [
-        {
-          kana: 'いくら',
-          mana: '',
-          cn: '多少钱'
-        },
-        {
-          kana: 'お〜',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜階',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜円',
-          mana: '',
-          cn: ''
-        },
-        {
-          kana: '〜曜日',
-          mana: '',
-          cn: ''
-        }
-      ]
+      phrase: [{ kana: '〜曜日', mana: '', cn: '' }]
     },
     {
       no: 4,
-      topic: '部屋に　机と　いすが　あります',
+      topic: '部屋に机といすがあります',
       basic: [],
       utilization: [],
       grammar: [],
       word: [
-        {
-          kana: 'へや',
-          mana: '部屋',
-          type: '名',
-          cn: '房间，屋子'
-        },
-        {
-          kana: 'にわ',
-          mana: '庭',
-          type: '名',
-          cn: '院子'
-        },
-        {
-          kana: 'いえ',
-          mana: '家',
-          type: '名',
-          cn: '家'
-        },
-        {
-          kana: 'いま',
-          mana: '居間',
-          type: '名',
-          cn: '起居室'
-        },
-        {
-          kana: 'れいぞうこ',
-          mana: '冷蔵庫',
-          type: '名',
-          cn: '冰箱'
-        },
-        {
-          kana: 'かべ',
-          mana: '壁',
-          type: '名',
-          cn: '墙壁'
-        },
-        {
-          kana: 'スイッチ',
-          mana: '',
-          type: '名',
-          cn: '开关'
-        },
-        {
-          kana: 'ほんだな',
-          mana: '本棚',
-          type: '名',
-          cn: '书架'
-        },
-        {
-          kana: 'ベッド',
-          mana: '',
-          type: '名',
-          cn: '床'
-        },
-        {
-          kana: 'ねこ',
-          mana: '猫',
-          type: '名',
-          cn: '猫'
-        },
-        {
-          kana: 'いぬ',
-          mana: '犬',
-          type: '名',
-          cn: '狗'
-        },
-        {
-          kana: 'はこ',
-          mana: '箱',
-          type: '名',
-          cn: '盒子，箱子'
-        },
-        {
-          kana: 'めがね',
-          mana: '眼鏡',
-          type: '名',
-          cn: '眼镜'
-        },
-        {
-          kana: 'ビデオ',
-          mana: '',
-          type: '名',
-          cn: '录像机'
-        },
-        {
-          kana: 'サッカーボール',
-          mana: '',
-          type: '名',
-          cn: '足球'
-        },
-        {
-          kana: 'ビール',
-          mana: '',
-          type: '名',
-          cn: '啤酒'
-        },
-        {
-          kana: 'ウイスキー',
-          mana: '',
-          type: '名',
-          cn: '威士忌'
-        },
-        {
-          kana: 'こども',
-          mana: '子供',
-          type: '名',
-          cn: '孩子，小孩'
-        },
-        {
-          kana: 'きょうだい',
-          mana: '兄弟',
-          type: '名',
-          cn: '兄弟姐妹'
-        },
-        {
-          kana: 'りょうしん',
-          mana: '両親',
-          type: '名',
-          cn: '父母，双亲'
-        },
-        {
-          kana: 'いもうと',
-          mana: '妹',
-          type: '名',
-          cn: '妹妹'
-        },
-        {
-          kana: 'おとこ',
-          mana: '男',
-          type: '名',
-          cn: '男'
-        },
-        {
-          kana: 'おんな',
-          mana: '女',
-          type: '名',
-          cn: '女'
-        },
-        {
-          kana: 'せいと',
-          mana: '生徒',
-          type: '名',
-          cn: '学生'
-        },
-        {
-          kana: 'うえ',
-          mana: '上',
-          type: '名',
-          cn: '上面'
-        },
-        {
-          kana: 'そと',
-          mana: '外',
-          type: '名',
-          cn: '外面'
-        },
-        {
-          kana: 'なか',
-          mana: '中',
-          type: '名',
-          cn: '里面，内部，中间'
-        },
-        {
-          kana: 'した',
-          mana: '下',
-          type: '名',
-          cn: '下面'
-        },
-        {
-          kana: 'まえ',
-          mana: '前',
-          type: '名',
-          cn: '前，前面'
-        },
-        {
-          kana: 'うしろ',
-          mana: '後ろ',
-          type: '名',
-          cn: '后，后面'
-        },
-        {
-          kana: 'ちかく',
-          mana: '近く',
-          type: '名',
-          cn: '附近，近旁'
-        },
-        {
-          kana: 'ばしょ',
-          mana: '場所',
-          type: '名',
-          cn: '所在地，地方，场所'
-        },
-        {
-          kana: 'きょうしつ',
-          mana: '教室',
-          type: '名',
-          cn: '教室'
-        },
-        {
-          kana: 'かいぎしつ',
-          mana: '会議室',
-          type: '名',
-          cn: '会议室'
-        },
-        {
-          kana: 'としょしつ',
-          mana: '図書室',
-          type: '名',
-          cn: '图书室'
-        },
-        {
-          kana: 'こうえん',
-          mana: '公園',
-          type: '名',
-          cn: '公园'
-        },
-        {
-          kana: 'はなや',
-          mana: '花屋',
-          type: '名',
-          cn: '花店'
-        },
-        {
-          kana: 'ばいてん',
-          mana: '売店',
-          type: '名',
-          cn: '小卖店，售货亭'
-        },
-        {
-          kana: 'えき',
-          mana: '駅',
-          type: '名',
-          cn: '车站'
-        },
-        {
-          kana: 'ちかてつ',
-          mana: '地下鉄',
-          type: '名',
-          cn: '地铁'
-        },
-        {
-          kana: 'き',
-          mana: '木',
-          type: '名',
-          cn: '树，树木'
-        },
+        { kana: 'へや', mana: '部屋', type: '名', cn: '房间，屋子' },
+        { kana: 'にわ', mana: '庭', type: '名', cn: '院子' },
+        { kana: 'いえ', mana: '家', type: '名', cn: '家' },
+        { kana: 'いま', mana: '居間', type: '名', cn: '起居室' },
+        { kana: 'れいぞうこ', mana: '冷蔵庫', type: '名', cn: '冰箱' },
+        { kana: 'かべ', mana: '壁', type: '名', cn: '墙壁' },
+        { kana: 'スイッチ', mana: '', type: '名', cn: '开关' },
+        { kana: 'ほんだな', mana: '本棚', type: '名', cn: '书架' },
+        { kana: 'ベッド', mana: '', type: '名', cn: '床' },
+        { kana: 'ねこ', mana: '猫', type: '名', cn: '猫' },
+        { kana: 'いぬ', mana: '犬', type: '名', cn: '狗' },
+        { kana: 'はこ', mana: '箱', type: '名', cn: '盒子，箱子' },
+        { kana: 'めがね', mana: '眼鏡', type: '名', cn: '眼镜' },
+        { kana: 'ビデオ', mana: '', type: '名', cn: '录像机' },
+        { kana: 'サッカーボール', mana: '', type: '名', cn: '足球' },
+        { kana: 'ビール', mana: '', type: '名', cn: '啤酒' },
+        { kana: 'ウイスキー', mana: '', type: '名', cn: '威士忌' },
+        { kana: 'こども', mana: '子供', type: '名', cn: '孩子，小孩' },
+        { kana: 'きょうだい', mana: '兄弟', type: '名', cn: '兄弟姐妹' },
+        { kana: 'りょうしん', mana: '両親', type: '名', cn: '父母，双亲' },
+        { kana: 'いもうと', mana: '妹', type: '名', cn: '妹妹' },
+        { kana: 'おとこ', mana: '男', type: '名', cn: '男' },
+        { kana: 'おんな', mana: '女', type: '名', cn: '女' },
+        { kana: 'せいと', mana: '生徒', type: '名', cn: '学生' },
+        { kana: 'うえ', mana: '上', type: '名', cn: '上面' },
+        { kana: 'そと', mana: '外', type: '名', cn: '外面' },
+        { kana: 'なか', mana: '中', type: '名', cn: '里面，内部，中间' },
+        { kana: 'した', mana: '下', type: '名', cn: '下面' },
+        { kana: 'まえ', mana: '前', type: '名', cn: '前，前面' },
+        { kana: 'うしろ', mana: '後ろ', type: '名', cn: '后，后面' },
+        { kana: 'ちかく', mana: '近く', type: '名', cn: '附近，近旁' },
+        { kana: 'ばしょ', mana: '場所', type: '名', cn: '所在地，地方，场所' },
+        { kana: 'きょうしつ', mana: '教室', type: '名', cn: '教室' },
+        { kana: 'かいぎしつ', mana: '会議室', type: '名', cn: '会议室' },
+        { kana: 'としょしつ', mana: '図書室', type: '名', cn: '图书室' },
+        { kana: 'こうえん', mana: '公園', type: '名', cn: '公园' },
+        { kana: 'はなや', mana: '花屋', type: '名', cn: '花店' },
+        { kana: 'ばいてん', mana: '売店', type: '名', cn: '小卖店，售货亭' },
+        { kana: 'えき', mana: '駅', type: '名', cn: '车站' },
+        { kana: 'ちかてつ', mana: '地下鉄', type: '名', cn: '地铁' },
+        { kana: 'き', mana: '木', type: '名', cn: '树，树木' },
         {
           kana: 'ひとりぐらし',
           mana: '一人暮らし',
           type: '名',
           cn: '单身生活'
         },
-        {
-          kana: 'あります',
-          mana: '',
-          type: '动1',
-          cn: '有，在（非意志者）'
-        },
-        {
-          kana: 'います',
-          mana: '',
-          type: '动2',
-          cn: '有，在（具意志者）'
-        },
-        {
-          kana: 'ええと',
-          mana: '',
-          type: '叹',
-          cn: '啊，嗯'
-        },
-        {
-          kana: 'よこはま',
-          mana: '横浜',
-          type: '专',
-          cn: '横滨'
-        },
-        {
-          kana: 'なごや',
-          mana: '名古屋',
-          type: '专',
-          cn: '名古屋'
-        },
-        {
-          kana: 'おおさか',
-          mana: '大阪',
-          type: '专',
-          cn: '大阪'
-        },
-        {
-          kana: 'ジェーアール',
-          mana: 'JR',
-          type: '专',
-          cn: 'JR'
-        }
+        { kana: 'あります', mana: '', type: '动1', cn: '有，在（非意志者）' },
+        { kana: 'います', mana: '', type: '动2', cn: '有，在（具意志者）' },
+        { kana: 'ええと', mana: '', type: '叹', cn: '啊，嗯' },
+        { kana: 'よこはま', mana: '横浜', type: '专', cn: '横滨' },
+        { kana: 'なごや', mana: '名古屋', type: '专', cn: '名古屋' },
+        { kana: 'おおさか', mana: '大阪', type: '专', cn: '大阪' },
+        { kana: 'ジェーアール', mana: 'JR', type: '专', cn: 'JR' }
       ],
-      phrase: [
-        {
-          kana: 'ご〜',
-          mana: '',
-          cn: ''
-        }
-      ]
+      phrase: [{ kana: 'ご〜', mana: '', cn: '' }]
     }
   ]
 }

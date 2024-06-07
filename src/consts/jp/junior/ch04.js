@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 13,
-      topic: '',
+      topic: '机の上に本が3冊あります',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 14,
-      topic: '',
+      topic: '昨日デパートへ行って、買い物しました',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 15,
-      topic: '',
+      topic: '小野さんは今新聞を読んでいます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 16,
-      topic: '',
+      topic: 'ホテルの部屋は広くて明るいです',
       basic: [],
       utilization: [],
       grammar: [],

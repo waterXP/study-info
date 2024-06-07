@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 9,
-      topic: '四川料理は　辛いです',
+      topic: '四川料理は辛いです',
       basic: [],
       utilization: [],
       grammar: [],
@@ -90,7 +90,7 @@ export default {
     },
     {
       no: 10,
-      topic: '京都の　紅葉は　有名です',
+      topic: '京都の紅葉は有名です',
       basic: [],
       utilization: [],
       grammar: [],
@@ -154,7 +154,7 @@ export default {
     },
     {
       no: 11,
-      topic: '小野さんは　歌が　好きです',
+      topic: '小野さんは歌が好きです',
       basic: [],
       utilization: [],
       grammar: [],
@@ -220,7 +220,7 @@ export default {
     },
     {
       no: 12,
-      topic: '李さんは　森さんより　若いです',
+      topic: '李さんは森さんより若いです',
       basic: [],
       utilization: [],
       grammar: [],

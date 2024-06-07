@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 45,
-      topic: '',
+      topic: '少子化が進んで、日本の人口はだんだん減っていくでしょう',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 46,
-      topic: '',
+      topic: 'これは柔らかくて、まるで本物の毛皮のようです',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 47,
-      topic: '',
+      topic: '周先生は明日日本へ行かれます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 48,
-      topic: '',
+      topic: 'お荷物は私がお持ちします',
       basic: [],
       utilization: [],
       grammar: [],

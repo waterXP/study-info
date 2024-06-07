@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 37,
-      topic: '',
+      topic: '優勝すれば、オリンピックに出場することができます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 38,
-      topic: '',
+      topic: '戴さんは英語が話せます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 39,
-      topic: '',
+      topic: '眼鏡をかけて本を読みます',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 40,
-      topic: '',
+      topic: 'これから友達と食事に行くところです',
       basic: [],
       utilization: [],
       grammar: [],

@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 29,
-      topic: '',
+      topic: '電気を消せ',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 30,
-      topic: '',
+      topic: 'もう11時だから寝よう',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 31,
-      topic: '',
+      topic: 'このボタンを押すと、電源が入ります',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 32,
-      topic: '',
+      topic: '今度の日曜日に遊園地へ行くつもりです',
       basic: [],
       utilization: [],
       grammar: [],

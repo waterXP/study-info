@@ -4,7 +4,7 @@ export default {
   lesson: [
     {
       no: 17,
-      topic: '',
+      topic: 'わたしは新しい洋服が欲しいです',
       basic: [],
       utilization: [],
       grammar: [],
@@ -26,7 +26,7 @@ export default {
     },
     {
       no: 18,
-      topic: '',
+      topic: '携帯電話はとても小さくなりました',
       basic: [],
       utilization: [],
       grammar: [],
@@ -48,7 +48,7 @@ export default {
     },
     {
       no: 19,
-      topic: '',
+      topic: '部屋のかぎを忘れないでください',
       basic: [],
       utilization: [],
       grammar: [],
@@ -70,7 +70,7 @@ export default {
     },
     {
       no: 20,
-      topic: '',
+      topic: 'スミスさんはピアノを弾くことができます',
       basic: [],
       utilization: [],
       grammar: [],

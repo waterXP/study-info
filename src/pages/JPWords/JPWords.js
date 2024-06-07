@@ -132,8 +132,38 @@ const JPWords = () => {
     }
   }, [navigate, allList, detail])
   const toggleShwoResult = useCallback(() => {
-    setShowResult(showResult => !showResult)
-  }, [])
+    const { kana, mana, cn, type } = switches
+    let len = 0
+    let a = 0
+    if (course.kana) {
+      len++
+      a += +kana
+    }
+    if (course.mana) {
+      len++
+      a += +mana
+    }
+    if (course.type) {
+      len++
+      a += +type
+    }
+    if (course.cn) {
+      len++
+      a += +cn
+    }
+    const inRecite = len !== a && a !== 0
+    if (inRecite && !showResult) {
+      setShowResult(true)
+    } else {
+      setShowResult(false)
+      const nextIndex = index + 1
+      if (list[nextIndex]) {
+        setIndex(nextIndex)
+      } else {
+        gotoNextChapter()
+      }
+    }
+  }, [showResult, index, list, gotoNextChapter, switches, course])
   const onSwtichsChange = useCallback(type => {
     setShowResult(false)
     setSwitches(switches => ({

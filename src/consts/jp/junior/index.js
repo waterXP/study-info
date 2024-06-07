@@ -45,7 +45,4 @@ r.forEach(
   }
 )
 
-console.log(wordList)
-console.log(phraseList)
-
 export default r

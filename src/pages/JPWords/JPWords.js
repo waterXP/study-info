@@ -186,31 +186,36 @@ const JPWords = () => {
   const onInputChange = useCallback(({ target: { value } }) => {
     setInput(value)
   }, [])
-  const onCheck = useCallback(() => {
-    if (refInput && refInput.current) {
-      const tar = refInput.current
-      if (tar && tar.input) {
-        const { value } = tar.input
-        const txt = value ? value.trim() : ''
-        if (txt) {
-          console.log(course)
-          if (course.mana === txt || course.kana === txt) {
-            setShowAnswer(false)
-            setTimeout(() => {
-              setInput('')
-            }, 0)
-            toggleShwoResult()
-          } else {
-            setTimeout(() => {
-              tar.select()
-            }, 0)
-            setShowAnswer(true)
-            message.error('错误')
+  const onCheck = useCallback(
+    () => {
+      if (refInput && refInput.current) {
+        const tar = refInput.current
+        if (tar && tar.input) {
+          const { value } = tar.input
+          const txt = value ? value.trim() : ''
+          if (txt) {
+            const cTxt = (txt || '').replace(/〜/g, '')
+            const ccMana = (course.mana || '').replace(/〜/g, '')
+            const ccKana = (course.kana || '').replace(/〜/g, '')
+            if (ccMana === cTxt || ccKana === cTxt) {
+              setShowAnswer(false)
+              setTimeout(() => {
+                setInput('')
+              }, 0)
+              toggleShwoResult()
+            } else {
+              setTimeout(() => {
+                tar.select()
+              }, 0)
+              setShowAnswer(true)
+              message.error('错误')
+            }
           }
         }
       }
-    }
-  }, [course, toggleShwoResult])
+    },
+    [course, toggleShwoResult]
+  )
   const showModal = useCallback(() => {
     setShowAnswer(false)
     setInput('')
@@ -222,8 +227,56 @@ const JPWords = () => {
   const hideModal = useCallback(() => {
     setOpen(false)
   }, [])
+  const onModalPrev = useCallback(() => {
+    setShowResult(false)
+    const prevIndex = index - 1
+    if (list[prevIndex]) {
+      setIndex(prevIndex)
+    } else {
+      gotoPrevChapter()
+    }
+  }, [list, index, gotoPrevChapter])
+  const onModalNext = useCallback(() => {
+    setShowResult(false)
+    const nextIndex = index + 1
+    if (list[nextIndex]) {
+      setIndex(nextIndex)
+    } else {
+      gotoNextChapter()
+    }
+  }, [list, index, gotoNextChapter])
   const modalTitle = useMemo(
-    () => <p className='pg-jp-words_modal-title'>{course && (course.cn || course.mana || course.kana)}</p>, [course]
+    () => (
+      <p className='pg-jp-words_modal-title'>
+        {course && (course.cn || course.mana || course.kana) || '默写'}
+      </p>
+    ),
+    [course]
+  )
+  const footer = useMemo(
+    () => (
+      <div className='pg-jp-words_modal-footer'>
+        <div
+          className='pg-jp-words_modal-button is-clickable'
+          onClick={onModalPrev}
+        >
+          上一个
+        </div>
+        <div
+          className='pg-jp-words_modal-button is-clickable'
+          onClick={onModalNext}
+        >
+          下一个
+        </div>
+        <div
+          className='pg-jp-words_modal-button is-clickable'
+          onClick={onCheck}
+        >
+          检查
+        </div>
+      </div>
+    ),
+    [onModalPrev, onModalNext, onCheck]
   )
   return (
     <div className='pg-jp-words  hide-scroll'>
@@ -321,7 +374,7 @@ const JPWords = () => {
       <Modal
         open={open}
         closable={false}
-        onOk={onCheck}
+        footer={footer}
         onCancel={hideModal}
         title={modalTitle}
       >

@@ -1,6 +1,14 @@
-import React, { memo, useMemo, useState, useEffect, useCallback } from 'react'
+import React, {
+  memo,
+  useRef,
+  useMemo,
+  useState,
+  useEffect,
+  useCallback
+} from 'react'
 import './JPWords.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
 import junior from '@/consts/jp/junior'
 import Switch from './components/Switch'
@@ -171,6 +179,52 @@ const JPWords = () => {
       [type]: !switches[type]
     }))
   }, [])
+  const refInput = useRef(null)
+  const [input, setInput] = useState('')
+  const [open, setOpen] = useState(false)
+  const [showAnswer, setShowAnswer] = useState(true)
+  const onInputChange = useCallback(({ target: { value } }) => {
+    setInput(value)
+  }, [])
+  const onCheck = useCallback(() => {
+    if (refInput && refInput.current) {
+      const tar = refInput.current
+      if (tar && tar.input) {
+        const { value } = tar.input
+        const txt = value ? value.trim() : ''
+        if (txt) {
+          console.log(course)
+          if (course.mana === txt || course.kana === txt) {
+            setShowAnswer(false)
+            setTimeout(() => {
+              setInput('')
+            }, 0)
+            toggleShwoResult()
+          } else {
+            setTimeout(() => {
+              tar.select()
+            }, 0)
+            setShowAnswer(true)
+            message.error('错误')
+          }
+        }
+      }
+    }
+  }, [course, toggleShwoResult])
+  const showModal = useCallback(() => {
+    setShowAnswer(false)
+    setInput('')
+    setTimeout(() => {
+      refInput.current && refInput.current.focus()
+    }, 0)
+    setOpen(true)
+  }, [])
+  const hideModal = useCallback(() => {
+    setOpen(false)
+  }, [])
+  const modalTitle = useMemo(
+    () => <p className='pg-jp-words_modal-title'>{course && (course.cn || course.mana || course.kana)}</p>, [course]
+  )
   return (
     <div className='pg-jp-words  hide-scroll'>
       <div className='pg-jp-words_content'>
@@ -231,13 +285,11 @@ const JPWords = () => {
           </div>
         </div>
         <div className='pg-jp-words_center' onClick={toggleShwoResult}>
-          <div className='pg-jp-words_body'>
+          <div
+            className={open ? 'pg-jp-words_body is-hide' : 'pg-jp-words_body'}
+          >
             {course ? (
-              <Word
-                word={course}
-                showResult={showResult}
-                switches={switches}
-              />
+              <Word word={course} showResult={showResult} switches={switches} />
             ) : (
               <p className='pg-jp-words_line'>未找到单词</p>
             )}
@@ -253,6 +305,12 @@ const JPWords = () => {
             上一个
           </div>
           <div
+            className='pg-jp-words_corner-center is-clickable'
+            onClick={showModal}
+          >
+            默写
+          </div>
+          <div
             className='pg-jp-words_corner-button is-right is-clickable'
             onClick={onNextClick}
           >
@@ -260,6 +318,31 @@ const JPWords = () => {
           </div>
         </div>
       </div>
+      <Modal
+        open={open}
+        closable={false}
+        onOk={onCheck}
+        onCancel={hideModal}
+        title={modalTitle}
+      >
+        <div className='pg-jp-words_modal-body'>
+          <Input
+            ref={refInput}
+            className='pg-jp-words_input'
+            onPressEnter={onCheck}
+            value={input}
+            onChange={onInputChange}
+            placeholder='入力してください'
+          />
+          {showAnswer && course && (
+            <p className='pg-jp-words_input-tip'>
+              {`${course.kana || ''}${course.mana ? `（${course.mana}）` : ''}${
+                course.type ? `「${course.type}」` : ''
+              }${course.cn || ''}`}
+            </p>
+          )}
+        </div>
+      </Modal>
     </div>
   )
 }

@@ -186,36 +186,33 @@ const JPWords = () => {
   const onInputChange = useCallback(({ target: { value } }) => {
     setInput(value)
   }, [])
-  const onCheck = useCallback(
-    () => {
-      if (refInput && refInput.current) {
-        const tar = refInput.current
-        if (tar && tar.input) {
-          const { value } = tar.input
-          const txt = value ? value.trim() : ''
-          if (txt) {
-            const cTxt = (txt || '').replace(/〜/g, '')
-            const ccMana = (course.mana || '').replace(/〜/g, '')
-            const ccKana = (course.kana || '').replace(/〜/g, '')
-            if (ccMana === cTxt || ccKana === cTxt) {
-              setShowAnswer(false)
-              setTimeout(() => {
-                setInput('')
-              }, 0)
-              toggleShwoResult()
-            } else {
-              setTimeout(() => {
-                tar.select()
-              }, 0)
-              setShowAnswer(true)
-              message.error('错误')
-            }
+  const onCheck = useCallback(() => {
+    if (refInput && refInput.current) {
+      const tar = refInput.current
+      if (tar && tar.input) {
+        const { value } = tar.input
+        const txt = value ? value.trim() : ''
+        if (txt) {
+          const cTxt = (txt || '').replace(/〜/g, '')
+          const ccMana = (course.mana || '').replace(/〜/g, '')
+          const ccKana = (course.kana || '').replace(/〜/g, '')
+          if (ccMana === cTxt || ccKana === cTxt) {
+            setShowAnswer(false)
+            setTimeout(() => {
+              setInput('')
+            }, 0)
+            toggleShwoResult()
+          } else {
+            setTimeout(() => {
+              tar.select()
+            }, 0)
+            setShowAnswer(true)
+            message.error('错误')
           }
         }
       }
-    },
-    [course, toggleShwoResult]
-  )
+    }
+  }, [course, toggleShwoResult])
   const showModal = useCallback(() => {
     setShowAnswer(false)
     setInput('')
@@ -248,7 +245,8 @@ const JPWords = () => {
   const modalTitle = useMemo(
     () => (
       <p className='pg-jp-words_modal-title'>
-        {course && (course.cn || course.mana || course.kana) || '默写'}
+        {(course && (course.cn || course.mana || course.kana)) || '默写'}
+        {course && course.type && `「${course.type}」`}
       </p>
     ),
     [course]

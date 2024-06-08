@@ -55,7 +55,7 @@ export default {
         { kana: 'はたらきます', mana: '働きます', type: '动1', cn: '工作' },
         { kana: 'はじまります', mana: '始まります', type: '动1', cn: '开始' },
         { kana: 'おわります', mana: '終わります', type: '动1', cn: '结束' },
-        { kana: 'おきます', mana: '起きます', type: '动2', cn: '动床' },
+        { kana: 'おきます', mana: '起きます', type: '动2', cn: '起床' },
         { kana: 'ねます', mana: '寝ます', type: '动2', cn: '睡觉' },
         {
           kana: 'べんきょうします',

@@ -85,7 +85,7 @@ export default {
       ],
       phrase: [
         { kana: 'きもちがいい', mana: '気持ちがいい', cn: '感觉舒服，心情愉快' },
-        { kana: '〜用', mana: '', cn: '' }
+        { kana: '〜よう', mana: '〜用', cn: '' }
       ]
     },
     {
@@ -149,7 +149,7 @@ export default {
       ],
       phrase: [
         { kana: 'もうすこし', mana: 'もう少し', cn: '再～一点' },
-        { kana: '〜中', mana: '', cn: '' }
+        { kana: '〜じゅう', mana: '〜中', cn: '' }
       ]
     },
     {
@@ -261,7 +261,7 @@ export default {
       ],
       phrase: [
         { kana: 'にんきがあります', mana: '人気があります', cn: '受欢迎' },
-        { kana: '〜年間', mana: '', cn: '' }
+        { kana: '〜ねんかん', mana: '〜年間', cn: '' }
       ]
     }
   ]

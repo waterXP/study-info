@@ -81,7 +81,20 @@ export default {
           cn: '日中商社'
         }
       ],
-      phrase: [{ kana: '〜君', mana: '', cn: '' }]
+      phrase: [
+        { kana: 'こんにちは', mana: '', cn: '你好' },
+        { kana: 'すみません', mana: '', cn: '对不起；请问' },
+        { kana: 'どうぞ', mana: '', cn: '请' },
+        { kana: 'よろしくおねがいします', mana: 'よろしくお願いします', cn: '请多关照' },
+        { kana: 'はじめまして', mana: '', cn: '初次见面' },
+        { kana: 'こちらこそ', mana: '', cn: '我才要（请您～）' },
+        { kana: 'そうです', mana: '', cn: '是（这样）' },
+        { kana: 'ちがいます', mana: '', cn: '不是' },
+        { kana: 'わかりません', mana: '分かりません', cn: '不知道' },
+        { kana: 'どうもすみません', mana: '', cn: '实在对不起' },
+        { kana: '〜さん', mana: '', cn: '' },
+        { kana: '〜ちゃん', mana: '', cn: '' },
+        { kana: '〜くん', mana: '〜君', cn: '' }]
     },
     {
       no: 2,
@@ -143,7 +156,12 @@ export default {
         { kana: 'スワトウ', mana: '', type: '专', cn: '汕头' },
         { kana: 'ロンドン', mana: '', type: '专', cn: '伦敦' }
       ],
-      phrase: [{ kana: '〜歳', mana: '', cn: '' }]
+      phrase: [
+        { kana: 'ありがとうございます', mana: '', cn: '谢谢' },
+        { kana: 'おいくつ', mana: '', cn: '多大' },
+        { kana: 'なん〜', mana: '何〜', cn: '' },
+        { kana: '〜さい', mana: '〜歳', cn: '' }
+      ]
     },
     {
       no: 3,
@@ -200,7 +218,13 @@ export default {
         { kana: 'シャンハイ', mana: '', type: '专', cn: '上海' },
         { kana: 'とうきょう', mana: '', type: '专', cn: '东京' }
       ],
-      phrase: [{ kana: '〜曜日', mana: '', cn: '' }]
+      phrase: [
+        { kana: 'いくら', mana: '', cn: '多少钱' },
+        { kana: 'お〜', mana: '', cn: '' },
+        { kana: '〜かい', mana: '〜階', cn: '' },
+        { kana: '〜えん', mana: '〜円', cn: '' },
+        { kana: '〜ようび', mana: '〜曜日', cn: '' }
+      ]
     },
     {
       no: 4,

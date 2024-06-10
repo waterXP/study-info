@@ -69,13 +69,13 @@ export default {
       ],
       phrase: [
         { kana: 'おはよう', mana: '', cn: '你早' },
-        { kana: '〜時', mana: '', cn: '' },
-        { kana: '〜分', mana: '', cn: '' },
-        { kana: '〜半', mana: '', cn: '' },
-        { kana: '〜月', mana: '', cn: '' },
-        { kana: '〜日', mana: '', cn: '' },
-        { kana: '〜年', mana: '', cn: '' },
-        { kana: '〜ころ', mana: '', cn: '' }
+        { kana: '〜じ', mana: '〜時', cn: '' },
+        { kana: '〜ふん', mana: '〜分', cn: '' },
+        { kana: '〜はん', mana: '〜半', cn: '' },
+        { kana: '〜げつ', mana: '〜月', cn: '' },
+        { kana: '〜にち', mana: '〜日', cn: '' },
+        { kana: '〜ねん', mana: '〜年', cn: '' },
+        { kana: '〜ごろ', mana: '', cn: '' }
       ]
     },
     {
@@ -302,7 +302,7 @@ export default {
         { kana: 'おねがいします', mana: 'お願いします', cn: '拜托了' },
         { kana: 'わかりました', mana: '分かりました', cn: '明白了' },
         { kana: 'よかったです', mana: '', cn: '太好了' },
-        { kana: '〜様', mana: '', cn: '' }
+        { kana: '〜さま', mana: '〜様', cn: '' }
       ]
     }
   ]

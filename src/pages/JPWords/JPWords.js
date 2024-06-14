@@ -209,6 +209,8 @@ const JPWords = () => {
             setShowAnswer(true)
             message.error('错误')
           }
+        } else {
+          setShowAnswer(true)
         }
       }
     }

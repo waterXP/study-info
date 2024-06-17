@@ -10,15 +10,15 @@ import React, {
 import './JPWordsList.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
-import junior from '@/consts/jp/junior'
+import jpWords from '@/consts/jp'
 
 const JPWordsList = () => {
   const navigate = useNavigate()
   const allList = useMemo(
     () =>
-      (junior || []).reduce((t, { chapter, title, lesson }) => {
+      (jpWords || []).reduce((t, { id, lesson }) => {
         t.push(
-          ...(lesson || []).map(v => ({ ...v, ch: chapter, chTitle: title }))
+          ...(lesson || []).map(v => ({ ...v, id }))
         )
         return t
       }, []),
@@ -26,22 +26,22 @@ const JPWordsList = () => {
   )
   const refBody = useRef(null)
   const [title, setTitle] = useState('')
-  const [params, setParams] = useState({ ch: 1, no: 1 })
+  const [params, setParams] = useState({ id: 1, no: 1 })
   const [searchParams] = useSearchParams()
 
   const [list, setList] = useState([])
   const [diIndex, setDiIndex] = useState(-1)
 
   useEffect(() => {
-    const ch = +searchParams.get('ch')
+    const id = +searchParams.get('id')
     const no = +searchParams.get('no')
-    if (ch && no) {
-      const tarCh = junior.find(v => v.chapter === ch)
+    if (id && no) {
+      const tarCh = jpWords.find(v => v.id === id)
       if (tarCh) {
         const tarNo = tarCh.lesson.find(v => v.no === no)
         if (tarNo) {
           setTitle(tarNo.topic || '')
-          setParams({ ch, no })
+          setParams({ id, no })
           const list = [...tarNo.word, ...tarNo.phrase]
           setList(
             list.map(
@@ -59,8 +59,8 @@ const JPWordsList = () => {
         }
       }
     }
-    setParams({ ch: 1, no: 1 })
-    setTitle(junior[0].topic || '')
+    setParams({ id: 1, no: 1 })
+    setTitle(jpWords[0].topic || '')
     const tar = junior[0].lesson[0]
     const list = [...tar.word, ...tar.phrase]
     setList(list)
@@ -75,8 +75,8 @@ const JPWordsList = () => {
       const index = allList.findIndex(v => v.no === params.no)
       if (~index) {
         const prev = index > 0 ? index - 1 : len - 1
-        const { ch, no } = allList[prev]
-        navigate(`/jp-words-list?ch=${ch}&no=${no}`)
+        const { id, no } = allList[prev]
+        navigate(`/jp-words-list?id=${id}&no=${no}`)
       }
     }
   }, [params, navigate, allList])
@@ -86,14 +86,14 @@ const JPWordsList = () => {
       const index = allList.findIndex(v => v.no === params.no)
       if (~index) {
         const next = index < len - 1 ? index + 1 : 0
-        const { ch, no } = allList[next]
-        navigate(`/jp-words-list?ch=${ch}&no=${no}`)
+        const { id, no } = allList[next]
+        navigate(`/jp-words-list?id=${id}&no=${no}`)
       }
     }
   }, [params, navigate, allList])
   const gotoWord = useCallback(
     index => {
-      navigate(`/jp-words?ch=${params.ch}&no=${params.no}&index=${index}`)
+      navigate(`/jp-words?id=${params.id}&no=${params.no}&index=${index}`)
     },
     [params, navigate]
   )

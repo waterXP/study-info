@@ -1,4 +1,5 @@
 export default {
+  id: 1,
   chapter: 1,
   title: '小李赴日',
   lesson: [

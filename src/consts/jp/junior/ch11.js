@@ -1,4 +1,5 @@
 export default {
+  id: 11,
   chapter: 11,
   title: '在北京的工作情况',
   lesson: [

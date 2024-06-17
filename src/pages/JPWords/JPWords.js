@@ -10,7 +10,7 @@ import './JPWords.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
-import junior from '@/consts/jp/junior'
+import jpWords from '@/consts/jp'
 import Switch from './components/Switch'
 import Word from './components/Word'
 
@@ -25,9 +25,9 @@ const JPWords = () => {
   const navigate = useNavigate()
   const allList = useMemo(
     () =>
-      (junior || []).reduce((t, { chapter, title, lesson }) => {
+      (jpWords || []).reduce((t, { id, lesson }) => {
         t.push(
-          ...(lesson || []).map(v => ({ ...v, ch: chapter, chTitle: title }))
+          ...(lesson || []).map(v => ({ ...v, id }))
         )
         return t
       }, []),
@@ -36,18 +36,18 @@ const JPWords = () => {
   const [searchParams] = useSearchParams()
   const [index, setIndex] = useState(0)
   const [detail, setDetail] = useState(null)
-  const [chapter, setChapter] = useState(1)
+  const [id, setId] = useState(1)
   useEffect(() => {
-    const ch = +searchParams.get('ch')
+    const id = +searchParams.get('id')
     const no = +searchParams.get('no')
     const index = +searchParams.get('index')
-    if (ch && no) {
-      const tarCh = junior.find(v => v.chapter === ch)
+    if (id && no) {
+      const tarCh = jpWords.find(v => v.id === id)
       if (tarCh) {
         const tarNo = tarCh.lesson.find(v => v.no === no)
         if (tarNo) {
           const list = [...tarNo.word, ...tarNo.phrase]
-          setChapter(ch)
+          setId(id)
           setDetail(tarNo)
           if (index && list[index]) {
             setIndex(index)
@@ -58,8 +58,8 @@ const JPWords = () => {
         }
       }
     }
-    const tar = junior[0].lesson[0]
-    setChapter(1)
+    const tar = jpWords[0].lesson[0]
+    setId(1)
     setDetail(tar)
     setIndex(0)
   }, [searchParams])
@@ -69,11 +69,11 @@ const JPWords = () => {
       return {
         title: `第${no}課 ${topic}`,
         list: [...(word || []), ...(phrase || [])],
-        link: `/jp-words-list?ch=${chapter}&no=${no}`
+        link: `/jp-words-list?id=${id}&no=${no}`
       }
     }
     return { title: '', list: [], link: -1 }
-  }, [detail, chapter])
+  }, [detail, id])
   const course = useMemo(() => (list && list[index]) || null, [list, index])
   const onPrevClick = useCallback(() => {
     setShowResult(false)
@@ -121,9 +121,9 @@ const JPWords = () => {
       const index = allList.findIndex(v => v.no === detail.no)
       if (~index) {
         const prev = index > 0 ? index - 1 : len - 1
-        const { ch, no } = allList[prev]
+        const { id, no } = allList[prev]
         setShowResult(false)
-        navigate(`/jp-words?ch=${ch}&no=${no}`)
+        navigate(`/jp-words?id=${id}&no=${no}`)
       }
     }
   }, [navigate, allList, detail])
@@ -133,9 +133,9 @@ const JPWords = () => {
       const index = allList.findIndex(v => v.no === detail.no)
       if (~index) {
         const next = index < len - 1 ? index + 1 : 0
-        const { ch, no } = allList[next]
+        const { id, no } = allList[next]
         setShowResult(false)
-        navigate(`/jp-words?ch=${ch}&no=${no}`)
+        navigate(`/jp-words?id=${id}&no=${no}`)
       }
     }
   }, [navigate, allList, detail])

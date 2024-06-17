@@ -1,4 +1,5 @@
 export default {
+  id: 6,
   chapter: 6,
   title: '再见！日本',
   lesson: [

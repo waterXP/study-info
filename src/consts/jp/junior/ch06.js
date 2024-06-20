@@ -6,9 +6,9 @@ export default {
     {
       no: 21,
       topic: 'わたしはすき焼きを食べたことがあります',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ことば', mana: '言葉', type: '名', cn: '语言' },
         { kana: 'メールアドレス', mana: '', type: '名', cn: '邮件地址' },
@@ -44,9 +44,9 @@ export default {
     {
       no: 22,
       topic: '森さんは毎晩テレビを見る',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'スキーじょう', mana: 'スキー場', type: '名', cn: '滑雪场' },
         { kana: 'そうべつかい', mana: '送別会', type: '名', cn: '欢送会' },
@@ -86,9 +86,9 @@ export default {
     {
       no: 23,
       topic: '休みの日、散歩したり買い物に行ったりします',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'しゅうまつ', mana: '週末', type: '名', cn: '周末' },
         { kana: 'スケート', mana: '', type: '名', cn: '滑冰，溜冰' },
@@ -119,9 +119,9 @@ export default {
     {
       no: 24,
       topic: '李さんはもうすぐ来ると思います',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ハイキング', mana: '', type: '名', cn: '郊游，远足' },
         { kana: 'おわかれ', mana: 'お別れ', type: '名', cn: '分别，分手' },

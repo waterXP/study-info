@@ -1,3 +1,4 @@
+import React from 'react'
 import ch01 from './ch01'
 import ch02 from './ch02'
 import ch03 from './ch03'
@@ -29,20 +30,41 @@ const r = [
 const wordList = []
 const phraseList = []
 
-r.forEach(
-  r => {
-    const { lesson } = r
-    lesson.forEach(({ word, phrase, no }) => {
-      word.forEach((v, i) => {
-        v.id = `junior-${no}-word-${i}`
-        wordList.push(v)
-      })
-      phrase.forEach((v, i) => {
-        v.id = `junior-${no}-phrase-${i}`
-        phraseList.push(v)
-      })
+r.forEach(r => {
+  const { lesson } = r
+  lesson.forEach(v => {
+    const { topic, word, phrase, no } = v
+    v.topicSingle = topic.replace(/<(.*?)>/g, (_, txt) => {
+      const [mana] = txt.split(',')
+      return mana
     })
-  }
-)
+    v.topicAll = topic.replace(/<(.*?)>/g, (_, txt) => {
+      const [mana, kana] = txt.split(',')
+      console.log(<ruby>
+        {mana}
+        <rp>「</rp>
+        <rt>{kana}</rt>
+        <rp>」</rp>
+      </ruby>)
+      return (
+        <ruby>
+          {mana}
+          <rp>「</rp>
+          <rt>{kana}</rt>
+          <rp>」</rp>
+        </ruby>
+      )
+    })
+    console.log(v.topicAll)
+    word.forEach((v, i) => {
+      v.id = `junior-${no}-word-${i}`
+      wordList.push(v)
+    })
+    phrase.forEach((v, i) => {
+      v.id = `junior-${no}-phrase-${i}`
+      phraseList.push(v)
+    })
+  })
+})
 
 export default r

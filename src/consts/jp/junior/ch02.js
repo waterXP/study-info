@@ -6,9 +6,9 @@ export default {
     {
       no: 5,
       topic: '森さんは７時に起きます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'いま', mana: '今', type: '名', cn: '现在' },
         { kana: 'せんしゅう', mana: '先週', type: '名', cn: '上个星期' },
@@ -82,9 +82,9 @@ export default {
     {
       no: 6,
       topic: '吉田さんは来月中国へ行きます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'らいげつ', mana: '来月', type: '名', cn: '下个月' },
         { kana: 'せんげつ', mana: '先月', type: '名', cn: '上个月' },
@@ -150,9 +150,9 @@ export default {
     {
       no: 7,
       topic: '李さんは毎日コーヒーを飲みます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'コーヒー', mana: '', type: '名', cn: '咖啡' },
         { kana: 'コーラ', mana: '', type: '名', cn: '可乐' },
@@ -224,9 +224,9 @@ export default {
     {
       no: 8,
       topic: '李さんは日本語で手紙を書きます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'プレゼント', mana: '', type: '名', cn: '礼物' },
         { kana: 'チケット', mana: '', type: '名', cn: '票' },

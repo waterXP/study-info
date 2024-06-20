@@ -6,9 +6,9 @@ export default {
     {
       no: 9,
       topic: 'トラブル・イタリア旅行',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -91,9 +91,9 @@ export default {
     }, {
       no: 10,
       topic: 'スケジュール・温泉大国、日本',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -176,9 +176,9 @@ export default {
     }, {
       no: 11,
       topic: '若者の意識・漫画とアニメ',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -261,9 +261,9 @@ export default {
     }, {
       no: 12,
       topic: '最終日・方言と共通語',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [

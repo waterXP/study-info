@@ -6,9 +6,9 @@ export default {
     {
       no: 13,
       topic: '机の上に本が3冊あります',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'にもつ', mana: '荷物', type: '名', cn: '包裹' },
         { kana: 'はがき', mana: '', type: '名', cn: '明信片' },
@@ -68,9 +68,9 @@ export default {
     {
       no: 14,
       topic: '昨日デパートへ行って、買い物しました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ふなびん', mana: '船便', type: '名', cn: '海运' },
         { kana: 'しょるい', mana: '書類', type: '名', cn: '文件，文稿' },
@@ -133,9 +133,9 @@ export default {
     {
       no: 15,
       topic: '小野さんは今新聞を読んでいます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ボート', mana: '', type: '名', cn: '小船，小艇' },
         { kana: 'ベンチ', mana: '', type: '名', cn: '长椅，长凳' },
@@ -188,9 +188,9 @@ export default {
     {
       no: 16,
       topic: 'ホテルの部屋は広くて明るいです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'そうさ', mana: '操作', type: '名', cn: '操作，操纵' },
         { kana: 'きかい', mana: '機械', type: '名', cn: '机械，机器' },

@@ -6,9 +6,9 @@ export default {
     {
       no: 45,
       topic: '少子化が進んで、日本の人口はだんだん減っていくでしょう',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'しょうしか', mana: '少子化', type: '名', cn: '孩子减少现象' },
         { kana: 'じんこう', mana: '人口', type: '名', cn: '人口' },
@@ -64,9 +64,9 @@ export default {
     {
       no: 46,
       topic: 'これは柔らかくて、まるで本物の毛皮のようです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'けがわ', mana: '毛皮', type: '名', cn: '毛皮' },
         { kana: 'ほんもの', mana: '本物', type: '名', cn: '真货，真东西' },
@@ -124,9 +124,9 @@ export default {
     {
       no: 47,
       topic: '周先生は明日日本へ行かれます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'したみ', mana: '下見', type: '名', cn: '视察' },
         { kana: 'スタッフ', mana: '', type: '名', cn: '职员，同事' },
@@ -152,9 +152,9 @@ export default {
     {
       no: 48,
       topic: 'お荷物は私がお持ちします',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'みょうにち', mana: '明日', type: '名', cn: '明天' },
         { kana: 'あす', mana: '明日', type: '名', cn: '明天' },

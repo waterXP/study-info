@@ -6,9 +6,9 @@ export default {
     {
       no: 5,
       topic: '商品紹介・日本語の語彙',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -170,9 +170,9 @@ export default {
     }, {
       no: 6,
       topic: '先輩・「はしの文化」さまざま',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -332,9 +332,9 @@ export default {
     }, {
       no: 7,
       topic: '打ち合わせ・電子メールの作法',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -480,9 +480,9 @@ export default {
     }, {
       no: 8,
       topic: '企画書・カップラーメン',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [

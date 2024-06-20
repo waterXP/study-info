@@ -6,9 +6,9 @@ export default {
     {
       no: 1,
       topic: '',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -91,9 +91,9 @@ export default {
     }, {
       no: 2,
       topic: '',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -176,9 +176,9 @@ export default {
     }, {
       no: 3,
       topic: '',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -261,9 +261,9 @@ export default {
     }, {
       no: 4,
       topic: '',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [

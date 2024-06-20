@@ -3,14 +3,21 @@ import './JP.styl'
 import { useNavigate } from 'react-router-dom'
 import junior from '@/consts/jp/junior'
 import intermediate from '@/consts/jp/intermediate'
-import Box from '@/components/Box'
-import Chapter from '@/components/Chapter'
-import List from '@/components/List'
-import Item from '@/components/Item'
+import Box from '@com/Box'
+import Chapter from '@com/Chapter'
+import List from '@com/List'
+import Item from '@com/Item'
+import JPText from '@com/JPText'
 
 const JP = () => {
   const navigate = useNavigate()
-  const gotoJunior = useCallback(
+  const gotoCourse = useCallback(
+    (id, no) => {
+      navigate(`/jp-course?id=${id}&no=${no}`)
+    },
+    [navigate]
+  )
+  const gotoWords = useCallback(
     (id, no) => {
       navigate(`/jp-words-list?id=${id}&no=${no}`)
     },
@@ -23,12 +30,49 @@ const JP = () => {
         <List key={id}>
           <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
           {lesson.map(({ topic, no }) => (
-            <Item
-              key={no}
-              onClick={() => {
-                gotoJunior(id, no)
-              }}
-            >{`第${no}課 ${topic}`}</Item>
+            <div key={no}>
+              <Item
+                onClick={() => {
+                  gotoWords(id, no)
+                }}
+              >
+                <JPText content={`第${no}課 ${topic}`} />
+              </Item>
+              <div className='pg-jp_options'>
+                <div
+                  className='pg-jp_option is-clickable'
+                  onClick={() => {
+                    gotoCourse(id, no)
+                  }}
+                >
+                  基
+                </div>
+                <div
+                  className='pg-jp_option is-clickable'
+                  onClick={() => {
+                    gotoWords(id, no)
+                  }}
+                >
+                  用
+                </div>
+                <div
+                  className='pg-jp_option is-clickable'
+                  onClick={() => {
+                    gotoWords(id, no)
+                  }}
+                >
+                  構
+                </div>
+                <div
+                  className='pg-jp_option is-clickable'
+                  onClick={() => {
+                    gotoWords(id, no)
+                  }}
+                >
+                  語
+                </div>
+              </div>
+            </div>
           ))}
         </List>
       ))}
@@ -40,9 +84,11 @@ const JP = () => {
             <Item
               key={no}
               onClick={() => {
-                gotoJunior(id, no)
+                gotoWords(id, no)
               }}
-            >{`第${no}課 ${topic}`}</Item>
+            >
+              <JPText content={`第${no}課 ${topic}`} />
+            </Item>
           ))}
         </List>
       ))}

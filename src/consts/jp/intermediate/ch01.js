@@ -6,9 +6,9 @@ export default {
     {
       no: 1,
       topic: '出会い・日本の鉄道',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -184,9 +184,9 @@ export default {
     }, {
       no: 2,
       topic: 'あいさつ・あいさつの時の礼儀',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -316,9 +316,9 @@ export default {
     }, {
       no: 3,
       topic: '顔合わせ・名字',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -489,9 +489,9 @@ export default {
     }, {
       no: 4,
       topic: '東京本社・近年サラリーマン事情',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [

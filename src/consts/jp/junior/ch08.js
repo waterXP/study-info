@@ -6,9 +6,9 @@ export default {
     {
       no: 29,
       topic: '電気を消せ',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'しつもん', mana: '質問', type: '名', cn: '提问，问题' },
         { kana: 'ばあい', mana: '場合', type: '名', cn: '场合，情况' },
@@ -68,9 +68,9 @@ export default {
     {
       no: 30,
       topic: 'もう11時だから寝よう',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'たくはいびん', mana: '宅配便', type: '名', cn: '送货上门服务' },
         { kana: 'ほうこくしょ', mana: '報告書', type: '名', cn: '报告书' },
@@ -115,9 +115,9 @@ export default {
     {
       no: 31,
       topic: 'このボタンを押すと、電源が入ります',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ボタン', mana: '', type: '名', cn: '按钮；纽扣' },
         { kana: 'ブローチ', mana: '', type: '名', cn: '胸针' },
@@ -167,9 +167,9 @@ export default {
     {
       no: 32,
       topic: '今度の日曜日に遊園地へ行くつもりです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'れっしゃ', mana: '列車', type: '名', cn: '火车，列车' },
         { kana: 'こうそくバス', mana: '高速バス', type: '名', cn: '走高速的公共汽车' },

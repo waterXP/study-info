@@ -11,15 +11,14 @@ import './JPWordsList.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
 import jpWords from '@/consts/jp'
+import JPText from '@com/JPText'
 
 const JPWordsList = () => {
   const navigate = useNavigate()
   const allList = useMemo(
     () =>
       (jpWords || []).reduce((t, { id, lesson }) => {
-        t.push(
-          ...(lesson || []).map(v => ({ ...v, id }))
-        )
+        t.push(...(lesson || []).map(v => ({ ...v, id })))
         return t
       }, []),
     []
@@ -105,7 +104,9 @@ const JPWordsList = () => {
           返回
         </Breadcrumb>
         {title && (
-          <p className='pg-jp-words-list_title'>{`第${params.no}課 ${title}`}</p>
+          <p className='pg-jp-words-list_title'>
+            <JPText content={`第${params.no}課 ${title}`} />
+          </p>
         )}
         <div className='pg-jp-words-list_body' ref={refBody}>
           {list.map((v, i) => (

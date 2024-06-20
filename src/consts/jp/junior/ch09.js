@@ -6,9 +6,9 @@ export default {
     {
       no: 33,
       topic: '電車が急に止まりました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'スーツケース', mana: '', type: '名', cn: '旅行箱' },
         { kana: 'トランク', mana: '', type: '名', cn: '后备箱；手提箱，皮箱' },
@@ -64,9 +64,9 @@ export default {
     {
       no: 34,
       topic: '壁にカレンダーが掛けてあります',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'カレンダー', mana: '', type: '名', cn: '挂历，日历' },
         { kana: 'ポスター', mana: '', type: '名', cn: '宣传画，海报' },
@@ -130,9 +130,9 @@ export default {
     {
       no: 35,
       topic: '明日雨が降ったら、マラソン大会は中止です',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'マラソンたいかい', mana: 'マラソン大会', type: '名', cn: '马拉松大赛' },
         { kana: 'ホームパーティー', mana: '', type: '名', cn: '家庭聚会' },
@@ -186,9 +186,9 @@ export default {
     {
       no: 36,
       topic: '遅くなって、すみません',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'さいしょ', mana: '最初', type: '名', cn: '开始的时候，最初' },
         { kana: 'しゅっしん', mana: '出身', type: '名', cn: '出生地' },

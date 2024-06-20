@@ -6,9 +6,9 @@ export default {
     {
       no: 13,
       topic: 'スピーチの依頼・日本の人口が減っているーー少子化',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -91,9 +91,9 @@ export default {
     }, {
       no: 14,
       topic: '恩師・日本の就職活動',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -176,9 +176,9 @@ export default {
     }, {
       no: 15,
       topic: '同級生・日本レストラン事情',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [
@@ -261,9 +261,9 @@ export default {
     }, {
       no: 16,
       topic: '結婚披露宴・変わる結婚式',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       words: [
         {
           word: [

@@ -6,9 +6,9 @@ export default {
     {
       no: 37,
       topic: '優勝すれば、オリンピックに出場することができます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ようじ', mana: '用事', type: '名', cn: '事情' },
         { kana: 'たいかい', mana: '大会', type: '名', cn: '大会' },
@@ -57,9 +57,9 @@ export default {
     {
       no: 38,
       topic: '戴さんは英語が話せます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'しょうひん', mana: '商品', type: '名', cn: '商品' },
         { kana: 'ごみばこ', mana: 'ごみ箱', type: '名', cn: '垃圾箱' },
@@ -105,9 +105,9 @@ export default {
     {
       no: 39,
       topic: '眼鏡をかけて本を読みます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'むら', mana: '村', type: '名', cn: '村子，村庄' },
         { kana: 'いね', mana: '稲', type: '名', cn: '稻子' },
@@ -162,9 +162,9 @@ export default {
     {
       no: 40,
       topic: 'これから友達と食事に行くところです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'モノレール', mana: '', type: '名', cn: '单轨铁路，单轨电车' },
         { kana: 'オイル', mana: '', type: '名', cn: '油，润滑油' },

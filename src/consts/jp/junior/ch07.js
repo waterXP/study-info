@@ -6,9 +6,9 @@ export default {
     {
       no: 25,
       topic: 'これは明日会議で使う資料です',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'すうがく', mana: '数学', type: '名', cn: '数学' },
         { kana: 'せんもん', mana: '専門', type: '名', cn: '专门' },
@@ -53,9 +53,9 @@ export default {
     {
       no: 26,
       topic: '自転車に２人で乗るのは危ないです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'おおあめ', mana: '大雨', type: '名', cn: '大雨' },
         { kana: 'さくら', mana: '桜', type: '名', cn: '樱花' },
@@ -110,9 +110,9 @@ export default {
     {
       no: 27,
       topic: '子供の時、大きな地震がありました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'けいざい', mana: '経済', type: '名', cn: '经济' },
         { kana: 'こくさいかんけいがく', mana: '国際関係学', type: '名', cn: '国际关系学' },
@@ -173,9 +173,9 @@ export default {
     {
       no: 28,
       topic: '馬さんはわたしに地図をくれました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'マフラー', mana: '', type: '名', cn: '围巾' },
         { kana: 'ネックレス', mana: '', type: '名', cn: '项链' },

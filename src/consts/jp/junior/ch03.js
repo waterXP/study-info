@@ -6,9 +6,9 @@ export default {
     {
       no: 9,
       topic: '四川料理は辛いです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'りょうり', mana: '料理', type: '名', cn: '菜肴，饭菜' },
         { kana: 'しせんりょうり', mana: '四川料理', type: '名', cn: '四川菜' },
@@ -92,9 +92,9 @@ export default {
     {
       no: 10,
       topic: '京都の紅葉は有名です',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'もみじ', mana: '紅葉', type: '名', cn: '红叶' },
         { kana: 'こきょう', mana: '故郷', type: '名', cn: '故乡' },
@@ -156,9 +156,9 @@ export default {
     {
       no: 11,
       topic: '小野さんは歌が好きです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'うた', mana: '歌', type: '名', cn: '歌，歌曲' },
         { kana: 'カラオケ', mana: '', type: '名', cn: '卡拉OK' },
@@ -222,9 +222,9 @@ export default {
     {
       no: 12,
       topic: '李さんは森さんより若いです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'きせつ', mana: '季節', type: '名', cn: '季节' },
         { kana: 'ふゆ', mana: '冬', type: '名', cn: '冬天，冬季' },

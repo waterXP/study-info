@@ -6,9 +6,9 @@ export default {
     {
       no: 41,
       topic: '李さんは部長にほめられました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'ことり', mana: '小鳥', type: '名', cn: '小鸟，鸟儿' },
         { kana: 'ばんぱく', mana: '万博', type: '名', cn: '世博会，万国博览会' },
@@ -86,9 +86,9 @@ export default {
     {
       no: 42,
       topic: 'テレビをつけたまま、出かけてしまいました',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'せきにんしゃ', mana: '責任者', type: '名', cn: '负责人' },
         { kana: 'どうりょう', mana: '同僚', type: '名', cn: '同事' },
@@ -133,9 +133,9 @@ export default {
     {
       no: 43,
       topic: '陳さんは息子をアメリカに留学させます',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'おてつだい', mana: 'お手伝い', type: '名', cn: '帮忙，帮助' },
         { kana: 'のりかえ', mana: '乗り換え', type: '名', cn: '换车，换乘' },
@@ -209,9 +209,9 @@ export default {
     {
       no: 44,
       topic: '玄関のところにだれかいるようです',
-      basic: [],
-      utilization: [],
-      grammar: [],
+      basic: {},
+      utilization: {},
+      grammar: {},
       word: [
         { kana: 'しゃいんりょこう', mana: '社員旅行', type: '名', cn: '员工旅行' },
         { kana: 'しんにゅうしゃいん', mana: '新入社員', type: '名', cn: '新来的职员' },

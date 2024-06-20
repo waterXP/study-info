@@ -10,6 +10,7 @@ import './JPWords.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
+import JPText from '@com/JPText'
 import jpWords from '@/consts/jp'
 import Switch from './components/Switch'
 import Word from './components/Word'
@@ -279,9 +280,9 @@ const JPWords = () => {
     [onModalPrev, onModalNext, onCheck]
   )
   return (
-    <div className='pg-jp-words  hide-scroll'>
+    <div className='pg-jp-words hide-scroll'>
       <div className='pg-jp-words_content'>
-        <Breadcrumb to={link} noTop title={title}>
+        <Breadcrumb to={link} noTop title={<JPText content={title} />}>
           返回
         </Breadcrumb>
         <div className='pg-jp-words_process' onClick={onProcess}>

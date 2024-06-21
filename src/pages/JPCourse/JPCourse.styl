@@ -19,6 +19,12 @@
   margin-bottom 32px
 .pg-jp-course_set
   margin-bottom 8px
+  &:not(&:last-child)::after
+    display block
+    width 200px
+    height 1px
+    background-color #d1d1d1
+    content ' '
 .pg-jp-course_line
   getFont(.85, 16, 24)
   margin-bottom 4px

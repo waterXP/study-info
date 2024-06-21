@@ -53,14 +53,6 @@ const JP = () => {
                     gotoWords(id, no)
                   }}
                 >
-                  用
-                </div>
-                <div
-                  className='pg-jp_option is-clickable'
-                  onClick={() => {
-                    gotoWords(id, no)
-                  }}
-                >
                   構
                 </div>
                 <div

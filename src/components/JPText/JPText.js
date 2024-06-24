@@ -5,15 +5,9 @@ const JPText = ({ content }) => {
   const r = useMemo(
     () =>
       content.replace(/<(.*?)>/g, (_, txt) => {
-        const [mana, kana] = txt.split(',')
-        console.log(
-          <ruby>
-            {mana}
-            <rp>「</rp>
-            <rt>{kana}</rt>
-            <rp>」</rp>
-          </ruby>
-        )
+        const splits = txt.split(',')
+        const mana = splits.slice(0, splits.length - 1).join(',')
+        const kana = splits[splits.length - 1]
         return `<ruby>${mana}<rp>「</rp><rt>${kana}</rt><rp>」</rp></ruby>`
       }),
     [content]

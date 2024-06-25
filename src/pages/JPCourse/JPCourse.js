@@ -28,7 +28,6 @@ const JPCourse = () => {
     setDetail(tar)
   }, [searchParams])
 
-  console.log(id, detail)
   const { base, use, topic, content, title } = useMemo(() => {
     if (detail) {
       const { no, topic, basic, utilization } = detail

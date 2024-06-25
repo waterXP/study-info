@@ -40,12 +40,6 @@ r.forEach(r => {
     })
     v.topicAll = topic.replace(/<(.*?)>/g, (_, txt) => {
       const [mana, kana] = txt.split(',')
-      console.log(<ruby>
-        {mana}
-        <rp>「</rp>
-        <rt>{kana}</rt>
-        <rp>」</rp>
-      </ruby>)
       return (
         <ruby>
           {mana}
@@ -55,7 +49,6 @@ r.forEach(r => {
         </ruby>
       )
     })
-    console.log(v.topicAll)
     word.forEach((v, i) => {
       v.id = `junior-${no}-word-${i}`
       wordList.push(v)

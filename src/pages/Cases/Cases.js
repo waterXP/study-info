@@ -30,7 +30,7 @@ const Cases = () => {
         cases.map(v =>
           <p
             key={v}
-            className='pg-cases_item is-clickable'
+            className='pg-cases_item on-click'
             onClick={() => { openPage(v) }}
           >
             { caseMap[v].title }

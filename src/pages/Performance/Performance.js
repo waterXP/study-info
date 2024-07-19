@@ -93,19 +93,19 @@ const Performance = () => {
         <div className='pg-performance_footer'>
           <div className='pg-performance_buttons'>
             <div
-              className='pg-performance_corner-button is-clickable'
+              className='pg-performance_corner-button on-click'
               onClick={onPrevClick}
             >
               上一个
             </div>
             <div
-              className='pg-performance_corner-center is-clickable'
+              className='pg-performance_corner-center on-click'
               onClick={toggleShort}
             >
               {shortTip ? '隐藏范文' : '显示范文'}
             </div>
             <div
-              className='pg-performance_corner-button is-right is-clickable'
+              className='pg-performance_corner-button is-right on-click'
               onClick={onNextClick}
             >
               下一个

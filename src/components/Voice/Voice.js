@@ -42,7 +42,7 @@ const Voice = ({ messages }) => {
     [inSpeaking, messages]
   )
   if (showVoice) {
-    return <div className='com-voice is-clickable' onClick={onClick}>
+    return <div className='com-voice on-click' onClick={onClick}>
       voice
     </div>
   }

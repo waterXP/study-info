@@ -75,19 +75,19 @@ const Others = () => {
         <div className='pg-others_footer'>
           <div className='pg-others_buttons'>
             <div
-              className='pg-others_corner-button is-clickable'
+              className='pg-others_corner-button on-click'
               onClick={onPrevClick}
             >
               上一个
             </div>
             <div
-              className='pg-others_corner-center is-clickable'
+              className='pg-others_corner-center on-click'
               onClick={toggleShort}
             >
               {shortTip ? '隐藏范文' : '显示范文'}
             </div>
             <div
-              className='pg-others_corner-button is-right is-clickable'
+              className='pg-others_corner-button is-right on-click'
               onClick={onNextClick}
             >
               下一个

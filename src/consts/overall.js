@@ -14,7 +14,7 @@ export const getColumns = onCell => [
         render: v => v && v.map((v, i) =>
           <p
             key={`start-${i}`}
-            className='is-clickable'
+            className='on-click'
             onClick={e => { onCell(e, v) }}
           >
             { v.text }
@@ -27,7 +27,7 @@ export const getColumns = onCell => [
         render: v => v && v.map((v, i) =>
           <p
             key={`plan-${i}`}
-            className='is-clickable'
+            className='on-click'
             onClick={e => { onCell(e, v) }}
           >
             { v.text }
@@ -40,7 +40,7 @@ export const getColumns = onCell => [
         render: v => v && v.map((v, i) =>
           <p
             key={`exec-${i}`}
-            className='is-clickable'
+            className='on-click'
             onClick={e => { onCell(e, v) }}
           >
             { v.text }
@@ -53,7 +53,7 @@ export const getColumns = onCell => [
         render: v => v && v.map((v, i) =>
           <p
             key={`monitor-${i}`}
-            className='is-clickable'
+            className='on-click'
             onClick={e => { onCell(e, v) }}
           >
             { v.text }
@@ -66,7 +66,7 @@ export const getColumns = onCell => [
         render: v => v && v.map((v, i) =>
           <p
             key={`end-${i}`}
-            className='is-clickable'
+            className='on-click'
             onClick={e => { onCell(e, v) }}
           >
             { v.text }

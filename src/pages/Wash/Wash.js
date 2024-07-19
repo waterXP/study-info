@@ -58,14 +58,14 @@ const Wash = () => {
     {
       inSpeaking
         ? <div
-          className='pg-wash_button is-clickable is-washing'
+          className='pg-wash_button on-click is-washing'
           type='primary'
           onClick={onVoice}
         >
           停止洗脑
         </div>
         : <div
-          className='pg-wash_button is-clickable'
+          className='pg-wash_button on-click'
           type='primary'
           onClick={onVoice}
         >

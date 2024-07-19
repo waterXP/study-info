@@ -237,7 +237,7 @@ const ITTO = () => {
           {
             data.top &&
             <span
-              className='is-clickable'
+              className='on-click'
               onClick={gotoTop}
             >
               { `${data.top.realm}/` }
@@ -308,19 +308,19 @@ const ITTO = () => {
       <div className='pg-itto_footer'>
         <div className='pg-itto_buttons'>
           <div
-            className='pg-itto_corner-button is-clickable'
+            className='pg-itto_corner-button on-click'
             onClick={onPrevClick}
           >
             上一个
           </div>
           <div
-            className='pg-itto_corner-center is-clickable'
+            className='pg-itto_corner-center on-click'
             onClick={toggleDetail}
           >
             { showDetail ? '隐藏详细' : '显示详细' }
           </div>
           <div
-            className='pg-itto_corner-button is-right is-clickable'
+            className='pg-itto_corner-button is-right on-click'
             onClick={onNextClick}
           >
             下一个

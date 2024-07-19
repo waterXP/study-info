@@ -1,24 +1,26 @@
 import React, {
   memo,
+  useEffect,
   useRef,
   useMemo,
   useState,
-  useEffect,
   useCallback
 } from 'react'
-import './JPWords.styl'
+import './JPFavorites.styl'
 import { useSelector, useDispatch } from 'react-redux'
-import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
 import Icon from '@com/Icon'
-import JPText from '@com/JPText'
-import jpWords from '@/consts/jp'
+import { words } from '@/consts/jp'
 import Switch from './components/Switch'
 import Word from './components/Word'
 
-const JPWords = () => {
+const JPFavorites = () => {
   const { favorites } = useSelector(({ favorites }) => ({ favorites }))
+  const list = useMemo(
+    () => words.filter(({ id }) => favorites[id]),
+    [favorites]
+  )
   const dispatch = useDispatch()
   const [showResult, setShowResult] = useState(false)
   const [switches, setSwitches] = useState({
@@ -27,56 +29,7 @@ const JPWords = () => {
     type: false,
     cn: false
   })
-  const navigate = useNavigate()
-  const allList = useMemo(
-    () =>
-      (jpWords || []).reduce((t, { id, lesson }) => {
-        t.push(...(lesson || []).map(v => ({ ...v, id })))
-        return t
-      }, []),
-    []
-  )
-  const [searchParams] = useSearchParams()
   const [index, setIndex] = useState(0)
-  const [detail, setDetail] = useState(null)
-  const [id, setId] = useState(1)
-  useEffect(() => {
-    const id = +searchParams.get('id')
-    const no = +searchParams.get('no')
-    const index = +searchParams.get('index')
-    if (id && no) {
-      const tarCh = jpWords.find(v => v.id === id)
-      if (tarCh) {
-        const tarNo = tarCh.lesson.find(v => v.no === no)
-        if (tarNo) {
-          const list = [...tarNo.word, ...tarNo.phrase]
-          setId(id)
-          setDetail(tarNo)
-          if (index && list[index]) {
-            setIndex(index)
-          } else {
-            setIndex(0)
-          }
-          return
-        }
-      }
-    }
-    const tar = jpWords[0].lesson[0]
-    setId(1)
-    setDetail(tar)
-    setIndex(0)
-  }, [searchParams])
-  const { list, title, link } = useMemo(() => {
-    if (detail) {
-      const { no, topic, word, phrase } = detail
-      return {
-        title: `第${no}課 ${topic}`,
-        list: [...(word || []), ...(phrase || [])],
-        link: `/jp-words-list?id=${id}&no=${no}`
-      }
-    }
-    return { title: '', list: [], link: -1 }
-  }, [detail, id])
   const course = useMemo(() => (list && list[index]) || null, [list, index])
   const onPrevClick = useCallback(() => {
     setShowResult(false)
@@ -118,49 +71,27 @@ const JPWords = () => {
     },
     [list]
   )
-  const gotoPrevChapter = useCallback(() => {
-    const len = allList.length
-    if (len > 0) {
-      const index = allList.findIndex(v => v.no === detail.no)
-      if (~index) {
-        const prev = index > 0 ? index - 1 : len - 1
-        const { id, no } = allList[prev]
-        setShowResult(false)
-        navigate(`/jp-words?id=${id}&no=${no}`)
-      }
-    }
-  }, [navigate, allList, detail])
-  const gotoNextChapter = useCallback(() => {
-    const len = allList.length
-    if (len > 0) {
-      const index = allList.findIndex(v => v.no === detail.no)
-      if (~index) {
-        const next = index < len - 1 ? index + 1 : 0
-        const { id, no } = allList[next]
-        setShowResult(false)
-        navigate(`/jp-words?id=${id}&no=${no}`)
-      }
-    }
-  }, [navigate, allList, detail])
   const toggleShwoResult = useCallback(() => {
     const { kana, mana, cn, type } = switches
     let len = 0
     let a = 0
-    if (course.kana) {
-      len++
-      a += +kana
-    }
-    if (course.mana) {
-      len++
-      a += +mana
-    }
-    if (course.type) {
-      len++
-      a += +type
-    }
-    if (course.cn) {
-      len++
-      a += +cn
+    if (course) {
+      if (course.kana) {
+        len++
+        a += +kana
+      }
+      if (course.mana) {
+        len++
+        a += +mana
+      }
+      if (course.type) {
+        len++
+        a += +type
+      }
+      if (course.cn) {
+        len++
+        a += +cn
+      }
     }
     const inRecite = len !== a && a !== 0
     if (inRecite && !showResult) {
@@ -170,11 +101,9 @@ const JPWords = () => {
       const nextIndex = index + 1
       if (list[nextIndex]) {
         setIndex(nextIndex)
-      } else {
-        gotoNextChapter()
       }
     }
-  }, [showResult, index, list, gotoNextChapter, switches, course])
+  }, [showResult, index, list, switches, course])
   const onSwtichsChange = useCallback(type => {
     setShowResult(false)
     setSwitches(switches => ({
@@ -235,18 +164,18 @@ const JPWords = () => {
     if (list[prevIndex]) {
       setIndex(prevIndex)
     } else {
-      gotoPrevChapter()
+      setIndex(list.length - 1)
     }
-  }, [list, index, gotoPrevChapter])
+  }, [list, index])
   const onModalNext = useCallback(() => {
     setShowResult(false)
     const nextIndex = index + 1
     if (list[nextIndex]) {
       setIndex(nextIndex)
     } else {
-      gotoNextChapter()
+      setIndex(0)
     }
-  }, [list, index, gotoNextChapter])
+  }, [list, index])
   const modalTitle = useMemo(
     () => (
       <p className='pg-jp-words_modal-title'>
@@ -283,10 +212,15 @@ const JPWords = () => {
       dispatch({ type: 'updateStorage', id: list[index].id })
     }
   }, [list, index])
+  useEffect(() => {
+    if (!course && open) {
+      setOpen(false)
+    }
+  }, [course, open])
   return (
     <div className='pg-jp-words hide-scroll'>
       <div className='pg-jp-words_content'>
-        <Breadcrumb to={link} noTop title={<JPText content={title} />}>
+        <Breadcrumb to={-1} noTop>
           返回
         </Breadcrumb>
         <div className='pg-jp-words_process' onClick={onProcess}>
@@ -326,26 +260,11 @@ const JPWords = () => {
             >
               意
             </Switch>
-            { course &&<Switch
-              checked={favorites[course.id]}
-              onClick={onFavorite}
-            >
-              藏
-            </Switch>}
-          </div>
-          <div className='pg-jp-words_options-block'>
-            <div
-              className='pg-jp-words_option on-click'
-              onClick={gotoPrevChapter}
-            >
-              上
-            </div>
-            <div
-              className='pg-jp-words_option on-click'
-              onClick={gotoNextChapter}
-            >
-              下
-            </div>
+            {course && (
+              <Switch checked={favorites[course.id]} onClick={onFavorite}>
+                藏
+              </Switch>
+            )}
           </div>
         </div>
         <div className='pg-jp-words_center' onClick={toggleShwoResult}>
@@ -426,4 +345,4 @@ const JPWords = () => {
   )
 }
 
-export default memo(JPWords)
+export default memo(JPFavorites)

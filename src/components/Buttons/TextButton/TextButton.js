@@ -4,7 +4,7 @@ import './TextButton.styl'
 
 const TextButton = ({ children, onClick }) =>
   <div
-    className='com-buttons-text-button is-clickable'
+    className='com-buttons-text-button on-click'
     onClick={onClick}
   >
     { children }

@@ -51,7 +51,7 @@ const Papers = () => {
         papers.map(({ id, name }) =>
           <p
             key={id}
-            className='pg-papers_item is-clickable'
+            className='pg-papers_item on-click'
             onClick={() => { openPage(id) }}
           >
             { name }

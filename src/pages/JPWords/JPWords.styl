@@ -123,10 +123,20 @@
   display flex
   justify-content flex-end
 .pg-jp-words_modal-button
-  f(.45, 14, 20)
+  getFont(.45, 14, 20)
   flex none
   margin-left 8px
   padding 4px 11px
   border 1px solid #d9d9d9
   border-radius 4px
   background-color #fff
+.pg-jp-words_favorite
+  position absolute
+  top 16px
+  right 16px
+.pg-jp-words_favorite-icon.iconfont
+  getFont(.45, 32)
+  width 32px
+  text-align center
+  &.is-favorite
+    color cw

@@ -214,19 +214,19 @@ const Chapter = () => {
       <div className='pg-chapter_footer'>
         <div className='pg-chapter_buttons'>
           <div
-            className='pg-chapter_corner-button is-clickable'
+            className='pg-chapter_corner-button on-click'
             onClick={onPrevClick}
           >
             上一个
           </div>
           <div
-            className='pg-chapter_corner-center is-clickable'
+            className='pg-chapter_corner-center on-click'
             onClick={toggleShort}
           >
             { shortTip ? '隐藏提示' : '显示提示' }
           </div>
           <div
-            className='pg-chapter_corner-button is-right is-clickable'
+            className='pg-chapter_corner-button is-right on-click'
             onClick={onNextClick}
           >
             下一个

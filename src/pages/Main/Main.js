@@ -13,10 +13,10 @@ const Main = () => {
   }, [navigate])
   return (
     <div className='pg-main'>
-      <div className='pg-main_link is-clickable' onClick={gotoMenu}>
+      <div className='pg-main_link on-click' onClick={gotoMenu}>
         软考
       </div>
-      <div className='pg-main_link is-clickable' onClick={gotoJapanese}>
+      <div className='pg-main_link on-click' onClick={gotoJapanese}>
         日语
       </div>
     </div>

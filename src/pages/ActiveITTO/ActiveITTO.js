@@ -304,7 +304,7 @@ const ActiveITTO = () => {
             target === v ? (
               <span
                 key={i}
-                className='pg-active-itto_name is-clickable is-current'
+                className='pg-active-itto_name on-click is-current'
                 onClick={() => {
                   onClick(v)
                 }}
@@ -312,7 +312,7 @@ const ActiveITTO = () => {
             ) : (
               <span
                 key={i}
-                className='pg-active-itto_name is-clickable'
+                className='pg-active-itto_name on-click'
                 onClick={() => {
                   onClick(v)
                 }}
@@ -321,7 +321,7 @@ const ActiveITTO = () => {
           )}
           {target === 'single' ? (
             <span
-              className='pg-active-itto_name is-clickable is-current'
+              className='pg-active-itto_name on-click is-current'
               onClick={() => {
                 onClick('single')
               }}
@@ -330,7 +330,7 @@ const ActiveITTO = () => {
             </span>
           ) : (
             <span
-              className='pg-active-itto_name is-clickable'
+              className='pg-active-itto_name on-click'
               onClick={() => {
                 onClick('single')
               }}

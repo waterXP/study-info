@@ -1,7 +1,10 @@
+import { getStorage, setStorage } from '@/utils/tool'
+
 const initialStates = {
   viewMode: 'recite',
   shortTip: true,
-  showDetail: false
+  showDetail: false,
+  favorites: getStorage('FAVORITE')
 }
 
 export default function mainReducer(state = initialStates, action) {
@@ -22,6 +25,20 @@ export default function mainReducer(state = initialStates, action) {
       return {
         ...state,
         showDetail: !state.showDetail
+      }
+    }
+    case 'updateStorage': {
+      console.log(action)
+      if (action.id) {
+        const nextFavorites = { ...state.favorites }
+        if (nextFavorites[action.id]) {
+          delete nextFavorites[action.id]
+        } else {
+          nextFavorites[action.id] = true
+        }
+        setStorage('FAVORITE', nextFavorites)
+        console.log(nextFavorites)
+        return { ...state, favorites: nextFavorites }
       }
     }
     default:

@@ -3,7 +3,7 @@ import './Item.styl'
 
 const Item = ({ children, onClick }) => (
   <div
-    className={onClick ? 'com-item is-clickable' : 'com-item'}
+    className={onClick ? 'com-item on-click' : 'com-item'}
     onClick={onClick}
   >
     {children}

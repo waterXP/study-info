@@ -18,6 +18,7 @@ import Others from '@/pages/Others'
 import Performance from '@/pages/Performance'
 import ActiveITTO from '@/pages/ActiveITTO'
 import JP from '@/pages/JP'
+import JPFavorites from '@/pages/JPFavorites'
 import JPWordsList from '@/pages/JPWordsList'
 import JPWords from '@/pages/JPWords'
 import JPCourse from '@/pages/JPCourse'
@@ -85,6 +86,10 @@ const router = createBrowserRouter(
     {
       path: 'performance',
       element: <Performance />
+    },
+    {
+      path: 'jp-favorites',
+      element: <JPFavorites />
     },
     {
       path: 'jp-words-list',

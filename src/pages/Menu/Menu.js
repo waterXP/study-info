@@ -78,7 +78,7 @@ const Menu = () => {
     <div className='pg-menu'>
       <div className='pg-menu_content'>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             gotoMenu()
           }}
@@ -86,7 +86,7 @@ const Menu = () => {
           目录
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openOthersPage()
           }}
@@ -94,7 +94,7 @@ const Menu = () => {
           论文
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openPerformancePage()
           }}
@@ -102,7 +102,7 @@ const Menu = () => {
           八大绩效域
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openWashPage()
           }}
@@ -110,7 +110,7 @@ const Menu = () => {
           洗脑
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openMainPage()
           }}
@@ -118,7 +118,7 @@ const Menu = () => {
           五组十域表
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openITTOPage()
           }}
@@ -126,7 +126,7 @@ const Menu = () => {
           ITTO
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openCasePage()
           }}
@@ -134,7 +134,7 @@ const Menu = () => {
           案例分析
         </p>
         <p
-          className='pg-menu_item is-clickable'
+          className='pg-menu_item on-click'
           onClick={() => {
             openPaperPage()
           }}
@@ -144,7 +144,7 @@ const Menu = () => {
         {menus.map(v => (
           <p
             key={v}
-            className='pg-menu_item is-clickable'
+            className='pg-menu_item on-click'
             onClick={() => {
               openPage(v)
             }}

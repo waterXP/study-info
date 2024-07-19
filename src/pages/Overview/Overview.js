@@ -92,7 +92,7 @@ const Overview = () => {
         </p>
       }
       <div
-        className='pg-overview_mode is-clickable'
+        className='pg-overview_mode on-click'
         onClick={gotoMenu}
       >
         菜单

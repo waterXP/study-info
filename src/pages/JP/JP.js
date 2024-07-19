@@ -1,6 +1,8 @@
-import React, { memo, useCallback } from 'react'
+import React, { memo, useMemo, useCallback } from 'react'
 import './JP.styl'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { words } from '@/consts/jp'
 import junior from '@/consts/jp/junior'
 import intermediate from '@/consts/jp/intermediate'
 import Box from '@com/Box'
@@ -10,6 +12,7 @@ import Item from '@com/Item'
 import JPText from '@com/JPText'
 
 const JP = () => {
+  const { favorites } = useSelector(({ favorites }) => ({ favorites }))
   const navigate = useNavigate()
   const gotoCourse = useCallback(
     (id, no) => {
@@ -23,8 +26,21 @@ const JP = () => {
     },
     [navigate]
   )
+  const favoriteCount = useMemo(
+    () => words.filter(({ id }) => favorites[id]).length,
+    [favorites]
+  )
+  const gotoFavorites = useCallback(() => {
+    navigate('/jp-favorites')
+  }, [navigate])
   return (
     <Box>
+      {favoriteCount > 0 && (
+        <p
+          className='pg-jp_topic on-click'
+          onClick={gotoFavorites}
+        >{`收藏单词（${favoriteCount}）`}</p>
+      )}
       <p className='pg-jp_topic'>初级</p>
       {junior.map(({ id, chapter, title, lesson }) => (
         <List key={id}>
@@ -40,7 +56,7 @@ const JP = () => {
               </Item>
               <div className='pg-jp_options'>
                 <div
-                  className='pg-jp_option is-clickable'
+                  className='pg-jp_option on-click'
                   onClick={() => {
                     gotoCourse(id, no)
                   }}
@@ -48,7 +64,7 @@ const JP = () => {
                   基
                 </div>
                 <div
-                  className='pg-jp_option is-clickable'
+                  className='pg-jp_option on-click'
                   onClick={() => {
                     gotoWords(id, no)
                   }}
@@ -56,7 +72,7 @@ const JP = () => {
                   構
                 </div>
                 <div
-                  className='pg-jp_option is-clickable'
+                  className='pg-jp_option on-click'
                   onClick={() => {
                     gotoWords(id, no)
                   }}

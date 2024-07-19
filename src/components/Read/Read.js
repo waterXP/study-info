@@ -40,7 +40,7 @@ const Voice = ({ text }) => {
     [inSpeaking, text]
   )
   if (showVoice) {
-    return <span className='com-read is-clickable' onClick={onClick}>
+    return <span className='com-read on-click' onClick={onClick}>
       { children }
     </span>
   }

@@ -112,7 +112,7 @@ const JPWordsList = () => {
           {list.map((v, i) => (
             <Fragment key={i}>
               <p
-                className='pg-jp-words-list_line is-clickable'
+                className='pg-jp-words-list_line on-click'
                 onClick={() => {
                   gotoWord(i)
                 }}
@@ -127,13 +127,13 @@ const JPWordsList = () => {
       <div className='pg-jp-words-list_footer'>
         <div className='pg-jp-words-list_buttons'>
           <div
-            className='pg-jp-words-list_corner-button is-clickable'
+            className='pg-jp-words-list_corner-button on-click'
             onClick={onPrevClick}
           >
             上一个
           </div>
           <div
-            className='pg-jp-words-list_corner-button is-right is-clickable'
+            className='pg-jp-words-list_corner-button is-right on-click'
             onClick={onNextClick}
           >
             下一个

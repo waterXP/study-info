@@ -1,8 +1,6 @@
 import junior from './junior'
 import intermediate from './intermediate'
 
-console.log([...junior, ...intermediate])
-
 const r = [...junior, ...intermediate]
 
 export const words = []

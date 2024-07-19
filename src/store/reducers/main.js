@@ -4,7 +4,7 @@ const initialStates = {
   viewMode: 'recite',
   shortTip: true,
   showDetail: false,
-  favorites: getStorage('FAVORITE')
+  favorites: getStorage('FAVORITE') || {}
 }
 
 export default function mainReducer(state = initialStates, action) {
@@ -28,7 +28,6 @@ export default function mainReducer(state = initialStates, action) {
       }
     }
     case 'updateStorage': {
-      console.log(action)
       if (action.id) {
         const nextFavorites = { ...state.favorites }
         if (nextFavorites[action.id]) {
@@ -37,7 +36,6 @@ export default function mainReducer(state = initialStates, action) {
           nextFavorites[action.id] = true
         }
         setStorage('FAVORITE', nextFavorites)
-        console.log(nextFavorites)
         return { ...state, favorites: nextFavorites }
       }
     }

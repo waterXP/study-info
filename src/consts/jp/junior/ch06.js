@@ -297,7 +297,7 @@ export default {
       word: [
         { kana: 'ハイキング', mana: '', type: '名', cn: '郊游，远足' },
         { kana: 'おわかれ', mana: 'お別れ', type: '名', cn: '分别，分手' },
-        { kana: 'はなし', mana: '話', type: '名', cn: '话说' },
+        { kana: 'はなし', mana: '話', type: '名', cn: '说话' },
         { kana: 'みおくり', mana: '見送り', type: '名', cn: '送行，送别' },
         { kana: 'あいだ', mana: '間', type: '名', cn: '时间，期间' },
         { kana: 'ほうりつ', mana: '法律', type: '名', cn: '法律' },

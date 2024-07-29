@@ -111,6 +111,7 @@ const JPWordsList = () => {
         <div className='pg-jp-words-list_body' ref={refBody}>
           {list.map((v, i) => (
             <Fragment key={i}>
+              {i === diIndex && <div className='pg-jp-words-list_division' />}
               <p
                 className='pg-jp-words-list_line on-click'
                 onClick={() => {
@@ -119,7 +120,6 @@ const JPWordsList = () => {
               >
                 {v}
               </p>
-              {i === diIndex && <div className='pg-jp-words-list_division' />}
             </Fragment>
           ))}
         </div>

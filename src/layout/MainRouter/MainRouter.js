@@ -22,6 +22,8 @@ import JPFavorites from '@/pages/JPFavorites'
 import JPWordsList from '@/pages/JPWordsList'
 import JPWords from '@/pages/JPWords'
 import JPCourse from '@/pages/JPCourse'
+import JPTables from '@/pages/JPTables'
+import JPTable from '@/pages/JPTable'
 
 const { PUBLIC_URL } = process.env
 
@@ -102,6 +104,14 @@ const router = createBrowserRouter(
     {
       path: 'jp-course',
       element: <JPCourse />
+    },
+    {
+      path: 'jp-tables',
+      element: <JPTables />
+    },
+    {
+      path: 'jp-table',
+      element: <JPTable />
     },
     {
       path: 'jp',

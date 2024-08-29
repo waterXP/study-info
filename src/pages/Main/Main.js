@@ -14,6 +14,9 @@ const Main = () => {
   const gotoTables = useCallback(() => {
     navigate('/jp-tables')
   }, [navigate])
+  const gotoNotes = useCallback(() => {
+    navigate('/jp-notes')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -23,7 +26,10 @@ const Main = () => {
         日语
       </div>
       <div className='pg-main_link on-click' onClick={gotoTables}>
-        文法
+        背颂
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoNotes}>
+        语法
       </div>
     </div>
   )

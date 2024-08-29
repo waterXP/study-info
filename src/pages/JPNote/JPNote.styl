@@ -1,0 +1,52 @@
+.pg-jp-note
+  display flex
+  flex-direction column
+  overflow hidden
+  box-sizing border-box
+  padding 16px 0 0
+  width 100vw
+  height 100vh
+  .com-breadcrumb
+    padding 0 32px 16px
+.pg-jp-note_content
+  flex auto
+  overflow auto
+  padding 0 32px
+.pg-jp-note_block
+  padding 32px 0
+  border-bottom 1px solid rgba(0, 0, 0, .25)
+.pg-jp-note_title
+  getFont(.85, 14, 20)
+  wb()
+  margin-bottom 8px
+  text-align center
+.pg-jp-note_desc
+  getFont(.45, 14, 20)
+  wb()
+  margin-bottom 16px
+  text-align left
+.pg-jp-note_column
+  fl(flex-start)
+  wb()
+  background-color #fff
+  &.is-header
+    position sticky
+    top 0
+.pg-jp-note_cell
+  getFont(.65, 14, 20)
+  wb()
+  flex none
+  text-align center
+  padding 8px 0
+  &.is-header
+    color cp
+  + .pg-jp-note_cell
+    border-left 1px solid rgba(0, 0, 0 .25)
+.pg-jp-note_bottom
+  width 100%
+  height 80px
+.pg-jp-note_text
+  getFont(.65, 14, 20)
+  &.is-topic
+    color rgba(0, 0, 0, .85)
+    padding-top 16px

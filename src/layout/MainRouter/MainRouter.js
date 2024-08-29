@@ -24,6 +24,8 @@ import JPWords from '@/pages/JPWords'
 import JPCourse from '@/pages/JPCourse'
 import JPTables from '@/pages/JPTables'
 import JPTable from '@/pages/JPTable'
+import JPNotes from '@/pages/JPNotes'
+import JPNote from '@/pages/JPNote'
 
 const { PUBLIC_URL } = process.env
 
@@ -112,6 +114,14 @@ const router = createBrowserRouter(
     {
       path: 'jp-table',
       element: <JPTable />
+    },
+    {
+      path: 'jp-notes',
+      element: <JPNotes />
+    },
+    {
+      path: 'jp-note',
+      element: <JPNote />
     },
     {
       path: 'jp',

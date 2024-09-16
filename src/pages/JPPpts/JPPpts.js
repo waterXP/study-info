@@ -7,7 +7,7 @@ import Box from '@com/Box'
 
 const JPPpts = () => {
   const navigate = useNavigate()
-  const gotoNote = useCallback(
+  const gotoPPT = useCallback(
     id => {
       navigate(`/jp-ppt?&id=${id}`)
     },
@@ -18,7 +18,7 @@ const JPPpts = () => {
       <Breadcrumb to='/' noTop>
         返回
       </Breadcrumb>
-      {note.map(({ id, title }) => (
+      {ppt.map(({ id, title }) => (
         <div
           key={id}
           onClick={() => {

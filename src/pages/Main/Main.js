@@ -19,7 +19,7 @@ const Main = () => {
   }, [navigate])
   const gotoPpt = useCallback(
     () => {
-      navigate('jp-jpps')
+      navigate('/jp-ppts')
     },
     [navigate]
   )

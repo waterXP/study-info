@@ -7,35 +7,39 @@ import Box from '@com/Box'
 
 const JPNotes = () => {
   const navigate = useNavigate()
-  const gotoNote = useCallback((pId, id) => {
-    console.log(pId, id)
-    navigate(`/jp-note?id=${id}&pId=${pId}`)
-  }, [navigator])
-  return <Box>
-    <Breadcrumb to='/' noTop>返回</Breadcrumb>
-    {
-      note.map(
-        ({ id: pId, title, desc, list }) => <div key={pId}>
-          <p className='pg-jp-notes_title'>{title}</p>
+  const gotoNote = useCallback(
+    id => {
+      navigate(`/jp-note?&id=${id}`)
+    },
+    [navigator]
+  )
+  return (
+    <Box>
+      <Breadcrumb to='/' noTop>
+        返回
+      </Breadcrumb>
+      {note.map(({ id: pId, title, desc, list }) => (
+        <div key={pId}>
+          <p
+            className='pg-jp-notes_title'
+            onClick={() => {
+              gotoNote(pId)
+            }}
+          >
+            {title}
+          </p>
           <p className='pg-jp-notes_desc'>{desc}</p>
           <div className='pg-jp-notes_list'>
-            {
-              list.map(
-                ({ id, name }) =>
-                  <p
-                    key={id}
-                    className='pg-jp-notes_name on-click'
-                    onClick={() => { gotoNote(pId, id) }}
-                  >
-                    { name }
-                  </p>
-              )
-            }
+            {list.map(({ id, name }) => (
+              <p key={id} className='pg-jp-notes_name on-click'>
+                {name}
+              </p>
+            ))}
           </div>
         </div>
-      )
-    }
-  </Box>
+      ))}
+    </Box>
+  )
 }
 
 export default memo(JPNotes)

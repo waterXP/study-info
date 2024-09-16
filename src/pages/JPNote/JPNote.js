@@ -8,9 +8,9 @@ const JPNote = () => {
   const [searchParams] = useSearchParams()
   const [list, setList] = useState([])
   useEffect(() => {
-    const pId = searchParams.get('pId')
-    if (pId) {
-      const unit = note.find(({ id }) => id === pId)
+    const id = searchParams.get('id')
+    if (id) {
+      const unit = note.find(({ id }) => id === id)
       if (unit) {
         setList(unit.list)
       }
@@ -27,7 +27,7 @@ const JPNote = () => {
               const style = type === 'table' && columns && columns.length
                 ? { width: `${100 / columns.length}%` }
                 : {}
-              return <div key={id} class='pg-jp-note_block'>
+              return <div key={id} className='pg-jp-note_block'>
                 { name && <p className='pg-jp-note_title'>{name}</p> }
                 {
                   type === 'table'

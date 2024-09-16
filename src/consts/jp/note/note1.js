@@ -1,6 +1,6 @@
 export default [
   {
-    id: 'none',
+    id: 'noun',
     title: '名词',
     list: [
       {

@@ -17,6 +17,12 @@ const Main = () => {
   const gotoNotes = useCallback(() => {
     navigate('/jp-notes')
   }, [navigate])
+  const gotoPpt = useCallback(
+    () => {
+      navigate('jp-jpps')
+    },
+    [navigate]
+  )
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -30,6 +36,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoNotes}>
         语法
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoPpt}>
+        PPT
       </div>
     </div>
   )

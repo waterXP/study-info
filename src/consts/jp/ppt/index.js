@@ -15,6 +15,14 @@ import p13 from './13'
 import p14 from './14'
 import p15 from './15'
 import p16 from './16'
+import p17 from './17'
+import p18 from './18'
+import p19 from './19'
+import p20 from './20'
+import p21 from './21'
+import p22 from './22'
+import p23 from './23'
+import p24 from './24'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -130,5 +138,13 @@ export default [
   p13,
   p14,
   p15,
-  p16
+  p16,
+  p17,
+  p18,
+  p19,
+  p20,
+  p21,
+  p22,
+  p23,
+  p24
 ].map(v => build(v))

@@ -26,6 +26,18 @@ export default [
   },
   {
     id: '5-3',
+    title: ['动词分类'],
+    explain: [],
+    example: []
+  },
+  {
+    id: '5-4',
+    title: ['动词分类ます形'],
+    explain: [],
+    example: []
+  },
+  {
+    id: '5-5',
     title: ['动词<<ます／ません／ました／ませんでした>>'],
     explain: [
       ['1. 一种礼貌的表达方式。'],

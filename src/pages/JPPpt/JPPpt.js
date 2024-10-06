@@ -9,15 +9,12 @@ const JPPpt = () => {
   const [unit, setUnit] = useState(null)
   useEffect(() => {
     const id = searchParams.get('id')
-    console.log(ppt)
-    console.log(id)
     if (id) {
       let unit = null
       ppt.some(v => {
         unit = v.find(v => v.id === id)
         return unit
       })
-      console.log('unit', unit)
       if (unit) {
         setUnit(unit)
       }

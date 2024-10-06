@@ -18,16 +18,24 @@ const JPPpts = () => {
       <Breadcrumb to='/' noTop>
         返回
       </Breadcrumb>
-      {ppt.map(({ id, title }) => (
-        <div
-          key={id}
-          onClick={() => {
-            gotoPPT(id)
-          }}
-        >
-          <p className='pg-jp-ppts_title'>
-            {title}
-          </p>
+      {ppt.map((arr, i) => (
+        <div key={i} className='pg-jp-ppts_lesson'>
+          <p className='pg-jp-ppts_topic'>{`第${i + 1}课`}</p>
+          {arr.map(({ id, title }) => (
+            <div
+              key={id}
+              className='pg-jp-ppts_titles'
+              onClick={() => {
+                gotoPPT(id)
+              }}
+            >
+              {title.map((v, i) => (
+                <p key={i} className='pg-jp-ppts_title'>
+                  {v}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
       ))}
     </Box>

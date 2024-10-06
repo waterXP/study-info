@@ -16,7 +16,6 @@ const JPNote = () => {
       }
     }
   }, [searchParams])
-  console.log('list', list)
   return (
     <div className='pg-jp-note'>
       <Breadcrumb to='/jp-notes' noTop>返回</Breadcrumb>

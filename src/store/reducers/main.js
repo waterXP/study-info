@@ -4,7 +4,9 @@ const initialStates = {
   viewMode: 'recite',
   shortTip: true,
   showDetail: false,
-  favorites: getStorage('FAVORITE') || {}
+  favorites: getStorage('FAVORITE') || {},
+  pptExplain: false,
+  pptExample: true
 }
 
 export default function mainReducer(state = initialStates, action) {
@@ -13,6 +15,18 @@ export default function mainReducer(state = initialStates, action) {
       return {
         ...state,
         viewMode: state.viewMode === 'recite' ? 'reading' : 'recite'
+      }
+    }
+    case 'changePptExplain': {
+      return {
+        ...state,
+        pptExplain: !state.pptExplain
+      }
+    }
+    case 'changePptExample': {
+      return {
+        ...state,
+        pptExample: !state.pptExample
       }
     }
     case 'changeShortTip': {

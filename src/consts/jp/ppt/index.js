@@ -24,6 +24,9 @@ import p22 from './22'
 import p23 from './23'
 import p24 from './24'
 import p25 from './25'
+import p26 from './26'
+import p27 from './27'
+import p28 from './28'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -148,5 +151,8 @@ export default [
   p22,
   p23,
   p24,
-  p25
+  p25,
+  p26,
+  p27,
+  p28
 ].map(v => build(v))

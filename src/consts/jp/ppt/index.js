@@ -27,6 +27,18 @@ import p25 from './25'
 import p26 from './26'
 import p27 from './27'
 import p28 from './28'
+import p29 from './29'
+import p30 from './30'
+import p31 from './31'
+import p32 from './32'
+import p33 from './33'
+import p34 from './34'
+import p35 from './35'
+import p36 from './36'
+import p37 from './37'
+import p38 from './38'
+import p39 from './39'
+import p40 from './40'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -154,5 +166,17 @@ export default [
   p25,
   p26,
   p27,
-  p28
+  p28,
+  p29,
+  p30,
+  p31,
+  p32,
+  p33,
+  p34,
+  p35,
+  p36,
+  p37,
+  p38,
+  p39,
+  p40
 ].map(v => build(v))

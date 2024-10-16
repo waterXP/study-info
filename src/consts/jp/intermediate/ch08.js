@@ -4,7 +4,7 @@ export default {
   title: '新的旅程',
   lesson: [
     {
-      no: 1,
+      no: 77,
       topic: '',
       basic: {},
       utilization: {},
@@ -89,7 +89,7 @@ export default {
         }
       ]
     }, {
-      no: 2,
+      no: 78,
       topic: '',
       basic: {},
       utilization: {},
@@ -174,7 +174,7 @@ export default {
         }
       ]
     }, {
-      no: 3,
+      no: 79,
       topic: '',
       basic: {},
       utilization: {},
@@ -259,7 +259,7 @@ export default {
         }
       ]
     }, {
-      no: 4,
+      no: 80,
       topic: '',
       basic: {},
       utilization: {},

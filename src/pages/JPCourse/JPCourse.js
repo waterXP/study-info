@@ -1,11 +1,12 @@
-import React, { memo, useEffect, useMemo, useState } from 'react'
+import React, { memo, useEffect, useCallback, useMemo, useState } from 'react'
 import './JPCourse.styl'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import jpWords from '@/consts/jp'
 import Breadcrumb from '@com/Breadcrumb'
 import JPText from '@com/JPText'
 
 const JPCourse = () => {
+  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const [detail, setDetail] = useState(null)
   const [id, setId] = useState(1)
@@ -43,6 +44,35 @@ const JPCourse = () => {
     }
     return { title: '', base: [], use: [], topic: '', content: [] }
   }, [detail])
+  const onPrevClick = useCallback(() => {
+    if (detail) {
+      const { no } = detail
+      const nextNo = no - 1
+      const nextId = id - 1
+      if (nextNo < 1) {
+        const last = jpWords[jpWords.length - 1]
+        const lastDetail = last.lesson[last.lesson.length - 1]
+        navigate(`/jp-course?id=${last.id}&no=${lastDetail.no}`)
+        return
+      }
+      const tar = jpWords.find(({ lesson }) => lesson.some(v => v.no === nextNo))
+      if (tar) {
+        navigate(`/jp-course?id=${tar.id}&no=${nextNo}`)
+      }
+    }
+  }, [id, detail, navigate])
+  const onNextClick = useCallback(() => {
+    if (detail) {
+      const { no } = detail
+      const nextNo = no + 1
+      const tar = jpWords.find(({ lesson }) => lesson.some(v => v.no === nextNo))
+      if (tar) {
+        navigate(`/jp-course?id=${tar.id}&no=${nextNo}`)
+      } else {
+        navigate('/jp-course?id=1&no=1')
+      }
+    }
+  }, [id, detail, navigate])
 
   return (
     <div className='pg-jp-course'>
@@ -88,6 +118,22 @@ const JPCourse = () => {
                 ))}
               </div>
             ))}
+        </div>
+      </div>
+      <div className='pg-jp-words-list_footer'>
+        <div className='pg-jp-words-list_buttons'>
+          <div
+            className='pg-jp-words-list_corner-button on-click'
+            onClick={onPrevClick}
+          >
+            上一个
+          </div>
+          <div
+            className='pg-jp-words-list_corner-button is-right on-click'
+            onClick={onNextClick}
+          >
+            下一个
+          </div>
         </div>
       </div>
     </div>

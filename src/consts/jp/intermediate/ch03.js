@@ -4,7 +4,7 @@ export default {
   title: '大阪采访之旅',
   lesson: [
     {
-      no: 9,
+      no: 57,
       topic: 'トラブル・イタリア旅行',
       basic: {},
       utilization: {},
@@ -89,7 +89,7 @@ export default {
         }
       ]
     }, {
-      no: 10,
+      no: 58,
       topic: 'スケジュール・温泉大国、日本',
       basic: {},
       utilization: {},
@@ -174,7 +174,7 @@ export default {
         }
       ]
     }, {
-      no: 11,
+      no: 59,
       topic: '若者の意識・漫画とアニメ',
       basic: {},
       utilization: {},
@@ -259,7 +259,7 @@ export default {
         }
       ]
     }, {
-      no: 12,
+      no: 60,
       topic: '最終日・方言と共通語',
       basic: {},
       utilization: {},

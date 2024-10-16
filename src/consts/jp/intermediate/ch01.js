@@ -4,7 +4,7 @@ export default {
   title: '“金星”项目相关人员',
   lesson: [
     {
-      no: 1,
+      no: 49,
       topic: '出会い・日本の鉄道',
       basic: {},
       utilization: {},
@@ -182,7 +182,7 @@ export default {
         }
       ]
     }, {
-      no: 2,
+      no: 50,
       topic: 'あいさつ・あいさつの時の礼儀',
       basic: {},
       utilization: {},
@@ -314,7 +314,7 @@ export default {
         }
       ]
     }, {
-      no: 3,
+      no: 51,
       topic: '顔合わせ・名字',
       basic: {},
       utilization: {},
@@ -487,7 +487,7 @@ export default {
         }
       ]
     }, {
-      no: 4,
+      no: 52,
       topic: '東京本社・近年サラリーマン事情',
       basic: {},
       utilization: {},

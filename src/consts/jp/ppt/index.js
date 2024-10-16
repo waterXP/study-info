@@ -84,7 +84,17 @@ const trans = arr =>
             r.push(<span className='glb-cd'>{chDelete(inText)}</span>)
           })
         } else {
-          r.push(<span className='glb-cd'>{chDelete(str)}</span>)
+          if (Array.isArray(chDelete(str))) {
+            r.push(
+              <span className='glb-cd'>
+                {chDelete(str).map((v, i) => (
+                  <Fragment key={i}>{v}</Fragment>
+                ))}
+              </span>
+            )
+          } else {
+            r.push(<span className='glb-cd'>{chDelete(str)}</span>)
+          }
         }
         r.push(chDelete(text))
       } else {
@@ -121,6 +131,15 @@ const trans = arr =>
               <Fragment key={i}>
                 {inlineR.map((line, i) => (
                   <Fragment key={i}>{line}</Fragment>
+                ))}
+              </Fragment>
+            )
+          }
+          if (Array.isArray(line)) {
+            return (
+              <Fragment key={i}>
+                {line.map(v => (
+                  <Fragment key={i}>{v}</Fragment>
                 ))}
               </Fragment>
             )

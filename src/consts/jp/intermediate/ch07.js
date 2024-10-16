@@ -4,7 +4,7 @@ export default {
   title: '准备大型宣传活动',
   lesson: [
     {
-      no: 1,
+      no: 73,
       topic: '',
       basic: {},
       utilization: {},
@@ -89,7 +89,7 @@ export default {
         }
       ]
     }, {
-      no: 2,
+      no: 74,
       topic: '',
       basic: {},
       utilization: {},
@@ -174,7 +174,7 @@ export default {
         }
       ]
     }, {
-      no: 3,
+      no: 75,
       topic: '',
       basic: {},
       utilization: {},
@@ -259,7 +259,7 @@ export default {
         }
       ]
     }, {
-      no: 4,
+      no: 76,
       topic: '',
       basic: {},
       utilization: {},

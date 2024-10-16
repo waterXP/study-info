@@ -4,7 +4,7 @@ export default {
   title: '启动“金星”项目',
   lesson: [
     {
-      no: 5,
+      no: 53,
       topic: '商品紹介・日本語の語彙',
       basic: {},
       utilization: {},
@@ -168,7 +168,7 @@ export default {
         }
       ]
     }, {
-      no: 6,
+      no: 54,
       topic: '先輩・「はしの文化」さまざま',
       basic: {},
       utilization: {},
@@ -330,7 +330,7 @@ export default {
         }
       ]
     }, {
-      no: 7,
+      no: 55,
       topic: '打ち合わせ・電子メールの作法',
       basic: {},
       utilization: {},
@@ -478,7 +478,7 @@ export default {
         }
       ]
     }, {
-      no: 8,
+      no: 56,
       topic: '企画書・カップラーメン',
       basic: {},
       utilization: {},

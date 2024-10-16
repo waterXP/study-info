@@ -4,7 +4,7 @@ export default {
   title: '值得庆贺的事',
   lesson: [
     {
-      no: 13,
+      no: 61,
       topic: 'スピーチの依頼・日本の人口が減っているーー少子化',
       basic: {},
       utilization: {},
@@ -89,7 +89,7 @@ export default {
         }
       ]
     }, {
-      no: 14,
+      no: 62,
       topic: '恩師・日本の就職活動',
       basic: {},
       utilization: {},
@@ -174,7 +174,7 @@ export default {
         }
       ]
     }, {
-      no: 15,
+      no: 63,
       topic: '同級生・日本レストラン事情',
       basic: {},
       utilization: {},
@@ -259,7 +259,7 @@ export default {
         }
       ]
     }, {
-      no: 16,
+      no: 64,
       topic: '結婚披露宴・変わる結婚式',
       basic: {},
       utilization: {},

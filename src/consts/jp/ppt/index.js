@@ -39,6 +39,14 @@ import p37 from './37'
 import p38 from './38'
 import p39 from './39'
 import p40 from './40'
+import p41 from './41'
+import p42 from './42'
+import p43 from './43'
+import p44 from './44'
+import p45 from './45'
+import p46 from './46'
+import p47 from './47'
+import p48 from './48'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -46,8 +54,30 @@ const chDelete = str => {
     str.split('[[').forEach(v => {
       if (v.includes(']]')) {
         const [str, text] = v.split(']]')
-        r.push(<span className='glb-delete'>{str}</span>)
-        r.push(text)
+        if (str.includes('((')) {
+          str.split('((').forEach(v => {
+            const [inStr, inText] = v.split('))')
+            const [mana, kana] = inStr.split(',')
+            if (mana && kana) {
+              r.push(
+                <span className='glb-delete'>
+                  <ruby>
+                    {mana}
+                    <rp>「</rp>
+                    <rt>{kana}</rt>
+                    <rp>」</rp>
+                  </ruby>
+                </span>
+              )
+            } else {
+              r.push(<span className='glb-delete'>{inStr}</span>)
+            }
+            r.push(<span className='glb-delete'>{chDelete(inText)}</span>)
+          })
+        } else {
+          r.push(<span className='glb-delete'>{str}</span>)
+          r.push(text)
+        }
       } else {
         r.push(v)
       }
@@ -197,5 +227,13 @@ export default [
   p37,
   p38,
   p39,
-  p40
+  p40,
+  p41,
+  p42,
+  p43,
+  p44,
+  p45,
+  p46,
+  p47,
+  p48
 ].map(v => build(v))

@@ -8,9 +8,9 @@ const JPNote = () => {
   const [searchParams] = useSearchParams()
   const [list, setList] = useState([])
   useEffect(() => {
-    const id = searchParams.get('id')
-    if (id) {
-      const unit = note.find(({ id }) => id === id)
+    const targetId = searchParams.get('id')
+    if (targetId) {
+      const unit = note.find(({ id }) => targetId === id)
       if (unit) {
         setList(unit.list)
       }

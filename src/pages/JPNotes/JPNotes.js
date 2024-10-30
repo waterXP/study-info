@@ -19,7 +19,7 @@ const JPNotes = () => {
         返回
       </Breadcrumb>
       {note.map(({ id: pId, title, desc, list }) => (
-        <div key={pId}>
+        <div key={pId} className='pg-jp-notes_box'>
           <p
             className='pg-jp-notes_title on-click'
             onClick={() => {

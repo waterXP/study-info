@@ -21,7 +21,7 @@ const JPNotes = () => {
       {note.map(({ id: pId, title, desc, list }) => (
         <div key={pId}>
           <p
-            className='pg-jp-notes_title'
+            className='pg-jp-notes_title on-click'
             onClick={() => {
               gotoNote(pId)
             }}
@@ -31,7 +31,13 @@ const JPNotes = () => {
           <p className='pg-jp-notes_desc'>{desc}</p>
           <div className='pg-jp-notes_list'>
             {list.map(({ id, name }) => (
-              <p key={id} className='pg-jp-notes_name on-click'>
+              <p
+                key={id}
+                className='pg-jp-notes_name on-click'
+                onClick={() => {
+                  gotoNote(pId)
+                }}
+              >
                 {name}
               </p>
             ))}

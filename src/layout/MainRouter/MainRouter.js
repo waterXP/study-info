@@ -28,6 +28,8 @@ import JPNotes from '@/pages/JPNotes'
 import JPNote from '@/pages/JPNote'
 import JPPpts from '@/pages/JPPpts'
 import JPPpt from '@/pages/JPPpt'
+import JPN2s from '@/pages/JPN2s'
+import JPN2 from '@/pages/JPN2'
 
 const { PUBLIC_URL } = process.env
 
@@ -132,6 +134,14 @@ const router = createBrowserRouter(
     {
       path: 'jp-ppt',
       element: <JPPpt />
+    },
+    {
+      path: 'jp-n2s',
+      element: <JPN2s />
+    },
+    {
+      path: 'jp-n2',
+      element: <JPN2 />
     },
     {
       path: 'jp',

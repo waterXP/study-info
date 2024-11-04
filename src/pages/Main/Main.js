@@ -23,6 +23,12 @@ const Main = () => {
     },
     [navigate]
   )
+  const gotoN2 = useCallback(
+    () => {
+      navigate('/jp-n2s')
+    },
+    [navigate]
+  )
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -39,6 +45,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoPpt}>
         PPT
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoN2}>
+        N2
       </div>
     </div>
   )

@@ -87,6 +87,7 @@ const chDelete = str => {
   return str
 }
 
+let i = 0
 const trans = arr =>
   arr.map(line => {
     const r = []
@@ -117,8 +118,8 @@ const trans = arr =>
           if (Array.isArray(chDelete(str))) {
             r.push(
               <span className='glb-cd'>
-                {chDelete(str).map((v, i) => (
-                  <Fragment key={i}>{v}</Fragment>
+                {chDelete(str).map(v => (
+                  <Fragment key={i++}>{v}</Fragment>
                 ))}
               </span>
             )
@@ -133,7 +134,7 @@ const trans = arr =>
     })
     return (
       <>
-        {r.map((line, i) => {
+        {r.map(line => {
           if (typeof line === 'string') {
             const inlineR = []
             line.split('((').forEach(v => {
@@ -158,34 +159,37 @@ const trans = arr =>
               }
             })
             return (
-              <Fragment key={i}>
-                {inlineR.map((line, i) => (
-                  <Fragment key={i}>{line}</Fragment>
+              <Fragment key={i++}>
+                {inlineR.map(line => (
+                  <Fragment key={i++}>{line}</Fragment>
                 ))}
               </Fragment>
             )
           }
           if (Array.isArray(line)) {
             return (
-              <Fragment key={i}>
+              <Fragment key={i++}>
                 {line.map(v => (
-                  <Fragment key={i}>{v}</Fragment>
+                  <Fragment key={i++}>{v}</Fragment>
                 ))}
               </Fragment>
             )
           }
-          return <Fragment key={i}>{line}</Fragment>
+          return <Fragment key={i++}>{line}</Fragment>
         })}
       </>
     )
   })
 const build = arr =>
-  arr.map(({ title, explain, example, ...rest }) => ({
-    title: trans(title),
-    explain: explain.map(v => trans(v)),
-    example: trans(example),
-    ...rest
-  }))
+  arr.map(({ title, explain, example, ...rest }) => {
+    i = 0
+    return {
+      title: trans(title),
+      explain: explain.map(v => trans(v)),
+      example: trans(example),
+      ...rest
+    }
+  })
 
 export default [
   p01,

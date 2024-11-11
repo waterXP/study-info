@@ -5,291 +5,291 @@ export default {
     {
       kana: 'てつや',
       mana: '徹夜',
-      cn: ''
+      cn: '彻夜，熬夜'
     }, {
       kana: 'よなか',
       mana: '夜中',
-      cn: ''
+      cn: '半夜'
     }, {
       kana: 'ねいろ',
       mana: '音色',
-      cn: ''
+      cn: '音色'
     }, {
       kana: 'おんち',
       mana: '音痴',
-      cn: ''
+      cn: '五音不全的人'
     }, {
       kana: 'けいざい',
       mana: '経済',
-      cn: ''
+      cn: '经济'
     }, {
       kana: 'へんさい',
       mana: '返済',
-      cn: ''
+      cn: '还债，还款'
     }, {
       kana: 'ほんすじ',
       mana: '本筋',
-      cn: ''
+      cn: '中心思路'
     }, {
       kana: 'てっきん',
       mana: '鉄筋',
-      cn: ''
+      cn: '钢筋'
     }, {
       kana: 'やね',
       mana: '屋根',
-      cn: ''
+      cn: '屋顶'
     }, {
       kana: 'かおく',
       mana: '家屋',
-      cn: ''
+      cn: '房屋'
     }, {
       kana: 'うみべ',
       mana: '海辺',
-      cn: ''
+      cn: '海边'
     }, {
       kana: 'しゅうへん',
       mana: '周辺',
-      cn: ''
+      cn: '周边，周围'
     }, {
       kana: 'しなもの',
       mana: '品物',
-      cn: ''
+      cn: '物品'
     }, {
       kana: 'ひんしつ',
       mana: '品質',
-      cn: ''
+      cn: '品质'
     }, {
       kana: 'みぢか',
       mana: '身近',
-      cn: ''
+      cn: '身边'
     }, {
       kana: 'きんじょ',
       mana: '近所',
-      cn: ''
+      cn: '附近'
     }, {
       kana: 'にせもの',
       mana: '偽物',
-      cn: ''
+      cn: '赝品'
     }, {
       kana: 'ぎぞう',
       mana: '偽造',
-      cn: ''
+      cn: '伪造'
     }, {
       kana: 'じゅうきょ',
       mana: '住居',
-      cn: ''
+      cn: '住所'
     }, {
       kana: 'しばい',
       mana: '芝居',
-      cn: ''
+      cn: '戏剧'
     }, {
       kana: 'ほんば',
       mana: '本場',
-      cn: ''
+      cn: '发源地，原产地'
     }, {
       kana: 'こうじょう',
       mana: '工場',
-      cn: ''
+      cn: '工厂'
     }, {
       kana: 'うえき',
       mana: '植木',
-      cn: ''
+      cn: '盆栽，庭院的树木'
     }, {
       kana: 'しょくぶつ',
       mana: '植物',
-      cn: ''
+      cn: '植物'
     }, {
       kana: 'こんせき',
       mana: '痕跡',
-      cn: ''
+      cn: '痕迹'
     }, {
       kana: 'あしあと',
       mana: '足跡',
-      cn: ''
+      cn: '足迹'
     }, {
       kana: 'とざん',
       mana: '登山',
-      cn: ''
+      cn: '爬山'
     }, {
       kana: 'とうちょう',
       mana: '登頂',
-      cn: ''
+      cn: '登顶，登上山顶'
     }, {
       kana: 'えがお',
       mana: '笑顔',
-      cn: ''
+      cn: '笑脸'
     }, {
       kana: 'びしょう',
       mana: '微笑',
-      cn: ''
+      cn: '微笑'
     }, {
       kana: 'しっけ',
       mana: '湿気',
-      cn: ''
+      cn: '湿气，潮气'
     }, {
       kana: 'きぶん',
       mana: '気分',
-      cn: ''
+      cn: '感觉'
     }, {
       kana: 'とうそつ',
       mana: '統率',
-      cn: ''
+      cn: '统率，领导'
     }, {
       kana: 'ひりつ',
       mana: '比率',
-      cn: ''
+      cn: '比例'
     }, {
       kana: 'みかた',
       mana: '味方',
-      cn: ''
+      cn: '朋友，伙伴'
     }, {
       kana: 'ほうほう',
       mana: '方法',
-      cn: ''
+      cn: '方法'
     }, {
       kana: 'はんぱ',
       mana: '半端',
-      cn: ''
+      cn: '零头；不彻底，不坚定'
     }, {
       kana: 'せんたん',
       mana: '先端',
-      cn: ''
+      cn: '先端，尖端'
     }, {
       kana: 'じもと',
       mana: '地元',
-      cn: ''
+      cn: '当地，本地'
     }, {
       kana: 'ぼち',
       mana: '墓地',
-      cn: ''
+      cn: '墓地'
     }, {
       kana: 'むくち',
       mana: '無口',
-      cn: ''
+      cn: '沉默寡言'
     }, {
       kana: 'ぶじ',
       mana: '無事',
-      cn: ''
+      cn: '平安无事'
     }, {
       kana: 'きざ',
       mana: '気障',
-      cn: ''
+      cn: '装模作样'
     }, {
       kana: 'しょうがい',
       mana: '障害',
-      cn: ''
+      cn: '阻挠，障碍'
     }, {
       kana: 'すなお',
       mana: '素直',
-      cn: ''
+      cn: '温顺，老实'
     }, {
       kana: 'しょうじき',
       mana: '正直',
-      cn: ''
+      cn: '正直'
     }, {
       kana: 'しょうりゃく',
       mana: '省略',
-      cn: ''
+      cn: '省略'
     }, {
       kana: 'きせい',
       mana: '帰省',
-      cn: ''
+      cn: '回乡探亲'
     }, {
       kana: 'にんげん',
       mana: '人間',
-      cn: ''
+      cn: '人类'
     }, {
       kana: 'せけん',
       mana: '世間',
-      cn: ''
+      cn: '社会，人世间'
     }, {
       kana: 'せいだい',
       mana: '盛大',
-      cn: ''
+      cn: '盛大'
     }, {
       kana: 'はんじょう',
       mana: '繁盛',
-      cn: ''
+      cn: '繁荣，昌盛'
     }, {
       kana: 'あいて',
       mana: '相手',
-      cn: ''
+      cn: '对方，对手'
     }, {
       kana: 'ようそう',
       mana: '様相',
-      cn: ''
+      cn: '状态，情况'
     }, {
       kana: 'あいず',
       mana: '合図',
-      cn: ''
+      cn: '信号，暗示'
     }, {
       kana: 'ごうかく',
       mana: '合格',
-      cn: ''
+      cn: '合格'
     }, {
       kana: 'あてな',
       mana: '宛名',
-      cn: ''
+      cn: '收件人姓名'
     }, {
       kana: 'めいぶつ',
       mana: '名物',
-      cn: ''
+      cn: '特产，名产'
     }, {
       kana: 'はんのう',
       mana: '反応',
-      cn: ''
+      cn: '反应'
     }, {
       kana: 'おうえん',
       mana: '応援',
-      cn: ''
+      cn: '支援，助威'
     }, {
       kana: 'おんけい',
       mana: '恩恵',
-      cn: ''
+      cn: '恩惠'
     }, {
       kana: 'ちえ',
       mana: '知恵',
-      cn: ''
+      cn: '智慧'
     }, {
       kana: 'かこう',
       mana: '加工',
-      cn: ''
+      cn: '加工'
     }, {
       kana: 'くふう',
       mana: '工夫',
-      cn: ''
+      cn: '精力，工夫'
     }, {
       kana: 'けしき',
       mana: '景色',
-      cn: ''
+      cn: '景色'
     }, {
       kana: 'ふうけい',
       mana: '風景',
-      cn: ''
+      cn: '风景'
     }, {
       kana: 'しぜん',
       mana: '自然',
-      cn: ''
+      cn: '自然'
     }, {
       kana: 'てんねん',
       mana: '天然',
-      cn: ''
+      cn: '天然'
     }, {
       kana: 'じゅみょう',
       mana: '寿命',
-      cn: ''
+      cn: '寿命'
     }, {
       kana: 'せいめい',
       mana: '生命',
-      cn: ''
+      cn: '生命'
     }, {
       kana: 'さいふ',
       mana: '財布',
-      cn: ''
+      cn: '钱包'
     }, {
       kana: 'ざいさん',
       mana: '財産',
-      cn: ''
+      cn: '财产'
     }
   ]
 }

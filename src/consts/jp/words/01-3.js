@@ -5,99 +5,99 @@ export default {
     {
       kana: 'あっとう',
       mana: '圧倒',
-      cn: ''
+      cn: '压倒，胜过'
     }, {
       kana: 'いっさい',
       mana: '一切',
-      cn: ''
+      cn: '一切；一点儿也（不）'
     }, {
       kana: 'かっこう',
       mana: '格好',
-      cn: ''
+      cn: '外表，样子'
     }, {
       kana: 'くっせつ',
       mana: '屈折',
-      cn: ''
+      cn: '曲折；扭曲'
     }, {
       kana: 'かっき',
       mana: '活気',
-      cn: ''
+      cn: '活力'
     }, {
       kana: 'きゃっかん',
       mana: '客観',
-      cn: ''
+      cn: '客观'
     }, {
       kana: 'がっぺい',
       mana: '合併',
-      cn: ''
+      cn: '合并'
     }, {
       kana: 'さっとう',
       mana: '殺到',
-      cn: ''
+      cn: '蜂拥而至'
     }, {
       kana: 'ぶっか',
       mana: '物価',
-      cn: ''
+      cn: '特价'
     }, {
       kana: 'しゃっきん',
       mana: '借金',
-      cn: ''
+      cn: '借款'
     }, {
       kana: 'せっとく',
       mana: '説得',
-      cn: ''
+      cn: '说服'
     }, {
       kana: 'たっせい',
       mana: '達成',
-      cn: ''
+      cn: '达成'
     }, {
       kana: 'にってい',
       mana: '日程',
-      cn: ''
+      cn: '日程'
     }, {
       kana: 'はっき',
       mana: '発揮',
-      cn: ''
+      cn: '发挥'
     }, {
       kana: 'しっぴつ',
       mana: '執筆',
-      cn: ''
+      cn: '执笔，写作'
     }, {
       kana: 'ばっきん',
       mana: '罰金',
-      cn: ''
+      cn: '罚金'
     }, {
       kana: 'もっか',
       mana: '目下',
-      cn: ''
+      cn: '眼下，当下'
     }, {
       kana: 'れっしゃ',
       mana: '列車',
-      cn: ''
+      cn: '火车'
     }, {
       kana: 'がっき',
       mana: '楽器',
-      cn: ''
+      cn: '乐器'
     }, {
       kana: 'かって',
       mana: '勝手',
-      cn: ''
+      cn: '任性'
     }, {
       kana: 'かっぱつ',
       mana: '活発',
-      cn: ''
+      cn: '活泼，活跃'
     }, {
       kana: 'にっか',
       mana: '日課',
-      cn: ''
+      cn: '惯例，每天都要做的事'
     }, {
       kana: 'がっしょう',
       mana: '合唱',
-      cn: ''
+      cn: '合唱'
     }, {
       kana: 'せっきょく',
       mana: '積極',
-      cn: ''
+      cn: '积极'
     }
   ]
 }

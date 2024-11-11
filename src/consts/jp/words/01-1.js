@@ -5,107 +5,107 @@ export default {
     {
       kana: 'かいどう',
       mana: '街道',
-      cn: ''
+      cn: '大街'
     }, {
       kana: 'がいとう',
       mana: '街頭',
-      cn: ''
+      cn: '街头'
     }, {
       kana: 'かんかく',
       mana: '間隔',
-      cn: ''
+      cn: '间隔'
     }, {
       kana: 'にんげん',
       mana: '人間',
-      cn: ''
+      cn: '人类'
     }, {
       kana: 'けいざい',
       mana: '経済',
-      cn: ''
+      cn: '经济'
     }, {
       kana: 'へんさい',
       mana: '返済',
-      cn: ''
+      cn: '偿还，还债'
     }, {
       kana: 'きげん',
       mana: '機嫌',
-      cn: ''
+      cn: '情绪'
     }, {
       kana: 'けんお',
       mana: '嫌悪',
-      cn: ''
+      cn: '厌恶'
     }, {
       kana: 'さいふ',
       mana: '財布',
-      cn: ''
+      cn: '钱包'
     }, {
       kana: 'ざいせい',
       mana: '財政',
-      cn: ''
+      cn: '财政'
     }, {
       kana: 'きしゃ',
       mana: '記者',
-      cn: ''
+      cn: '记者'
     }, {
       kana: 'かんじゃ',
       mana: '患者',
-      cn: ''
+      cn: '患者'
     }, {
       kana: 'しょじ',
       mana: '所持',
-      cn: ''
+      cn: '携带'
     }, {
       kana: 'きんじょ',
       mana: '近所',
-      cn: ''
+      cn: '附近'
     }, {
       kana: 'すうじ',
       mana: '数字',
-      cn: ''
+      cn: '数字'
     }, {
       kana: 'にんずう',
       mana: '人数',
-      cn: ''
+      cn: '人数'
     }, {
       kana: 'おおぜい',
       mana: '大勢',
-      cn: ''
+      cn: '众多'
     }, {
       kana: 'しせい',
       mana: '姿勢',
-      cn: ''
+      cn: '姿势'
     }, {
       kana: 'せつめい',
       mana: '説明',
-      cn: ''
+      cn: '说明'
     }, {
       kana: 'えんぜつ',
       mana: '演説',
-      cn: ''
+      cn: '演讲'
     }, {
       kana: 'そせん',
       mana: '祖先',
-      cn: ''
+      cn: '祖先'
     }, {
       kana: 'せんぞ',
       mana: '先祖',
-      cn: ''
+      cn: '始祖；祖宗'
     }, {
       kana: 'たいりく',
       mana: '大陸',
-      cn: ''
+      cn: '大陆'
     }, {
       kana: 'だいじ',
       mana: '大事',
-      cn: ''
+      cn: '重要'
     }, {
       kana: 'たいふう',
       mana: '台風',
-      cn: ''
+      cn: '台风'
     }, {
       kana: 'だいどころ',
       mana: '台所',
-      cn: ''
+      cn: '厨房'
     }
   ]
 }

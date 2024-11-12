@@ -107,7 +107,7 @@ const Word = ({ word, switches, showResult }) => {
   }
   return (
     <div className='com-word-word'>
-      <p className='com-word-word_line'>
+      <p className='com-word-word_line is-big'>
         <JPText kana={kana} mana={mana} />
       </p>
       {type && <p className='com-word-word_line'>{`「${type}」`}</p>}

@@ -48,9 +48,9 @@ const JPN2Study = () => {
   }, [searchParams])
   const { list, title } = useMemo(() => {
     if (detail) {
-      const { topic, list } = detail
+      const { id, topic, list } = detail
       return {
-        title: topic,
+        title: `${id}.${topic}`,
         list
       }
     }

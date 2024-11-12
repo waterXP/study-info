@@ -1,5 +1,6 @@
 import React, { memo, useMemo } from 'react'
 import './Word.styl'
+import JPText from '@/components/JPText'
 
 const Word = ({ word, switches, showResult }) => {
   const inRecite = useMemo(() => {
@@ -27,34 +28,35 @@ const Word = ({ word, switches, showResult }) => {
     }
     return true
   }, [switches, word])
-  const { kana, mana, type, cn } = useMemo(() => word || {}, [word])
+  const { kana, mana, type, cn, ex } = useMemo(() => word || {}, [word])
   if (inRecite) {
     if (!showResult) {
       return (
-        <div className='pg-jp-words--word'>
+        <div className='com-word-word'>
           {switches.kana && kana && (
-            <p className='pg-jp-words--word_line is-recite'>{kana}</p>
+            <p className='com-word-word_line is-recite'>{kana}</p>
           )}
           {switches.mana && mana && (
-            <p className='pg-jp-words--word_line is-recite'>{`（${mana}）`}</p>
+            <p className='com-word-word_line is-recite'>{`（${mana}）`}</p>
           )}
           {switches.type && type && (
-            <p className='pg-jp-words--word_line is-recite'>{`「${type}」`}</p>
+            <p className='com-word-word_line is-recite'>{`「${type}」`}</p>
           )}
           {switches.cn && cn && (
-            <p className='pg-jp-words--word_line is-recite'>{cn}</p>
+            <p className='com-word-word_line is-recite'>{cn}</p>
           )}
+          {switches.ex && ex && <p className='com-word-word_line'>{ex}</p>}
         </div>
       )
     }
     return (
-      <div className='pg-jp-words--word'>
+      <div className='com-word-word'>
         {kana && (
           <p
             className={
               switches.kana
-                ? 'pg-jp-words--word_line is-recite'
-                : 'pg-jp-words--word_line'
+                ? 'com-word-word_line is-recite'
+                : 'com-word-word_line'
             }
           >
             {kana}
@@ -64,8 +66,8 @@ const Word = ({ word, switches, showResult }) => {
           <p
             className={
               switches.mana
-                ? 'pg-jp-words--word_line is-recite'
-                : 'pg-jp-words--word_line'
+                ? 'com-word-word_line is-recite'
+                : 'com-word-word_line'
             }
           >{`（${mana}）`}</p>
         )}
@@ -73,8 +75,8 @@ const Word = ({ word, switches, showResult }) => {
           <p
             className={
               switches.type
-                ? 'pg-jp-words--word_line is-recite'
-                : 'pg-jp-words--word_line'
+                ? 'com-word-word_line is-recite'
+                : 'com-word-word_line'
             }
           >{`「${type}」`}</p>
         )}
@@ -82,22 +84,35 @@ const Word = ({ word, switches, showResult }) => {
           <p
             className={
               switches.cn
-                ? 'pg-jp-words--word_line is-recite'
-                : 'pg-jp-words--word_line'
+                ? 'com-word-word_line is-recite'
+                : 'com-word-word_line'
             }
           >
             {cn}
+          </p>
+        )}
+        {ex && (
+          <p
+            className={
+              switches.ex
+                ? 'com-word-word_line is-recite'
+                : 'com-word-word_line'
+            }
+          >
+            {ex}
           </p>
         )}
       </div>
     )
   }
   return (
-    <div className='pg-jp-words--word'>
-      {kana && <p className='pg-jp-words--word_line'>{kana}</p>}
-      {mana && <p className='pg-jp-words--word_line'>{`（${mana}）`}</p>}
-      {type && <p className='pg-jp-words--word_line'>{`「${type}」`}</p>}
-      {cn && <p className='pg-jp-words--word_line'>{cn}</p>}
+    <div className='com-word-word'>
+      <p className='com-word-word_line'>
+        <JPText kana={kana} mana={mana} />
+      </p>
+      {type && <p className='com-word-word_line'>{`「${type}」`}</p>}
+      {cn && <p className='com-word-word_line'>{cn}</p>}
+      {ex && <p className='com-word-word_line'>{ex}</p>}
     </div>
   )
 }

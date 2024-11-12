@@ -116,7 +116,7 @@ export default {
       }, {
         id: '4-3-6',
         title: '组织过程资产'
-      }, 
+      },
     ],
     tt: [
       {
@@ -137,7 +137,7 @@ export default {
       }, {
         id: '4-3-12',
         title: '融资'
-      }, 
+      },
     ],
     o: [
       {

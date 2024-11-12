@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useCallback, useRef } from 'react'
 import './JPPpts.styl'
 import { useNavigate } from 'react-router-dom'
-import ppt from '@/consts/jp/ppt'
 import Breadcrumb from '@com/Breadcrumb'
 import Box from '@com/Box'
+import ppt from '@/consts/jp/ppt'
 
 let scrollTop = 0
 

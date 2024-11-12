@@ -58,7 +58,7 @@ const Menu = () => {
     [navigate]
   )
   const gotoMenu = useCallback(
-    key => {
+    () => {
       navigate('/')
     },
     [navigate]
@@ -66,12 +66,12 @@ const Menu = () => {
   const openOthersPage = useCallback(
     () => {
       navigate('/others?id=security')
-    },[navigate]
+    }, [navigate]
   )
   const openPerformancePage = useCallback(
     () => {
       navigate('/performance?id=people')
-    },[navigate]
+    }, [navigate]
   )
 
   return (

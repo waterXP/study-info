@@ -10,8 +10,9 @@ import React, {
 import './JPWordsList.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
-import jpWords from '@/consts/jp'
 import JPText from '@com/JPText'
+import junior from '@/consts/jp/junior'
+import jpWords from '@/consts/jp'
 
 const JPWordsList = () => {
   const navigate = useNavigate()

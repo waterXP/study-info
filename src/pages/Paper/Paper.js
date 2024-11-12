@@ -2,10 +2,10 @@ import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import './Paper.styl'
 import { useSearchParams } from 'react-router-dom'
-import paperMap from '@/consts/paper'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
+import paperMap from '@/consts/paper'
 
 const Paper = () => {
   const [searchParams] = useSearchParams()
@@ -27,9 +27,9 @@ const Paper = () => {
       if (data) {
         data.forEach(
           v => {
-            r.push(v.title + '。')
+            r.push(`${v.title}。`)
             v.contents.forEach(
-              v => r.push(v + '。')
+              v => r.push(`${v}。`)
             )
           }
         )

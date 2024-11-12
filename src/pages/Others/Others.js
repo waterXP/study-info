@@ -2,11 +2,11 @@ import React, { memo, useState, useEffect, useCallback } from 'react'
 import './Others.styl'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import others, { otherList } from '@/consts/others'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
 import Topic from '@com/Topic'
 import Paragraph from '@com/Paragraph'
+import others, { otherList } from '@/consts/others'
 
 const Others = () => {
   const navigate = useNavigate()

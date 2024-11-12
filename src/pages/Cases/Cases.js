@@ -2,8 +2,8 @@ import React, { memo, useCallback } from 'react'
 // import PropTypes from 'prop-types'
 import './Cases.styl'
 import { useNavigate } from 'react-router-dom'
-import caseMap from '@/consts/case'
 import Breadcrumb from '@com/Breadcrumb'
+import caseMap from '@/consts/case'
 
 const cases = [
   '1-1',

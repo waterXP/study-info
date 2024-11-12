@@ -6,11 +6,30 @@ const initialStates = {
   showDetail: false,
   favorites: getStorage('FAVORITE') || {},
   pptExplain: false,
-  pptExample: true
+  pptExample: true,
+  showCn: true,
+  displayType: 'all' // all, kana, mana
 }
 
 export default function mainReducer(state = initialStates, action) {
   switch (action.type) {
+    case 'changeDisplayCn': {
+      return {
+        ...state,
+        showCn: !state.showCn
+      }
+    }
+    case 'changeDisplayType': {
+      return {
+        ...state,
+        displayType:
+          state.displayType === 'all'
+            ? 'kana'
+            : state.displayType === 'kana'
+              ? 'mana'
+              : 'all'
+      }
+    }
     case 'changeViewMode': {
       return {
         ...state,

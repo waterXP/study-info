@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react'
 import './JPNotes.styl'
 import { useNavigate } from 'react-router-dom'
-import note from '@/consts/jp/note'
 import Breadcrumb from '@com/Breadcrumb'
 import Box from '@com/Box'
+import note from '@/consts/jp/note'
 
 const JPNotes = () => {
   const navigate = useNavigate()

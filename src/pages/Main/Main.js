@@ -29,6 +29,12 @@ const Main = () => {
     },
     [navigate]
   )
+  const gotoN2Words = useCallback(
+    () => {
+      navigate('/jp-n2-words')
+    },
+    [navigate]
+  )
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -48,6 +54,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoN2}>
         N2
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoN2Words}>
+        N2 Words
       </div>
     </div>
   )

@@ -14,8 +14,8 @@ import Breadcrumb from '@com/Breadcrumb'
 import Icon from '@com/Icon'
 import JPText from '@com/JPText'
 import jpWords from '@/consts/jp'
-import Switch from './components/Switch'
-import Word from './components/Word'
+import Switch from '@/components/Word/Switch'
+import Word from '@/components/Word/Word'
 
 const JPWords = () => {
   const { favorites } = useSelector(({ favorites }) => ({ favorites }))
@@ -100,7 +100,7 @@ const JPWords = () => {
       const left = index * unitWidth
       r.width = `${unitWidth}%`
       r.left = `${left}%`
-      r.transition = `left .4s ease`
+      r.transition = 'left .4s ease'
     }
     return r
   }, [index, list])
@@ -326,7 +326,7 @@ const JPWords = () => {
             >
               意
             </Switch>
-            { course &&<Switch
+            { course && <Switch
               checked={favorites[course.id]}
               onClick={onFavorite}
             >

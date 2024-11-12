@@ -53,7 +53,7 @@ const JPFavorites = () => {
       const left = index * unitWidth
       r.width = `${unitWidth}%`
       r.left = `${left}%`
-      r.transition = `left .4s ease`
+      r.transition = 'left .4s ease'
     }
     return r
   }, [index, list])

@@ -1,11 +1,11 @@
-import React, { memo,useMemo } from 'react'
+import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import './Point.styl'
 import { useSearchParams } from 'react-router-dom'
-import points from '@/consts/points'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
+import points from '@/consts/points'
 
 const Point = () => {
   const [searchParams] = useSearchParams()
@@ -25,11 +25,11 @@ const Point = () => {
     () => {
       const r = []
       if (data) {
-        r.push(data.title + '。')
+        r.push(`${data.title}。`)
         data.texts.forEach(
           v => {
             if (typeof v === 'string') {
-              r.push(v + '。')
+              r.push(`${v}。`)
             }
           }
         )

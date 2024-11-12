@@ -1,3 +1,4 @@
+import React from 'react'
 import MainRouter from '@/layout/MainRouter'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
     <div className='App'>
       <MainRouter />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -59,7 +59,7 @@ export default {
         title: '项目文件(更新)'
       }
     ]
-  }, 
+  },
   '10-2': {
     title: '规划干系人参与',
     phase: '规划',
@@ -111,7 +111,7 @@ export default {
         title: '干系人参与计划'
       }
     ]
-  }, 
+  },
   '10-3': {
     title: '管理干系人参与',
     phase: '执行',
@@ -160,7 +160,7 @@ export default {
         title: '项目文件(更新)'
       }
     ]
-  }, 
+  },
   '10-4': {
     title: '监督干系人参与',
     phase: '监控',

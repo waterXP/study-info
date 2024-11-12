@@ -4,13 +4,13 @@ import './ITTO.styl'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { message } from 'antd'
-import { dataSource } from '@/consts/overall'
-import itto from '@/consts/itto'
-import nouns from '@/consts/nouns'
 import Breadcrumb from '@com/Breadcrumb'
 import Detail from '@com/Detail'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
+import nouns from '@/consts/nouns'
+import itto from '@/consts/itto'
+import { dataSource } from '@/consts/overall'
 
 const ITTO = () => {
   const navigate = useNavigate()
@@ -203,9 +203,9 @@ const ITTO = () => {
       const r = []
       if (data) {
         if (data.top) {
-          r.push(data.top.realm + '。')
+          r.push(`${data.top.realm}。`)
         }
-        r.push(data.title + '。')
+        r.push(`${data.title}。`)
         if (showDetail && data && data.queryId && nouns[data.queryId]) {
           r.push(nouns[data.queryId].content)
         }
@@ -213,15 +213,14 @@ const ITTO = () => {
         if (data.contents) {
           data.contents.forEach(
             ({ text, id, pre }) => {
-              pre && r.push(pre + '。')
-              text && r.push(text + '。')
+              pre && r.push(`${pre}。`)
+              text && r.push(`${text}。`)
               if (showDetail && nouns[id]) {
                 r.push(nouns[id].content)
               }
             }
           )
         }
-
       }
       return r
     },
@@ -258,46 +257,46 @@ const ITTO = () => {
                     {
                       pre
                         ? <>
-                            <p className='pg-itto_item-pre'>{ pre }</p>
-                            <p
+                          <p className='pg-itto_item-pre'>{ pre }</p>
+                          <p
                               className={
                                 nouns[id] && nouns[id].important
                                   ? 'pg-itto_item is-important'
                                   : 'pg-itto_item'
                               }
-                            >
-                              <span onClick={e => { gotoDetail(e, id) }}>
-                                { text }
-                              </span>
-                            </p>
-                            {
+                          >
+                            <span onClick={e => { gotoDetail(e, id) }}>
+                              { text }
+                            </span>
+                          </p>
+                          {
                               showDetail &&
                               <Detail
                                 id={id}
                                 important={nouns[id] && nouns[id].important}
                               />
                             }
-                          </>
-                          : <>
-                            <p
+                        </>
+                        : <>
+                          <p
                               className={
                                 nouns[id] && nouns[id].important
                                   ? 'pg-itto_item is-important'
                                   : 'pg-itto_item'
                               }
-                            >
-                              <span onClick={e => { gotoDetail(e, id) }}>
-                                { text }
-                              </span>
-                            </p>
-                            {
+                          >
+                            <span onClick={e => { gotoDetail(e, id) }}>
+                              { text }
+                            </span>
+                          </p>
+                          {
                               showDetail &&
                               <Detail
                                 id={id}
                                 important={nouns[id] && nouns[id].important}
                               />
                             }
-                          </>
+                        </>
                     }
                   </Fragment>
               )

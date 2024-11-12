@@ -1,9 +1,9 @@
 import React, { memo, useCallback } from 'react'
 import './JPTables.styl'
 import { useNavigate } from 'react-router-dom'
-import tables from '@/consts/jp/tables'
 import Breadcrumb from '@com/Breadcrumb'
 import Box from '@com/Box'
+import tables from '@/consts/jp/tables'
 
 const JPTables = () => {
   const navigate = useNavigate()

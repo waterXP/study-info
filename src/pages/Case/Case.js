@@ -2,10 +2,10 @@ import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import './Case.styl'
 import { useSearchParams } from 'react-router-dom'
-import caseMap from '@/consts/case'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
+import caseMap from '@/consts/case'
 
 const Case = () => {
   const [searchParams] = useSearchParams()
@@ -25,27 +25,27 @@ const Case = () => {
     () => {
       const r = []
       if (data) {
-        r.push(data.title + '。')
+        r.push(`${data.title}。`)
         data.explains.forEach(
           v => {
             if (typeof v === 'string') {
-              r.push(v + '。')
+              r.push(`${v}。`)
             }
           }
         )
         data.contents.forEach(
           ({ q, a }) => {
-            q.map(
+            q.forEach(
               v => {
                 if (typeof v === 'string') {
-                  r.push(v + '。')
+                  r.push(`${v}。`)
                 }
               }
             )
-            a.map(
+            a.forEach(
               v => {
                 if (typeof v === 'string') {
-                  r.push(v + '。')
+                  r.push(`${v}。`)
                 }
               }
             )
@@ -76,6 +76,7 @@ const Case = () => {
                       className='pg-case_image'
                       style={v.style}
                       src={`assets/${v.name}`}
+                      alt='case'
                     />
                   }
                   return <p key={i} className='pg-case_explain'>{ v }</p>
@@ -94,6 +95,7 @@ const Case = () => {
                         className='pg-case_image'
                         style={v.style}
                         src={`assets/${v.name}`}
+                      alt='case'
                       />
                     }
                     return <p key={i} className='pg-case_q'>{ v }</p>
@@ -107,6 +109,7 @@ const Case = () => {
                         className='pg-case_image'
                         style={v.style}
                         src={`assets/${v.name}`}
+                      alt='case'
                       />
                     }
                     return <p key={i} className='pg-case_a'>{ v }</p>

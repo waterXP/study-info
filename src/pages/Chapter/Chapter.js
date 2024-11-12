@@ -4,11 +4,11 @@ import './Chapter.styl'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { message } from 'antd'
-import { dataMap, dataSource } from '@/consts/overall'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Detail from '@com/Detail'
 import Voice from '@com/Voice'
+import { dataMap, dataSource } from '@/consts/overall'
 import nouns from '@/consts/nouns'
 
 const Chapter = () => {
@@ -146,12 +146,12 @@ const Chapter = () => {
     () => {
       const r = []
       if (data) {
-        r.push(data.realm + '。')
+        r.push(`${data.realm}。`)
         if (data.contents) {
           data.contents.forEach(
             ({ text, pre, id }) => {
-              pre && r.push(pre + '。')
-              text && r.push(text + '。')
+              pre && r.push(`${pre}。`)
+              text && r.push(`${text}。`)
               if (shortTip && nouns[id] && nouns[id].content) {
                 r.push(nouns[id].content)
               }
@@ -194,7 +194,7 @@ const Chapter = () => {
                           shortTip && <Detail id={id} />
                         }
                       </Fragment>
-                      :  <p
+                      : <p
                         key={id}
                         className='pg-chapter_item'
                       >

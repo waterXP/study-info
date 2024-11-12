@@ -2,11 +2,11 @@ import React, { memo, useMemo } from 'react'
 // import PropTypes from 'prop-types'
 import './Noun.styl'
 import { useSearchParams } from 'react-router-dom'
-import nouns from '@/consts/nouns'
-import itto from '@/consts/itto'
 import Breadcrumb from '@com/Breadcrumb'
 import Title from '@com/Title'
 import Voice from '@com/Voice'
+import itto from '@/consts/itto'
+import nouns from '@/consts/nouns'
 
 const Noun = ({ id }) => {
   const [searchParams] = useSearchParams()
@@ -52,7 +52,7 @@ const Noun = ({ id }) => {
     () => {
       const r = []
       if (data) {
-        r.push(data.title + '。')
+        r.push(`${data.title}。`)
         if (data.content) {
           data.content.forEach(
             v => {
@@ -60,7 +60,6 @@ const Noun = ({ id }) => {
             }
           )
         }
-
       }
       return r
     },

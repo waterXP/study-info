@@ -25,9 +25,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -44,9 +44,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -63,9 +63,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -82,9 +82,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }
       ]
@@ -110,9 +110,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -129,9 +129,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -148,9 +148,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -167,9 +167,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }
       ]
@@ -195,9 +195,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -214,9 +214,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -233,9 +233,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -252,9 +252,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }
       ]
@@ -280,9 +280,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -299,9 +299,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -318,9 +318,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }, {
           word: [
@@ -337,9 +337,9 @@ export default {
             { kana: '', mana: '', type: '', cn: '' }
           ],
           phrase: [
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' },
-            { kana: '', mana: '', cn : '' }
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' },
+            { kana: '', mana: '', cn: '' }
           ]
         }
       ]

@@ -24,9 +24,9 @@ export default {
             { kana: 'ニューヨーク', mana: '', type: '专', cn: '纽约' }
           ],
           phrase: [
-            { kana: 'しつれいですが', mana: '失礼ですが', cn : '对不起' },
-            { kana: 'かんじがします', mana: '感じがします', cn : '感觉，觉得' },
-            { kana: 'てんきんになる', mana: '転勤になる', cn : '调动工作，调换工作地点' }
+            { kana: 'しつれいですが', mana: '失礼ですが', cn: '对不起' },
+            { kana: 'かんじがします', mana: '感じがします', cn: '感觉，觉得' },
+            { kana: 'てんきんになる', mana: '転勤になる', cn: '调动工作，调换工作地点' }
           ]
         }, {
           word: [
@@ -100,12 +100,12 @@ export default {
             { kana: 'こたえ', mana: '答え', type: '名', cn: '回答，答案' }
           ],
           phrase: [
-            { kana: '〜しゅるい', mana: '〜種類', cn : '～种，～类' },
-            { kana: '〜か', mana: '〜化', cn : '～化' },
-            { kana: '〜てき', mana: '〜的', cn : '～的' },
-            { kana: 'だい〜', mana: '大〜', cn : '大～' },
-            { kana: 'おお〜', mana: '大〜', cn : '大～' },
-            { kana: 'かく〜', mana: '各〜', cn : '各～' }
+            { kana: '〜しゅるい', mana: '〜種類', cn: '～种，～类' },
+            { kana: '〜か', mana: '〜化', cn: '～化' },
+            { kana: '〜てき', mana: '〜的', cn: '～的' },
+            { kana: 'だい〜', mana: '大〜', cn: '大～' },
+            { kana: 'おお〜', mana: '大〜', cn: '大～' },
+            { kana: 'かく〜', mana: '各〜', cn: '各～' }
           ]
         }, {
           word: [
@@ -195,10 +195,10 @@ export default {
             { kana: 'プロジェクト', mana: '', type: '名', cn: '项目，计划，企划' }
           ],
           phrase: [
-            { kana: 'ごぶさたする', mana: '', cn : '好久不见，久疏问候' },
-            { kana: 'そのせつ', mana: 'その節', cn : '那时，那次' },
-            { kana: '〜ぶり', mana: '', cn : '……之后又，间隔……' },
-            { kana: '〜しゃ', mana: '〜者', cn : '～者，～的人' }
+            { kana: 'ごぶさたする', mana: '', cn: '好久不见，久疏问候' },
+            { kana: 'そのせつ', mana: 'その節', cn: '那时，那次' },
+            { kana: '〜ぶり', mana: '', cn: '……之后又，间隔……' },
+            { kana: '〜しゃ', mana: '〜者', cn: '～者，～的人' }
           ]
         }, {
           word: [
@@ -214,10 +214,10 @@ export default {
             { kana: 'わかもの', mana: '若者', type: '名', cn: '年轻人' }
           ],
           phrase: [
-            { kana: 'ごちそうさまでした', mana: '', cn : '谢谢热情款待' },
-            { kana: 'もうしわけありません', mana: '申し訳ありません', cn : '对不起，抱歉' },
-            { kana: 'では、これで', mana: '', cn : '那就这样吧' },
-            { kana: '〜びょう', mana: '〜秒', cn : '～秒' }
+            { kana: 'ごちそうさまでした', mana: '', cn: '谢谢热情款待' },
+            { kana: 'もうしわけありません', mana: '申し訳ありません', cn: '对不起，抱歉' },
+            { kana: 'では、これで', mana: '', cn: '那就这样吧' },
+            { kana: '〜びょう', mana: '〜秒', cn: '～秒' }
           ]
         }, {
           word: [
@@ -255,10 +255,10 @@ export default {
             { kana: 'つたわる', mana: '伝わる', type: '动1', cn: '传，传达；传播，流传' }
           ],
           phrase: [
-            { kana: 'りょう〜', mana: '両〜', cn : '两～' },
-            { kana: '〜かん', mana: '〜感', cn : '～感' },
-            { kana: '〜どうし', mana: '〜同士', cn : '（有相同关系或同一类别的人）～之间，～彼此，～一伙' },
-            { kana: 'いくら〜ても', mana: '', cn : '不管怎么……也，无论怎么……都' }
+            { kana: 'りょう〜', mana: '両〜', cn: '两～' },
+            { kana: '〜かん', mana: '〜感', cn: '～感' },
+            { kana: '〜どうし', mana: '〜同士', cn: '（有相同关系或同一类别的人）～之间，～彼此，～一伙' },
+            { kana: 'いくら〜ても', mana: '', cn: '不管怎么……也，无论怎么……都' }
           ]
         }, {
           word: [
@@ -287,9 +287,9 @@ export default {
             { kana: 'あかんぼう', mana: '赤ん坊', type: '名', cn: '婴儿' }
           ],
           phrase: [
-            { kana: 'どんなに', mana: '', cn : '怎样，怎么' },
-            { kana: 'どれだけ', mana: '', cn : '怎么，多么' },
-            { kana: 'いかに', mana: '', cn : '怎样，怎么' }
+            { kana: 'どんなに', mana: '', cn: '怎样，怎么' },
+            { kana: 'どれだけ', mana: '', cn: '怎么，多么' },
+            { kana: 'いかに', mana: '', cn: '怎样，怎么' }
           ]
         }, {
           word: [
@@ -309,7 +309,7 @@ export default {
             { kana: 'なまける', mana: '怠ける', type: '动2', cn: '懒惰，懈怠' }
           ],
           phrase: [
-            { kana: '〜まん', mana: '〜万', cn : '～万' }
+            { kana: '〜まん', mana: '〜万', cn: '～万' }
           ]
         }
       ]
@@ -337,10 +337,10 @@ export default {
             { kana: 'しょうこうしゅ', mana: '紹興酒', type: '名', cn: '绍兴酒' }
           ],
           phrase: [
-            { kana: 'いまでも', mana: '今でも', cn : '至今，现在还……' },
-            { kana: '〜めい', mana: '〜名', cn : '～名，～人' },
-            { kana: '〜ねんめ', mana: '〜年目', cn : '第～年' },
-            { kana: '〜しょう', mana: '〜省', cn : '～省' }
+            { kana: 'いまでも', mana: '今でも', cn: '至今，现在还……' },
+            { kana: '〜めい', mana: '〜名', cn: '～名，～人' },
+            { kana: '〜ねんめ', mana: '〜年目', cn: '第～年' },
+            { kana: '〜しょう', mana: '〜省', cn: '～省' }
           ]
         }, {
           word: [
@@ -363,9 +363,9 @@ export default {
             { kana: 'いままで', mana: '今まで', type: '副', cn: '现在为止，以前，此前' }
           ],
           phrase: [
-            { kana: 'これからおせわになります', mana: 'これからお世話になります', cn : '往后（今后）请多费心' },
-            { kana: 'よろしくおねがいもうしあげます', mana: 'よろしくお願い申し上げます', cn : '请多关照' },
-            { kana: '〜ねんせい', mana: '〜年生', cn : '～年级学生' }
+            { kana: 'これからおせわになります', mana: 'これからお世話になります', cn: '往后（今后）请多费心' },
+            { kana: 'よろしくおねがいもうしあげます', mana: 'よろしくお願い申し上げます', cn: '请多关照' },
+            { kana: '〜ねんせい', mana: '〜年生', cn: '～年级学生' }
           ]
         }, {
           word: [
@@ -427,12 +427,12 @@ export default {
             { kana: 'にんずう', mana: '人数', type: '名', cn: '人数' }
           ],
           phrase: [
-            { kana: '〜ちかく', mana: '〜近く', cn : '将近～，近～' },
-            { kana: 'だい〜', mana: '第〜', cn : '第～' },
-            { kana: '〜い', mana: '〜位', cn : '～位' },
-            { kana: '〜ていど', mana: '〜程度', cn : '～左右，约～' },
-            { kana: 'やく〜', mana: '約〜', cn : '约～，大约～' },
-            { kana: '〜おく', mana: '〜億', cn : '～亿' }
+            { kana: '〜ちかく', mana: '〜近く', cn: '将近～，近～' },
+            { kana: 'だい〜', mana: '第〜', cn: '第～' },
+            { kana: '〜い', mana: '〜位', cn: '～位' },
+            { kana: '〜ていど', mana: '〜程度', cn: '～左右，约～' },
+            { kana: 'やく〜', mana: '約〜', cn: '约～，大约～' },
+            { kana: '〜おく', mana: '〜億', cn: '～亿' }
           ]
         }, {
           word: [
@@ -455,8 +455,8 @@ export default {
             { kana: 'ぎょうせき', mana: '業績', type: '名', cn: '业绩；成绩' }
           ],
           phrase: [
-            { kana: 'ほぼ〜', mana: '', cn : '大约' },
-            { kana: '〜いか', mana: '〜以下', cn : '以下' }
+            { kana: 'ほぼ〜', mana: '', cn: '大约' },
+            { kana: '〜いか', mana: '〜以下', cn: '以下' }
           ]
         }, {
           word: [
@@ -503,9 +503,9 @@ export default {
             { kana: 'じじょう', mana: '事情', type: '名', cn: '情况；缘故，缘由' }
           ],
           phrase: [
-            { kana: 'かまわない', mana: '', cn : '没关系' },
-            { kana: 'そのように', mana: '', cn : '那样' },
-            { kana: 'かんけいがある', mana: '関係がある', cn : '有关系' }
+            { kana: 'かまわない', mana: '', cn: '没关系' },
+            { kana: 'そのように', mana: '', cn: '那样' },
+            { kana: 'かんけいがある', mana: '関係がある', cn: '有关系' }
           ]
         }, {
           word: [
@@ -571,10 +571,10 @@ export default {
             { kana: 'おう', mana: '追う', type: '动1', cn: '追，赶；催逼' }
           ],
           phrase: [
-            { kana: 'これまで', mana: '', cn : '以往，此前' },
-            { kana: 'みられる', mana: 'いられる', cn : '出现，能看到' },
-            { kana: 'じかんにおわれる', mana: '時間に追われる', cn : '被时间追赶' },
-            { kana: '〜ねんだい', mana: '〜年代', cn : '～年代' }
+            { kana: 'これまで', mana: '', cn: '以往，此前' },
+            { kana: 'みられる', mana: 'いられる', cn: '出现，能看到' },
+            { kana: 'じかんにおわれる', mana: '時間に追われる', cn: '被时间追赶' },
+            { kana: '〜ねんだい', mana: '〜年代', cn: '～年代' }
           ]
         }, {
           word: [
@@ -602,8 +602,8 @@ export default {
             { kana: 'アイターンげんしょう', mana: 'Iターン現象', type: '名', cn: '单行现象' }
           ],
           phrase: [
-            { kana: '〜だい', mana: '〜代', cn : '～多岁' },
-            { kana: '〜ご', mana: '〜後', cn : '～后，～之后' }
+            { kana: '〜だい', mana: '〜代', cn: '～多岁' },
+            { kana: '〜ご', mana: '〜後', cn: '～后，～之后' }
           ]
         }, {
           word: [
@@ -629,7 +629,7 @@ export default {
             { kana: 'でんきせいひん', mana: '電気製品', type: '名', cn: '电器' }
           ],
           phrase: [
-            { kana: '〜か', mana: '〜家', cn : '～家' }
+            { kana: '〜か', mana: '〜家', cn: '～家' }
           ]
         }
       ]

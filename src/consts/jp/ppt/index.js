@@ -114,18 +114,16 @@ const trans = arr =>
             }
             r.push(<span className='glb-cd'>{chDelete(inText)}</span>)
           })
+        } else if (Array.isArray(chDelete(str))) {
+          r.push(
+            <span className='glb-cd'>
+              {chDelete(str).map(v => (
+                <Fragment key={i++}>{v}</Fragment>
+              ))}
+            </span>
+          )
         } else {
-          if (Array.isArray(chDelete(str))) {
-            r.push(
-              <span className='glb-cd'>
-                {chDelete(str).map(v => (
-                  <Fragment key={i++}>{v}</Fragment>
-                ))}
-              </span>
-            )
-          } else {
-            r.push(<span className='glb-cd'>{chDelete(str)}</span>)
-          }
+          r.push(<span className='glb-cd'>{chDelete(str)}</span>)
         }
         r.push(chDelete(text))
       } else {

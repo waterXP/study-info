@@ -1,12 +1,12 @@
-import React, { memo, useState, useEffect, useCallback, Fragment } from 'react'
+import React, { memo, useState, useEffect, useCallback } from 'react'
 import './Performance.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import performance, { performanceList } from '@/consts/performance'
 import Title from '@com/Title'
 import Breadcrumb from '@com/Breadcrumb'
 import Topic from '@com/Topic'
 import Paragraph from '@com/Paragraph'
+import performance, { performanceList } from '@/consts/performance'
 
 const columns = [
   { title: '预期目标', dataIndex: 'text' },

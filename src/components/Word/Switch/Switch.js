@@ -5,8 +5,8 @@ const Switch = ({ children, checked, onClick }) => (
   <div
     className={
       checked
-        ? 'pg-jp-words_switch is-checked on-click'
-        : 'pg-jp-words_switch on-click'
+        ? 'com-word-switch is-checked on-click'
+        : 'com-word-switch on-click'
     }
     onClick={onClick}
   >

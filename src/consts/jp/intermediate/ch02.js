@@ -26,9 +26,9 @@ export default {
             { kana: 'まちがいない', mana: '間違いない', type: '形1', cn: '一定，肯定，没错' }
           ],
           phrase: [
-            { kana: 'きんぼしをあげる', mana: '金星をあげる', cn : '成就非凡功绩，获得金星' },
-            { kana: 'さい〜', mana: '最〜', cn : '最～' },
-            { kana: '〜しょう', mana: '〜賞', cn : '～奖' }
+            { kana: 'きんぼしをあげる', mana: '金星をあげる', cn: '成就非凡功绩，获得金星' },
+            { kana: 'さい〜', mana: '最〜', cn: '最～' },
+            { kana: '〜しょう', mana: '〜賞', cn: '～奖' }
           ]
         }, {
           word: [
@@ -62,9 +62,9 @@ export default {
             { kana: 'ほうふ', mana: '豊富', type: '形2', cn: '丰富' }
           ],
           phrase: [
-            { kana: 'ちがいない', mana: '違いない', cn : '没错' },
-            { kana: 'そういない', mana: '相違ない', cn : '没有区别' },
-            { kana: '〜ぶ', mana: '〜部', cn : '～部' }
+            { kana: 'ちがいない', mana: '違いない', cn: '没错' },
+            { kana: 'そういない', mana: '相違ない', cn: '没有区别' },
+            { kana: '〜ぶ', mana: '〜部', cn: '～部' }
           ]
         }, {
           word: [
@@ -76,7 +76,7 @@ export default {
             { kana: 'ぼうりょく', mana: '暴力', type: '名', cn: '暴力' }
           ],
           phrase: [
-            { kana: 'しん〜', mana: '新〜', cn : '新～' }
+            { kana: 'しん〜', mana: '新〜', cn: '新～' }
           ]
         }, {
           word: [
@@ -112,7 +112,7 @@ export default {
             { kana: 'しく', mana: '敷く', type: '动1', cn: '铺，垫' }
           ],
           phrase: [
-            { kana: '〜せいき', mana: '〜世紀', cn : '～世纪' }
+            { kana: '〜せいき', mana: '〜世紀', cn: '～世纪' }
           ]
         }, {
           word: [
@@ -162,8 +162,8 @@ export default {
             { kana: 'ふくろ', mana: '袋', type: '名', cn: '袋子，口袋' }
           ],
           phrase: [
-            { kana: '〜ぶそく', mana: '〜不足', cn : '～不足' },
-            { kana: '〜がく', mana: '〜学', cn : '～学' }
+            { kana: '〜ぶそく', mana: '〜不足', cn: '～不足' },
+            { kana: '〜がく', mana: '〜学', cn: '～学' }
           ]
         }
       ]
@@ -189,9 +189,9 @@ export default {
             { kana: 'りそう', mana: '理想', type: '名', cn: '理想' }
           ],
           phrase: [
-            { kana: 'めんどうをみる', mana: '面倒を見る', cn : '照顾，照料' },
-            { kana: 'それはもう', mana: '', cn : '可不是嘛，是呀，是啊，那么' },
-            { kana: 'きになる', mana: '気になる', cn : '有意，有心；担心，挂念' }
+            { kana: 'めんどうをみる', mana: '面倒を見る', cn: '照顾，照料' },
+            { kana: 'それはもう', mana: '', cn: '可不是嘛，是呀，是啊，那么' },
+            { kana: 'きになる', mana: '気になる', cn: '有意，有心；担心，挂念' }
           ]
         }, {
           word: [
@@ -263,7 +263,7 @@ export default {
             { kana: 'じつに', mana: '実に', type: '副', cn: '实在，的确，确实' }
           ],
           phrase: [
-            { kana: '〜わり', mana: '〜割', cn : '～成，十分之～' }
+            { kana: '〜わり', mana: '〜割', cn: '～成，十分之～' }
           ]
         }, {
           word: [
@@ -292,10 +292,10 @@ export default {
             { kana: 'タイミング', mana: '', type: '名', cn: '时机，时候' }
           ],
           phrase: [
-            { kana: 'わ〜', mana: '和〜', cn : '日本式的～' },
-            { kana: 'よう〜', mana: '洋〜', cn : '西式的～，欧美式的～' },
-            { kana: '〜しき', mana: '〜式', cn : '～式' },
-            { kana: '〜ふう', mana: '〜風', cn : '～风格' }
+            { kana: 'わ〜', mana: '和〜', cn: '日本式的～' },
+            { kana: 'よう〜', mana: '洋〜', cn: '西式的～，欧美式的～' },
+            { kana: '〜しき', mana: '〜式', cn: '～式' },
+            { kana: '〜ふう', mana: '〜風', cn: '～风格' }
           ]
         }, {
           word: [
@@ -358,9 +358,9 @@ export default {
             { kana: 'それぞれ', mana: '', type: '名', cn: '分别，各自' }
           ],
           phrase: [
-            { kana: 'さんこうにする', mana: '参考にする', cn : '作为参考' },
-            { kana: 'さんこうになる', mana: '参考になる', cn : '有参考价值，供参考' },
-            { kana: 'わだいになる', mana: '話題になる', cn : '成为热闹话题，成为谈资' }
+            { kana: 'さんこうにする', mana: '参考にする', cn: '作为参考' },
+            { kana: 'さんこうになる', mana: '参考になる', cn: '有参考价值，供参考' },
+            { kana: 'わだいになる', mana: '話題になる', cn: '成为热闹话题，成为谈资' }
           ]
         }, {
           word: [
@@ -386,7 +386,7 @@ export default {
             { kana: 'ミルク', mana: '', type: '名', cn: '牛奶' }
           ],
           phrase: [
-            { kana: '〜もう', mana: '〜網', cn : '～网，～网络' }
+            { kana: '〜もう', mana: '〜網', cn: '～网，～网络' }
           ]
         }, {
           word: [
@@ -401,7 +401,7 @@ export default {
             { kana: 'ひかり', mana: '', type: '专', cn: '光号（新干线列车名）' }
           ],
           phrase: [
-            { kana: '〜じょう', mana: '〜錠', cn : '～粒' }
+            { kana: '〜じょう', mana: '〜錠', cn: '～粒' }
           ]
         }, {
           word: [
@@ -424,10 +424,10 @@ export default {
             { kana: 'しょぞく', mana: '所属', type: '名', cn: '工作单位；所属，附属' }
           ],
           phrase: [
-            { kana: '〜ぶ', mana: '〜部', cn : '～部' },
-            { kana: '〜ぎょう', mana: '〜行', cn : '～行' },
-            { kana: '〜もじ', mana: '〜文字', cn : '～字' },
-            { kana: '〜ごと', mana: '', cn : '～每' }
+            { kana: '〜ぶ', mana: '〜部', cn: '～部' },
+            { kana: '〜ぎょう', mana: '〜行', cn: '～行' },
+            { kana: '〜もじ', mana: '〜文字', cn: '～字' },
+            { kana: '〜ごと', mana: '', cn: '～每' }
           ]
         }, {
           word: [
@@ -472,8 +472,8 @@ export default {
             { kana: 'えんそうする', mana: '演奏する', type: '动3', cn: '演奏' }
           ],
           phrase: [
-            { kana: 'きにする', mana: '気にする', cn : '介意，关心，留心' },
-            { kana: 'ひ〜', mana: '非〜', cn : '非～，不～' }
+            { kana: 'きにする', mana: '気にする', cn: '介意，关心，留心' },
+            { kana: 'ひ〜', mana: '非〜', cn: '非～，不～' }
           ]
         }
       ]
@@ -499,9 +499,9 @@ export default {
             { kana: 'そのような', mana: '', type: '连体', cn: '像这样的' }
           ],
           phrase: [
-            { kana: 'そのとおりです', mana: '', cn : '是这样，是那样的，的确如此' },
-            { kana: '〜とおり', mana: '', cn : '～样，～那样' },
-            { kana: '〜ぶ', mana: '〜部', cn : '～区域，～部位' }
+            { kana: 'そのとおりです', mana: '', cn: '是这样，是那样的，的确如此' },
+            { kana: '〜とおり', mana: '', cn: '～样，～那样' },
+            { kana: '〜ぶ', mana: '〜部', cn: '～区域，～部位' }
           ]
         }, {
           word: [
@@ -541,7 +541,7 @@ export default {
             { kana: 'こうざ', mana: '講座', type: '名', cn: '讲座' }
           ],
           phrase: [
-            { kana: '〜しゅうねん', mana: '〜周年', cn : '～周年' }
+            { kana: '〜しゅうねん', mana: '〜周年', cn: '～周年' }
           ]
         }, {
           word: [
@@ -567,8 +567,8 @@ export default {
             { kana: 'すべりおちる', mana: '滑り落ちる', type: '动2', cn: '滑落，滑下' }
           ],
           phrase: [
-            { kana: '〜けん', mana: '〜圏', cn : '～圈，～区域' },
-            { kana: '〜かこく', mana: '〜か国', cn : '～个国家' }
+            { kana: '〜けん', mana: '〜圏', cn: '～圈，～区域' },
+            { kana: '〜かこく', mana: '〜か国', cn: '～个国家' }
           ]
         }, {
           word: [

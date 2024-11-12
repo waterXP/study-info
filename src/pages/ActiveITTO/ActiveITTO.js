@@ -1,9 +1,9 @@
 import React, { memo, useState, useCallback, useMemo } from 'react'
 import './ActiveITTO.styl'
 import { Table } from 'antd'
+import Breadcrumb from '@com/Breadcrumb'
 import { datas } from '@/consts/itto'
 import nouns from '@/consts/nouns'
-import Breadcrumb from '@com/Breadcrumb'
 
 const names = [
   '整合管理',
@@ -23,14 +23,12 @@ const dataSource = datas.reduce(
     ...t,
     ...Object.entries(realm)
       .sort(([a], [b]) => a - b)
-      .map(([a, b], i, arr) => {
-        return {
-          ...b,
-          id: a,
-          nameSpan: i === 0 ? arr.length : 0,
-          name: i === 0 ? names[index] : ''
-        }
-      })
+      .map(([a, b], i, arr) => ({
+        ...b,
+        id: a,
+        nameSpan: i === 0 ? arr.length : 0,
+        name: i === 0 ? names[index] : ''
+      }))
   ],
   []
 )
@@ -255,43 +253,43 @@ const ActiveITTO = () => {
     () =>
       totalFilter
         ? dataSource.map(({ i, tt, o, ...rest }) => ({
-            ...rest,
-            i:
+          ...rest,
+          i:
               totalFilter === 'single'
                 ? i.filter(({ title }) => total.count[title] === 1)
                 : i.filter(({ title }) => title === totalFilter),
-            tt:
+          tt:
               totalFilter === 'single'
                 ? tt.filter(({ title }) => total.count[title] === 1)
                 : tt.filter(({ title }) => title === totalFilter),
-            o:
+          o:
               totalFilter === 'single'
                 ? o.filter(({ title }) => total.count[title] === 1)
                 : o.filter(({ title }) => title === totalFilter)
-          }))
+        }))
         : inputFilter || toolFilter || outputFilter
-        ? dataSource.map(({ i, tt, o, ...rest }) => ({
+          ? dataSource.map(({ i, tt, o, ...rest }) => ({
             ...rest,
             i:
               inputFilter === 'single'
                 ? i.filter(({ title }) => input.count[title] === 1)
                 : inputFilter
-                ? i.filter(({ title }) => title === inputFilter)
-                : i,
+                  ? i.filter(({ title }) => title === inputFilter)
+                  : i,
             tt:
               toolFilter === 'single'
                 ? tt.filter(({ title }) => tool.count[title] === 1)
                 : toolFilter
-                ? tt.filter(({ title }) => title === toolFilter)
-                : tt,
+                  ? tt.filter(({ title }) => title === toolFilter)
+                  : tt,
             o:
               outputFilter === 'single'
                 ? o.filter(({ title }) => output.count[title] === 1)
                 : outputFilter
-                ? o.filter(({ title }) => title === outputFilter)
-                : o
+                  ? o.filter(({ title }) => title === outputFilter)
+                  : o
           }))
-        : dataSource,
+          : dataSource,
     [dataSource, totalFilter, inputFilter, toolFilter, outputFilter]
   )
   return (

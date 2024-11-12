@@ -1,8 +1,8 @@
 import React, { memo, useRef, useEffect, useState, useCallback } from 'react'
 import './JPPpt.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import ppt from '@/consts/jp/ppt'
 import Breadcrumb from '@com/Breadcrumb'
+import ppt from '@/consts/jp/ppt'
 
 const JPPpt = () => {
   const navigate = useNavigate()

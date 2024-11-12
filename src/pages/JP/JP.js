@@ -2,14 +2,15 @@ import React, { memo, useMemo, useCallback } from 'react'
 import './JP.styl'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { words } from '@/consts/jp'
-import junior from '@/consts/jp/junior'
-import intermediate from '@/consts/jp/intermediate'
 import Box from '@com/Box'
+import Breadcrumb from '@com/Breadcrumb'
 import Chapter from '@com/Chapter'
 import List from '@com/List'
 import Item from '@com/Item'
 import JPText from '@com/JPText'
+import intermediate from '@/consts/jp/intermediate'
+import junior from '@/consts/jp/junior'
+import { words } from '@/consts/jp'
 
 const JP = () => {
   const { favorites } = useSelector(({ favorites }) => ({ favorites }))
@@ -34,73 +35,80 @@ const JP = () => {
     navigate('/jp-favorites')
   }, [navigate])
   return (
-    <Box>
-      {favoriteCount > 0 && (
-        <p
-          className='pg-jp_topic on-click'
-          onClick={gotoFavorites}
-        >{`收藏单词（${favoriteCount}）`}</p>
-      )}
-      <p className='pg-jp_topic'>初级</p>
-      {junior.map(({ id, chapter, title, lesson }) => (
-        <List key={id}>
-          <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
-          {lesson.map(({ topic, no }) => (
-            <div key={no}>
+    <div>
+      <div className='pg-jp_top'>
+        <Breadcrumb to='/' noTop>
+          返回
+        </Breadcrumb>
+      </div>
+      <Box noTop>
+        {favoriteCount > 0 && (
+          <p
+            className='pg-jp_topic on-click'
+            onClick={gotoFavorites}
+          >{`收藏单词（${favoriteCount}）`}</p>
+        )}
+        <p className='pg-jp_topic'>初级</p>
+        {junior.map(({ id, chapter, title, lesson }) => (
+          <List key={id}>
+            <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
+            {lesson.map(({ topic, no }) => (
+              <div key={no}>
+                <Item
+                  onClick={() => {
+                    gotoWords(id, no)
+                  }}
+                >
+                  <JPText content={`第${no}課 ${topic}`} />
+                </Item>
+                <div className='pg-jp_options'>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoCourse(id, no)
+                    }}
+                  >
+                    基
+                  </div>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoWords(id, no)
+                    }}
+                  >
+                    構
+                  </div>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoWords(id, no)
+                    }}
+                  >
+                    語
+                  </div>
+                </div>
+              </div>
+            ))}
+          </List>
+        ))}
+        <p className='pg-jp_topic'>中级</p>
+        {intermediate.map(({ id, chapter, title, lesson }) => (
+          <List key={id}>
+            <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
+            {lesson.map(({ topic, no }) => (
               <Item
+                key={no}
                 onClick={() => {
                   gotoWords(id, no)
                 }}
               >
                 <JPText content={`第${no}課 ${topic}`} />
               </Item>
-              <div className='pg-jp_options'>
-                <div
-                  className='pg-jp_option on-click'
-                  onClick={() => {
-                    gotoCourse(id, no)
-                  }}
-                >
-                  基
-                </div>
-                <div
-                  className='pg-jp_option on-click'
-                  onClick={() => {
-                    gotoWords(id, no)
-                  }}
-                >
-                  構
-                </div>
-                <div
-                  className='pg-jp_option on-click'
-                  onClick={() => {
-                    gotoWords(id, no)
-                  }}
-                >
-                  語
-                </div>
-              </div>
-            </div>
-          ))}
-        </List>
-      ))}
-      <p className='pg-jp_topic'>中级</p>
-      {intermediate.map(({ id, chapter, title, lesson }) => (
-        <List key={id}>
-          <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
-          {lesson.map(({ topic, no }) => (
-            <Item
-              key={no}
-              onClick={() => {
-                gotoWords(id, no)
-              }}
-            >
-              <JPText content={`第${no}課 ${topic}`} />
-            </Item>
-          ))}
-        </List>
-      ))}
-    </Box>
+            ))}
+          </List>
+        ))}
+      </Box>
+    </div>
   )
 }
 

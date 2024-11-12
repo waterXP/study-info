@@ -1,9 +1,9 @@
 import React, { memo, useEffect, useCallback, useMemo, useState } from 'react'
 import './JPCourse.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import jpWords from '@/consts/jp'
 import Breadcrumb from '@com/Breadcrumb'
 import JPText from '@com/JPText'
+import jpWords from '@/consts/jp'
 
 const JPCourse = () => {
   const navigate = useNavigate()
@@ -48,7 +48,6 @@ const JPCourse = () => {
     if (detail) {
       const { no } = detail
       const nextNo = no - 1
-      const nextId = id - 1
       if (nextNo < 1) {
         const last = jpWords[jpWords.length - 1]
         const lastDetail = last.lesson[last.lesson.length - 1]

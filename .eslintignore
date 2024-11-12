@@ -1,0 +1,5 @@
+/scripts/
+/config/
+.*
+/public/
+/src/iconfont

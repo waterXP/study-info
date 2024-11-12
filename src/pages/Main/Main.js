@@ -17,26 +17,23 @@ const Main = () => {
   const gotoNotes = useCallback(() => {
     navigate('/jp-notes')
   }, [navigate])
-  const gotoPpt = useCallback(
-    () => {
-      navigate('/jp-ppts')
-    },
-    [navigate]
-  )
-  const gotoN2 = useCallback(
-    () => {
-      navigate('/jp-n2s')
-    },
-    [navigate]
-  )
-  const gotoN2Words = useCallback(
-    () => {
-      navigate('/jp-n2-words')
-    },
-    [navigate]
-  )
+  const gotoPpt = useCallback(() => {
+    navigate('/jp-ppts')
+  }, [navigate])
+  const gotoN2 = useCallback(() => {
+    navigate('/jp-n2s')
+  }, [navigate])
+  const gotoN2Words = useCallback(() => {
+    navigate('/jp-n2-words')
+  }, [navigate])
+  const gotoDeprive = useCallback(() => {
+    navigate('/deprive')
+  }, [navigate])
   return (
     <div className='pg-main'>
+      <div className='pg-main_link on-click' onClick={gotoDeprive}>
+        Deprive
+      </div>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
         软考
       </div>

@@ -33,6 +33,7 @@ import JPN2 from '@/pages/JPN2'
 import JPN2Words from '@/pages/JPN2Words'
 import JPN2Word from '@/pages/JPN2Word'
 import JPN2Study from '@/pages/JPN2Study'
+import Deprive from '@/pages/Deprive'
 
 const { PUBLIC_URL } = process.env
 
@@ -161,6 +162,10 @@ const router = createBrowserRouter(
     {
       path: 'jp-n2-study',
       element: <JPN2Study />
+    },
+    {
+      path: 'deprive',
+      element: <Deprive />
     },
     {
       path: '*',

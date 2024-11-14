@@ -1,36 +1,34 @@
-import React, { memo, useEffect, useCallback, useRef } from 'react'
+import React, { memo, useCallback, useState, useMemo } from 'react'
 import './JPN2s.styl'
 import { useNavigate } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
-import Box from '@com/Box'
 import ppt from '@/consts/jp/n2'
 
-let scrollTop = 0
-
 const JPN2s = () => {
-  const ref = useRef(null)
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.scrollTop = scrollTop
-    }
-  }, [])
+  const [index, setIndex] = useState(0)
   const navigate = useNavigate()
   const gotoPPT = useCallback(
     id => {
-      scrollTop = ref.current.scrollTop
       navigate(`/jp-n2?&id=${id}`)
     },
     [navigator]
   )
+  const tar = useMemo(() => ppt[index] || ppt[0], [index])
+  const onPrevClick = useCallback(() => {
+    setIndex(index => (index > 0 ? index - 1 : ppt.length - 1))
+  }, [index])
+  const onNextClick = useCallback(() => {
+    setIndex(index => (index < ppt.length - 1 ? index + 1 : 0))
+  }, [index])
   return (
-    <Box ref={ref}>
-      <Breadcrumb to='/' noTop>
-        返回
-      </Breadcrumb>
-      {ppt.map((arr, i) => (
-        <div key={i} className='pg-jp-n2s_lesson'>
-          <p className='pg-jp-n2s_topic'>{`第${i + 1}课`}</p>
-          {arr.map(({ id, title }) => (
+    <div className='pg-jp-n2s hide-scroll'>
+      <div className='pg-jp-n2s_content'>
+        <Breadcrumb to='/' noTop>
+          返回
+        </Breadcrumb>
+        <div className='pg-jp-n2s_lesson'>
+          <p className='pg-jp-n2s_topic'>{`第${index + 1}课`}</p>
+          {tar.map(({ id, title, cn, example }) => (
             <div
               key={id}
               className='pg-jp-n2s_titles'
@@ -43,11 +41,36 @@ const JPN2s = () => {
                   {v}
                 </p>
               ))}
+              {cn && <p className='pg-jp-n2s_cn'>{cn}</p>}
+              <div className='pg-jp-n2s_examples'>
+                {example && example[0] && (
+                  <p className='pg-jp-n2s_example'>{example[0]}</p>
+                )}
+                {example && example[1] && (
+                  <p className='pg-jp-n2s_example'>{example[1]}</p>
+                )}
+              </div>
             </div>
           ))}
         </div>
-      ))}
-    </Box>
+      </div>
+      <div className='pg-jp-n2s_footer'>
+        <div className='pg-jp-n2s_buttons'>
+          <div
+            className='pg-jp-n2s_corner-button on-click'
+            onClick={onPrevClick}
+          >
+            上一个
+          </div>
+          <div
+            className='pg-jp-n2s_corner-button is-right on-click'
+            onClick={onNextClick}
+          >
+            下一个
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

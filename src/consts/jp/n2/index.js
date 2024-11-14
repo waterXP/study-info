@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import y01 from './y01'
 import y02 from './y02'
+import y03 from './y03'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -145,5 +146,6 @@ const build = arr =>
 
 export default [
   y01,
-  y02
+  y02,
+  y03
 ].map(v => build(v))

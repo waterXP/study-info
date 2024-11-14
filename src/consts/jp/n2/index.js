@@ -2,6 +2,23 @@ import React, { Fragment } from 'react'
 import y01 from './y01'
 import y02 from './y02'
 import y03 from './y03'
+import y04 from './y04'
+import y05 from './y05'
+import y06 from './y06'
+import y07 from './y07'
+import y08 from './y08'
+import y09 from './y09'
+import y10 from './y10'
+import y11 from './y11'
+import y12 from './y12'
+import y13 from './y13'
+import y14 from './y14'
+import y15 from './y15'
+import y16 from './y16'
+import y17 from './y17'
+import y18 from './y18'
+import y19 from './y19'
+import y20 from './y20'
 
 const chDelete = str => {
   if (typeof str === 'string' && str.includes('[[') && str.includes(']]')) {
@@ -133,19 +150,37 @@ const trans = arr =>
       </>
     )
   })
-const build = arr =>
-  arr.map(({ title, explain, example, ...rest }) => {
+const build = (arr, index) =>
+  arr.map(({ title, explain, example, ...rest }, arrIndex) => {
     i = 0
     return {
       title: trans(title),
       explain: explain.map(v => trans(v)),
       example: trans(example),
-      ...rest
+      ...rest,
+      id: `y${index}-${arrIndex}`
     }
   })
 
 export default [
   y01,
   y02,
-  y03
-].map(v => build(v))
+  y03,
+  y04,
+  y05,
+  y06,
+  y07,
+  y08,
+  y09,
+  y10,
+  y11,
+  y12,
+  y13,
+  y14,
+  y15,
+  y16,
+  y17,
+  y18,
+  y19,
+  y20
+].map((v, i) => build(v, i))

@@ -96,14 +96,41 @@ const JP = () => {
           <List key={id}>
             <Chapter>{`第${chapter}单元 ${title}`}</Chapter>
             {lesson.map(({ topic, no }) => (
-              <Item
-                key={no}
-                onClick={() => {
-                  gotoWords(id, no)
-                }}
-              >
-                <JPText content={`第${no}課 ${topic}`} />
-              </Item>
+              <div key={no}>
+                <Item
+                  onClick={() => {
+                    gotoWords(id, no)
+                  }}
+                >
+                  <JPText content={`第${no}課 ${topic}`} />
+                </Item>
+                <div className='pg-jp_options'>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoCourse(id, no)
+                    }}
+                  >
+                    基
+                  </div>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoWords(id, no)
+                    }}
+                  >
+                    構
+                  </div>
+                  <div
+                    className='pg-jp_option on-click'
+                    onClick={() => {
+                      gotoWords(id, no)
+                    }}
+                  >
+                    語
+                  </div>
+                </div>
+              </div>
             ))}
           </List>
         ))}

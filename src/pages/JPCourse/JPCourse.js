@@ -74,7 +74,7 @@ const JPCourse = () => {
   }, [id, detail, navigate])
 
   return (
-    <div className='pg-jp-course'>
+    <div className='pg-jp-course hide-scroll'>
       <div className='pg-jp-course_content'>
         <Breadcrumb to='/jp' noTop title={<JPText content={title} />}>
           返回
@@ -93,7 +93,7 @@ const JPCourse = () => {
             <div className='pg-jp-course_block'>
               {use.map((v, i) => (
                 <div key={i} className='pg-jp-course_set'>
-                  {v.map((v, i) => (
+                  {v.length > 0 && v.map((v, i) => (
                     <div key={i} className='pg-jp-course_line'>
                       <JPText content={v} />
                     </div>
@@ -110,7 +110,7 @@ const JPCourse = () => {
           {content.length > 0 &&
             content.map((v, i) => (
               <div key={i} className='pg-jp-course_set'>
-                {v.map((v, i) => (
+                {v.length > 0 && v.map((v, i) => (
                   <div key={i} className='pg-jp-course_line'>
                     <JPText content={v} />
                   </div>

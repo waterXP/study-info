@@ -326,12 +326,11 @@ const JPWords = () => {
             >
               意
             </Switch>
-            { course && <Switch
-              checked={favorites[course.id]}
-              onClick={onFavorite}
-            >
-              藏
-            </Switch>}
+            {course && (
+              <Switch checked={favorites[course.id]} onClick={onFavorite}>
+                藏
+              </Switch>
+            )}
           </div>
           <div className='pg-jp-words_options-block'>
             <div
@@ -400,9 +399,10 @@ const JPWords = () => {
           />
           {showAnswer && course && (
             <p className='pg-jp-words_input-tip'>
-              {`${course.kana || ''}${course.mana ? `（${course.mana}）` : ''}${
-                course.type ? `「${course.type}」` : ''
-              }${course.cn || ''}`}
+              <JPText kana={course.kana} mana={course.mana} />
+              <span>{`${course.type ? `「${course.type}」` : ''}${
+                course.cn || ''
+              }`}</span>
             </p>
           )}
         </div>

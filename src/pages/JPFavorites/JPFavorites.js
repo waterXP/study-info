@@ -12,6 +12,7 @@ import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
 import Icon from '@com/Icon'
 import { words } from '@/consts/jp'
+import JPText from '@/components/JPText'
 import Switch from './components/Switch'
 import Word from './components/Word'
 
@@ -319,9 +320,10 @@ const JPFavorites = () => {
           />
           {showAnswer && course && (
             <p className='pg-jp-words_input-tip'>
-              {`${course.kana || ''}${course.mana ? `（${course.mana}）` : ''}${
-                course.type ? `「${course.type}」` : ''
-              }${course.cn || ''}`}
+              <JPText kana={course.kana} mana={course.mana} />
+              <span>{`${course.type ? `「${course.type}」` : ''}${
+                course.cn || ''
+              }`}</span>
             </p>
           )}
         </div>

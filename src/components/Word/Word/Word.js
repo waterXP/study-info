@@ -33,12 +33,21 @@ const Word = ({ word, switches, showResult }) => {
     if (!showResult) {
       return (
         <div className='com-word-word'>
-          {switches.kana && kana && (
-            <p className='com-word-word_line is-recite'>{kana}</p>
+          {switches.kana && kana && switches.mana && mana ? (
+            <p className='com-word-word_line is-recite is-big'>
+              <JPText kana={kana} mana={mana} />
+            </p>
+          ) : (
+            <>
+              {switches.kana && kana && (
+                <p className='com-word-word_line is-recite'>{kana}</p>
+              )}
+              {switches.mana && mana && (
+                <p className='com-word-word_line is-recite'>{`（${mana}）`}</p>
+              )}
+            </>
           )}
-          {switches.mana && mana && (
-            <p className='com-word-word_line is-recite'>{`（${mana}）`}</p>
-          )}
+
           {switches.type && type && (
             <p className='com-word-word_line is-recite'>{`「${type}」`}</p>
           )}
@@ -51,26 +60,41 @@ const Word = ({ word, switches, showResult }) => {
     }
     return (
       <div className='com-word-word'>
-        {kana && (
+        {kana && mana ? (
           <p
             className={
-              switches.kana
-                ? 'com-word-word_line is-recite'
-                : 'com-word-word_line'
+              switches.kana || switches.man
+                ? 'com-word-word_line is-recite is-big'
+                : 'com-word-word_line is-big'
             }
           >
-            {kana}
+            <JPText kana={kana} mana={mana} />
           </p>
+        ) : (
+          <>
+            {kana && (
+              <p
+                className={
+                  switches.kana
+                    ? 'com-word-word_line is-recite'
+                    : 'com-word-word_line'
+                }
+              >
+                {kana}
+              </p>
+            )}
+            {mana && (
+              <p
+                className={
+                  switches.mana
+                    ? 'com-word-word_line is-recite'
+                    : 'com-word-word_line'
+                }
+              >{`（${mana}）`}</p>
+            )}
+          </>
         )}
-        {mana && (
-          <p
-            className={
-              switches.mana
-                ? 'com-word-word_line is-recite'
-                : 'com-word-word_line'
-            }
-          >{`（${mana}）`}</p>
-        )}
+
         {type && (
           <p
             className={

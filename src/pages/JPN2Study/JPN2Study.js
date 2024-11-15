@@ -383,9 +383,10 @@ const JPN2Study = () => {
           />
           {showAnswer && course && (
             <p className='pg-jp-words_input-tip'>
-              {`${course.kana || ''}${course.mana ? `（${course.mana}）` : ''}${
-                course.type ? `「${course.type}」` : ''
-              }${course.cn || ''}`}
+              <JPText kana={course.kana} mana={course.mana} />
+              <span>{`${course.type ? `「${course.type}」` : ''}${
+                course.cn || ''
+              }`}</span>
             </p>
           )}
           {showAnswer && course && course.ex && (

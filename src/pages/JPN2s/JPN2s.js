@@ -23,9 +23,11 @@ const JPN2s = () => {
   return (
     <div className='pg-jp-n2s hide-scroll'>
       <div className='pg-jp-n2s_content'>
-        <Breadcrumb to='/' noTop>
-          返回
-        </Breadcrumb>
+        <div className='pg-jp-n2s_header'>
+          <Breadcrumb to='/' noTop>
+            返回
+          </Breadcrumb>
+        </div>
         <div className='pg-jp-n2s_lesson'>
           <p className='pg-jp-n2s_topic'>{`第${index + 1}课`}</p>
           {tar.map(({ id, title, cn, example }) => (

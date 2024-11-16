@@ -93,6 +93,11 @@ const JPN2 = () => {
                 ))}
               </div>
             ))}
+            {(unit.explain.length === 0 || unit.explain[0].length === 0) && (
+              <div className='pg-jp-n2_explain'>
+                <p className='pg-jp-n2_explain-item'>{unit.cn}</p>
+              </div>
+            )}
           </div>
           <div className='pg-jp-n2_examples'>
             {unit.example.map((v, i) => (

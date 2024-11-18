@@ -1,6 +1,7 @@
 import React, { memo, useCallback, useState, useMemo } from 'react'
 import './JPN2s.styl'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import Breadcrumb from '@com/Breadcrumb'
 import ppt from '@/consts/jp/n2'
 
@@ -13,6 +14,7 @@ const JPN2s = () => {
     },
     [navigator]
   )
+  const showEx = useSelector(({ showEx }) => showEx)
   const tar = useMemo(() => ppt[index] || ppt[0], [index])
   const onPrevClick = useCallback(() => {
     setIndex(index => (index > 0 ? index - 1 : ppt.length - 1))
@@ -24,7 +26,7 @@ const JPN2s = () => {
     <div className='pg-jp-n2s hide-scroll'>
       <div className='pg-jp-n2s_content'>
         <div className='pg-jp-n2s_header'>
-          <Breadcrumb to='/' noTop>
+          <Breadcrumb to='/' noTop ex>
             返回
           </Breadcrumb>
         </div>
@@ -44,14 +46,24 @@ const JPN2s = () => {
                 </p>
               ))}
               {cn && <p className='pg-jp-n2s_cn'>{cn}</p>}
-              <div className='pg-jp-n2s_examples'>
-                {example && example[0] && (
-                  <p className='pg-jp-n2s_example'>{example[0]}</p>
-                )}
-                {example && example[1] && (
-                  <p className='pg-jp-n2s_example'>{example[1]}</p>
-                )}
-              </div>
+              {showEx ? (
+                <div className='pg-jp-n2s_examples'>
+                  {example.map((v, i) => (
+                    <p key={i} className='pg-jp-n2s_example'>
+                      {v}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <div className='pg-jp-n2s_examples'>
+                  {example && example[0] && (
+                    <p className='pg-jp-n2s_example'>{example[0]}</p>
+                  )}
+                  {example && example[1] && (
+                    <p className='pg-jp-n2s_example'>{example[1]}</p>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

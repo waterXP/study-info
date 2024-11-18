@@ -5,12 +5,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import TextButton from '@com/Buttons/TextButton'
 
-const Breadcrumb = ({ to = '/', children, noTop, title }) => {
+const Breadcrumb = ({ to = '/', children, noTop, title, ex }) => {
   const dispatch = useDispatch()
-  const { showCn, displayType } = useSelector(({ displayType, showCn }) => ({
-    showCn,
-    displayType
-  }))
+  const { showCn, showEx, displayType } = useSelector(
+    ({ displayType, showEx, showCn }) => ({
+      showCn,
+      showEx,
+      displayType
+    })
+  )
   const navigate = useNavigate()
   const onClick = useCallback(
     e => {
@@ -30,18 +33,18 @@ const Breadcrumb = ({ to = '/', children, noTop, title }) => {
     },
     [navigate]
   )
-  const changeCn = useCallback(
-    e => {
-      e.stopPropagation()
-      dispatch({ type: 'changeDisplayCn' })
-    }, []
-  )
-  const changeDisplayType = useCallback(
-    e => {
-      e.stopPropagation()
-      dispatch({ type: 'changeDisplayType' })
-    }, []
-  )
+  const changeCn = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeDisplayCn' })
+  }, [])
+  const changeEx = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeDisplayEx' })
+  }, [])
+  const changeDisplayType = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeDisplayType' })
+  }, [])
   return (
     <div className='com-breadcrumb'>
       <div className='com-breadcrumb_left'>
@@ -56,6 +59,14 @@ const Breadcrumb = ({ to = '/', children, noTop, title }) => {
         {title && <span>&nbsp;&nbsp;{title}</span>}
       </div>
       <div className='com-breadcrumb_right'>
+        {ex && (
+          <span
+            className={showEx ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+            onClick={changeEx}
+          >
+            ex
+          </span>
+        )}
         <span
           className={showCn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
           onClick={changeCn}

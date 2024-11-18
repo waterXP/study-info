@@ -8,6 +8,7 @@ const initialStates = {
   pptExplain: false,
   pptExample: true,
   showCn: true,
+  showEx: false,
   displayType: 'all' // all, kana, mana
 }
 
@@ -17,6 +18,12 @@ export default function mainReducer(state = initialStates, action) {
       return {
         ...state,
         showCn: !state.showCn
+      }
+    }
+    case 'changeDisplayEx': {
+      return {
+        ...state,
+        showEx: !state.showEx
       }
     }
     case 'changeDisplayType': {

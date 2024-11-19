@@ -29,10 +29,16 @@ const Main = () => {
   const gotoDeprive = useCallback(() => {
     navigate('/deprive')
   }, [navigate])
+  const gotoDeprive2 = useCallback(() => {
+    navigate('/deprive2')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoDeprive}>
         Deprive
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoDeprive2}>
+        Deprive2
       </div>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
         软考

@@ -6,7 +6,7 @@ export default {
       kana: 'いはん',
       mana: '違反',
       cn: '违反（法规、契约等）',
-      ex: 'aaaa'
+      ex: ''
     }, {
       kana: 'いだく',
       mana: '抱く',

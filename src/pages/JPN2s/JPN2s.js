@@ -1,11 +1,12 @@
-import React, { memo, useCallback, useState, useMemo } from 'react'
+import React, { memo, useCallback, useState, useMemo, useEffect } from 'react'
 import './JPN2s.styl'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import Breadcrumb from '@com/Breadcrumb'
 import ppt from '@/consts/jp/n2'
 
 const JPN2s = () => {
+  const [searchParams] = useSearchParams()
   const [index, setIndex] = useState(0)
   const navigate = useNavigate()
   const gotoPPT = useCallback(
@@ -14,13 +15,23 @@ const JPN2s = () => {
     },
     [navigator]
   )
+  useEffect(() => {
+    const index = +searchParams.get('index')
+    if (index && ppt[index]) {
+      setIndex(index)
+    } else {
+      setIndex(0)
+    }
+  }, [searchParams])
   const showEx = useSelector(({ showEx }) => showEx)
   const tar = useMemo(() => ppt[index] || ppt[0], [index])
   const onPrevClick = useCallback(() => {
-    setIndex(index => (index > 0 ? index - 1 : ppt.length - 1))
+    const nextIndex = index > 0 ? index - 1 : ppt.length - 1
+    navigate(`/jp-n2s?&index=${nextIndex}`, { replace: true })
   }, [index])
   const onNextClick = useCallback(() => {
-    setIndex(index => (index < ppt.length - 1 ? index + 1 : 0))
+    const nextIndex = index < ppt.length - 1 ? index + 1 : 0
+    navigate(`/jp-n2s?&index=${nextIndex}`, { replace: true })
   }, [index])
   return (
     <div className='pg-jp-n2s hide-scroll'>

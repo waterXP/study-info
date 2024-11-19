@@ -9,14 +9,20 @@ const JPN2 = () => {
   const [searchParams] = useSearchParams()
   const [unit, setUnit] = useState(null)
   const refId = useRef(null)
+  const [index, setIndex] = useState(0)
   useEffect(() => {
     const id = searchParams.get('id')
     if (id) {
       let unit = null
-      ppt.some(v => {
+      let index
+      ppt.some((v, i) => {
         unit = v.find(v => v.id === id)
+        if (unit) {
+          index = i
+        }
         return unit
       })
+      setIndex(index)
       if (unit) {
         refId.current = id
         setUnit(unit)
@@ -71,7 +77,7 @@ const JPN2 = () => {
   }, [])
   return (
     <div className='pg-jp-n2'>
-      <Breadcrumb to='/jp-n2s' noTop>
+      <Breadcrumb to={`/jp-n2s?index=${index}`} noTop>
         返回
       </Breadcrumb>
       {unit && (

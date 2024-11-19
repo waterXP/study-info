@@ -229,7 +229,11 @@ const JPN2Study = () => {
   const modalTitle = useMemo(
     () => (
       <p className='pg-jp-words_modal-title'>
-        {(course && (course.cn || course.mana || course.kana)) || '默写'}
+        {(course &&
+          (course.cn || course.mana
+            ? `${course.mana || ''}${course.cn ? `[${course.cn}]` : ''}`
+            : course.kana)) ||
+          '默写'}
         {course && course.type && `「${course.type}」`}
       </p>
     ),
@@ -385,7 +389,7 @@ const JPN2Study = () => {
             <p className='pg-jp-words_input-tip'>
               <JPText kana={course.kana} mana={course.mana} />
               <span>{`${course.type ? `「${course.type}」` : ''}${
-                course.cn || ''
+                course.cn ? `[${course.cn}]` : ''
               }`}</span>
             </p>
           )}

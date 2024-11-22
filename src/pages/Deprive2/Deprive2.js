@@ -4,7 +4,7 @@ import { Input, message } from 'antd'
 
 const copyToClipboard = value => {
   if (typeof value === 'string') {
-    const text = value.replace(/<|>/g, '')
+    const text = value.replace(/<<|>>/g, '').replace(/\(\((.*?),(.*?)\)\)/g, (_, txt) => txt)
     if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(() => {
         message.success('已复制')

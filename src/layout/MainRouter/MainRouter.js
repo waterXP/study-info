@@ -35,6 +35,7 @@ import JPN2Word from '@/pages/JPN2Word'
 import JPN2Study from '@/pages/JPN2Study'
 import Deprive from '@/pages/Deprive'
 import Deprive2 from '@/pages/Deprive2'
+import JPExec from '@/pages/JPExec'
 
 const { PUBLIC_URL } = process.env
 
@@ -147,6 +148,10 @@ const router = createBrowserRouter(
     {
       path: 'jp-n2',
       element: <JPN2 />
+    },
+    {
+      path: 'jp-exec',
+      element: <JPExec />
     },
     {
       path: 'jp',

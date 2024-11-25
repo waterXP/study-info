@@ -26,6 +26,9 @@ const Main = () => {
   const gotoN2Words = useCallback(() => {
     navigate('/jp-n2-words')
   }, [navigate])
+  const gotoN2Exec = useCallback(() => {
+    navigate('/jp-exec')
+  }, [navigate])
   const gotoDeprive = useCallback(() => {
     navigate('/deprive')
   }, [navigate])
@@ -60,6 +63,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoN2Words}>
         N2 Words
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoN2Exec}>
+        N2 Exec
       </div>
     </div>
   )

@@ -35,6 +35,9 @@ const Main = () => {
   const gotoDeprive2 = useCallback(() => {
     navigate('/deprive2')
   }, [navigate])
+  const gotoN2Listen = useCallback(() => {
+    navigate('/jp-listen')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoDeprive}>
@@ -66,6 +69,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoN2Exec}>
         N2 Exec
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoN2Listen}>
+        N2 Listen
       </div>
     </div>
   )

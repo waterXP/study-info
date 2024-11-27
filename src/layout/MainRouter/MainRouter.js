@@ -36,6 +36,7 @@ import JPN2Study from '@/pages/JPN2Study'
 import Deprive from '@/pages/Deprive'
 import Deprive2 from '@/pages/Deprive2'
 import JPExec from '@/pages/JPExec'
+import JPListen from '@/pages/JPListen'
 
 const { PUBLIC_URL } = process.env
 
@@ -152,6 +153,10 @@ const router = createBrowserRouter(
     {
       path: 'jp-exec',
       element: <JPExec />
+    },
+    {
+      path: 'jp-listen',
+      element: <JPListen />
     },
     {
       path: 'jp',

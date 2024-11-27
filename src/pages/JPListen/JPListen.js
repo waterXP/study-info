@@ -43,7 +43,7 @@ const JPListen = () => {
   return (
     <div className='pg-jp-listen hide-scroll'>
       <div className='pg-jp-listen_header'>
-        <Breadcrumb to='/' noTop>
+        <Breadcrumb to='/jp-listens' noTop>
           返回
         </Breadcrumb>
       </div>

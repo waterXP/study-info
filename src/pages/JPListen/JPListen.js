@@ -50,8 +50,16 @@ const JPListen = () => {
       {info && (
         <div className='pg-jp-listen_content'>
           {info.q.map((v, i) => (
-            <p key={i} className='pg-jp-listen_text'>{v}</p>
+            <p key={i} className='pg-jp-listen_text'>
+              {v}
+            </p>
           ))}
+          {info.qa &&
+            info.qa.map((v, i) => (
+              <p key={i} className='pg-jp-listen_text'>
+                {v}
+              </p>
+            ))}
         </div>
       )}
       <div className='pg-jp-listen_footer'>

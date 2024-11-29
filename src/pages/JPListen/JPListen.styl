@@ -9,11 +9,37 @@
   padding 24px 32px 0
 .pg-jp-listen_content
   flex auto
-  padding 0 32px 16px
   overflow auto
+  padding 0 32px 16px
+.pg-jp-listen_topic
+  getFont(.85, 16, 24)
+  weight()
 .pg-jp-listen_text
   getFont(.85, 16, 24)
   padding-bottom 8px
+  &.is-correct
+    color cs
+  &.is-error
+    color cd
+.pg-jp-listen_bottom-texts-wrap
+  display flex
+.pg-jp-listen_bottom-texts
+  flex 1
+  border-top 1px solid #eee
+  &:first-child
+    .pg-jp-listen_bottom-text
+      padding-left 32px
+  &:last-child
+    .pg-jp-listen_bottom-text
+      padding-right 32px    
+.pg-jp-listen_bottom-text
+  getFont(.85, 16, 24)
+  weight()
+  padding 8px
+  &.is-correct
+    color cs
+  &.is-error
+    color cd
 .pg-jp-listen_footer
   display flex
   flex none
@@ -39,3 +65,21 @@
   font-size 24px
   &.is-right
     border-radius 20px 0 0 0
+.pg-jp-listen_answers
+  fl(center)
+  padding 0 16px
+.pg-jp-listen_answer
+  f(#fff, 32, 64)
+  flex 1
+  text-align center
+  padding 8px 0
+  margin 0 8px 8px
+  background-color cp
+  border-radius 4px
+  opacity .8
+  &.on-click
+    opacity 1
+  &.is-correct
+    background-color cs
+  &.is-error
+    background-color cd

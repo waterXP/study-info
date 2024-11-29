@@ -9,6 +9,7 @@ const initialStates = {
   pptExample: true,
   showCn: true,
   showEx: false,
+  showLs: false,
   displayType: 'all' // all, kana, mana
 }
 
@@ -35,6 +36,12 @@ export default function mainReducer(state = initialStates, action) {
             : state.displayType === 'kana'
               ? 'mana'
               : 'all'
+      }
+    }
+    case 'changeDisplayLs': {
+      return {
+        ...state,
+        showLs: !state.showLs
       }
     }
     case 'changeViewMode': {

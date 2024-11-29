@@ -5,10 +5,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import TextButton from '@com/Buttons/TextButton'
 
-const Breadcrumb = ({ to = '/', children, noTop, title, ex }) => {
+const Breadcrumb = ({ to = '/', children, noTop, title, ex, ls }) => {
   const dispatch = useDispatch()
-  const { showCn, showEx, displayType } = useSelector(
-    ({ displayType, showEx, showCn }) => ({
+  const { showCn, showEx, showLs, displayType } = useSelector(
+    ({ displayType, showEx, showCn, showLs }) => ({
+      showLs,
       showCn,
       showEx,
       displayType
@@ -41,6 +42,10 @@ const Breadcrumb = ({ to = '/', children, noTop, title, ex }) => {
     e.stopPropagation()
     dispatch({ type: 'changeDisplayEx' })
   }, [])
+  const changeLs = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeDisplayLs' })
+  }, [])
   const changeDisplayType = useCallback(e => {
     e.stopPropagation()
     dispatch({ type: 'changeDisplayType' })
@@ -65,6 +70,14 @@ const Breadcrumb = ({ to = '/', children, noTop, title, ex }) => {
             onClick={changeEx}
           >
             ex
+          </span>
+        )}
+        {ls && (
+          <span
+            className={showLs ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+            onClick={changeLs}
+          >
+            ls
           </span>
         )}
         <span

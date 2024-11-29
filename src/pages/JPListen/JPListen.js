@@ -73,11 +73,10 @@ const JPListen = () => {
   const updateAn = useCallback((i, v) => {
     setAn(an => {
       const r = [...an]
-      an[i] = v
+      r[i] = v
       return r
     })
   }, [])
-  console.log('an', an)
   return (
     <div className='pg-jp-listen hide-scroll'>
       <div className='pg-jp-listen_header'>

@@ -1,8 +1,11 @@
 import React, { memo, useEffect, useCallback, useMemo, useState } from 'react'
 import './JPCourse.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import Breadcrumb from '@com/Breadcrumb'
 import JPText from '@com/JPText'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
+import Footer from '@com/Page/Footer'
 import jpWords from '@/consts/jp'
 
 const JPCourse = () => {
@@ -54,7 +57,9 @@ const JPCourse = () => {
         navigate(`/jp-course?id=${last.id}&no=${lastDetail.no}`)
         return
       }
-      const tar = jpWords.find(({ lesson }) => lesson.some(v => v.no === nextNo))
+      const tar = jpWords.find(({ lesson }) =>
+        lesson.some(v => v.no === nextNo)
+      )
       if (tar) {
         navigate(`/jp-course?id=${tar.id}&no=${nextNo}`)
       }
@@ -64,7 +69,9 @@ const JPCourse = () => {
     if (detail) {
       const { no } = detail
       const nextNo = no + 1
-      const tar = jpWords.find(({ lesson }) => lesson.some(v => v.no === nextNo))
+      const tar = jpWords.find(({ lesson }) =>
+        lesson.some(v => v.no === nextNo)
+      )
       if (tar) {
         navigate(`/jp-course?id=${tar.id}&no=${nextNo}`)
       } else {
@@ -74,11 +81,9 @@ const JPCourse = () => {
   }, [id, detail, navigate])
 
   return (
-    <div className='pg-jp-course hide-scroll'>
-      <div className='pg-jp-course_content'>
-        <Breadcrumb to='/jp' noTop title={<JPText content={title} />}>
-          返回
-        </Breadcrumb>
+    <Page>
+      <Header to='/jp' title={<JPText content={title} />} />
+      <Content hasFooter>
         <div className='pg-jp-course_body'>
           {base.length > 0 && (
             <div className='pg-jp-course_block'>
@@ -93,11 +98,12 @@ const JPCourse = () => {
             <div className='pg-jp-course_block'>
               {use.map((v, i) => (
                 <div key={i} className='pg-jp-course_set'>
-                  {v.length > 0 && v.map((v, i) => (
-                    <div key={i} className='pg-jp-course_line'>
-                      <JPText content={v} />
-                    </div>
-                  ))}
+                  {v.length > 0 &&
+                    v.map((v, i) => (
+                      <div key={i} className='pg-jp-course_line'>
+                        <JPText content={v} />
+                      </div>
+                    ))}
                 </div>
               ))}
             </div>
@@ -110,32 +116,18 @@ const JPCourse = () => {
           {content.length > 0 &&
             content.map((v, i) => (
               <div key={i} className='pg-jp-course_set'>
-                {v.length > 0 && v.map((v, i) => (
-                  <div key={i} className='pg-jp-course_line'>
-                    <JPText content={v} />
-                  </div>
-                ))}
+                {v.length > 0 &&
+                  v.map((v, i) => (
+                    <div key={i} className='pg-jp-course_line'>
+                      <JPText content={v} />
+                    </div>
+                  ))}
               </div>
             ))}
         </div>
-      </div>
-      <div className='pg-jp-words-list_footer'>
-        <div className='pg-jp-words-list_buttons'>
-          <div
-            className='pg-jp-words-list_corner-button on-click'
-            onClick={onPrevClick}
-          >
-            上一个
-          </div>
-          <div
-            className='pg-jp-words-list_corner-button is-right on-click'
-            onClick={onNextClick}
-          >
-            下一个
-          </div>
-        </div>
-      </div>
-    </div>
+      </Content>
+      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick} />
+    </Page>
   )
 }
 

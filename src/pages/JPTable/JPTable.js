@@ -1,7 +1,9 @@
 import React, { memo, useState, useMemo, useEffect } from 'react'
 import './JPTable.styl'
 import { useSearchParams } from 'react-router-dom'
-import Breadcrumb from '@com/Breadcrumb'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
 import tables from '@/consts/jp/tables'
 
 const JPTable = () => {
@@ -27,42 +29,36 @@ const JPTable = () => {
       }
     }
   }, [searchParams])
-  const style = useMemo(
-    () => {
-      if (columns.length) {
-        return { width: `${100 / columns.length}%` }
-      }
-      return {}
-    },
-    [columns]
-  )
+  const style = useMemo(() => {
+    if (columns.length) {
+      return { width: `${100 / columns.length}%` }
+    }
+    return {}
+  }, [columns])
   return (
-    <div className='pg-jp-table'>
-      <Breadcrumb to='/jp-tables' noTop>返回</Breadcrumb>
-      <div className='pg-jp-table_content hide-scroll'>
+    <Page>
+      <Header to='/' />
+      <Content>
         <p className='pg-jp-table_title'>{name}</p>
-        { desc && <p className='pg-jp-table_desc'>{desc}</p> }
+        {desc && <p className='pg-jp-table_desc'>{desc}</p>}
         <div className='pg-jp-table_column is-header'>
           {columns.map(v => (
-            <div key={v} className='pg-jp-table_cell is-header' style={style}>{v}</div>
+            <div key={v} className='pg-jp-table_cell is-header' style={style}>
+              {v}
+            </div>
           ))}
         </div>
         {dataSource.map((v, i) => (
           <div key={i} className='pg-jp-table_column'>
             {v.map(v => (
               <div key={v} className='pg-jp-table_cell' style={style}>
-                {
-                  Array.isArray(v)
-                    ? v.map((v, i) => <p key={i}>{v}</p>)
-                    : v
-                }
+                {Array.isArray(v) ? v.map((v, i) => <p key={i}>{v}</p>) : v}
               </div>
             ))}
           </div>
         ))}
-        <div className='pg-jp-table_bottom' />
-      </div>
-    </div>
+      </Content>
+    </Page>
   )
 }
 

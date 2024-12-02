@@ -1,7 +1,9 @@
 import React, { memo, useCallback } from 'react'
 import './JPListens.styl'
 import { useNavigate } from 'react-router-dom'
-import Breadcrumb from '@com/Breadcrumb'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
 import listen from '@/consts/jp/listen'
 
 const JPListens = () => {
@@ -13,13 +15,9 @@ const JPListens = () => {
     [navigate]
   )
   return (
-    <div className='pg-jp-listens hide-scroll'>
-      <div className='pg-jp-listens_header'>
-        <Breadcrumb to='/' noTop>
-          返回
-        </Breadcrumb>
-      </div>
-      <div className='pg-jp-listens_content'>
+    <Page>
+      <Header to='/' />
+      <Content>
         {listen.map((v, i) => (
           <p
             key={i}
@@ -31,8 +29,8 @@ const JPListens = () => {
             {v.id}
           </p>
         ))}
-      </div>
-    </div>
+      </Content>
+    </Page>
   )
 }
 

@@ -10,9 +10,12 @@ import './JPWords.styl'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Modal, Input, message } from 'antd'
-import Breadcrumb from '@com/Breadcrumb'
 import Icon from '@com/Icon'
 import JPText from '@com/JPText'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
+import Footer from '@com/Page/Footer'
 import jpWords from '@/consts/jp'
 import Switch from '@/components/Word/Switch'
 import Word from '@/components/Word/Word'
@@ -284,11 +287,8 @@ const JPWords = () => {
     }
   }, [list, index])
   return (
-    <div className='pg-jp-words hide-scroll'>
-      <div className='pg-jp-words_content'>
-        <Breadcrumb to={link} noTop title={<JPText content={title} />}>
-          返回
-        </Breadcrumb>
+    <Page>
+      <Header to={link} title={<JPText content={title} />}>
         <div className='pg-jp-words_process' onClick={onProcess}>
           <div className='pg-jp-words_point' style={pointStyle} />
         </div>
@@ -347,6 +347,8 @@ const JPWords = () => {
             </div>
           </div>
         </div>
+      </Header>
+      <Content>
         <div className='pg-jp-words_center' onClick={toggleShwoResult}>
           <div
             className={open ? 'pg-jp-words_body is-hide' : 'pg-jp-words_body'}
@@ -358,29 +360,13 @@ const JPWords = () => {
             )}
           </div>
         </div>
-      </div>
-      <div className='pg-jp-words_footer'>
-        <div className='pg-jp-words_buttons'>
-          <div
-            className='pg-jp-words_corner-button on-click'
-            onClick={onPrevClick}
-          >
-            上一个
-          </div>
-          <div
-            className='pg-jp-words_corner-center on-click'
-            onClick={showModal}
-          >
-            默写
-          </div>
-          <div
-            className='pg-jp-words_corner-button is-right on-click'
-            onClick={onNextClick}
-          >
-            下一个
-          </div>
-        </div>
-      </div>
+      </Content>
+      <Footer
+        onPrevClick={onPrevClick}
+        onCenterClick={showModal}
+        centerText='默写'
+        onNextClick={onNextClick}
+      />
       <Modal
         open={open}
         closable={false}
@@ -422,7 +408,7 @@ const JPWords = () => {
           </div>
         )}
       </Modal>
-    </div>
+    </Page>
   )
 }
 

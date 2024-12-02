@@ -1,7 +1,13 @@
 import React, { memo } from 'react'
 import './Footer.styl'
 
-const Footer = ({ onPrevClick, onNextClick, children }) => (
+const Footer = ({
+  onPrevClick,
+  onNextClick,
+  onCenterClick,
+  centerText,
+  children
+}) => (
   <div className='com-footer'>
     {children}
     <div className='com-footer_buttons'>
@@ -11,6 +17,14 @@ const Footer = ({ onPrevClick, onNextClick, children }) => (
           onClick={onPrevClick}
         >
           上一个
+        </div>
+      )}
+      {onCenterClick && (
+        <div
+          className='com-footer_corner-center on-click'
+          onClick={onCenterClick}
+        >
+          {centerText}
         </div>
       )}
       {onNextClick && (

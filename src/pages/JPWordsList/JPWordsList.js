@@ -9,8 +9,11 @@ import React, {
 } from 'react'
 import './JPWordsList.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
-import Breadcrumb from '@com/Breadcrumb'
 import JPText from '@com/JPText'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
+import Footer from '@com/Page/Footer'
 import junior from '@/consts/jp/junior'
 import jpWords from '@/consts/jp'
 
@@ -99,16 +102,15 @@ const JPWordsList = () => {
   )
 
   return (
-    <div className='pg-jp-words-list hide-scroll'>
-      <div className='pg-jp-words-list_content'>
-        <Breadcrumb to='/jp' noTop>
-          返回
-        </Breadcrumb>
+    <Page>
+      <Header to='/jp'>
         {title && (
           <p className='pg-jp-words-list_title'>
             <JPText content={`第${params.no}課 ${title}`} />
           </p>
         )}
+      </Header>
+      <Content hasFooter>
         <div className='pg-jp-words-list_body' ref={refBody}>
           {list.map((v, i) => (
             <Fragment key={i}>
@@ -124,24 +126,9 @@ const JPWordsList = () => {
             </Fragment>
           ))}
         </div>
-      </div>
-      <div className='pg-jp-words-list_footer'>
-        <div className='pg-jp-words-list_buttons'>
-          <div
-            className='pg-jp-words-list_corner-button on-click'
-            onClick={onPrevClick}
-          >
-            上一个
-          </div>
-          <div
-            className='pg-jp-words-list_corner-button is-right on-click'
-            onClick={onNextClick}
-          >
-            下一个
-          </div>
-        </div>
-      </div>
-    </div>
+      </Content>
+      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick} />
+    </Page>
   )
 }
 

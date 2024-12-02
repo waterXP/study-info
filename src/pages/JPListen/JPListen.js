@@ -9,10 +9,15 @@ import React, {
 import './JPListen.styl'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import Breadcrumb from '@com/Breadcrumb'
-import listen from '@/consts/jp/exec/listen'
+import Page from '@com/Page'
+import Header from '@com/Page/Header'
+import Content from '@com/Page/Content'
+import Footer from '@com/Page/Footer'
+import listen from '@/consts/jp/listen'
+import { getPrev, getNext } from '@/utils/tool'
 
 const JPListen = () => {
+  const [cur, setCur] = useState(0)
   const [an, setAn] = useState([])
   const [info, setInfo] = useState(null)
   const [searchParams] = useSearchParams()
@@ -30,27 +35,15 @@ const JPListen = () => {
   }, [searchParams])
   const onPrevClick = useCallback(() => {
     setAn([])
-    if (info) {
-      const { id } = info
-      const index = listen.findIndex(v => v.id === id)
-      if (~index) {
-        setInfo(listen[index > 0 ? index - 1 : listen.length - 1])
-        return
-      }
-    }
-    setInfo(listen[listen.length - 1])
+    setCur(0)
+    const prev = getPrev(info, listen)
+    setInfo(prev || listen[listen.length - 1])
   }, [info])
   const onNextClick = useCallback(() => {
     setAn([])
-    if (info) {
-      const { id } = info
-      const index = listen.findIndex(v => v.id === id)
-      if (~index) {
-        setInfo(listen[index < listen.length - 1 ? index + 1 : 0])
-        return
-      }
-    }
-    setInfo(listen[1])
+    setCur(0)
+    const next = getNext(info, listen)
+    setInfo(next || 1)
   }, [info])
   const { showQa, answerName } = useMemo(() => {
     const r = { showQa: false, answerName: [] }
@@ -77,89 +70,144 @@ const JPListen = () => {
       return r
     })
   }, [])
+  useEffect(() => {
+    setCur(cur => {
+      if (typeof an[cur] === 'number') {
+        const list = info.a || info.qa
+        if (list.length > 0) {
+          let index = cur
+          for (let i = 0; i < list.length; i++) {
+            if (typeof an[index] !== 'number') {
+              break
+            }
+            index = list[index + 1] ? index + 1 : 0
+          }
+          if (typeof an[index] !== 'number') {
+            return index
+          }
+        }
+      }
+      return cur
+    })
+  }, [an, info])
+  const curIndex = useMemo(() => {
+    if (info && info.a && info.a.length > 1) {
+      return info.a[cur] ? cur : 0
+    }
+    return 0
+  }, [info, cur])
   return (
-    <div className='pg-jp-listen hide-scroll'>
-      <div className='pg-jp-listen_header'>
-        <Breadcrumb to='/jp-listens' noTop ls>
-          返回
-        </Breadcrumb>
-      </div>
-      {info && (
-        <div className='pg-jp-listen_content'>
-          <p className='pg-jp-listen_topic'>{info.id}</p>
-          {showLs && (
-            <>
-              {info.q.map((v, i) => (
-                <p key={i} className='pg-jp-listen_text'>
-                  {v}
-                </p>
-              ))}
-              {info.qa &&
-                info.qa.map((v, sort) => (
-                  <Fragment key={sort}>
-                    {v.map((v, i) => {
-                      if (showQa && info.d[sort] === i) {
-                        return (
-                          <p
-                            key={i}
-                            className={`pg-jp-listen_text${answerName[sort]}`}
-                          >
-                            {v}
-                          </p>
-                        )
-                      }
-                      return (
-                        <p key={i} className='pg-jp-listen_text'>
-                          {v}
-                        </p>
-                      )
-                    })}
-                  </Fragment>
-                ))}
-            </>
-          )}
-        </div>
-      )}
-      <div className='pg-jp-listen_footer'>
+    <Page>
+      <Header to='/jp-listens' ls />
+      <Content hasFooter>
         {info && (
-          <>
-            {info.a && (
-              <div className='pg-jp-listen_bottom-texts-wrap'>
-                {info.a.map((v, sort) => (
-                  <div key={sort} className='pg-jp-listen_bottom-texts'>
-                    {v.map((v, i) => {
-                      if (typeof an[sort] === 'number') {
-                        if (an[sort] === i) {
+          <div className='pg-jp-listen_body'>
+            <p className='pg-jp-listen_topic'>{info.id}</p>
+            {showLs && (
+              <>
+                {info.q.map((v, i) => (
+                  <p key={i} className='pg-jp-listen_text'>
+                    {v}
+                  </p>
+                ))}
+                {info.qa &&
+                  info.qa.map((v, sort) => (
+                    <Fragment key={sort}>
+                      {v.map((v, i) => {
+                        if (showQa && info.d[sort] === i) {
                           return (
-                            <div
+                            <p
                               key={i}
-                              className={`pg-jp-listen_bottom-text${answerName[sort]}`}
+                              className={`pg-jp-listen_text${answerName[sort]}`}
                             >
                               {v}
-                            </div>
+                            </p>
                           )
                         }
                         return (
-                          <div key={i} className='pg-jp-listen_bottom-text'>
+                          <p key={i} className='pg-jp-listen_text'>
+                            {v}
+                          </p>
+                        )
+                      })}
+                    </Fragment>
+                  ))}
+              </>
+            )}
+          </div>
+        )}
+      </Content>
+      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick}>
+        {info && (
+          <>
+            {info.a && info.a.length > 0 && (
+              <>
+                <div className='pg-jp-listen_bottom-texts'>
+                  {info.a[curIndex].map((v, i) => {
+                    if (typeof an[curIndex] === 'number') {
+                      if (an[curIndex] === i) {
+                        return (
+                          <div
+                            key={i}
+                            className={`pg-jp-listen_bottom-text${answerName[curIndex]}`}
+                          >
                             {v}
                           </div>
                         )
                       }
+                      const d = info.d || []
+                      const exName =
+                        i === d[curIndex]
+                          ? 'pg-jp-listen_bottom-text is-correct'
+                          : 'pg-jp-listen_bottom-text'
                       return (
-                        <p
+                        <div key={i} className={exName}>
+                          {v}
+                        </div>
+                      )
+                    }
+                    return (
+                      <p
+                        key={i}
+                        className='pg-jp-listen_bottom-text on-click'
+                        onClick={() => {
+                          updateAn(curIndex, i)
+                        }}
+                      >
+                        {v}
+                      </p>
+                    )
+                  })}
+                </div>
+                {info.a.length > 1 && (
+                  <div className='pg-jp-listen_a-list'>
+                    {info.a.map((_, i) => {
+                      const isCurrent = curIndex === i
+                      if (isCurrent) {
+                        return (
+                          <div
+                            key={i}
+                            className={`pg-jp-listen_a-box is-current${answerName[i]}`}
+                          >
+                            {i + 1}
+                          </div>
+                        )
+                      }
+                      return (
+                        <div
                           key={i}
-                          className='pg-jp-listen_bottom-text on-click'
+                          className={`pg-jp-listen_a-box on-click${answerName[i]}`}
                           onClick={() => {
-                            updateAn(sort, i)
+                            setCur(i)
                           }}
                         >
-                          {v}
-                        </p>
+                          {i + 1}
+                        </div>
                       )
                     })}
                   </div>
-                ))}
-              </div>
+                )}
+              </>
             )}
             {showQa && info.qa && (
               <div className='pg-jp-listen_answers'>
@@ -177,8 +225,13 @@ const JPListen = () => {
                             </div>
                           )
                         }
+                        const d = info.d || []
+                        const exName =
+                          i === d[sort]
+                            ? 'pg-jp-listen_answer is-correct'
+                            : 'pg-jp-listen_answer'
                         return (
-                          <div key={i} className='pg-jp-listen_answer'>
+                          <div key={i} className={exName}>
                             {i + 1}
                           </div>
                         )
@@ -201,22 +254,8 @@ const JPListen = () => {
             )}
           </>
         )}
-        <div className='pg-jp-listen_buttons'>
-          <div
-            className='pg-jp-listen_corner-button on-click'
-            onClick={onPrevClick}
-          >
-            上一个
-          </div>
-          <div
-            className='pg-jp-listen_corner-button is-right on-click'
-            onClick={onNextClick}
-          >
-            下一个
-          </div>
-        </div>
-      </div>
-    </div>
+      </Footer>
+    </Page>
   )
 }
 

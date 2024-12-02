@@ -1,16 +1,5 @@
-.pg-jp-listen
-  display flex
-  flex-direction column
-  overflow hidden
-  width 100vw
-  height 100vh
-.pg-jp-listen_header
-  flex none
-  padding 24px 32px 0
-.pg-jp-listen_content
-  flex auto
-  overflow auto
-  padding 0 32px 16px
+.pg-jp-listen_body
+  padding 0 32px
 .pg-jp-listen_topic
   getFont(.85, 16, 24)
   weight()
@@ -21,64 +10,49 @@
     color cs
   &.is-error
     color cd
-.pg-jp-listen_bottom-texts-wrap
-  display flex
 .pg-jp-listen_bottom-texts
-  flex 1
   border-top 1px solid #eee
-  &:first-child
-    .pg-jp-listen_bottom-text
-      padding-left 32px
-  &:last-child
-    .pg-jp-listen_bottom-text
-      padding-right 32px    
 .pg-jp-listen_bottom-text
   getFont(.85, 16, 24)
   weight()
-  padding 8px
+  padding 8px 32px
   &.is-correct
     color cs
   &.is-error
     color cd
-.pg-jp-listen_footer
-  display flex
-  flex none
-  flex-direction column
-  overflow hidden
-.pg-jp-listen_buttons
-  display flex
-  flex none
-  justify-content space-between
-  align-items center
-  box-sizing border-box
-  width 100vw
-.pg-jp-listen_corner-button
-  flex none
-  padding 16px 0 0
-  min-width 30vw
-  max-width 50vw
-  height 80px
-  border-radius 0 20px 0 0
-  background-color cw
-  color #fff
-  text-align center
-  font-size 24px
-  &.is-right
-    border-radius 20px 0 0 0
 .pg-jp-listen_answers
   fl(center)
   padding 0 16px
 .pg-jp-listen_answer
   f(#fff, 32, 64)
   flex 1
-  text-align center
-  padding 8px 0
   margin 0 8px 8px
-  background-color cp
+  padding 8px 0
   border-radius 4px
+  background-color cp
+  text-align center
   opacity .8
   &.on-click
     opacity 1
+  &.is-correct
+    background-color cs
+  &.is-error
+    background-color cd
+.pg-jp-listen_a-list
+  fl(center)
+  flex-wrap wrap
+  padding 0 24px
+.pg-jp-listen_a-box
+  f(#fff, 32, 48)
+  flex none
+  box-sizing border-box
+  margin 0 8px 8px
+  width 48px
+  border-radius 4px
+  background-color cp
+  text-align center
+  &.is-current
+    outline 2px solid cw
   &.is-correct
     background-color cs
   &.is-error

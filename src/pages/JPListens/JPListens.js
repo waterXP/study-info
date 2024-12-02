@@ -2,7 +2,7 @@ import React, { memo, useCallback } from 'react'
 import './JPListens.styl'
 import { useNavigate } from 'react-router-dom'
 import Breadcrumb from '@com/Breadcrumb'
-import listen from '@/consts/jp/exec/listen'
+import listen from '@/consts/jp/listen'
 
 const JPListens = () => {
   const navigate = useNavigate()

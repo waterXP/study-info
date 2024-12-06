@@ -102,6 +102,9 @@ const JPGrammar = () => {
           const style = aa === v ? 'is-correct' : 'is-error'
           return q.join('\n').replace(/__.?__/g, str => {
             if (values[i]) {
+              if (str === '__★__') {
+                return `<span class='${style} is-star'>${values[i++]}</span>`
+              }
               return `<span class='${style}'>${values[i++]}</span>`
             }
             return str
@@ -131,7 +134,52 @@ const JPGrammar = () => {
   }, [tar, cur, an])
   return (
     <Page>
-      <Header to='/jp-grammars' qa />
+      <Header to='/jp-grammars' qa>
+        {list && (
+          <div className='pg-jp-grammar_process'>
+            {list.map((v, i) => {
+              const { d } = v
+              const aa = ans[i] || []
+              const cName = ['pg-jp-grammar_p']
+              const isCurrent = index === i
+              if (isCurrent) {
+                cName.push('is-current')
+              } else {
+                cName.push('on-click')
+              }
+              let hasError = false
+              const ful = d.every((v, i) => {
+                if (typeof aa[i] === 'number') {
+                  if (aa[i] !== v) {
+                    hasError = true
+                  }
+                  return true
+                }
+                return false
+              })
+              if (ful) {
+                if (hasError) {
+                  cName.push('is-error')
+                } else {
+                  cName.push('is-correct')
+                }
+              }
+              if (isCurrent) {
+                return <div key={i} className={cName.join(' ')} />
+              }
+              return (
+                <div
+                  key={i}
+                  className={cName.join(' ')}
+                  onClick={() => {
+                    setIndex(i)
+                  }}
+                />
+              )
+            })}
+          </div>
+        )}
+      </Header>
       <Content hasFooter>
         {tar && (
           <>

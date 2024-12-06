@@ -35,6 +35,9 @@ const Main = () => {
   const gotoDeprive2 = useCallback(() => {
     navigate('/deprive2')
   }, [navigate])
+  const gotoDeprive3 = useCallback(() => {
+    navigate('/deprive3')
+  }, [navigate])
   const gotoN2Listens = useCallback(() => {
     navigate('/jp-listens')
   }, [navigate])
@@ -45,6 +48,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoDeprive2}>
         Deprive2
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoDeprive3}>
+        Deprive3
       </div>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
         软考

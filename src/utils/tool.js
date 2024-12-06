@@ -1,3 +1,5 @@
+import { message } from 'antd'
+
 export const fromJSON = json => {
   let r = ''
   try {
@@ -41,6 +43,25 @@ export const getNext = (info, list) => {
     }
   }
   return null
+}
+
+export const copyToClipboard = value => {
+  if (typeof value === 'string') {
+    const text = value.replace(/<<|>>/g, '').replace(/\(\((.*?),(.*?)\)\)/g, (_, txt) => txt)
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        message.success('已复制')
+      })
+    } else if (document.execCommand('Copy')) {
+      const oInput = document.createElement('input')
+      oInput.value = text
+      document.body.appendChild(oInput)
+      oInput.select() // 选择对象
+      document.execCommand('Copy') // 执行浏览器复制命令
+      oInput.style.display = 'none'
+      message.success('已复制')
+    }
+  }
 }
 
 export default null

@@ -10,6 +10,7 @@ const initialStates = {
   showCn: true,
   showEx: false,
   showLs: false,
+  showQa: true,
   displayType: 'all' // all, kana, mana
 }
 
@@ -42,6 +43,12 @@ export default function mainReducer(state = initialStates, action) {
       return {
         ...state,
         showLs: !state.showLs
+      }
+    }
+    case 'changeDisplayQa': {
+      return {
+        ...state,
+        showQa: !state.showQa
       }
     }
     case 'changeViewMode': {

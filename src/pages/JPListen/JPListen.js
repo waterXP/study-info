@@ -118,7 +118,9 @@ const JPListen = () => {
                           return (
                             <p
                               key={i}
-                              className={`pg-jp-listen_text${answerName[sort]}`}
+                              className={`pg-jp-listen_text${
+                                answerName[sort] || ''
+                              }`}
                             >
                               {v}
                             </p>
@@ -149,7 +151,9 @@ const JPListen = () => {
                         return (
                           <div
                             key={i}
-                            className={`pg-jp-listen_bottom-text${answerName[curIndex]}`}
+                            className={`pg-jp-listen_bottom-text${
+                              answerName[curIndex] || ''
+                            }`}
                           >
                             {v}
                           </div>
@@ -187,7 +191,9 @@ const JPListen = () => {
                         return (
                           <div
                             key={i}
-                            className={`pg-jp-listen_a-box is-current${answerName[i]}`}
+                            className={`pg-jp-listen_a-box is-current${
+                              answerName[i] || ''
+                            }`}
                           >
                             {i + 1}
                           </div>
@@ -196,7 +202,9 @@ const JPListen = () => {
                       return (
                         <div
                           key={i}
-                          className={`pg-jp-listen_a-box on-click${answerName[i]}`}
+                          className={`pg-jp-listen_a-box on-click${
+                            answerName[i] || ''
+                          }`}
                           onClick={() => {
                             setCur(i)
                           }}
@@ -219,7 +227,9 @@ const JPListen = () => {
                           return (
                             <div
                               key={i}
-                              className={`pg-jp-listen_answer${answerName[sort]}`}
+                              className={`pg-jp-listen_answer${
+                                answerName[sort] || ''
+                              }`}
                             >
                               {i + 1}
                             </div>

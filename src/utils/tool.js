@@ -39,7 +39,29 @@ export const getNext = (info, list) => {
     const { id } = info
     const index = list.findIndex(v => v.id === id)
     if (~index) {
-      return list[[index < list.length - 1 ? index + 1 : 0]]
+      return list[index < list.length - 1 ? index + 1 : 0]
+    }
+  }
+  return null
+}
+
+export const getPrevIndex = (info, list) => {
+  if (info) {
+    const { id } = info
+    const index = list.findIndex(v => v.id === id)
+    if (~index) {
+      return index > 0 ? index - 1 : list.length - 1
+    }
+  }
+  return null
+}
+
+export const getNextIndex = (info, list) => {
+  if (info) {
+    const { id } = info
+    const index = list.findIndex(v => v.id === id)
+    if (~index) {
+      return index < list.length - 1 ? index + 1 : 0
     }
   }
   return null

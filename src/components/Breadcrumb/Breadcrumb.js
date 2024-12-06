@@ -5,11 +5,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import TextButton from '@com/Buttons/TextButton'
 
-const Breadcrumb = ({ to = '/', children, noTop, title, ex, ls }) => {
+const Breadcrumb = ({ to = '/', children, noTop, title, qa, ex, ls }) => {
   const dispatch = useDispatch()
-  const { showCn, showEx, showLs, displayType } = useSelector(
-    ({ displayType, showEx, showCn, showLs }) => ({
+  const { showCn, showEx, showQa, showLs, displayType } = useSelector(
+    ({ displayType, showEx, showCn, showLs, showQa }) => ({
       showLs,
+      showQa,
       showCn,
       showEx,
       displayType
@@ -42,6 +43,10 @@ const Breadcrumb = ({ to = '/', children, noTop, title, ex, ls }) => {
     e.stopPropagation()
     dispatch({ type: 'changeDisplayEx' })
   }, [])
+  const changeQa = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeDisplayQa' })
+  }, [])
   const changeLs = useCallback(e => {
     e.stopPropagation()
     dispatch({ type: 'changeDisplayLs' })
@@ -64,6 +69,14 @@ const Breadcrumb = ({ to = '/', children, noTop, title, ex, ls }) => {
         {title && <span>&nbsp;&nbsp;{title}</span>}
       </div>
       <div className='com-breadcrumb_right'>
+        {qa && (
+          <span
+            className={showQa ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+            onClick={changeQa}
+          >
+            qa
+          </span>
+        )}
         {ex && (
           <span
             className={showEx ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}

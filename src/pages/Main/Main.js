@@ -41,6 +41,9 @@ const Main = () => {
   const gotoN2Listens = useCallback(() => {
     navigate('/jp-listens')
   }, [navigate])
+  const gotoN2Grammars = useCallback(() => {
+    navigate('/jp-grammars')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoDeprive}>
@@ -78,6 +81,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoN2Listens}>
         N2 Listens
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoN2Grammars}>
+        N2 Grammars
       </div>
     </div>
   )

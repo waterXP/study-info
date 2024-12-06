@@ -39,6 +39,8 @@ import Deprive3 from '@/pages/Deprive3'
 import JPExec from '@/pages/JPExec'
 import JPListens from '@/pages/JPListens'
 import JPListen from '@/pages/JPListen'
+import JPGrammars from '@/pages/JPGrammars'
+import JPGrammar from '@/pages/JPGrammar'
 
 const { PUBLIC_URL } = process.env
 
@@ -163,6 +165,14 @@ const router = createBrowserRouter(
     {
       path: 'jp-listen',
       element: <JPListen />
+    },
+    {
+      path: 'jp-grammars',
+      element: <JPGrammars />
+    },
+    {
+      path: 'jp-grammar',
+      element: <JPGrammar />
     },
     {
       path: 'jp',

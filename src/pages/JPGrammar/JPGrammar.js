@@ -7,7 +7,6 @@ import Header from '@com/Page/Header'
 import Content from '@com/Page/Content'
 import Footer from '@com/Page/Footer'
 import grammar from '@/consts/jp/exec/grammar'
-import { getPrevIndex, getNextIndex } from '@/utils/tool'
 
 const getList = info => [
   ...info.select.map(v => ({ ...v, type: 'select' })),
@@ -37,13 +36,27 @@ const JPGrammar = () => {
     [index, list]
   )
   const onPrevClick = useCallback(() => {
-    const prev = getPrevIndex(tar, list)
-    setIndex(prev === null ? list.length - 1 : prev)
-  }, [tar, list])
+    if (list) {
+      setIndex(index => {
+        const next = --index
+        if (list[next]) {
+          return next
+        }
+        return list.length - 1
+      })
+    }
+  }, [list])
   const onNextClick = useCallback(() => {
-    const next = getNextIndex(tar, list)
-    setIndex(next === null ? 1 : next)
-  }, [tar, list])
+    if (list) {
+      setIndex(index => {
+        const next = ++index
+        if (list[next]) {
+          return next
+        }
+        return 0
+      })
+    }
+  }, [list])
   useEffect(() => {
     if (tar && !tar.a[cur]) {
       setCur(0)

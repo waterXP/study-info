@@ -79,6 +79,9 @@ const { t } = useTranslation()`)
         if (co.f && r.length > 30) {
           return `${pre}_${cc}_${++co.i}`
         }
+        if (r[r.length - 1] === ':') {
+          return `${r.slice(0, -1)}_`
+        }
         return r
       })
       if (co.i && co.f) {

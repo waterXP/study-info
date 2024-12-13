@@ -59,6 +59,61 @@ const { t } = useTranslation()`)
       copyToClipboard(`i18next.t('${key.trim()}')`)
     }
   }, [key])
+  const onCopy7 = useCallback(() => {
+    if (key && key.trim()) {
+      copyToClipboard(`_['${key.trim()}']`)
+    }
+  }, [key])
+  const onCopy8 = useCallback(() => {
+    if (key && key.trim()) {
+      copyToClipboard(`{{_['${key.trim()}']}}`)
+    }
+  }, [key])
+  const onCopy9 = useCallback(() => {
+    copyToClipboard(`
+    if (g._ !== this.data._) {
+      this.setData({ _: g._ })
+    }`)
+  }, [])
+  const onCopy10 = useCallback(() => {
+    copyToClipboard(`,
+    _: g._
+    this.setData({ _: g._ })`)
+  }, [])
+  const onCopy11 = useCallback(() => {
+    if (key && key.trim()) {
+      copyToClipboard(`{{_["${key.trim()}"]}}`)
+    }
+  }, [key])
+  const onCopy12 = useCallback(() => {
+    copyToClipboard(`const g = getApp().globalData
+`)
+  }, [])
+  const onCopy13 = useCallback(() => {
+    copyToClipboard(`,
+    _: g._
+    g.userCall(() => {
+      this.setData({ _: g._ })
+    })`)
+  }, [])
+  const onCopy14 = useCallback(() => {
+    copyToClipboard(`,
+    _: g._
+    this.setData({ _: g._ })
+    if (g._ !== this.data._) {
+      this.setData({ _: g._ })
+    }`)
+  }, [])
+  const onCopy15 = useCallback(() => {
+    copyToClipboard(`,
+    _: g._
+    g.userCall(() => {
+      this.setData({ _: g._ })
+    })
+    if (g._ !== this.data._) {
+      this.setData({ _: g._ })
+    }`)
+  }, [])
   const { cn, en, count, cur } = useMemo(() => {
     const r = { cn: '', en: '', count: 0, cur: 0 }
     if (typeof v === 'string' && typeof s === 'string' && s && v) {
@@ -176,6 +231,17 @@ const { t } = useTranslation()`)
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy4}>{'{t(x)}'}</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy5}>this.props.t(x)</div>
         <div className='pg-deprive-3_button on-click' onClick={onCopy6}>i18next.t(x)</div>
+      </div>
+      <div className='pg-deprive-3_tap'>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy14}>didFullMount</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy15}>didFullMountCall</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy12}>getGlobalData</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy10}>didMount</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy13}>didMountCall</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy9}>didUpdate</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy7}>_[x]</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy8}>{'{{_[x]}}'}</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy11}>{'"{{_[x]}}"'}</div>
       </div>
     </div>
   )

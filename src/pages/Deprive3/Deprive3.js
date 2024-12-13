@@ -114,6 +114,11 @@ const { t } = useTranslation()`)
       this.setData({ _: g._ })
     }`)
   }, [])
+  const onCopy16 = useCallback(() => {
+    if (key && key.trim()) {
+      copyToClipboard(`g._['${key.trim()}']`)
+    }
+  }, [key])
   const { cn, en, count, cur } = useMemo(() => {
     const r = { cn: '', en: '', count: 0, cur: 0 }
     if (typeof v === 'string' && typeof s === 'string' && s && v) {
@@ -239,9 +244,10 @@ const { t } = useTranslation()`)
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy10}>didMount</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy13}>didMountCall</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy9}>didUpdate</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy16}>g._[x]</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy7}>_[x]</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy8}>{'{{_[x]}}'}</div>
-        <div className='pg-deprive-3_r-button on-click' onClick={onCopy11}>{'"{{_[x]}}"'}</div>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy11}>{'{{_["x"]}}'}</div>
       </div>
     </div>
   )

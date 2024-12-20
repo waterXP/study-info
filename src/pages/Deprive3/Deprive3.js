@@ -125,7 +125,7 @@ const { t } = useTranslation()`)
     }
   }, [key])
   const onCopy18 = useCallback(() => {
-    copyToClipboard('[\u4e00-\u9fff]')
+    copyToClipboard('[\\u4e00-\\u9fff]')
   }, [])
   const { cn, en, count, cur } = useMemo(() => {
     const r = { cn: '', en: '', count: 0, cur: 0 }

@@ -124,6 +124,9 @@ const { t } = useTranslation()`)
       copyToClipboard(`_["${key.trim()}"]`)
     }
   }, [key])
+  const onCopy18 = useCallback(() => {
+    copyToClipboard('[\u4e00-\u9fff]')
+  }, [])
   const { cn, en, count, cur } = useMemo(() => {
     const r = { cn: '', en: '', count: 0, cur: 0 }
     if (typeof v === 'string' && typeof s === 'string' && s && v) {
@@ -234,6 +237,7 @@ const { t } = useTranslation()`)
         </div>
       </div>
       <div className='pg-deprive-3_tap'>
+        <div className='pg-deprive-3_r-button on-click' onClick={onCopy18}>regex</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy1}>withTranslation</div>
         <div className='pg-deprive-3_r-button on-click' onClick={onCopy2}>useTranslation</div>
         <Input className='pg-deprive-3_input' value={key} onChange={changeValue} />

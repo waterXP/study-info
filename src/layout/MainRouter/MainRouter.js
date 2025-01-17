@@ -41,6 +41,12 @@ import JPListens from '@/pages/JPListens'
 import JPListen from '@/pages/JPListen'
 import JPGrammars from '@/pages/JPGrammars'
 import JPGrammar from '@/pages/JPGrammar'
+import Cabinet from '@/pages/Cabinet'
+import CabinetPick from '@/pages/CabinetPick'
+import CabinetPickCode from '@/pages/CabinetPickCode'
+import CabinetPickList from '@/pages/CabinetPickList'
+import CabinetSave from '@/pages/CabinetSave'
+import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
 
 const { PUBLIC_URL } = process.env
 
@@ -201,6 +207,30 @@ const router = createBrowserRouter(
     {
       path: 'deprive3',
       element: <Deprive3 />
+    },
+    {
+      path: 'cabinet',
+      element: <Cabinet />
+    },
+    {
+      path: 'cabinet-pick',
+      element: <CabinetPick />
+    },
+    {
+      path: 'cabinet-pick-code',
+      element: <CabinetPickCode />
+    },
+    {
+      path: 'cabinet-pick-list',
+      element: <CabinetPickList />
+    },
+    {
+      path: 'cabinet-save',
+      element: <CabinetSave />
+    },
+    {
+      path: 'cabinet-save-query',
+      element: <CabinetSaveQuery />
     },
     {
       path: '*',

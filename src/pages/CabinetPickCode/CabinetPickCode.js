@@ -1,49 +1,27 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback } from 'react'
 import './CabinetPickCode.styl'
-import CabinetReturn from '@/components/CabinetReturn'
-import Icon from '@/components/Icon'
+import { message } from 'antd'
+import { useNavigate } from 'react-router-dom'
+import CabinetBody from '@/components/CabinetBody'
+import CabinetInput from '@/components/CabinetInput'
 
-const CabinetPickCode = () => (
-  <div className='cabinet-pick-code'>
-    <CabinetReturn />
-    <div>
-      <div>
-        <div>
-          <p>收件人取件码：</p>
-          <div />
-          <div />
-          <div />
-          <div />
-        </div>
-        <div>
-          <div>
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-          </div>
-          <div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-          </div>
-          <div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-          </div>
-          <div>
-            <div>0</div>
-            <div>
-              <Icon type='icon-qingkong' />
-            </div>
-            <div>
-              <Icon type='icon-tuige' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+const CabinetPickCode = () => {
+  const navigate = useNavigate()
+  const handleFullChange = useCallback(
+    values => {
+      if (values.join('') === '8888') {
+        navigate('/cabinet-pick-list')
+      } else {
+        message.error('取件码不正确')
+      }
+    },
+    [navigate]
+  )
+  return (
+    <CabinetBody className='pg-cabinet-pick-code' delay={90}>
+      <CabinetInput title='输入取件码' onFullChange={handleFullChange} />
+    </CabinetBody>
+  )
+}
 
 export default memo(CabinetPickCode)

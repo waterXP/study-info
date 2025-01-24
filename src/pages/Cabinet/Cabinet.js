@@ -1,6 +1,7 @@
 import React, { memo, useCallback } from 'react'
 import './Cabinet.styl'
 import { useNavigate } from 'react-router-dom'
+import CabinetBody from '@/components/CabinetBody'
 
 const Cabinet = () => {
   const navigate = useNavigate()
@@ -14,8 +15,8 @@ const Cabinet = () => {
     navigate('/cabinet-pick-code')
   }, [navigate])
   return (
-    <div className='pg-cabinet'>
-      <div className='pg-cabinet_body'>
+    <CabinetBody>
+      <div className='pg-cabinet'>
         <div className='pg-cabinet_save on-click' onClick={gotoSave}>
           <span className='pg-cabinet_text'>存件</span>
         </div>
@@ -28,7 +29,7 @@ const Cabinet = () => {
           </div>
         </div>
       </div>
-    </div>
+    </CabinetBody>
   )
 }
 

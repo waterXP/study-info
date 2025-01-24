@@ -74,9 +74,9 @@ const CabinetPickList = () => {
     <CabinetBody delay={90}>
       <div className='pg-cabinet-pick-list'>
         <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>
-        <div className='pg-cabinet-pick-list_body'>
-          {showArrow &&
-            (canPrev ? (
+        {showArrow ? (
+          <div className='pg-cabinet-pick-list_body'>
+            {canPrev ? (
               <Icon
                 className='pg-cabinet-pick-list_arrorw on-click'
                 type='icon-sanjiaoleft'
@@ -87,30 +87,31 @@ const CabinetPickList = () => {
                 className='pg-cabinet-pick-list_arrorw is-disabled'
                 type='icon-sanjiaoleft'
               />
-            ))}
-          <div className='pg-cabinet-pick-list_wrap'>
-            <Carousel
-              ref={ref}
-              slidesToShow={3}
-              infinite={false}
-              swipeToSlide
-              afterChange={afterChange}
-              dots={false}
-            >
-              {list.map(({ id, text }) => (
-                <div key={id} className='pg-cabinet-pick-list_button-wrap'>
-                  <div
-                    className='pg-cabinet-pick-list_button on-click'
-                    onClick={openBox}
-                  >
-                    <span className='pg-cabinet-pick-list_button-text'>{text}</span>
+            )}
+            <div className='pg-cabinet-pick-list_wrap'>
+              <Carousel
+                ref={ref}
+                slidesToShow={3}
+                infinite={false}
+                swipeToSlide
+                afterChange={afterChange}
+                dots={false}
+              >
+                {list.map(({ id, text }) => (
+                  <div key={id} className='pg-cabinet-pick-list_button-wrap'>
+                    <div
+                      className='pg-cabinet-pick-list_button on-click'
+                      onClick={openBox}
+                    >
+                      <span className='pg-cabinet-pick-list_button-text'>
+                        {text}
+                      </span>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-          {showArrow &&
-            (canNext ? (
+                ))}
+              </Carousel>
+            </div>
+            {canNext ? (
               <Icon
                 className='pg-cabinet-pick-list_arrorw on-click'
                 type='icon-sanjiaoright'
@@ -121,8 +122,24 @@ const CabinetPickList = () => {
                 className='pg-cabinet-pick-list_arrorw is-disabled'
                 type='icon-sanjiaoright'
               />
+            )}
+          </div>
+        ) : (
+          <div className='pg-cabinet-pick-list_body'>
+            {list.map(({ id, text }) => (
+              <div key={id} className='pg-cabinet-pick-list_button-wrap'>
+                <div
+                  className='pg-cabinet-pick-list_button on-click'
+                  onClick={openBox}
+                >
+                  <span className='pg-cabinet-pick-list_button-text'>
+                    {text}
+                  </span>
+                </div>
+              </div>
             ))}
-        </div>
+          </div>
+        )}
       </div>
     </CabinetBody>
   )

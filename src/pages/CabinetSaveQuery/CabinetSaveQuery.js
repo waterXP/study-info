@@ -40,7 +40,7 @@ const CabinetSaveQuery = () => {
     }
   }, [])
   const onReturn = useCallback(() => {
-    navigate('/cabinet')
+    navigate('/')
   }, [navigate])
   const onSelect = useCallback(target => {
     setCurrent(target)
@@ -50,7 +50,7 @@ const CabinetSaveQuery = () => {
     setList([])
   }, [])
   const onOpen = useCallback(() => {
-    navigate('/cabinet-save')
+    navigate('/save')
   }, [navigate])
   return (
     <CabinetBody delay={300}>

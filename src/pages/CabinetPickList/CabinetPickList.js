@@ -68,7 +68,7 @@ const CabinetPickList = () => {
     return r
   }, [current, list])
   const openBox = useCallback(() => {
-    navigate('/cabinet-pick')
+    navigate('/pick')
   }, [navigate])
   return (
     <CabinetBody delay={90}>

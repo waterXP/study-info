@@ -6,13 +6,13 @@ import CabinetBody from '@/components/CabinetBody'
 const Cabinet = () => {
   const navigate = useNavigate()
   const gotoSave = useCallback(() => {
-    navigate('/cabinet-save-query')
+    navigate('/save-query')
   }, [navigate])
   const gotoPick = useCallback(() => {
-    navigate('/cabinet-pick-list')
+    navigate('/pick-list')
   }, [navigate])
   const gotoCode = useCallback(() => {
-    navigate('/cabinet-pick-code')
+    navigate('/pick-code')
   }, [navigate])
   return (
     <CabinetBody>

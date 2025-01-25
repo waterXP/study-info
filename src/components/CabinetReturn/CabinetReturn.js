@@ -11,7 +11,7 @@ const CabinetReturn = ({ delay, onClick }) => {
     if (onClick) {
       onClick()
     } else {
-      navigate('/cabinet')
+      navigate('/')
     }
   }, [navigate, onClick])
   const onTime = useCallback(
@@ -19,7 +19,7 @@ const CabinetReturn = ({ delay, onClick }) => {
       refTm.current = setTimeout(() => {
         refTm.current = null
         if (time === 0) {
-          navigate('/cabinet')
+          navigate('/')
         } else {
           const nextTime = time - 1
           setTime(nextTime)

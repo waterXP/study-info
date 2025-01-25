@@ -10,7 +10,7 @@ const CabinetPickCode = () => {
   const handleFullChange = useCallback(
     values => {
       if (values.join('') === '8888') {
-        navigate('/cabinet-pick-list')
+        navigate('/pick-list')
       } else {
         message.error('取件码不正确')
       }

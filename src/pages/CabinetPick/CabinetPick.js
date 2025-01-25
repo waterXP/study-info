@@ -22,9 +22,9 @@ const CabinetPick = () => {
   }, [])
   const handleReturn = useCallback(() => {
     if (hasOthers) {
-      navigate('/cabinet-pick-list')
+      navigate('/pick-list')
     } else {
-      navigate('/cabinet')
+      navigate('/')
     }
   }, [hasOthers, navigate])
   const onOpen = useCallback(() => {

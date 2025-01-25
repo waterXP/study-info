@@ -32,10 +32,10 @@ const CabinetSave = () => {
     // open again
   }, [])
   const goSave = useCallback(() => {
-    navigate('/cabinet-save-query')
+    navigate('/save-query')
   }, [])
   const goMain = useCallback(() => {
-    navigate('/cabinet')
+    navigate('/')
   }, [])
   const { tip, inOperate } = useMemo(() => {
     const r = {

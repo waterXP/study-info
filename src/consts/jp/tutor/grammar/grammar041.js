@@ -1,5 +1,5 @@
 export default {
-  title: 'その他',
+  title: 'その他（八）',
   content: [
     {
       topic: '~ほど',

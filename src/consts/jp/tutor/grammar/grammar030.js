@@ -1,5 +1,5 @@
 export default {
-  title: '~に~',
+  title: '~に~（四）',
   content: [
     {
       topic: '~にほかならない',

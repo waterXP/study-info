@@ -1,5 +1,5 @@
 export default {
-  title: '~に~',
+  title: '~に~（二）',
   content: [
     {
       topic: '~に比ベ/~に比べて',

@@ -1,5 +1,5 @@
 export default {
-  title: '~に~',
+  title: '~に~（一）',
   content: [
     {
       topic: '~にあたって/~にあたり',

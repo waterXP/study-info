@@ -1,5 +1,5 @@
 export default {
-  title: 'その他',
+  title: 'その他（二）',
   content: [
     {
       topic: '~かけだ/~かけの/~かける',

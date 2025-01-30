@@ -40,7 +40,10 @@ import JPExec from '@/pages/JPExec'
 import JPListens from '@/pages/JPListens'
 import JPListen from '@/pages/JPListen'
 import JPGrammars from '@/pages/JPGrammars'
+import JPGrammarChapter from '@/pages/JPGrammarChapter'
 import JPGrammar from '@/pages/JPGrammar'
+import JPGrammarsExec from '@/pages/JPGrammarsExec'
+import JPGrammarExec from '@/pages/JPGrammarExec'
 import Cabinet from '@/pages/Cabinet'
 import CabinetPick from '@/pages/CabinetPick'
 import CabinetPickCode from '@/pages/CabinetPickCode'
@@ -177,8 +180,20 @@ const router = createBrowserRouter(
       element: <JPGrammars />
     },
     {
+      path: 'jp-grammar-chapter',
+      element: <JPGrammarChapter />
+    },
+    {
       path: 'jp-grammar',
       element: <JPGrammar />
+    },
+    {
+      path: 'jp-grammars-exec',
+      element: <JPGrammarsExec />
+    },
+    {
+      path: 'jp-grammar-exec',
+      element: <JPGrammarExec />
     },
     {
       path: 'jp',

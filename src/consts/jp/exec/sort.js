@@ -82,7 +82,7 @@ const trans = arr =>
       }
     })
     return (
-      <>
+      <Fragment key={i++}>
         {r.map(line => {
           if (typeof line === 'string') {
             const inlineR = []
@@ -126,7 +126,7 @@ const trans = arr =>
           }
           return <Fragment key={i++}>{line}</Fragment>
         })}
-      </>
+      </Fragment>
     )
   })
 export default [

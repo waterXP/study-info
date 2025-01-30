@@ -43,7 +43,7 @@ const JPListen = () => {
     setAn([])
     setCur(0)
     const next = getNext(info, listen)
-    setInfo(next || 1)
+    setInfo(next || listen[1])
   }, [info])
   const { showQa, answerName } = useMemo(() => {
     const r = { showQa: false, answerName: [] }

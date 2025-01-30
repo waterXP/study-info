@@ -1,5 +1,5 @@
 export default {
-  title: '~に~',
+  title: '~に~（三）',
   content: [
     {
       topic: '~に相違ない',

@@ -1,5 +1,5 @@
 export default {
-  title: 'その他',
+  title: 'その他（四）',
   content: [
     {
       topic: '~すえ/~すえに/~すえの',

@@ -1,301 +1,137 @@
 import React, { memo, useEffect, useState, useMemo, useCallback } from 'react'
 import './JPGrammar.styl'
-import { useSearchParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import Page from '@com/Page'
 import Header from '@com/Page/Header'
 import Content from '@com/Page/Content'
 import Footer from '@com/Page/Footer'
-import grammar from '@/consts/jp/exec/grammar'
+import Trans from '@com/Trans'
+import { getPrev, getNext } from '@/utils/tool'
+import grammar from '@/consts/jp/tutor/grammar'
 
-const getList = info => [
-  ...info.select.map(v => ({ ...v, type: 'select' })),
-  ...info.combination.map(v => ({ ...v, type: 'combination' })),
-  ...info.essay.map(v => ({ ...v, type: 'essay' }))
-]
+const noArray = ['①', '②', '③', '④', '⑤', '⑥', '⑦', '⑧', '⑨', '⑩']
 
 const JPGrammar = () => {
-  const [info, setInfo] = useState(null)
-  const showQa = useSelector(({ showQa }) => showQa)
-  const [cur, setCur] = useState(0)
-  const [ans, setAns] = useState([])
-  const [index, setIndex] = useState(0)
+  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
+  const [search, setSearch] = useState(null)
   useEffect(() => {
+    const ch = +searchParams.get('ch')
     const id = +searchParams.get('id')
-    const tar = grammar.find(v => v.id === id)
-    if (tar) {
-      setInfo(tar)
-    } else {
-      setInfo(grammar[0])
-    }
+    setSearch({ ch, id })
   }, [searchParams])
-  const list = useMemo(() => (info ? getList(info) : null), [info])
-  const tar = useMemo(
-    () => (list ? list[index] || list[0] : null),
-    [index, list]
-  )
-  const onPrevClick = useCallback(() => {
-    if (list) {
-      setIndex(index => {
-        const next = --index
-        if (list[next]) {
-          return next
-        }
-        return list.length - 1
-      })
-    }
-  }, [list])
-  const onNextClick = useCallback(() => {
-    if (list) {
-      setIndex(index => {
-        const next = ++index
-        if (list[next]) {
-          return next
-        }
-        return 0
-      })
-    }
-  }, [list])
-  useEffect(() => {
-    if (tar && !tar.a[cur]) {
-      setCur(0)
-    }
-  }, [cur, tar])
-  const answer = useMemo(() => {
-    if (tar) {
-      return tar.a[cur]
-    }
-    return null
-  }, [tar, cur])
-  const { answerName, an } = useMemo(() => {
-    const r = { an: [], answerName: [] }
-    if (list) {
-      const tar = list[index]
-      if (tar) {
-        const an = ans[index]
-        if (an && tar.d) {
-          r.an = an
-          an.forEach((v, i) => {
-            if (typeof v === 'number') {
-              r.answerName[i] = v === tar.d[i] ? ' is-correct' : ' is-error'
-            }
-          })
-        }
-      }
-    }
-    return r
-  }, [ans, list, index])
-  const onAnswer = useCallback(
-    i => {
-      if (list) {
-        const tar = list[index]
-        if (tar) {
-          setAns(ans => {
-            const an = [...(ans[index] || [])]
-            an[cur] = i
-            const r = [...ans]
-            r[index] = an
-            return r
-          })
-        }
-      }
-    },
-    [list, index, cur]
-  )
-  const ques = useMemo(() => {
-    if (tar) {
-      const { q, type, d, a, s } = tar
-      let i = 0
-      if (type === 'combination') {
-        const values = s.map(v => a[i][v])
-        const v = d[i]
-        const aa = an[i]
-        if (a[i] && typeof aa === 'number' && typeof v === 'number') {
-          const style = aa === v ? 'is-correct' : 'is-error'
-          return q.join('\n').replace(/__.?__/g, str => {
-            if (values[i]) {
-              if (str === '__★__') {
-                return `<span class='${style} is-star'>${values[i++]}</span>`
-              }
-              return `<span class='${style}'>${values[i++]}</span>`
-            }
-            return str
-          })
-        }
-        return q.join('\n').replace(/__★__/g, str => {
-          if (i++ === cur) {
-            return `<span class='is-current'>${str}</span>`
+  const { re, title, list } = useMemo(() => {
+    if (search) {
+      const { ch, id } = search
+      const chapter = grammar.find(v => v.id === ch)
+      if (chapter) {
+        const info = chapter.content.find(v => v.id === id)
+        if (info) {
+          console.log(info) // t, l, i, e, u
+          const { topic, list } = info
+          return {
+            re: `/jp-grammar-chapter?id=${ch}`,
+            title: topic,
+            list
           }
-          return str
-        })
+        }
       }
-      return q.join('\n').replace(/__.?__/g, str => {
-        const v = d[i]
-        const aa = an[i]
-        if (a[i] && typeof aa === 'number' && typeof v === 'number') {
-          const str = aa === v ? 'is-correct' : 'is-error'
-          return `<span class='${str}'>${a[i++][v]}</span>`
-        }
-        if (i++ === cur) {
-          return `<span class='is-current'>${str}</span>`
-        }
-        return str
-      })
     }
-    return ''
-  }, [tar, cur, an])
+    return {
+      re: '/jp-grammar-chapter?id=1',
+      title: '',
+      list: []
+    }
+  }, [search])
+  const onPrevClick = useCallback(() => {
+    if (search) {
+      const { ch, id } = search
+      const chapter = grammar.find(({ id }) => id === ch)
+      if (chapter) {
+        const info = chapter.content.find(v => v.id === id)
+        if (info) {
+          const prev = getPrev(info, chapter.content)
+          navigate(
+            `/jp-grammar?ch=${ch}&id=${
+              (prev || chapter.content[chapter.content.length - 1]).id
+            }`
+          )
+        }
+      }
+    }
+  }, [search])
+  const onNextClick = useCallback(() => {
+    if (search) {
+      const { ch, id } = search
+      const chapter = grammar.find(({ id }) => id === ch)
+      if (chapter) {
+        const info = chapter.content.find(v => v.id === id)
+        if (info) {
+          const next = getNext(info, chapter.content)
+          navigate(
+            `/jp-grammar?ch=${ch}&id=${
+              (next || chapter.content[1] || chapter.content[0]).id
+            }`
+          )
+        }
+      }
+    }
+  }, [search])
+
+  console.log('search', search)
+  console.log('list', list)
+  const hasMulti = useMemo(() => Boolean(list && list.length > 1), [list])
+  console.log('hasMulti', hasMulti)
   return (
     <Page>
-      <Header to='/jp-grammars' qa>
-        {list && (
-          <div className='pg-jp-grammar_process'>
-            {list.map((v, i) => {
-              const { d } = v
-              const aa = ans[i] || []
-              const cName = ['pg-jp-grammar_p']
-              const isCurrent = index === i
-              if (isCurrent) {
-                cName.push('is-current')
-              } else {
-                cName.push('on-click')
-              }
-              let hasError = false
-              const ful = d.every((v, i) => {
-                if (typeof aa[i] === 'number') {
-                  if (aa[i] !== v) {
-                    hasError = true
-                  }
-                  return true
-                }
-                return false
-              })
-              if (ful) {
-                if (hasError) {
-                  cName.push('is-error')
-                } else {
-                  cName.push('is-correct')
-                }
-              }
-              if (isCurrent) {
-                return <div key={i} className={cName.join(' ')} />
-              }
-              return (
-                <div
-                  key={i}
-                  className={cName.join(' ')}
-                  onClick={() => {
-                    setIndex(i)
-                  }}
-                />
-              )
-            })}
-          </div>
-        )}
-      </Header>
+      <Header to={re} title={title} />
       <Content hasFooter>
-        {tar && (
-          <>
-            {tar.pre && <p className='pg-jp-grammar_pre'>{tar.pre}</p>}
-            {tar.title && <p className='pg-jp-grammar_title'>{tar.title}</p>}
-            {tar.author && <p className='pg-jp-grammar_author'>{tar.author}</p>}
-            <div
-              className='pg-jp-grammar_block'
-              dangerouslySetInnerHTML={{ __html: ques }}
-            />
-          </>
-        )}
+        {list.map(({ t, l, i, e, u }, index) => (
+          <div key={index} className='pg-jp-grammar_item'>
+            {hasMulti && (
+              <div className='pg-jp-grammar_group'>
+                <span className='pg-jp-grammar_title'>{noArray[index % 10]}</span>
+                {t && (
+                  <span className='pg-jp-grammar_title'>
+                    <Trans text={t} />
+                  </span>
+                )}
+              </div>
+            )}
+            <div className='pg-jp-grammar_group'>
+              <p className='pg-jp-grammar_topic'>
+                <Trans text='「((接続,せつぞく))」' />
+              </p>
+              <div className='pg-jp-grammar_line'><Trans text={l} /></div>
+            </div>
+            <div className='pg-jp-grammar_group'>
+              <p className='pg-jp-grammar_topic'>
+                <Trans text='「((意味,いみ))」' />
+              </p>
+              <div className='pg-jp-grammar_line'><Trans text={i} /></div>
+            </div>
+            <div className='pg-jp-grammar_group'>
+              <p className='pg-jp-grammar_topic'>
+                <Trans text='「((例文,れいぶん))」' />
+              </p>
+              {e.map((v, i) => (
+                <div key={i} className='pg-jp-grammar_line'>
+                  <Trans text={v} />
+                </div>
+              ))}
+            </div>
+            {u && (
+              <div className='pg-jp-grammar_group'>
+                <p className='pg-jp-grammar_topic'>
+                  <Trans text='「((共起,きょうき))」' />
+                </p>
+                <div className='pg-jp-grammar_line'><Trans text={u} /></div>
+              </div>
+            )}
+          </div>
+        ))}
       </Content>
-      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick}>
-        {showQa && (
-          <>
-            <div className='pg-jp-grammar_line' />
-            {answer && (
-              <div>
-                {answer.map((v, i) => {
-                  const correct = tar.d ? tar.d[cur] : null
-                  if (an && typeof an[cur] === 'number') {
-                    if (an[cur] === i) {
-                      return (
-                        <div
-                          key={i}
-                          className={`pg-jp-grammar_answer${
-                            answerName[cur] || ''
-                          }`}
-                        >
-                          <span className='pg-jp-grammar_no'>{i + 1}</span>
-                          {v}
-                        </div>
-                      )
-                    }
-                    if (correct === i) {
-                      return (
-                        <div
-                          key={i}
-                          className='pg-jp-grammar_answer is-primary'
-                        >
-                          <span className='pg-jp-grammar_no'>{i + 1}</span>
-                          {v}
-                        </div>
-                      )
-                    }
-                    return (
-                      <div key={i} className='pg-jp-grammar_answer'>
-                        <span className='pg-jp-grammar_no'>{i + 1}</span>
-                        {v}
-                      </div>
-                    )
-                  }
-                  return (
-                    <div
-                      key={i}
-                      className='pg-jp-grammar_answer on-click'
-                      onClick={() => {
-                        onAnswer(i)
-                      }}
-                    >
-                      <span className='pg-jp-grammar_no'>{i + 1}</span>
-                      {v}
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-            {tar && tar.a.length > 1 && (
-              <div className='pg-jp-grammar_qus-wrap'>
-                {tar.a.map((_, i) => {
-                  const isCurrent = cur === i
-                  if (isCurrent) {
-                    return (
-                      <div
-                        key={i}
-                        className={`pg-jp-grammar_qus is-current${
-                          answerName[i] || ''
-                        }`}
-                      >
-                        {i + 1}
-                      </div>
-                    )
-                  }
-                  return (
-                    <div
-                      key={i}
-                      className={`pg-jp-grammar_qus on-click${
-                        answerName[i] || ''
-                      }`}
-                      onClick={() => {
-                        setCur(i)
-                      }}
-                    >
-                      {i + 1}
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </>
-        )}
-      </Footer>
+      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick} />
     </Page>
   )
 }

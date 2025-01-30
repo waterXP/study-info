@@ -1,7 +1,16 @@
-import { memo } from 'react'
+import React, { memo } from 'react'
 import './Trans.styl'
 import { trans } from '@/utils/tool'
 
-const Trans = ({ text }) => trans(Array.isArray(text) ? text : [text])
+const Trans = ({ text, className }) => {
+  if (Array.isArray(text)) {
+    return text.map((v, i) => (
+      <p key={i} className={className}>
+        {trans([v])}
+      </p>
+    ))
+  }
+  return trans([text])
+}
 
 export default memo(Trans)

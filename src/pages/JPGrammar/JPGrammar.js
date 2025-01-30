@@ -89,34 +89,34 @@ const JPGrammar = () => {
         {list.map(({ t, l, i, e, u }, index) => (
           <div key={index} className='pg-jp-grammar_item'>
             {hasMulti && (
-              <div className='pg-jp-grammar_group'>
+              <p className='pg-jp-grammar_title-wrap'>
                 <span className='pg-jp-grammar_title'>{noArray[index % 10]}</span>
                 {t && (
                   <span className='pg-jp-grammar_title'>
                     <Trans text={t} />
                   </span>
                 )}
-              </div>
+              </p>
             )}
             <div className='pg-jp-grammar_group'>
               <p className='pg-jp-grammar_topic'>
                 <Trans text='「((接続,せつぞく))」' />
               </p>
-              <div className='pg-jp-grammar_line'><Trans text={l} /></div>
+              <Trans text={l} className='pg-jp-grammar_line' />
             </div>
             <div className='pg-jp-grammar_group'>
               <p className='pg-jp-grammar_topic'>
                 <Trans text='「((意味,いみ))」' />
               </p>
-              <div className='pg-jp-grammar_line'><Trans text={i} /></div>
+              <Trans text={i} className='pg-jp-grammar_line' />
             </div>
             <div className='pg-jp-grammar_group'>
               <p className='pg-jp-grammar_topic'>
                 <Trans text='「((例文,れいぶん))」' />
               </p>
               {e.map((v, i) => (
-                <div key={i} className='pg-jp-grammar_line'>
-                  <Trans text={v} />
+                <div key={i} className='pg-jp-grammar_lines'>
+                  <Trans text={v} className='pg-jp-grammar_line' />
                 </div>
               ))}
             </div>
@@ -125,7 +125,7 @@ const JPGrammar = () => {
                 <p className='pg-jp-grammar_topic'>
                   <Trans text='「((共起,きょうき))」' />
                 </p>
-                <div className='pg-jp-grammar_line'><Trans text={u} /></div>
+                <Trans text={u} className='pg-jp-grammar_line' />
               </div>
             )}
           </div>

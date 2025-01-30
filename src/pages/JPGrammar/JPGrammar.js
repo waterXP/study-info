@@ -27,7 +27,6 @@ const JPGrammar = () => {
       if (chapter) {
         const info = chapter.content.find(v => v.id === id)
         if (info) {
-          console.log(info) // t, l, i, e, u
           const { topic, list } = info
           return {
             re: `/jp-grammar-chapter?id=${ch}`,
@@ -78,10 +77,7 @@ const JPGrammar = () => {
     }
   }, [search])
 
-  console.log('search', search)
-  console.log('list', list)
   const hasMulti = useMemo(() => Boolean(list && list.length > 1), [list])
-  console.log('hasMulti', hasMulti)
   return (
     <Page>
       <Header to={re} title={title} />

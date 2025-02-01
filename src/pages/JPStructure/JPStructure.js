@@ -120,7 +120,7 @@ const JPStructure = () => {
               <div key={no} className='pg-jp-structure_lines'>
                 {lines.map((v, i) => {
                   const [flag, text] = v.split('::')
-                  const dispText = i === 0 ? `${no + 1}.${text}` : text
+                  const dispText = i === 0 ? `${no + 1}. ${text}` : text
                   const className = classNameMap[flag] || 'pg-jp-structure_line'
                   if (flag === 't') {
                     const rows = text.split('@').map(v => v.split(':'))
@@ -128,20 +128,11 @@ const JPStructure = () => {
                       <>
                         {rows.map((row, i) => (
                           <div key={i} className='pg-jp-structure_row'>
-                            {row.map((v, i) =>
-                              i === 0 ? (
-                                <span key={i} className='pg-jp-structure_cell'>
-                                  <Trans text={v} />
-                                </span>
-                              ) : (
-                                <Fragment key={i}>
-                                  <div className='pg-jp-structure_divider' />
-                                  <span className='pg-jp-structure_cell'>
-                                    <Trans text={v} />
-                                  </span>
-                                </Fragment>
-                              )
-                            )}
+                            {row.map((v, i) => (
+                              <div key={i} className='pg-jp-structure_cell'>
+                                <p className='pg-jp-structure_cell-text'><Trans text={v} /></p>
+                              </div>
+                            ))}
                           </div>
                         ))}
                       </>
@@ -164,7 +155,7 @@ const JPStructure = () => {
               <div key={no} className='pg-jp-structure_lines'>
                 {lines.map((v, i) => {
                   const [flag, text] = v.split('::')
-                  const dispText = i === 0 ? `${no + 1}.${text}` : text
+                  const dispText = i === 0 ? `${no + 1}. ${text}` : text
                   const className = classNameMap[flag] || 'pg-jp-structure_line'
                   return (
                     <p key={i} className={className}>

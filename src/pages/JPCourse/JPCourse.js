@@ -8,6 +8,11 @@ import Content from '@com/Page/Content'
 import Footer from '@com/Page/Footer'
 import jpWords from '@/consts/jp'
 
+const buttons = [
+  { text: '構', value: 'structure' },
+  { text: '語', value: 'words' }
+]
+
 const JPCourse = () => {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
@@ -80,9 +85,27 @@ const JPCourse = () => {
     }
   }, [id, detail, navigate])
 
+  const onButtons = useCallback(
+    value => {
+      const id = +searchParams.get('id')
+      const no = +searchParams.get('no')
+      if (value === 'words') {
+        navigate(`/jp-words-list?id=${id}&no=${no}`)
+      } else if (value === 'structure') {
+        navigate(`/jp-structure?id=${id}&no=${no}`)
+      }
+    },
+    [navigate, searchParams]
+  )
+  const dispTitle = useMemo(() => {
+    if (title) {
+      return <JPText content={title} />
+    }
+    return ''
+  }, [title])
   return (
     <Page>
-      <Header to='/jp' title={<JPText content={title} />} />
+      <Header to='/jp' title={dispTitle} />
       <Content hasFooter>
         <div className='pg-jp-course_body'>
           {base.length > 0 && (
@@ -126,7 +149,12 @@ const JPCourse = () => {
             ))}
         </div>
       </Content>
-      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick} />
+      <Footer
+        onPrevClick={onPrevClick}
+        onNextClick={onNextClick}
+        buttons={buttons}
+        onButtons={onButtons}
+      />
     </Page>
   )
 }

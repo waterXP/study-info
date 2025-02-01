@@ -22,6 +22,7 @@ import JPFavorites from '@/pages/JPFavorites'
 import JPWordsList from '@/pages/JPWordsList'
 import JPWords from '@/pages/JPWords'
 import JPCourse from '@/pages/JPCourse'
+import JPStructure from '@/pages/JPStructure'
 import JPTables from '@/pages/JPTables'
 import JPTable from '@/pages/JPTable'
 import JPNotes from '@/pages/JPNotes'
@@ -130,6 +131,10 @@ const router = createBrowserRouter(
     {
       path: 'jp-course',
       element: <JPCourse />
+    },
+    {
+      path: 'jp-structure',
+      element: <JPStructure />
     },
     {
       path: 'jp-tables',

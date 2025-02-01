@@ -22,6 +22,12 @@ const JP = () => {
     },
     [navigate]
   )
+  const gotoStructure = useCallback(
+    (id, no) => {
+      navigate(`/jp-structure?id=${id}&no=${no}`)
+    },
+    [navigate]
+  )
   const gotoWords = useCallback(
     (id, no) => {
       navigate(`/jp-words-list?id=${id}&no=${no}`)
@@ -54,7 +60,7 @@ const JP = () => {
                 <div key={no}>
                   <Item
                     onClick={() => {
-                      gotoWords(id, no)
+                      gotoCourse(id, no)
                     }}
                   >
                     <JPText content={`第${no}課 ${topic}`} />
@@ -71,7 +77,7 @@ const JP = () => {
                     <div
                       className='pg-jp_option on-click'
                       onClick={() => {
-                        gotoWords(id, no)
+                        gotoStructure(id, no)
                       }}
                     >
                       構

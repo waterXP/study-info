@@ -17,6 +17,11 @@ import Footer from '@com/Page/Footer'
 import junior from '@/consts/jp/junior'
 import jpWords from '@/consts/jp'
 
+const buttons = [
+  { text: '基', value: 'course' },
+  { text: '構', value: 'structure' }
+]
+
 const JPWordsList = () => {
   const navigate = useNavigate()
   const allList = useMemo(
@@ -100,16 +105,27 @@ const JPWordsList = () => {
     },
     [params, navigate]
   )
-
+  const onButtons = useCallback(
+    value => {
+      const id = +searchParams.get('id')
+      const no = +searchParams.get('no')
+      if (value === 'course') {
+        navigate(`/jp-course?id=${id}&no=${no}`)
+      } else if (value === 'structure') {
+        navigate(`/jp-structure?id=${id}&no=${no}`)
+      }
+    },
+    [navigate, searchParams]
+  )
+  const dispTitle = useMemo(() => {
+    if (title) {
+      return <JPText content={`第${params.no}課 ${title}`} />
+    }
+    return ''
+  }, [title])
   return (
     <Page>
-      <Header to='/jp'>
-        {title && (
-          <p className='pg-jp-words-list_title'>
-            <JPText content={`第${params.no}課 ${title}`} />
-          </p>
-        )}
-      </Header>
+      <Header to='/jp' title={dispTitle} />
       <Content hasFooter>
         <div className='pg-jp-words-list_body' ref={refBody}>
           {list.map((v, i) => (
@@ -127,7 +143,12 @@ const JPWordsList = () => {
           ))}
         </div>
       </Content>
-      <Footer onPrevClick={onPrevClick} onNextClick={onNextClick} />
+      <Footer
+        onPrevClick={onPrevClick}
+        onNextClick={onNextClick}
+        buttons={buttons}
+        onButtons={onButtons}
+      />
     </Page>
   )
 }

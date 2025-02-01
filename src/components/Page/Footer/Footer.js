@@ -6,7 +6,9 @@ const Footer = ({
   onNextClick,
   onCenterClick,
   centerText,
-  children
+  children,
+  buttons,
+  onButtons
 }) => (
   <div className='com-footer'>
     {children}
@@ -25,6 +27,21 @@ const Footer = ({
           onClick={onCenterClick}
         >
           {centerText}
+        </div>
+      )}
+      {buttons && (
+        <div className='com-footer_center-buttons'>
+          {buttons.map(({ value, text }) => (
+            <div
+              key={value}
+              className='com-footer_center-button on-click'
+              onClick={() => {
+                onButtons(value)
+              }}
+            >
+              {text}
+            </div>
+          ))}
         </div>
       )}
       {onNextClick && (

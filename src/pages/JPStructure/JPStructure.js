@@ -1,33 +1,18 @@
-import React, {
-  memo,
-  useState,
-  useEffect,
-  useMemo,
-  useCallback,
-  Fragment
-} from 'react'
+import React, { memo, useState, useEffect, useMemo, useCallback } from 'react'
 import './JPStructure.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import JPText from '@com/JPText'
-import Trans from '@com/Trans'
 import Page from '@com/Page'
 import Header from '@com/Page/Header'
 import Content from '@com/Page/Content'
 import Footer from '@com/Page/Footer'
 import jpWords from '@/consts/jp'
+import Block from './components/Block'
 
 const buttons = [
   { text: '基', value: 'course' },
   { text: '語', value: 'words' }
 ]
-
-const classNameMap = {
-  o: 'pg-jp-structure_line is-title',
-  m: 'pg-jp-structure_line is-explain',
-  e: 'pg-jp-structure_line is-example',
-  n: 'pg-jp-structure_line is-notice',
-  s: 'pg-jp-structure_line is-title'
-}
 
 const JPStructure = () => {
   const navigate = useNavigate()
@@ -113,60 +98,8 @@ const JPStructure = () => {
     <Page>
       <Header to='/jp' title={title} />
       <Content hasFooter>
-        {base && (
-          <div className='pg-jp-structure_block'>
-            <p className='pg-jp-structure_title'>语法解释</p>
-            {base.map((lines, no) => (
-              <div key={no} className='pg-jp-structure_lines'>
-                {lines.map((v, i) => {
-                  const [flag, text] = v.split('::')
-                  const dispText = i === 0 ? `${no + 1}. ${text}` : text
-                  const className = classNameMap[flag] || 'pg-jp-structure_line'
-                  if (flag === 't') {
-                    const rows = text.split('@').map(v => v.split(':'))
-                    return (
-                      <>
-                        {rows.map((row, i) => (
-                          <div key={i} className='pg-jp-structure_row'>
-                            {row.map((v, i) => (
-                              <div key={i} className='pg-jp-structure_cell'>
-                                <p className='pg-jp-structure_cell-text'><Trans text={v} /></p>
-                              </div>
-                            ))}
-                          </div>
-                        ))}
-                      </>
-                    )
-                  }
-                  return (
-                    <p key={i} className={className}>
-                      <Trans text={dispText} />
-                    </p>
-                  )
-                })}
-              </div>
-            ))}
-          </div>
-        )}
-        {explain && (
-          <div className='pg-jp-structure_block'>
-            <p className='pg-jp-structure_title'>表达及词语讲解</p>
-            {explain.map((lines, no) => (
-              <div key={no} className='pg-jp-structure_lines'>
-                {lines.map((v, i) => {
-                  const [flag, text] = v.split('::')
-                  const dispText = i === 0 ? `${no + 1}. ${text}` : text
-                  const className = classNameMap[flag] || 'pg-jp-structure_line'
-                  return (
-                    <p key={i} className={className}>
-                      <Trans text={dispText} />
-                    </p>
-                  )
-                })}
-              </div>
-            ))}
-          </div>
-        )}
+        {base && <Block title='语法解释' content={base} />}
+        {explain && <Block title='表达及词语讲解' content={explain} />}
       </Content>
       <Footer
         onPrevClick={onPrevClick}

@@ -1,41 +1,71 @@
 .pg-cabinet
   display flex
   flex auto
+  flex-direction column
   height 100%
+.pg-cabinet_header
+  flf(none, center, space-between)
+  padding 0 64px
+  height 213px
+  background linear-gradient(0, rgba(0, 0, 0, .001), rgba(0, 0, 0, .001)), #fff
+.pg-cabinet_header-left
+  flf(none, center)
+.pg-cabinet_header-icon.iconfont
+  flex none
+  f(cp, 40)
+  margin-right 24px
+.pg-cabinet_header-title
+  f(#333, 36, 50)
+  weight(600)
+  flex none
+.pg-cabinet_header-right
+  f(#000, 16, 24)
+  flex none
+.pg-cabinet_body
+  flf(auto, stretch)
+  padding 64px
 .pg-cabinet_save
+  flfc(1, center, center)
   bs()
-  display flex
-  flex 1
-  justify-content center
-  align-items center
   padding 16px 32px
-  border 1px solid cp
-  border-radius 8px
+  border-radius 20px
+  background-color #fff
 .pg-cabinet_pick
   display flex
   flex 1
   flex-direction column
-  margin-left 32px
+  margin-left 64px
 .pg-cabinet_pick-self
+  flfc(1, center, center)
   bs()
-  display flex
-  flex 3
-  justify-content center
-  align-items center
-  padding 16px 32px
-  border 1px solid cp
-  border-radius 8px
+  border-radius 20px
+  background-color #fff
 .pg-cabinet_pick-others
+  flfc(1, center, center)
   bs()
-  display flex
-  flex 1
-  justify-content center
-  align-items center
-  margin-top 32px
-  padding 16px 32px
-  border 1px solid cp
-  border-radius 8px
+  margin-top 64px
+  border-radius 20px
+  background-color #fff
 .pg-cabinet_text
-  f(ft85, 48, 72)
+  f(#333, 24, 32)
   flex none
   max-width 100%
+.pg-cabinet_tip
+  f(#666, 16, 24)
+  flex none
+  margin-top 20px
+  max-width 100%
+.pg-cabinet_footer
+  flfc(none, center, center)
+  height 213px
+  background-color #fff
+.pg-cabinet_footer-version
+  flf(none, center)
+  padding-bottom 20px
+.pg-cabinet_footer-text
+  f(#666, 14, 20)
+  flex none
+  + .pg-cabinet_footer-text
+    margin-left 42px
+.pg-cabinet_footer-right
+  f(#999, 14, 20)

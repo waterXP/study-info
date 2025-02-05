@@ -3,7 +3,7 @@ ft65 = rgba(255, 255, 255, .65)
 ft85 = rgba(255, 255, 255, .85)
 ftp = rgba(255, 255, 255, .85)
 bs()
-  box-shadow 0 6px 20px 0 rgba(255, 255, 255, 0.1)
+  box-shadow 0 4px 6px 0 rgba(0, 0, 0, .1)
 cd = #ea4436
 cp = #4284f4
 cs = #34a853
@@ -44,9 +44,20 @@ fl(alignItems = normal, justifyContent = start)
   display flex
   justify-content justifyContent
   align-items alignItems
+flc(alignItems = normal, justifyContent = start)
+  display flex
+  flex-direction column
+  justify-content justifyContent
+  align-items alignItems
 flf(fValue = 0 1 auto, alignItems = normal, justifyContent = start)
   display flex
   flex fValue
+  justify-content justifyContent
+  align-items alignItems
+flfc(fValue = 0 1 auto, alignItems = normal, justifyContent = start)
+  display flex
+  flex fValue
+  flex-direction column
   justify-content justifyContent
   align-items alignItems
 wb()

@@ -27,6 +27,7 @@ const Cabinet = () => {
         </div>
         <div className='pg-cabinet_body'>
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>
+            <img className='pg-cabinet_save-image' src='/assets/tst.png' alt='save' />
             <span className='pg-cabinet_text'>存件</span>
             <span className='pg-cabinet_tip'>快速存放您的包裹</span>
           </div>

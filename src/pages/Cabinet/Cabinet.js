@@ -28,7 +28,7 @@ const Cabinet = () => {
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>
             <img
               className='pg-cabinet_save-image'
-              src='/assets/tst.png'
+              src='./assets/tst.png'
               alt='save'
             />
             <span className='pg-cabinet_text'>存件</span>

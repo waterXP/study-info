@@ -23,7 +23,6 @@ const Cabinet = () => {
             <Icon className='pg-cabinet_header-icon' type='icon-mall-l' />
             <span className='pg-cabinet_header-title'>智慧快递柜</span>
           </div>
-          <span className='pg-cabinet_header-right'>登录/注册</span>
         </div>
         <div className='pg-cabinet_body'>
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>

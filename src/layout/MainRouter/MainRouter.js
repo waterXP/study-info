@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 // import PropTypes from 'prop-types'
 import './MainRouter.styl'
-import { createHashRouter, Navigate, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Cabinet from '@/pages/Cabinet'
 import CabinetPick from '@/pages/CabinetPick'
 import CabinetPickCode from '@/pages/CabinetPickCode'
@@ -11,7 +11,7 @@ import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
 
 const { PUBLIC_URL } = process.env
 
-const router = createHashRouter(
+const router = createBrowserRouter(
   [
     {
       path: '/',

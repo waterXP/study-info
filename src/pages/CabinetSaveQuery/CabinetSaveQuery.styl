@@ -1,23 +1,32 @@
 .pg-cabinet-save-query
-  flf(auto, flex-start)
-  margin-top 24px
+  flf(auto, stretch)
+  padding 32px 64px
 .pg-cabinet-save-query_input-box
+  bs()
   flex 1
   margin-right 16px
   margin-left auto
+  border-radius 20px
+  background-color #fff
 .pg-cabinet-save-query_detail
-  flex 1
+  flfc(1, center)
+  bs()
   margin-right auto
-  margin-left 16px
+  margin-left 32px
+  padding-bottom 48px
+  border-radius 20px
+  background-color #fff
 .pg-cabinet-save-query_topic
-  f(ft65, 24, 32)
-  margin 16px 0 48px
+  f(ft85, 32, 48)
+  flex none
+  margin 32px 0
+  text-align center
 .pg-cabinet-save-query_row
-  fl(center)
+  flf(auto, flex-start, center)
 .pg-cabinet-save-query_option
   flf(none, center, center)
   box-sizing border-box
-  margin-right 32px
+  margin 0 16px
   width 100px
   height 100px
   border 1px solid ft45
@@ -30,7 +39,7 @@
   &.is-current
     color cs
 .pg-cabinet-save-query_buttons
-  margin-top 64px
+  flex none
 .pg-cabinet-save-query_button
   f(ft65, 24, 32)
   bs()
@@ -42,5 +51,5 @@
   border-radius 4px
   text-align center
   &.is-disabled
-    cursor not-allowed
     opacity .25
+    cursor not-allowed

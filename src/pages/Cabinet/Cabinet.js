@@ -16,7 +16,7 @@ const Cabinet = () => {
     navigate('/pick-code')
   }, [navigate])
   return (
-    <CabinetBody>
+    <CabinetBody noPadding>
       <div className='pg-cabinet'>
         <div className='pg-cabinet_header'>
           <div className='pg-cabinet_header-left'>

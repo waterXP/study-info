@@ -15,6 +15,7 @@ const Cabinet = () => {
   const gotoCode = useCallback(() => {
     navigate('/pick-code')
   }, [navigate])
+  console.log('xxkjkj')
   return (
     <CabinetBody noPadding>
       <div className='pg-cabinet'>

@@ -15,8 +15,7 @@ const statusMap = {
   others: '数据处理中……'
 }
 
-const CabinetSave = () => {
-  // const navigate = useNavigate()
+const CabinetSave = ({ onUrl }) => {
   const [status, setStatus] = useState({
     title: '',
     type: '' // opened, closed, hasError, waiting
@@ -32,11 +31,11 @@ const CabinetSave = () => {
     // open again
   }, [])
   const goSave = useCallback(() => {
-    // navigate('/save-query')
-  }, [])
+    onUrl('save-query')
+  }, [onUrl])
   const goMain = useCallback(() => {
-    // navigate('/')
-  }, [])
+    onUrl('')
+  }, [onUrl])
   const { tip, inOperate } = useMemo(() => {
     const r = {
       tip: statusMap[status.type] || statusMap.others,
@@ -49,30 +48,32 @@ const CabinetSave = () => {
   }, [status])
 
   return (
-    <CabinetBody delay={300}>
+    <CabinetBody delay={300} onUrl={onUrl}>
       <div className='pg-cabinet-save'>
-        <p className='pg-cabinet-save_title'>开箱存件</p>
-        {status.title && <div className='pg-cabinet-save_box'>08号箱门</div>}
-        <p className='pg-cabinet-save_tip'>{tip}</p>
-        {inOperate ? (
-          <div className='pg-cabinet-save_buttons'>
-            <div className='pg-cabinet-save_button is-disabled'>再次开箱</div>
-            <div className='pg-cabinet-save_button is-disabled'>继续存件</div>
-            <div className='pg-cabinet-save_button is-disabled'>返回首页</div>
-          </div>
-        ) : (
-          <div className='pg-cabinet-save_buttons'>
-            <div className='pg-cabinet-save_button on-click' onClick={onOpen}>
-              再次开箱
+        <div className='pg-cabinet-save_body'>
+          <p className='pg-cabinet-save_title'>开箱存件</p>
+          {status.title && <div className='pg-cabinet-save_box'>08号箱门</div>}
+          <p className='pg-cabinet-save_tip'>{tip}</p>
+          {inOperate ? (
+            <div className='pg-cabinet-save_buttons'>
+              <div className='pg-cabinet-save_button is-disabled'>再次开箱</div>
+              <div className='pg-cabinet-save_button is-disabled'>继续存件</div>
+              <div className='pg-cabinet-save_button is-disabled'>返回首页</div>
             </div>
-            <div className='pg-cabinet-save_button on-click' onClick={goSave}>
-              继续存件
+          ) : (
+            <div className='pg-cabinet-save_buttons'>
+              <div className='pg-cabinet-save_button on-click' onClick={onOpen}>
+                再次开箱
+              </div>
+              <div className='pg-cabinet-save_button on-click' onClick={goSave}>
+                继续存件
+              </div>
+              <div className='pg-cabinet-save_button on-click' onClick={goMain}>
+                返回首页
+              </div>
             </div>
-            <div className='pg-cabinet-save_button on-click' onClick={goMain}>
-              返回首页
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </CabinetBody>
   )

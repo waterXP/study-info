@@ -48,6 +48,11 @@ const CabinetInput = ({
         setValues(['', '', '', ''])
         setCur(0)
       } else if (v === 'icon-tuige') {
+        setValues(values => {
+          const r = [...values]
+          r[cur] = ''
+          return r
+        })
         setCur(cur => (cur > 0 ? cur - 1 : 0))
       } else {
         setValues(values => {
@@ -65,6 +70,15 @@ const CabinetInput = ({
     setValues(['', '', '', ''])
     setCur(0)
   }, [onClear])
+  const handleCancel = useCallback(() => {
+    if (list && list.length > 1) {
+      onSelect('')
+    } else {
+      onClear && onClear()
+      setValues(['', '', '', ''])
+      setCur(0)
+    }
+  }, [list, onSelect])
   const targetName = useMemo(() => {
     if (Array.isArray(list)) {
       const target = list.find(({ value }) => value === current)
@@ -97,67 +111,82 @@ const CabinetInput = ({
         )}
       </div>
       {showList ? (
-        <div className='com-cabinet-input_list'>
-          <p className='com-cabinet-input_list-topic'>{`选择收件人：${
-            targetName || ''
-          }`}</p>
-          <div className='com-cabinet-input_list-body'>
-            {dispList.map(({ name, value }) =>
-              current === value ? (
-                <div
-                  key={value}
-                  className='com-cabinet-input_list-item is-current'
-                >
-                  {name}
-                </div>
-              ) : (
-                <div
-                  key={value}
-                  className='com-cabinet-input_list-item'
-                  onClick={() => {
-                    onSelect && onSelect(value)
-                  }}
-                >
-                  {name}
-                </div>
-              )
-            )}
-          </div>
-          <div className='com-cabinet-input_list-buttons'>
-            {hasPagination &&
-              (pageNo > 0 ? (
-                <div
-                  className='com-cabinet-input_list-button on-click'
-                  onClick={onPrev}
-                >
-                  上一页
-                </div>
-              ) : (
-                <div className='com-cabinet-input_list-button is-disabled'>
-                  上一页
-                </div>
-              ))}
-            <div
-              className='com-cabinet-input_list-button on-click'
-              onClick={handleClear}
-            >
-              返回
+        targetName ? (
+          <div className='com-cabinet-input_list'>
+            <div className='com-cabinet-input_list-detail'>
+              <p className='com-cabinet-input_list-topic'>收件人姓名：</p>
+              <p className='com-cabinet-input_list-topic'>{targetName}</p>
             </div>
-            {hasPagination &&
-              (pageNo < maxPageNo ? (
-                <div
-                  className='com-cabinet-input_list-button on-click'
-                  onClick={onNext}
-                >
-                  下一页
-                </div>
-              ) : (
-                <div className='com-cabinet-input_list-button is-disabled'>
-                  下一页
-                </div>
-              ))}
+            <div className='com-cabinet-input_list-buttons'>
+              <div
+                className='com-cabinet-input_list-button on-click'
+                onClick={handleCancel}
+              >
+                返回
+              </div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className='com-cabinet-input_list'>
+            <p className='com-cabinet-input_list-topic'>选择收件人：</p>
+            <div className='com-cabinet-input_list-body'>
+              {dispList.map(({ name, value }) =>
+                current === value ? (
+                  <div
+                    key={value}
+                    className='com-cabinet-input_list-item is-current'
+                  >
+                    {name}
+                  </div>
+                ) : (
+                  <div
+                    key={value}
+                    className='com-cabinet-input_list-item'
+                    onClick={() => {
+                      onSelect && onSelect(value)
+                    }}
+                  >
+                    {name}
+                  </div>
+                )
+              )}
+            </div>
+            <div className='com-cabinet-input_list-buttons'>
+              {hasPagination &&
+                (pageNo > 0 ? (
+                  <div
+                    className='com-cabinet-input_list-button on-click'
+                    onClick={onPrev}
+                  >
+                    上一页
+                  </div>
+                ) : (
+                  <div className='com-cabinet-input_list-button is-disabled'>
+                    上一页
+                  </div>
+                ))}
+              <div
+                className='com-cabinet-input_list-button on-click'
+                onClick={handleClear}
+              >
+                返回
+              </div>
+              {hasPagination &&
+                (pageNo < maxPageNo ? (
+                  <div
+                    className='com-cabinet-input_list-button on-click'
+                    onClick={onNext}
+                  >
+                    下一页
+                  </div>
+                ) : (
+                  <div className='com-cabinet-input_list-button is-disabled'>
+                    下一页
+                  </div>
+                ))}
+            </div>
+          </div>
+        )
       ) : (
         <div className='com-cabinet-input_buttons'>
           {buttons.map(v => (

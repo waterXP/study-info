@@ -4,19 +4,18 @@ import './Cabinet.styl'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const Cabinet = () => {
-  // const navigate = useNavigate()
-  const gotoSave = useCallback(() => {}, [])
-  //   navigate('/save-query')
-  // }, [navigate])
-  const gotoPick = useCallback(() => {}, [])
-  //   navigate('/pick-list')
-  // }, [navigate])
-  const gotoCode = useCallback(() => {}, [])
-  //   navigate('/pick-code')
-  // }, [navigate])
+const Cabinet = ({ onUrl }) => {
+  const gotoSave = useCallback(() => {
+    onUrl('save-query')
+  }, [onUrl])
+  const gotoPick = useCallback(() => {
+    onUrl('pick-list')
+  }, [onUrl])
+  const gotoCode = useCallback(() => {
+    onUrl('pick-code')
+  }, [onUrl])
   return (
-    <CabinetBody noPadding>
+    <CabinetBody onUrl={onUrl}>
       <div className='pg-cabinet'>
         <div className='pg-cabinet_header'>
           <div className='pg-cabinet_header-left'>
@@ -28,7 +27,7 @@ const Cabinet = () => {
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>
             <img
               className='pg-cabinet_save-image'
-              src='./assets/tst.png'
+              src='./assets/save.png'
               alt='save'
             />
             <span className='pg-cabinet_text'>存件</span>
@@ -36,10 +35,20 @@ const Cabinet = () => {
           </div>
           <div className='pg-cabinet_pick'>
             <div className='pg-cabinet_pick-self on-click' onClick={gotoPick}>
+              <img
+                className='pg-cabinet_pick-image'
+                src='./assets/pick.png'
+                alt='pick'
+              />
               <span className='pg-cabinet_text'>取件</span>
               <span className='pg-cabinet_tip'>便捷取出您的包裹</span>
             </div>
             <div className='pg-cabinet_pick-others on-click' onClick={gotoCode}>
+              <img
+                className='pg-cabinet_pick-image'
+                src='./assets/replace.png'
+                alt='replace'
+              />
               <span className='pg-cabinet_text'>代取件</span>
               <span className='pg-cabinet_tip'>帮他人代取包裹</span>
             </div>

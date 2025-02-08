@@ -8,12 +8,10 @@ import React, {
 } from 'react'
 import './CabinetPickList.styl'
 import { Carousel } from 'antd'
-// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const CabinetPickList = () => {
-  // const navigate = useNavigate()
+const CabinetPickList = ({ onUrl }) => {
   const ref = useRef(null)
   const [list, setList] = useState([])
   const [current, setCurrent] = useState(0)
@@ -67,79 +65,81 @@ const CabinetPickList = () => {
     }
     return r
   }, [current, list])
-  const openBox = useCallback(() => {}, [])
-  //   navigate('/pick')
-  // }, [navigate])
+  const openBox = useCallback(() => {
+    onUrl('pick')
+  }, [onUrl])
   return (
-    <CabinetBody delay={90}>
+    <CabinetBody delay={90} onUrl={onUrl}>
       <div className='pg-cabinet-pick-list'>
-        <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>
-        {showArrow ? (
-          <div className='pg-cabinet-pick-list_body'>
-            {canPrev ? (
-              <Icon
-                className='pg-cabinet-pick-list_arrorw on-click'
-                type='icon-sanjiaoleft'
-                onClick={handlePrev}
-              />
-            ) : (
-              <Icon
-                className='pg-cabinet-pick-list_arrorw is-disabled'
-                type='icon-sanjiaoleft'
-              />
-            )}
-            <div className='pg-cabinet-pick-list_wrap'>
-              <Carousel
-                ref={ref}
-                slidesToShow={3}
-                infinite={false}
-                swipeToSlide
-                afterChange={afterChange}
-                dots={false}
-              >
-                {list.map(({ id, text }) => (
-                  <div key={id} className='pg-cabinet-pick-list_button-wrap'>
-                    <div
-                      className='pg-cabinet-pick-list_button on-click'
-                      onClick={openBox}
-                    >
-                      <span className='pg-cabinet-pick-list_button-text'>
-                        {text}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </Carousel>
-            </div>
-            {canNext ? (
-              <Icon
-                className='pg-cabinet-pick-list_arrorw on-click'
-                type='icon-sanjiaoright'
-                onClick={handleNext}
-              />
-            ) : (
-              <Icon
-                className='pg-cabinet-pick-list_arrorw is-disabled'
-                type='icon-sanjiaoright'
-              />
-            )}
-          </div>
-        ) : (
-          <div className='pg-cabinet-pick-list_body'>
-            {list.map(({ id, text }) => (
-              <div key={id} className='pg-cabinet-pick-list_button-wrap'>
-                <div
-                  className='pg-cabinet-pick-list_button on-click'
-                  onClick={openBox}
+        <div className='pg-cabinet-pick-list_body'>
+          <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>
+          {showArrow ? (
+            <div className='pg-cabinet-pick-list_content'>
+              {canPrev ? (
+                <Icon
+                  className='pg-cabinet-pick-list_arrorw on-click'
+                  type='icon-sanjiaoleft'
+                  onClick={handlePrev}
+                />
+              ) : (
+                <Icon
+                  className='pg-cabinet-pick-list_arrorw is-disabled'
+                  type='icon-sanjiaoleft'
+                />
+              )}
+              <div className='pg-cabinet-pick-list_wrap'>
+                <Carousel
+                  ref={ref}
+                  slidesToShow={3}
+                  infinite={false}
+                  swipeToSlide
+                  afterChange={afterChange}
+                  dots={false}
                 >
-                  <span className='pg-cabinet-pick-list_button-text'>
-                    {text}
-                  </span>
-                </div>
+                  {list.map(({ id, text }) => (
+                    <div key={id} className='pg-cabinet-pick-list_button-wrap'>
+                      <div
+                        className='pg-cabinet-pick-list_button on-click'
+                        onClick={openBox}
+                      >
+                        <span className='pg-cabinet-pick-list_button-text'>
+                          {text}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </Carousel>
               </div>
-            ))}
-          </div>
-        )}
+              {canNext ? (
+                <Icon
+                  className='pg-cabinet-pick-list_arrorw on-click'
+                  type='icon-sanjiaoright'
+                  onClick={handleNext}
+                />
+              ) : (
+                <Icon
+                  className='pg-cabinet-pick-list_arrorw is-disabled'
+                  type='icon-sanjiaoright'
+                />
+              )}
+            </div>
+          ) : (
+            <div className='pg-cabinet-pick-list_body'>
+              {list.map(({ id, text }) => (
+                <div key={id} className='pg-cabinet-pick-list_button-wrap'>
+                  <div
+                    className='pg-cabinet-pick-list_button on-click'
+                    onClick={openBox}
+                  >
+                    <span className='pg-cabinet-pick-list_button-text'>
+                      {text}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </CabinetBody>
   )

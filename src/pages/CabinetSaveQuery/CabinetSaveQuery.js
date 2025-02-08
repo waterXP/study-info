@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useState } from 'react'
 import './CabinetSaveQuery.styl'
 import { message } from 'antd'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
 
@@ -12,7 +12,7 @@ const sizeList = [
 ]
 
 const CabinetSaveQuery = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [current, setCurrent] = useState(null)
   const [size, setSize] = useState('small')
   const [list, setList] = useState([])
@@ -39,9 +39,9 @@ const CabinetSaveQuery = () => {
       message.error('未找到收件人')
     }
   }, [])
-  const onReturn = useCallback(() => {
-    navigate('/')
-  }, [navigate])
+  const onReturn = useCallback(() => {}, [])
+  //   navigate('/')
+  // }, [navigate])
   const onSelect = useCallback(target => {
     setCurrent(target)
   }, [])
@@ -49,9 +49,9 @@ const CabinetSaveQuery = () => {
     setCurrent(null)
     setList([])
   }, [])
-  const onOpen = useCallback(() => {
-    navigate('/save')
-  }, [navigate])
+  const onOpen = useCallback(() => {}, [])
+  //   navigate('/save')
+  // }, [navigate])
   return (
     <CabinetBody delay={300}>
       <div className='pg-cabinet-save-query'>

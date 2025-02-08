@@ -8,12 +8,12 @@ import React, {
 } from 'react'
 import './CabinetPickList.styl'
 import { Carousel } from 'antd'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
 const CabinetPickList = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const ref = useRef(null)
   const [list, setList] = useState([])
   const [current, setCurrent] = useState(0)
@@ -67,9 +67,9 @@ const CabinetPickList = () => {
     }
     return r
   }, [current, list])
-  const openBox = useCallback(() => {
-    navigate('/pick')
-  }, [navigate])
+  const openBox = useCallback(() => {}, [])
+  //   navigate('/pick')
+  // }, [navigate])
   return (
     <CabinetBody delay={90}>
       <div className='pg-cabinet-pick-list'>

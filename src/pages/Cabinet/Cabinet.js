@@ -1,20 +1,20 @@
 import React, { memo, useCallback } from 'react'
 import './Cabinet.styl'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
 const Cabinet = () => {
-  const navigate = useNavigate()
-  const gotoSave = useCallback(() => {
-    navigate('/save-query')
-  }, [navigate])
-  const gotoPick = useCallback(() => {
-    navigate('/pick-list')
-  }, [navigate])
-  const gotoCode = useCallback(() => {
-    navigate('/pick-code')
-  }, [navigate])
+  // const navigate = useNavigate()
+  const gotoSave = useCallback(() => {}, [])
+  //   navigate('/save-query')
+  // }, [navigate])
+  const gotoPick = useCallback(() => {}, [])
+  //   navigate('/pick-list')
+  // }, [navigate])
+  const gotoCode = useCallback(() => {}, [])
+  //   navigate('/pick-code')
+  // }, [navigate])
   return (
     <CabinetBody noPadding>
       <div className='pg-cabinet'>
@@ -26,7 +26,11 @@ const Cabinet = () => {
         </div>
         <div className='pg-cabinet_body'>
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>
-            <img className='pg-cabinet_save-image' src='/assets/tst.png' alt='save' />
+            <img
+              className='pg-cabinet_save-image'
+              src='/assets/tst.png'
+              alt='save'
+            />
             <span className='pg-cabinet_text'>存件</span>
             <span className='pg-cabinet_tip'>快速存放您的包裹</span>
           </div>

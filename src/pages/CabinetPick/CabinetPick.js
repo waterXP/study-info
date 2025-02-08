@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
 import './CabinetPick.styl'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 
 const CabinetPick = () => {
@@ -15,18 +15,18 @@ const CabinetPick = () => {
       tip: '08号箱门已打开，完成取件后请关闭箱门。'
     })
   }, [])
-  const navigate = useNavigate()
-  const [hasOthers, setHasOthers] = useState(true)
+  // const navigate = useNavigate()
+  // const [hasOthers, setHasOthers] = useState(true)
   useEffect(() => {
-    setHasOthers(Math.random() > 0.5)
+    // setHasOthers(Math.random() > 0.5)
   }, [])
-  const handleReturn = useCallback(() => {
-    if (hasOthers) {
-      navigate('/pick-list')
-    } else {
-      navigate('/')
-    }
-  }, [hasOthers, navigate])
+  const handleReturn = useCallback(() => {}, [])
+  //   if (hasOthers) {
+  //     navigate('/pick-list')
+  //   } else {
+  //     navigate('/')
+  //   }
+  // }, [hasOthers, navigate])
   const onOpen = useCallback(() => {
     // open again
   }, [])

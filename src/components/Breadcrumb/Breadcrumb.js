@@ -2,7 +2,7 @@ import React, { memo, useCallback } from 'react'
 // import PropTypes from 'prop-types'
 import './Breadcrumb.styl'
 import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import TextButton from '@com/Buttons/TextButton'
 
 const Breadcrumb = ({ to = '/', children, noTop, title, qa, ex, ls }) => {
@@ -16,24 +16,26 @@ const Breadcrumb = ({ to = '/', children, noTop, title, qa, ex, ls }) => {
       displayType
     })
   )
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const onClick = useCallback(
     e => {
       e.stopPropagation()
       if (typeof to === 'function') {
         to()
-      } else {
-        navigate(to)
+        // } else {
+        //   navigate(to)
       }
     },
-    [to, navigate]
+    [to]
+    // [to, navigate]
   )
   const onHome = useCallback(
     e => {
       e.stopPropagation()
-      navigate('/menu')
+      // navigate('/menu')
     },
-    [navigate]
+    []
+    // [navigate]
   )
   const changeCn = useCallback(e => {
     e.stopPropagation()

@@ -1,25 +1,26 @@
 import React, { memo, useRef, useState, useEffect, useCallback } from 'react'
 import './CabinetReturn.styl'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import Icon from '@com/Icon'
 
 const CabinetReturn = ({ delay, onClick }) => {
   const refTm = useRef(null)
   const [time, setTime] = useState(delay)
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const gotoMain = useCallback(() => {
     if (onClick) {
       onClick()
-    } else {
-      navigate('/')
+      // } else {
+      // navigate('/')
     }
-  }, [navigate, onClick])
+  }, [onClick])
+  // }, [navigate, onClick])
   const onTime = useCallback(
     time => {
       refTm.current = setTimeout(() => {
         refTm.current = null
         if (time === 0) {
-          navigate('/')
+          // navigate('/')
         } else {
           const nextTime = time - 1
           setTime(nextTime)
@@ -27,7 +28,8 @@ const CabinetReturn = ({ delay, onClick }) => {
         }
       }, 1000)
     },
-    [navigate]
+    []
+    // [navigate]
   )
   useEffect(() => {
     onTime(delay)

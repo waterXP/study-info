@@ -1,6 +1,6 @@
 import React, { memo, useEffect, useCallback, useMemo, useState } from 'react'
 import './CabinetSave.styl'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 
 const statusMap = {
@@ -16,7 +16,7 @@ const statusMap = {
 }
 
 const CabinetSave = () => {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   const [status, setStatus] = useState({
     title: '',
     type: '' // opened, closed, hasError, waiting
@@ -32,10 +32,10 @@ const CabinetSave = () => {
     // open again
   }, [])
   const goSave = useCallback(() => {
-    navigate('/save-query')
+    // navigate('/save-query')
   }, [])
   const goMain = useCallback(() => {
-    navigate('/')
+    // navigate('/')
   }, [])
   const { tip, inOperate } = useMemo(() => {
     const r = {

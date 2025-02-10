@@ -65,11 +65,12 @@ const getSign = params => {
     ...params,
     appKey: 'dingjasudvtsjkbuygl3',
     appSecret:
-    'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr',
+      'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr',
     timeStamp: Date.now()
   })
   console.log('str after 1')
   console.log(str)
+  Object.defineProperty(params, 'appSecret', { enumerable: false })
   return CryptoJS.MD5(str).toString()
 }
 
@@ -153,17 +154,17 @@ instance.interceptors.request.use(
       config.data = stringify(config.data)
     }
     // 添加头部字段customname
-    if (
-      !config.headers.customname &&
-      !config.url.includes(loginApi) &&
-      !config.url.includes(loginMockApi)
-    ) {
-      const customname = localStorage.getItem('CUSTOM_NAME')
-      config.headers.customname = customname
-    }
-    if (!config.headers.token) {
-      config.headers.token = localStorage.getItem('RETOKEN')
-    }
+    // if (
+    //   !config.headers.customname &&
+    //   !config.url.includes(loginApi) &&
+    //   !config.url.includes(loginMockApi)
+    // ) {
+    //   const customname = localStorage.getItem('CUSTOM_NAME')
+    //   config.headers.customname = customname
+    // }
+    // if (!config.headers.token) {
+    //   config.headers.token = localStorage.getItem('RETOKEN')
+    // }
     if (config.onLoad) {
       config.timeout = 100000
       delete config.onLoad

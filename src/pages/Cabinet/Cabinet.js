@@ -22,6 +22,7 @@ const Cabinet = ({ onUrl }) => {
             <Icon className='pg-cabinet_header-icon' type='icon-mall-l' />
             <span className='pg-cabinet_header-title'>智慧快递柜</span>
           </div>
+          <span className='pg-cabinet_footer-text'>系统版本: v1.0.0</span>
         </div>
         <div className='pg-cabinet_body'>
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>
@@ -49,21 +50,12 @@ const Cabinet = ({ onUrl }) => {
                 src='./assets/replace.png'
                 alt='replace'
               />
-              <span className='pg-cabinet_text'>代取件</span>
-              <span className='pg-cabinet_tip'>帮他人代取包裹</span>
+              <div className='pg-cabinet_others-right'>
+                <span className='pg-cabinet_text'>代取件</span>
+                <span className='pg-cabinet_tip'>帮他人代取包裹</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className='pg-cabinet_footer'>
-          <div className='pg-cabinet_footer-version'>
-            <span className='pg-cabinet_footer-text'>系统版本: v1.0.0</span>
-            <span className='pg-cabinet_footer-text'>
-              客服电话: 400-888-8888
-            </span>
-          </div>
-          <span className='pg-cabinet_footer-right'>
-            © 2024 智慧快递柜 版权所有
-          </span>
         </div>
       </div>
     </CabinetBody>

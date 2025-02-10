@@ -1,53 +1,6 @@
 import axios from 'axios'
 import { stringify } from 'qs'
-// import jsMd5 from 'js-md5'
 import CryptoJS from 'crypto-js'
-
-// const Encrypt = () => {
-//   const iv = 'xfw2023yydsl@#!$'
-//   const loginInfo = JSON.parse(localStorage.getItem('LOGIN_INFO') || '{}')
-//   const encrypted = CryptoJS.AES.encrypt(
-//     loginInfo.dingUserId,
-//     CryptoJS.enc.Utf8.parse(iv),
-//     {
-//       iv: CryptoJS.enc.Utf8.parse(iv),
-//       mode: CryptoJS.mode.ECB,
-//       padding: CryptoJS.pad.Pkcs7
-//     }
-//   )
-//   return encrypted.toString()
-// }
-
-// 加密函数，直接修改对象，无返回
-// function encipher(data = {}, nature = '', target = 'sign') {
-//   const secret = 'sq2019'
-//   data[target] = jsMd5(data[nature] + secret)
-//   return data[target]
-// }
-
-function getParamsStr2(params) {
-  var sortedKeys = Object.keys(params).sort()
-  var str = ''
-  sortedKeys.forEach(key => {
-    str = str + params[key]
-  })
-  return str
-}
-function getSign2(params) {
-  var app_key = 'dingjasudvtsjkbuygl3'
-  var app_secret =
-    'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr'
-  var timeStamp = new Date().getTime()
-  params.appKey = app_key
-  params.appSecret = app_secret
-  params.timeStamp = timeStamp
-  var str = getParamsStr2(params)
-  console.log('str after 2')
-  console.log(str)
-  Object.defineProperty(params, 'appSecret', { enumerable: false })
-  var sign = '' + CryptoJS.MD5(str)
-  return sign
-}
 
 const getParamsStr = params => {
   const sortedKeys = Object.keys(params).sort()
@@ -59,28 +12,21 @@ const getParamsStr = params => {
 }
 
 const getSign = params => {
-  params.appKey = 'dingjasudvtsjkbuygl3'
-  params.timeStamp = Date.now()
   const str = getParamsStr({
     ...params,
-    appKey: 'dingjasudvtsjkbuygl3',
     appSecret:
-      'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr',
-    timeStamp: Date.now()
+      'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr'
   })
-  console.log('str after 1')
-  console.log(str)
-  Object.defineProperty(params, 'appSecret', { enumerable: false })
   return CryptoJS.MD5(str).toString()
 }
 
 const buildData = ori => {
-  const params = { ...(ori || {}) }
-  // const sign = getSign(params)
+  const params = {
+    ...(ori || {}),
+    appKey: 'dingjasudvtsjkbuygl3',
+    timeStamp: Date.now()
+  }
   params.sign = getSign(params)
-  // delete params.appSecret
-  // params.appSecret =
-  //   'PlSqxPrsa3cE1ms-TW_xwuBT3-Fy2Q1wcjcdLgkqOyiGQ1WejB0AMtKRdUDy3CDr'
   return params
 }
 
@@ -97,17 +43,10 @@ const instance = axios.create({
   withCredentials: false,
   responseType: 'json',
   headers: { 'Content-Type': DefaultContentType },
-  // 定义可获得的http响应状态码
-  // return true、设置为null或者undefined，promise将resolved,否则将rejected
   validateStatus(status) {
     return status >= 200 && status < 300 // default
   }
 })
-
-const extraParams = [
-  { name: '__platform', value: 'pc' },
-  { name: 'versionNumber', value: 3 }
-]
 
 // 添加一个请求拦截器
 instance.interceptors.request.use(
@@ -119,30 +58,16 @@ instance.interceptors.request.use(
           config.baseURL = config.data._baseUrl
           delete config.data._baseUrl
         }
-        extraParams.forEach(v => {
-          config.data[v.name] = v.value
-        })
       } else {
-        const _data = {}
-        extraParams.forEach(v => {
-          _data[v.name] = v.value
-        })
-        config.data = _data
+        config.data = {}
       }
     } else if (config.params) {
       if (config.params._baseUrl || config.params._baseUrl !== undefined) {
         config.baseURL = config.params._baseUrl
         delete config.params._baseUrl
       }
-      extraParams.forEach(v => {
-        config.params[v.name] = v.value
-      })
     } else {
-      const _data = {}
-      extraParams.forEach(v => {
-        _data[v.name] = v.value
-      })
-      config.params = _data
+      config.params = {}
     }
 
     // 当且仅当请求类型为post并且请求格式为表单形式时将参数序列化
@@ -153,18 +78,6 @@ instance.interceptors.request.use(
     ) {
       config.data = stringify(config.data)
     }
-    // 添加头部字段customname
-    // if (
-    //   !config.headers.customname &&
-    //   !config.url.includes(loginApi) &&
-    //   !config.url.includes(loginMockApi)
-    // ) {
-    //   const customname = localStorage.getItem('CUSTOM_NAME')
-    //   config.headers.customname = customname
-    // }
-    // if (!config.headers.token) {
-    //   config.headers.token = localStorage.getItem('RETOKEN')
-    // }
     if (config.onLoad) {
       config.timeout = 100000
       delete config.onLoad
@@ -221,26 +134,7 @@ api.request = function (...args) {
   const method = _arguments[1]
   const url = _arguments[2]
   const data = _arguments[3] || {}
-  // const other =
-  //   _arguments[4] === 'useJSON'
-  //     ? { headers: { 'Content-Type': 'application/json' } }
-  //     : _arguments[4] || {}
   const config = { method, url }
-  // if (typeof other === 'string') {
-  //   const sign = encipher(data, other)
-  //   config.headers = { ...(config.headers || {}), sign }
-  // } else {
-  //   if (other.sign) {
-  //     const sign = encipher(data, other.sign)
-  //     delete other.sign
-  //     other.headers = { ...(other.headers || {}), sign }
-  //   }
-  //   if (other.onUploadProgress) {
-  //     config.onUploadProgress = other.onUploadProgress
-  //   }
-  //   Object.assign(config, other)
-  // }
-  console.log(getSign2({ phoneSuffix: 1821 }))
   config[isPost ? 'data' : 'params'] = buildData(data)
 
   return new Promise((resolve, reject) => {

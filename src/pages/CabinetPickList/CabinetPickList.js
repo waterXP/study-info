@@ -1,20 +1,9 @@
-import React, {
-  memo,
-  useState,
-  useRef,
-  useEffect,
-  useMemo,
-  useCallback
-} from 'react'
+import React, { memo, useState, useEffect, useCallback } from 'react'
 import './CabinetPickList.styl'
-import { Carousel } from 'antd'
 import CabinetBody from '@/components/CabinetBody'
-import Icon from '@/components/Icon'
 
 const CabinetPickList = ({ onUrl }) => {
-  const ref = useRef(null)
   const [list, setList] = useState([])
-  const [current, setCurrent] = useState(0)
   useEffect(() => {
     setList([
       {
@@ -43,28 +32,6 @@ const CabinetPickList = ({ onUrl }) => {
       }
     ])
   }, [])
-  const handlePrev = useCallback(() => {
-    ref.current && ref.current.prev && ref.current.prev()
-  }, [])
-  const handleNext = useCallback(() => {
-    ref.current && ref.current.next && ref.current.next()
-  }, [])
-  const afterChange = useCallback(current => {
-    setCurrent(current)
-  }, [])
-  const { canPrev, canNext, showArrow } = useMemo(() => {
-    const r = { showArrow: false, canPrev: false, canNext: false }
-    if (list && list.length > 3) {
-      r.showArrow = true
-      if (current > 0) {
-        r.canPrev = true
-      }
-      if (current < list.length - 3) {
-        r.canNext = true
-      }
-    }
-    return r
-  }, [current, list])
   const openBox = useCallback(() => {
     onUrl('pick')
   }, [onUrl])
@@ -73,72 +40,20 @@ const CabinetPickList = ({ onUrl }) => {
       <div className='pg-cabinet-pick-list'>
         <div className='pg-cabinet-pick-list_body'>
           <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>
-          {showArrow ? (
-            <div className='pg-cabinet-pick-list_content'>
-              {canPrev ? (
-                <Icon
-                  className='pg-cabinet-pick-list_arrorw on-click'
-                  type='icon-sanjiaoleft'
-                  onClick={handlePrev}
-                />
-              ) : (
-                <Icon
-                  className='pg-cabinet-pick-list_arrorw is-disabled'
-                  type='icon-sanjiaoleft'
-                />
-              )}
-              <div className='pg-cabinet-pick-list_wrap'>
-                <Carousel
-                  ref={ref}
-                  slidesToShow={3}
-                  infinite={false}
-                  swipeToSlide
-                  afterChange={afterChange}
-                  dots={false}
+          <div className='pg-cabinet-pick-list_content'>
+            {list.map(({ id, text }) => (
+              <div key={id} className='pg-cabinet-pick-list_button-wrap'>
+                <div
+                  className='pg-cabinet-pick-list_button on-click'
+                  onClick={openBox}
                 >
-                  {list.map(({ id, text }) => (
-                    <div key={id} className='pg-cabinet-pick-list_button-wrap'>
-                      <div
-                        className='pg-cabinet-pick-list_button on-click'
-                        onClick={openBox}
-                      >
-                        <span className='pg-cabinet-pick-list_button-text'>
-                          {text}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </Carousel>
-              </div>
-              {canNext ? (
-                <Icon
-                  className='pg-cabinet-pick-list_arrorw on-click'
-                  type='icon-sanjiaoright'
-                  onClick={handleNext}
-                />
-              ) : (
-                <Icon
-                  className='pg-cabinet-pick-list_arrorw is-disabled'
-                  type='icon-sanjiaoright'
-                />
-              )}
-            </div>
-          ) : (
-            <div className='pg-cabinet-pick-list_body'>
-              {list.map(({ id, text }) => (
-                <div key={id} className='pg-cabinet-pick-list_button-wrap'>
-                  <div
-                    className='pg-cabinet-pick-list_button on-click'
-                    onClick={openBox}
-                  >
-                    <span className='pg-cabinet-pick-list_button-text'>
-                      {text}
-                    </span>
-                  </div>
+                  <span className='pg-cabinet-pick-list_button-text'>
+                    {text}
+                  </span>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </CabinetBody>

@@ -48,12 +48,21 @@ const CabinetInput = ({
         setValues(['', '', '', ''])
         setCur(0)
       } else if (v === 'icon-tuige') {
-        setValues(values => {
-          const r = [...values]
-          r[cur] = ''
-          return r
-        })
-        setCur(cur => (cur > 0 ? cur - 1 : 0))
+        const r = [...values]
+        if (r[cur] === '' && cur > 0) {
+          setValues(values => {
+            const r = [...values]
+            r[cur - 1] = ''
+            return r
+          })
+          setCur(cur => (cur > 0 ? cur - 1 : 0))
+        } else {
+          setValues(values => {
+            const r = [...values]
+            r[cur] = ''
+            return r
+          })
+        }
       } else {
         setValues(values => {
           const r = [...values]
@@ -63,7 +72,7 @@ const CabinetInput = ({
         setCur(cur => (cur < 3 ? cur + 1 : 3))
       }
     },
-    [cur]
+    [cur, values]
   )
   const handleClear = useCallback(() => {
     onClear && onClear()

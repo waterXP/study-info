@@ -9,7 +9,8 @@ const Cabinet = ({ onUrl }) => {
     onUrl('save-query')
   }, [onUrl])
   const gotoPick = useCallback(() => {
-    onUrl('pick-list')
+    // onUrl('pick-list')
+    window.location.href = './pick-list.html'
   }, [onUrl])
   const gotoCode = useCallback(() => {
     onUrl('pick-code')

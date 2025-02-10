@@ -57,7 +57,10 @@ module.exports = {
   appBuild: resolveApp(buildPath),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: {
+    index: resolveModule(resolveApp, 'src/index'),
+    'pick-list': resolveModule(resolveApp, 'src/pick-list')
+  },
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),

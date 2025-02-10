@@ -4,32 +4,33 @@ import './CabinetSave.styl'
 import CabinetBody from '@/components/CabinetBody'
 
 const statusMap = {
-  opened: (
+  open: (
     <>
       <span>箱门已经打开，请放好快递后关门，</span>
       <span className='pg-cabinet-save_important'>关门后自动完成存件</span>
     </>
   ),
-  closed: '箱门已关闭',
+  close: '箱门已关闭',
   hasError: '箱门打开失败，请尝试再次操作',
   others: '数据处理中……'
 }
 
-const CabinetSave = ({ onUrl, userInfo }) => {
+const CabinetSave = ({ onUrl, userInfo, doorInfo, reOpen }) => {
   const [status, setStatus] = useState({
     title: '',
-    type: '' // opened, closed, hasError, waiting
+    type: '' // open, close, hasError, waiting
   })
   useEffect(() => {
-    // do open
+    const { boxNum, status } = doorInfo
     setStatus({
-      title: '08号箱门',
-      type: 'opened'
+      title: `${boxNum < 10 ? `0${boxNum}` : boxNum}号箱门`,
+      type: status
     })
-  }, [])
+  }, [doorInfo])
   const onOpen = useCallback(() => {
     // open again
-  }, [])
+    reOpen()
+  }, [reOpen])
   const goSave = useCallback(() => {
     onUrl('save-query')
   }, [onUrl])
@@ -41,7 +42,7 @@ const CabinetSave = ({ onUrl, userInfo }) => {
       tip: statusMap[status.type] || statusMap.others,
       inOperate: true
     }
-    if (status.type === 'closed' || status.type === 'hasError') {
+    if (status.type === 'close' || status.type === 'hasError') {
       r.inOperate = false
     }
     return r
@@ -52,7 +53,9 @@ const CabinetSave = ({ onUrl, userInfo }) => {
       <div className='pg-cabinet-save'>
         <div className='pg-cabinet-save_body'>
           <p className='pg-cabinet-save_title'>开箱存件</p>
-          {status.title && <div className='pg-cabinet-save_box'>08号箱门</div>}
+          {status.title && (
+            <div className='pg-cabinet-save_box'>{status.title}</div>
+          )}
           <p className='pg-cabinet-save_tip'>{tip}</p>
           {inOperate ? (
             <div className='pg-cabinet-save_buttons'>

@@ -6,8 +6,8 @@ export const getAvailableLockerBox = p => api.get('/expressLocker/getAvailableLo
 
 export const saveExpress = p => api.post('/expressLocker/saveExpress', p)
 
-export const findWaitTakeList = p => api.post('/expressLocker/findWaitTakeList', p)
+export const findWaitTakeList = p => api.get('/expressLocker/findWaitTakeList', p)
 
-export const takeExpress = p => api.post('/expressLocker/takeExpress', p)
+export const takeExpress = p => api.get('/expressLocker/takeExpress', p)
 
 export default null

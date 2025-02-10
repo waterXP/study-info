@@ -4,24 +4,17 @@ import './Cabinet.styl'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const Cabinet = ({ onUrl, userInfo }) => {
+const Cabinet = ({ onUrl, userInfo, handleFace }) => {
   const userName = useMemo(
     () => (userInfo && userInfo.personName) || '',
     [userInfo]
   )
   const gotoSave = useCallback(() => {
-    console.log('check face')
-    // if (window.plus) {
-    //   window.plus.android.invoke(
-    //     'com.dcp.application.biz.facade.ExpressLockerFacade',
-    //     'detectFace'
-    //   )
-    // }
-    onUrl('save-query')
-  }, [onUrl])
+    handleFace('save-query')
+  }, [handleFace])
   const gotoPick = useCallback(() => {
-    onUrl('pick-list')
-  }, [onUrl])
+    handleFace('pick-list')
+  }, [handleFace])
   const gotoCode = useCallback(() => {
     onUrl('pick-code')
   }, [onUrl])

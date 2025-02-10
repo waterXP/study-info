@@ -139,23 +139,23 @@ const CabinetInput = ({
           <div className='com-cabinet-input_list'>
             <p className='com-cabinet-input_list-topic'>选择收件人：</p>
             <div className='com-cabinet-input_list-body'>
-              {dispList.map(({ name, value }) =>
-                current === value ? (
+              {dispList.map(({ userName, userId }) =>
+                current === userId ? (
                   <div
-                    key={value}
+                    key={userId}
                     className='com-cabinet-input_list-item is-current'
                   >
-                    {name}
+                    {userName}
                   </div>
                 ) : (
                   <div
-                    key={value}
+                    key={userId}
                     className='com-cabinet-input_list-item'
                     onClick={() => {
-                      onSelect && onSelect(value)
+                      onSelect && onSelect(userId)
                     }}
                   >
-                    {name}
+                    {userName}
                   </div>
                 )
               )}

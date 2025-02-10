@@ -3,47 +3,53 @@ import './CabinetSaveQuery.styl'
 import { message } from 'antd'
 import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
-import { getAvailableLockerBox } from '@/api/expressLocker'
+import { getAvailableLockerBox, findUser } from '@/api/expressLocker'
 
-const sizeList = [
-  { value: 'small', text: '小箱' },
-  { value: 'middle', text: '中箱' },
-  { value: 'large', text: '大箱' }
-]
+// const sizeList = [
+//   { value: 'small', text: '小箱' },
+//   { value: 'middle', text: '中箱' },
+//   { value: 'large', text: '大箱' }
+// ]
 
-const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode }) => {
+const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
+  const [sizeList, setSizeList] = useState([])
+  const [size, setSize] = useState(null)
   useEffect(() => {
     if (deviceCode) {
+      console.log('do more')
+      console.log('deviceCode', deviceCode)
       getAvailableLockerBox({ deviceCode }).then(d => {
-        console.log(d)
+        if (d.code === 200) {
+          const sizeList = (d.data || []).filter(
+            ({ lockerBoxes }) => lockerBoxes && lockerBoxes.length > 0
+          )
+          setSizeList(sizeList)
+          setSize(sizeList[0] ? sizeList[0].boxType : null)
+        }
       })
     }
-  }, [deviceCode])
+  }, [])
   const [current, setCurrent] = useState(null)
-  const [size, setSize] = useState('small')
   const [list, setList] = useState([])
   const handleFullChange = useCallback(values => {
     const code = values.join('')
-    if (code === '8888') {
-      setList([
-        { name: '小明', value: 1 },
-        { name: '小白', value: 2 },
-        { name: '小张', value: 3 },
-        { name: '小张', value: 4 },
-        { name: '小张', value: 5 },
-        { name: '小张', value: 6 }
-      ])
-    } else if (code === '2222') {
-      setList([
-        { name: '小明', value: 1 },
-        { name: '小白', value: 2 }
-      ])
-    } else if (code === '1111') {
-      setList([{ name: '小明', value: 1 }])
-      setCurrent(1)
-    } else {
-      message.error('未找到收件人')
-    }
+    findUser({
+      phoneSuffix: code
+    }).then(d => {
+      if (d.code === 200) {
+        const list = d.data
+        if (list && list.length > 0) {
+          if (list.length === 1) {
+            setCurrent(list[0].userId)
+          } else {
+            setCurrent(null)
+          }
+          setList(list)
+        } else {
+          message.error('未找到收件人')
+        }
+      }
+    })
   }, [])
   const onReturn = useCallback(() => {
     onUrl('')
@@ -56,16 +62,33 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode }) => {
     setList([])
   }, [])
   const onOpen = useCallback(() => {
-    if (window.plus) {
-      window.plus.android.invoke(
-        'com.dcp.application.biz.facade.ExpressLockerFacade',
-        'openLockerDoor',
-        1,
-        1
-      )
+    console.log(current)
+    console.log(list)
+    console.log(size)
+    console.log(sizeList)
+    const receiver = list.find(({ userId }) => userId === current)
+    const targetType = sizeList.find(({ boxType }) => boxType === size)
+    const box =
+      targetType && targetType.lockerBoxes && targetType.lockerBoxes[0]
+    if (!receiver) {
+      message.error('未找到收件人')
+      return
     }
-    onUrl('save')
-  }, [onUrl])
+    if (!box) {
+      message.error('未找到箱子')
+      return
+    }
+    handleOpen('save', receiver, box)
+    // if (window.plus) {
+    //   window.plus.android.invoke(
+    //     'com.dcp.application.biz.facade.ExpressLockerFacade',
+    //     'openLockerDoor',
+    //     1,
+    //     1
+    //   )
+    // }
+    // onUrl('save')
+  }, [list, current, size, sizeList])
   return (
     <CabinetBody delay={300} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-save-query'>
@@ -82,25 +105,27 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode }) => {
         <div className='pg-cabinet-save-query_detail'>
           <p className='pg-cabinet-save-query_topic'>选择箱子大小</p>
           <div className='pg-cabinet-save-query_row'>
-            {sizeList.map(({ value, text }) =>
-              value === size ? (
+            {sizeList.map(({ boxType, typeLabel, lockerBoxes }) =>
+              boxType === size ? (
                 <p
-                  key={value}
+                  key={boxType}
                   className='pg-cabinet-save-query_option is-current'
                 >
                   <span className='pg-cabinet-save-query_text is-current'>
-                    {text}
+                    {`${typeLabel}(${lockerBoxes.length})`}
                   </span>
                 </p>
               ) : (
                 <p
-                  key={value}
+                  key={boxType}
                   className='pg-cabinet-save-query_option'
                   onClick={() => {
-                    setSize(value)
+                    setSize(boxType)
                   }}
                 >
-                  <span className='pg-cabinet-save-query_text'>{text}</span>
+                  <span className='pg-cabinet-save-query_text'>
+                    {`${typeLabel}(${lockerBoxes.length})`}
+                  </span>
                 </p>
               )
             )}

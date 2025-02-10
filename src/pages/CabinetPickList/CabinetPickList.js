@@ -1,10 +1,16 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
 import './CabinetPickList.styl'
 import CabinetBody from '@/components/CabinetBody'
+import { findWaitTakeList } from '@/api/expressLocker'
 
-const CabinetPickList = ({ onUrl, userInfo }) => {
+const CabinetPickList = ({ onUrl, deviceCode, userInfo }) => {
   const [list, setList] = useState([])
   useEffect(() => {
+    if (userInfo) {
+      findWaitTakeList({ deviceCode, takeUserId: userInfo.personId }).then(d => {
+        console.log('d', d)
+      })
+    }
     setList([
       {
         id: '01',
@@ -31,7 +37,7 @@ const CabinetPickList = ({ onUrl, userInfo }) => {
         text: '12号箱'
       }
     ])
-  }, [])
+  }, [deviceCode, userInfo])
   const openBox = useCallback(() => {
     onUrl('pick')
   }, [onUrl])

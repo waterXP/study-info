@@ -1,8 +1,9 @@
-import React, { memo, useCallback, useState } from 'react'
+import React, { memo, useCallback, useEffect, useState } from 'react'
 import './CabinetSaveQuery.styl'
 import { message } from 'antd'
 import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
+import { getAvailableLockerBox } from '@/api/expressLocker'
 
 const sizeList = [
   { value: 'small', text: '小箱' },
@@ -10,7 +11,14 @@ const sizeList = [
   { value: 'large', text: '大箱' }
 ]
 
-const CabinetSaveQuery = ({ onUrl }) => {
+const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode }) => {
+  useEffect(() => {
+    if (deviceCode) {
+      getAvailableLockerBox({ deviceCode }).then(d => {
+        console.log(d)
+      })
+    }
+  }, [deviceCode])
   const [current, setCurrent] = useState(null)
   const [size, setSize] = useState('small')
   const [list, setList] = useState([])
@@ -48,10 +56,18 @@ const CabinetSaveQuery = ({ onUrl }) => {
     setList([])
   }, [])
   const onOpen = useCallback(() => {
+    if (window.plus) {
+      window.plus.android.invoke(
+        'com.dcp.application.biz.facade.ExpressLockerFacade',
+        'openLockerDoor',
+        1,
+        1
+      )
+    }
     onUrl('save')
   }, [onUrl])
   return (
-    <CabinetBody delay={300} onUrl={onUrl}>
+    <CabinetBody delay={300} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-save-query'>
         <div className='pg-cabinet-save-query_input-box'>
           <CabinetInput

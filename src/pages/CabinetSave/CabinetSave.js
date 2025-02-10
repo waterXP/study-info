@@ -15,7 +15,7 @@ const statusMap = {
   others: '数据处理中……'
 }
 
-const CabinetSave = ({ onUrl }) => {
+const CabinetSave = ({ onUrl, userInfo }) => {
   const [status, setStatus] = useState({
     title: '',
     type: '' // opened, closed, hasError, waiting
@@ -48,7 +48,7 @@ const CabinetSave = ({ onUrl }) => {
   }, [status])
 
   return (
-    <CabinetBody delay={300} onUrl={onUrl}>
+    <CabinetBody delay={300} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-save'>
         <div className='pg-cabinet-save_body'>
           <p className='pg-cabinet-save_title'>开箱存件</p>

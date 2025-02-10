@@ -1,11 +1,22 @@
-import React, { memo, useCallback } from 'react'
+import React, { memo, useCallback, useMemo } from 'react'
 import './Cabinet.styl'
 // import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const Cabinet = ({ onUrl }) => {
+const Cabinet = ({ onUrl, userInfo }) => {
+  const userName = useMemo(
+    () => (userInfo && userInfo.personName) || '',
+    [userInfo]
+  )
   const gotoSave = useCallback(() => {
+    console.log('check face')
+    // if (window.plus) {
+    //   window.plus.android.invoke(
+    //     'com.dcp.application.biz.facade.ExpressLockerFacade',
+    //     'detectFace'
+    //   )
+    // }
     onUrl('save-query')
   }, [onUrl])
   const gotoPick = useCallback(() => {
@@ -22,7 +33,13 @@ const Cabinet = ({ onUrl }) => {
             <Icon className='pg-cabinet_header-icon' type='icon-mall-l' />
             <span className='pg-cabinet_header-title'>智慧快递柜</span>
           </div>
-          <span className='pg-cabinet_footer-text'>系统版本: v1.0.0</span>
+          <div className='pg-cabinet_header-right'>
+            {userName ? (
+              <span className='pg-cabinet_header-name'>{`当前用户：${userName}`}</span>
+            ) : (
+              <span className='pg-cabinet_footer-text'>系统版本: v1.0.0</span>
+            )}
+          </div>
         </div>
         <div className='pg-cabinet_body'>
           <div className='pg-cabinet_save on-click' onClick={gotoSave}>

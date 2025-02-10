@@ -4,7 +4,7 @@ import { message } from 'antd'
 import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
 
-const CabinetPickCode = ({ onUrl }) => {
+const CabinetPickCode = ({ onUrl, userInfo }) => {
   const handleFullChange = useCallback(
     values => {
       if (values.join('') === '8888') {
@@ -16,7 +16,7 @@ const CabinetPickCode = ({ onUrl }) => {
     [onUrl]
   )
   return (
-    <CabinetBody delay={90} onUrl={onUrl}>
+    <CabinetBody delay={90} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-pick-code'>
         <div className='pg-cabinet-pick-code_body'>
           <CabinetInput title='输入取件码' onFullChange={handleFullChange} />

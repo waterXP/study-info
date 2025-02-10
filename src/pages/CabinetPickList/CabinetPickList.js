@@ -2,7 +2,7 @@ import React, { memo, useState, useEffect, useCallback } from 'react'
 import './CabinetPickList.styl'
 import CabinetBody from '@/components/CabinetBody'
 
-const CabinetPickList = ({ onUrl }) => {
+const CabinetPickList = ({ onUrl, userInfo }) => {
   const [list, setList] = useState([])
   useEffect(() => {
     setList([
@@ -36,7 +36,7 @@ const CabinetPickList = ({ onUrl }) => {
     onUrl('pick')
   }, [onUrl])
   return (
-    <CabinetBody delay={90} onUrl={onUrl}>
+    <CabinetBody delay={90} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-pick-list'>
         <div className='pg-cabinet-pick-list_body'>
           <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>

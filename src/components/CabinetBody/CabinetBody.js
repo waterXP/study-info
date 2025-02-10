@@ -2,7 +2,14 @@ import React, { memo, useMemo } from 'react'
 import './CabinetBody.styl'
 import CabinetReturn from '@/components/CabinetReturn'
 
-const CabinetBody = ({ className, onReturn, children, delay, onUrl }) => {
+const CabinetBody = ({
+  className,
+  onReturn,
+  children,
+  delay,
+  onUrl,
+  userInfo
+}) => {
   const cName = useMemo(
     () => ['com-cabinet-body', className].filter(Boolean).join(' '),
     [className]
@@ -10,7 +17,12 @@ const CabinetBody = ({ className, onReturn, children, delay, onUrl }) => {
   return (
     <div className={cName}>
       {delay && (
-        <CabinetReturn onClick={onReturn} delay={delay} onUrl={onUrl} />
+        <CabinetReturn
+          onClick={onReturn}
+          delay={delay}
+          onUrl={onUrl}
+          userInfo={userInfo}
+        />
       )}
       {children}
     </div>

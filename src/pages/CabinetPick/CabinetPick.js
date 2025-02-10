@@ -3,7 +3,7 @@ import './CabinetPick.styl'
 import CabinetBody from '@/components/CabinetBody'
 import { findUser } from '@/api/expressLocker'
 
-const CabinetPick = ({ onUrl }) => {
+const CabinetPick = ({ onUrl, userInfo }) => {
   const [status, setStatus] = useState({
     title: '',
     tip: '数据处理中……'
@@ -33,7 +33,12 @@ const CabinetPick = ({ onUrl }) => {
     })
   }, [])
   return (
-    <CabinetBody onReturn={handleReturn} delay={300} onUrl={onUrl}>
+    <CabinetBody
+      onReturn={handleReturn}
+      delay={300}
+      onUrl={onUrl}
+      userInfo={userInfo}
+    >
       <div className='pg-cabinet-pick'>
         <div className='pg-cabinet-pick_body'>
           {status.title && (

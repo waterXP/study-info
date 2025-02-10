@@ -1,6 +1,7 @@
 import React, { memo, useState, useEffect, useCallback } from 'react'
 import './CabinetPick.styl'
 import CabinetBody from '@/components/CabinetBody'
+import { findUser } from '@/api/expressLocker'
 
 const CabinetPick = ({ onUrl }) => {
   const [status, setStatus] = useState({
@@ -27,6 +28,9 @@ const CabinetPick = ({ onUrl }) => {
   }, [hasOthers, onUrl])
   const onOpen = useCallback(() => {
     // open again
+    findUser({ phoneSuffix: 1821 }).then(d => {
+      console.log(d)
+    })
   }, [])
   return (
     <CabinetBody onReturn={handleReturn} delay={300} onUrl={onUrl}>

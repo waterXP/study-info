@@ -38,7 +38,6 @@ const App = () => {
   // 更新用户信息
   const updateUserInfo = useCallback(userInfo => {
     setUserInfo(userInfo)
-    console.log('update user info')
     if (refNextUrl.current === 'save-query') {
       setUrl('save-query')
     } else if (refNextUrl.current === 'pick-list') {
@@ -57,17 +56,25 @@ const App = () => {
         if (result.status === 'open') {
           waitLocker(refBoxInfo.current.boardNum)
         }
-        saveExpress(refOpenParams.current).then(d => {
-          if (d.code === 200) {
-            setUrl('save')
-          }
-        })
+        if (refOpenParams.current && !refOpenParams.current.saved) {
+          const params = { ...refOpenParams.current }
+          refOpenParams.current.saved = true
+          saveExpress(params).then(d => {
+            if (d.code === 200) {
+              setUrl('save')
+            }
+          })
+        }
       } else if (refNextUrl.current === 'pick') {
-        takeExpress(refOpenParams.current).then(d => {
-          if (d.code === 200) {
-            setUrl('pick')
-          }
-        })
+        if (refOpenParams.current && !refOpenParams.current.picked) {
+          const params = { ...refOpenParams.current }
+          refOpenParams.current.picked = true
+          takeExpress(params).then(d => {
+            if (d.code === 200) {
+              setUrl('pick')
+            }
+          })
+        }
       }
     }
   }, [])

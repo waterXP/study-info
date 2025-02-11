@@ -5,19 +5,11 @@ import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
 import { getAvailableLockerBox, findUser } from '@/api/expressLocker'
 
-// const sizeList = [
-//   { value: 'small', text: '小箱' },
-//   { value: 'middle', text: '中箱' },
-//   { value: 'large', text: '大箱' }
-// ]
-
 const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
   const [sizeList, setSizeList] = useState([])
   const [size, setSize] = useState(null)
   useEffect(() => {
     if (deviceCode) {
-      console.log('do more')
-      console.log('deviceCode', deviceCode)
       getAvailableLockerBox({ deviceCode }).then(d => {
         if (d.code === 200) {
           const sizeList = (d.data || []).filter(
@@ -62,10 +54,6 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
     setList([])
   }, [])
   const onOpen = useCallback(() => {
-    console.log(current)
-    console.log(list)
-    console.log(size)
-    console.log(sizeList)
     const receiver = list.find(({ userId }) => userId === current)
     const targetType = sizeList.find(({ boxType }) => boxType === size)
     const box =
@@ -78,16 +66,7 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
       message.error('未找到箱子')
       return
     }
-    handleOpen('save', receiver, box)
-    // if (window.plus) {
-    //   window.plus.android.invoke(
-    //     'com.dcp.application.biz.facade.ExpressLockerFacade',
-    //     'openLockerDoor',
-    //     1,
-    //     1
-    //   )
-    // }
-    // onUrl('save')
+    handleOpen('save', box, receiver)
   }, [list, current, size, sizeList])
   return (
     <CabinetBody delay={300} onUrl={onUrl} userInfo={userInfo}>

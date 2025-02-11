@@ -15,7 +15,7 @@ import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
 import { initAndroid, checkFace, openLocker } from '@/api/android'
-import { saveExpress } from '@/api/expressLocker'
+import { saveExpress, takeExpress } from '@/api/expressLocker'
 
 const ComMap = {
   default: Cabinet,
@@ -27,35 +27,54 @@ const ComMap = {
 }
 
 const App = () => {
-  const refStatus = useRef('save-query')
+  const refNextUrl = useRef('save-query')
   const refOpenParams = useRef(null)
+  const refBoxInfo = useRef(null) // 操作的柜子信息
+  const [hasOthers, setHasOthers] = useState(false)
   const [userInfo, setUserInfo] = useState(null)
   const [deviceCode, setDeviceCode] = useState('34049E63C6F7')
   const [doorInfo, setDoorInfo] = useState(null)
   const [url, setUrl] = useState('')
+  // 更新用户信息
   const updateUserInfo = useCallback(userInfo => {
     setUserInfo(userInfo)
     console.log('update user info')
-    if (refStatus.current === 'save-query') {
+    if (refNextUrl.current === 'save-query') {
       setUrl('save-query')
-    } else if (refStatus.current === 'pick-list') {
+    } else if (refNextUrl.current === 'pick-list') {
       setUrl('pick-list')
     }
   }, [])
+  // 更新开锁、关锁信息
   const afterDoorOperate = useCallback(result => {
-    setDoorInfo(result)
-    if (result && refStatus.current === 'save') {
-      saveExpress(refOpenParams.current).then(d => {
-        if (d.code === 200) {
-          setUrl('save')
-        }
-      })
+    const doorInfo = result || {}
+    if (refBoxInfo.current) {
+      doorInfo.boxName = refBoxInfo.current.boxName
+    }
+    setDoorInfo(doorInfo)
+    if (result) {
+      if (refNextUrl.current === 'save') {
+        saveExpress(refOpenParams.current).then(d => {
+          if (d.code === 200) {
+            setUrl('save')
+          }
+        })
+      } else if (refNextUrl.current === 'pick') {
+        takeExpress(refOpenParams.current).then(d => {
+          if (d.code === 200) {
+            setUrl('pick')
+          }
+        })
+      }
     }
   }, [])
+  // 初始化页面回调
   useEffect(() => {
     initAndroid(setDeviceCode, updateUserInfo, afterDoorOperate)
   }, [])
+  // 根据url获取内容
   const Comp = useMemo(() => ComMap[url] || ComMap.default, [url])
+  // 根据内容初始化数据
   useEffect(() => {
     if (Comp === ComMap.default) {
       setUserInfo(null)
@@ -64,38 +83,57 @@ const App = () => {
   const onUrl = useCallback(url => {
     setUrl(url)
   }, [])
+  // 刷脸
   const handleFace = useCallback(status => {
-    refStatus.current = status
+    refNextUrl.current = status
     if (window.plus) {
       checkFace()
     } else {
-      console.log('b')
       setUserInfo({
-        personId: '1821',
+        personId: '123',
         personName: 'tao'
       })
       setUrl(status)
     }
   }, [])
-  console.log('url', url)
-  console.log(Comp)
   const handleOpen = useCallback(
-    (keyword, receiver, box) => {
-      console.log(keyword, receiver, box)
-      if (userInfo) {
-        refStatus.current = keyword
-        const { userId: takeUserId, userName: takeUserName } = receiver
-        const { personId: saveUserId, personName: saveUserName } = userInfo
-        const { boardNum, boxNum, boxName } = box
+    (keyword, box, receiver) => {
+      refBoxInfo.current = box
+      if (keyword === 'save') {
+        if (userInfo) {
+          refNextUrl.current = keyword
+          const { userId: takeUserId, userName: takeUserName } = receiver || {}
+          const { personId: saveUserId, personName: saveUserName } =
+            userInfo || {}
+          const { boardNum, boxNum, boxName } = box
+          refOpenParams.current = {
+            takeUserId,
+            takeUserName,
+            saveUserId,
+            saveUserName,
+            boardNum,
+            boxNum,
+            boxName,
+            deviceCode
+          }
+          if (window.plus) {
+            openLocker(boardNum, boxNum)
+          } else {
+            afterDoorOperate({
+              boardNum,
+              boxNum,
+              status: 'open'
+            })
+          }
+        } else {
+          message.error('未找到存件人信息')
+        }
+      } else if (keyword === 'pick') {
+        const { boardNum, boxNum, expressCode, hasOthers } = box
+        setHasOthers(hasOthers)
+        refNextUrl.current = keyword
         refOpenParams.current = {
-          takeUserId,
-          takeUserName,
-          saveUserId,
-          saveUserName,
-          boardNum,
-          boxNum,
-          boxName,
-          deviceCode
+          expressCode
         }
         if (window.plus) {
           openLocker(boardNum, boxNum)
@@ -106,32 +144,23 @@ const App = () => {
             status: 'open'
           })
         }
-      } else {
-        message.error('未找到存件人信息')
       }
     },
     [userInfo, deviceCode]
   )
-  const reOpen = useCallback(
-    () => {
-      if (userInfo) {
-        refStatus.current = 're-open'
-        const { boardNum, boxNum } = doorInfo
-        if (window.plus) {
-          openLocker(boardNum, boxNum)
-        } else {
-          afterDoorOperate({
-            boardNum,
-            boxNum,
-            status: 're-open'
-          })
-        }
-      } else {
-        message.error('未找到存件人信息')
-      }
-    },
-    [userInfo, deviceCode]
-  )
+  const reOpen = useCallback(() => {
+    refNextUrl.current = 're-open'
+    const { boardNum, boxNum } = doorInfo
+    if (window.plus) {
+      openLocker(boardNum, boxNum)
+    } else {
+      afterDoorOperate({
+        boardNum,
+        boxNum,
+        status: 're-open'
+      })
+    }
+  }, [userInfo, deviceCode])
   return (
     <Spin spinning={!deviceCode}>
       <div className='App'>
@@ -143,6 +172,7 @@ const App = () => {
           handleFace={handleFace}
           handleOpen={handleOpen}
           reOpen={reOpen}
+          hasOthers={hasOthers}
         />
       </div>
     </Spin>

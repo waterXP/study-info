@@ -21,9 +21,9 @@ const CabinetSave = ({ onUrl, userInfo, doorInfo, reOpen }) => {
     type: '' // open, close, hasError, waiting
   })
   useEffect(() => {
-    const { boxNum, status } = doorInfo
+    const { boxName, status } = doorInfo
     setStatus({
-      title: `${boxNum < 10 ? `0${boxNum}` : boxNum}号箱门`,
+      title: boxName,
       type: status
     })
   }, [doorInfo])

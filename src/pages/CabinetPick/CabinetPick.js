@@ -12,7 +12,7 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
     }
   }, [hasOthers, onUrl])
   const onOpen = useCallback(() => {
-    reOpen()
+    reOpen('pick')
   }, [reOpen])
   return (
     <CabinetBody

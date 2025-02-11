@@ -29,7 +29,7 @@ const CabinetSave = ({ onUrl, userInfo, doorInfo, reOpen }) => {
   }, [doorInfo])
   const onOpen = useCallback(() => {
     // open again
-    reOpen()
+    reOpen('save')
   }, [reOpen])
   const goSave = useCallback(() => {
     onUrl('save-query')

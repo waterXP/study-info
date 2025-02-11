@@ -50,8 +50,18 @@ const App = () => {
     if (refBoxInfo.current) {
       doorInfo.boxName = refBoxInfo.current.boxName
     }
-    setDoorInfo(doorInfo)
+    if (
+      refBoxInfo.current.boardNum === doorInfo.boardNum &&
+      refBoxInfo.current.boxNum === doorInfo.boxNum
+    ) {
+      setDoorInfo(doorInfo)
+    }
     if (result) {
+      // if (refNextUrl.current === 're-open-save') {
+      //   if (result.status === 'open') {
+      //     waitLocker(refBoxInfo.current.boardNum)
+      //   }
+      // } else
       if (refNextUrl.current === 'save') {
         if (result.status === 'open') {
           waitLocker(refBoxInfo.current.boardNum)
@@ -63,7 +73,10 @@ const App = () => {
             if (d.code === 200) {
               setUrl('save')
             }
+            // setUrl('save')
           })
+          // } else {
+          //   setUrl('save')
         }
       } else if (refNextUrl.current === 'pick') {
         if (refOpenParams.current && !refOpenParams.current.picked) {
@@ -73,7 +86,10 @@ const App = () => {
             if (d.code === 200) {
               setUrl('pick')
             }
+            // setUrl('pick')
           })
+          // } else {
+          //   setUrl('pick')
         }
       }
     }
@@ -158,19 +174,22 @@ const App = () => {
     },
     [userInfo, deviceCode]
   )
-  const reOpen = useCallback(() => {
-    refNextUrl.current = 're-open'
-    const { boardNum, boxNum } = doorInfo
-    if (window.plus) {
-      openLocker(boardNum, boxNum)
-    } else {
-      afterDoorOperate({
-        boardNum,
-        boxNum,
-        status: 're-open'
-      })
-    }
-  }, [userInfo, deviceCode])
+  const reOpen = useCallback(
+    keyword => {
+      refNextUrl.current = keyword
+      const { boardNum, boxNum } = doorInfo
+      if (window.plus) {
+        openLocker(boardNum, boxNum)
+      } else {
+        afterDoorOperate({
+          boardNum,
+          boxNum,
+          status: keyword
+        })
+      }
+    },
+    [doorInfo]
+  )
   return (
     <Spin spinning={!deviceCode}>
       <div className='App'>

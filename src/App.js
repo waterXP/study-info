@@ -14,7 +14,7 @@ import CabinetPickCode from '@/pages/CabinetPickCode'
 import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
-import { initAndroid, checkFace, openLocker } from '@/api/android'
+import { initAndroid, checkFace, openLocker, waitLocker } from '@/api/android'
 import { saveExpress, takeExpress } from '@/api/expressLocker'
 
 const ComMap = {
@@ -54,6 +54,9 @@ const App = () => {
     setDoorInfo(doorInfo)
     if (result) {
       if (refNextUrl.current === 'save') {
+        if (result.status === 'open') {
+          waitLocker(refBoxInfo.current.boardNum)
+        }
         saveExpress(refOpenParams.current).then(d => {
           if (d.code === 200) {
             setUrl('save')

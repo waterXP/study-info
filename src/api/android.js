@@ -62,4 +62,14 @@ export const openLocker = (boardNum, boxNum) => {
   }
 }
 
+export const waitLocker = boardNum => {
+  if (window.plus) {
+    window.plus.android.invoke(
+      'com.dcp.application.biz.facade.ExpressLockerFacade',
+      'waitReadLockerClose',
+      boardNum
+    )
+  }
+}
+
 export default null

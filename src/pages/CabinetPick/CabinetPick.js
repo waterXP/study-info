@@ -29,7 +29,6 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
               ? `${boxName}门已打开，完成取件后请关闭箱门。`
               : `${boxName}门已关闭`}
           </p>
-          {/* {status === 'close' && ( */}
           <div className='pg-cabinet-pick_buttons'>
             <div className='pg-cabinet-pick_button on-click' onClick={onOpen}>
               再次开箱
@@ -41,7 +40,6 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
               完成取件
             </div>
           </div>
-          {/* )} */}
         </div>
       </div>
     </CabinetBody>

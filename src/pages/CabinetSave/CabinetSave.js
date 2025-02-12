@@ -10,7 +10,7 @@ const statusMap = {
       <span className='pg-cabinet-save_important'>关门后自动完成存件</span>
     </>
   ),
-  close: '箱门已关闭',
+  close: '箱门已关闭，存件完成！',
   hasError: '箱门打开失败，请尝试再次操作',
   others: '数据处理中……'
 }

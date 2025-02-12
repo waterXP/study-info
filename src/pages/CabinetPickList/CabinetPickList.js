@@ -3,17 +3,20 @@ import './CabinetPickList.styl'
 import CabinetBody from '@/components/CabinetBody'
 import { findWaitTakeList } from '@/api/expressLocker'
 
-const CabinetPickList = ({ onUrl, deviceCode, userInfo, handleOpen }) => {
+const CabinetPickList = ({ onUrl, deviceCode, userInfo, handleOpen, setLoading }) => {
   const [list, setList] = useState([])
   useEffect(() => {
     if (userInfo) {
+      setLoading(true)
       findWaitTakeList({ deviceCode, takeUserId: userInfo.personId }).then(
         d => {
           if (d.code === 200) {
             setList(d.data || [])
           }
         }
-      )
+      ).finally(() => {
+        setLoading(false)
+      })
     }
   }, [deviceCode, userInfo])
   const openBox = useCallback(

@@ -27,6 +27,7 @@ const ComMap = {
 }
 
 const App = () => {
+  const [loading, setLoading] = useState(false)
   const refNextUrl = useRef('save-query')
   const refOpenParams = useRef(null)
   const refBoxInfo = useRef(null) // 操作的柜子信息
@@ -69,11 +70,14 @@ const App = () => {
         if (refOpenParams.current && !refOpenParams.current.saved) {
           const params = { ...refOpenParams.current }
           refOpenParams.current.saved = true
+          setLoading(true)
           saveExpress(params).then(d => {
             if (d.code === 200) {
               setUrl('save')
             }
             // setUrl('save')
+          }).finally(() => {
+            setLoading(false)
           })
           // } else {
           //   setUrl('save')
@@ -82,11 +86,14 @@ const App = () => {
         if (refOpenParams.current && !refOpenParams.current.picked) {
           const params = { ...refOpenParams.current }
           refOpenParams.current.picked = true
+          setLoading(true)
           takeExpress(params).then(d => {
             if (d.code === 200) {
               setUrl('pick')
             }
             // setUrl('pick')
+          }).finally(() => {
+            setLoading(false)
           })
           // } else {
           //   setUrl('pick')
@@ -191,7 +198,7 @@ const App = () => {
     [doorInfo]
   )
   return (
-    <Spin spinning={!deviceCode}>
+    <Spin spinning={!deviceCode || loading} size='large' tip='加载中……'>
       <div className='App'>
         <Comp
           onUrl={onUrl}
@@ -202,6 +209,7 @@ const App = () => {
           handleOpen={handleOpen}
           reOpen={reOpen}
           hasOthers={hasOthers}
+          setLoading={setLoading}
         />
       </div>
     </Spin>

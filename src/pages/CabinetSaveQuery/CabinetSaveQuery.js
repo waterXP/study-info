@@ -5,11 +5,12 @@ import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
 import { getAvailableLockerBox, findUser } from '@/api/expressLocker'
 
-const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
+const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading }) => {
   const [sizeList, setSizeList] = useState([])
   const [size, setSize] = useState(null)
   useEffect(() => {
     if (deviceCode) {
+      setLoading(true)
       getAvailableLockerBox({ deviceCode }).then(d => {
         if (d.code === 200) {
           const sizeList = (d.data || []).filter(
@@ -18,6 +19,8 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
           setSizeList(sizeList)
           setSize(sizeList[0] ? sizeList[0].boxType : null)
         }
+      }).finally(() => {
+        setLoading(false)
       })
     }
   }, [])
@@ -25,6 +28,7 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
   const [list, setList] = useState([])
   const handleFullChange = useCallback(values => {
     const code = values.join('')
+    setLoading(true)
     findUser({
       phoneSuffix: code
     }).then(d => {
@@ -41,6 +45,8 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen }) => {
           message.error('未找到收件人')
         }
       }
+    }).finally(() => {
+      setLoading(false)
     })
   }, [])
   const onReturn = useCallback(() => {

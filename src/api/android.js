@@ -25,9 +25,7 @@ const getDevice = callback => {
 export const initAndroid = (updateDevice, updateUserInfo, updateDoorInfo) => {
   getDevice(updateDevice)
   window.callbackModianAction = result => {
-    if (result && result.action) {
-      updateUserInfo(result)
-    }
+    updateUserInfo(result)
   }
   window.callbackOpenDoor = result => {
     if (result) {
@@ -68,6 +66,24 @@ export const waitLocker = boardNum => {
       'com.dcp.application.biz.facade.ExpressLockerFacade',
       'waitReadLockerClose',
       boardNum
+    )
+  }
+}
+
+export const closeScreenLight = () => {
+  if (window.plus) {
+    window.plus.android.invoke(
+      'com.dcp.application.biz.facade.ExpressLockerFacade',
+      'closeScreenLight'
+    )
+  }
+}
+
+export const openScreenLight = () => {
+  if (window.plus) {
+    window.plus.android.invoke(
+      'com.dcp.application.biz.facade.ExpressLockerFacade',
+      'openScreenLight'
     )
   }
 }

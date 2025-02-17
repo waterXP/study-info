@@ -14,7 +14,14 @@ import CabinetPickCode from '@/pages/CabinetPickCode'
 import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
-import { initAndroid, checkFace, openLocker, waitLocker } from '@/api/android'
+import {
+  initAndroid,
+  checkFace,
+  openLocker,
+  waitLocker,
+  closeScreenLight,
+  openScreenLight
+} from '@/api/android'
 import { saveExpress, takeExpress } from '@/api/expressLocker'
 
 const ComMap = {
@@ -27,6 +34,7 @@ const ComMap = {
 }
 
 const App = () => {
+  const [inHiding, setInHiding] = useState(false)
   const [loading, setLoading] = useState(false)
   const refNextUrl = useRef('save-query')
   const refOpenParams = useRef(null)
@@ -38,11 +46,16 @@ const App = () => {
   const [url, setUrl] = useState('')
   // 更新用户信息
   const updateUserInfo = useCallback(userInfo => {
-    setUserInfo(userInfo)
-    if (refNextUrl.current === 'save-query') {
-      setUrl('save-query')
-    } else if (refNextUrl.current === 'pick-list') {
-      setUrl('pick-list')
+    const { action } = userInfo || {}
+    if (action === 'detect_face' || action === 'scanqrcode') {
+      setUserInfo(userInfo)
+      if (refNextUrl.current === 'save-query') {
+        setUrl('save-query')
+      } else if (refNextUrl.current === 'pick-list') {
+        setUrl('pick-list')
+      }
+    } else {
+      message.error((userInfo && userInfo.message) || '用户识别失败')
     }
   }, [])
   // 更新开锁、关锁信息
@@ -71,14 +84,16 @@ const App = () => {
           const params = { ...refOpenParams.current }
           refOpenParams.current.saved = true
           setLoading(true)
-          saveExpress(params).then(d => {
-            if (d.code === 200) {
-              setUrl('save')
-            }
-            // setUrl('save')
-          }).finally(() => {
-            setLoading(false)
-          })
+          saveExpress(params)
+            .then(d => {
+              if (d.code === 200) {
+                setUrl('save')
+              }
+              // setUrl('save')
+            })
+            .finally(() => {
+              setLoading(false)
+            })
           // } else {
           //   setUrl('save')
         }
@@ -87,14 +102,16 @@ const App = () => {
           const params = { ...refOpenParams.current }
           refOpenParams.current.picked = true
           setLoading(true)
-          takeExpress(params).then(d => {
-            if (d.code === 200) {
-              setUrl('pick')
-            }
-            // setUrl('pick')
-          }).finally(() => {
-            setLoading(false)
-          })
+          takeExpress(params)
+            .then(d => {
+              if (d.code === 200) {
+                setUrl('pick')
+              }
+              // setUrl('pick')
+            })
+            .finally(() => {
+              setLoading(false)
+            })
           // } else {
           //   setUrl('pick')
         }
@@ -197,20 +214,33 @@ const App = () => {
     },
     [doorInfo]
   )
+  const onScreenClose = useCallback(() => {
+    setInHiding(true)
+    closeScreenLight()
+  }, [])
+  const onScreenOpen = useCallback(() => {
+    if (inHiding) {
+      setInHiding(false)
+      openScreenLight()
+    }
+  }, [inHiding])
   return (
     <Spin spinning={!deviceCode || loading} size='large' tip='加载中……'>
-      <div className='App'>
-        <Comp
-          onUrl={onUrl}
-          userInfo={userInfo}
-          deviceCode={deviceCode}
-          doorInfo={doorInfo}
-          handleFace={handleFace}
-          handleOpen={handleOpen}
-          reOpen={reOpen}
-          hasOthers={hasOthers}
-          setLoading={setLoading}
-        />
+      <div className='lay-app' onClick={onScreenOpen}>
+        {!inHiding && (
+          <Comp
+            onUrl={onUrl}
+            setInHiding={onScreenClose}
+            userInfo={userInfo}
+            deviceCode={deviceCode}
+            doorInfo={doorInfo}
+            handleFace={handleFace}
+            handleOpen={handleOpen}
+            reOpen={reOpen}
+            hasOthers={hasOthers}
+            setLoading={setLoading}
+          />
+        )}
       </div>
     </Spin>
   )

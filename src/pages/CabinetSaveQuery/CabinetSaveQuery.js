@@ -97,7 +97,10 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading 
                   className='pg-cabinet-save-query_option is-current'
                 >
                   <span className='pg-cabinet-save-query_text is-current'>
-                    {`${typeLabel}(${lockerBoxes.length})`}
+                    {typeLabel}
+                  </span>
+                  <span className='pg-cabinet-save-query_count is-current'>
+                    {`剩余：${lockerBoxes.length}`}
                   </span>
                 </p>
               ) : (
@@ -109,7 +112,10 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading 
                   }}
                 >
                   <span className='pg-cabinet-save-query_text'>
-                    {`${typeLabel}(${lockerBoxes.length})`}
+                    {typeLabel}
+                  </span>
+                  <span className='pg-cabinet-save-query_count'>
+                    {`剩余：${lockerBoxes.length}`}
                   </span>
                 </p>
               )
@@ -118,13 +124,13 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading 
           <div className='pg-cabinet-save-query_buttons'>
             {current && size ? (
               <div
-                className='pg-cabinet-save-query_button on-click'
+                className='pg-cabinet-save-query_button is-primary on-click'
                 onClick={onOpen}
               >
                 开锁
               </div>
             ) : (
-              <div className='pg-cabinet-save-query_button is-disabled'>
+              <div className='pg-cabinet-save-query_button is-primary is-disabled'>
                 开锁
               </div>
             )}

@@ -58,7 +58,10 @@ const CabinetReturn = ({ delay, onClick, onUrl, userInfo }) => {
       </div>
       <div className='pg-cabinet-return_right'>
         {userName && (
-          <span className='pg-cabinet-return_name'>{`当前用户：${userName}`}</span>
+          <>
+            <Icon className='pg-cabinet-return_user-icon' type='icon-customer-fill' />
+            <span className='pg-cabinet-return_name'>{`当前用户：${userName}`}</span>
+          </>
         )}
         <span className='com-cabinet-return_time'>{time}</span>
       </div>

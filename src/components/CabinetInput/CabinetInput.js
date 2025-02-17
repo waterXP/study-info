@@ -2,7 +2,7 @@ import React, { memo, useMemo, useState, useCallback, useEffect } from 'react'
 import './CabinetInput.styl'
 import Icon from '@/components/Icon'
 
-const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'icon-qingkong', 'icon-tuige']
+const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 'icon-tuige', 'icon-qingkong']
 const blockList = [0, 1, 2, 3]
 
 const CabinetInput = ({

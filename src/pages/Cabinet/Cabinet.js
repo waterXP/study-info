@@ -1,10 +1,18 @@
-import React, { memo, useCallback, useMemo } from 'react'
+import React, { memo, useCallback, useMemo, useEffect } from 'react'
 import './Cabinet.styl'
 // import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const Cabinet = ({ onUrl, userInfo, handleFace }) => {
+const Cabinet = ({ onUrl, userInfo, handleFace, setInHiding }) => {
+  useEffect(() => {
+    const tm = setTimeout(() => {
+      setInHiding(true)
+    }, 900000)
+    return () => {
+      clearTimeout(tm)
+    }
+  }, [])
   const userName = useMemo(
     () => (userInfo && userInfo.personName) || '',
     [userInfo]
@@ -35,24 +43,24 @@ const Cabinet = ({ onUrl, userInfo, handleFace }) => {
           </div>
         </div>
         <div className='pg-cabinet_body'>
-          <div className='pg-cabinet_save on-click' onClick={gotoSave}>
+          <div className='pg-cabinet_save on-click' onClick={gotoPick}>
             <img
               className='pg-cabinet_save-image'
-              src='./assets/save.png'
+              src='./assets/pick.png'
               alt='save'
             />
-            <span className='pg-cabinet_text'>存件</span>
-            <span className='pg-cabinet_tip'>快速存放您的包裹</span>
+            <span className='pg-cabinet_text'>取件</span>
+            <span className='pg-cabinet_tip'>便捷取出您的包裹</span>
           </div>
           <div className='pg-cabinet_pick'>
-            <div className='pg-cabinet_pick-self on-click' onClick={gotoPick}>
+            <div className='pg-cabinet_pick-self on-click' onClick={gotoSave}>
               <img
                 className='pg-cabinet_pick-image'
-                src='./assets/pick.png'
+                src='./assets/save.png'
                 alt='pick'
               />
-              <span className='pg-cabinet_text'>取件</span>
-              <span className='pg-cabinet_tip'>便捷取出您的包裹</span>
+              <span className='pg-cabinet_text'>存件</span>
+              <span className='pg-cabinet_tip'>快速存放您的包裹</span>
             </div>
             <div className='pg-cabinet_pick-others on-click' onClick={gotoCode}>
               <img

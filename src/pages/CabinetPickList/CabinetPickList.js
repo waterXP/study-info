@@ -42,35 +42,6 @@ const CabinetPickList = ({
         .then(d => {
           if (d.code === 200) {
             setList(d.data || [])
-            setList([
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              },
-              {
-                boxName: '02号柜'
-              }
-            ])
           }
         })
         .finally(() => {

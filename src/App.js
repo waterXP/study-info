@@ -81,24 +81,34 @@ const App = () => {
       if (refNextUrl.current === 'save') {
         if (result.status === 'open') {
           waitLocker(refBoxInfo.current.boardNum)
+          // if (refOpenParams.current && refOpenParams.current.saved) {
+          //   fetch pick packget
+          // }
         }
-        // if result.status === 'close' do fetch
         if (refOpenParams.current && !refOpenParams.current.saved) {
-          const params = { ...refOpenParams.current }
-          refOpenParams.current.saved = true
-          setLoading(true)
-          saveExpress(params)
-            .then(d => {
-              if (d.code === 200) {
-                setUrl('save')
-              }
-              // setUrl('save')
-            })
-            .finally(() => {
-              setLoading(false)
-            })
-          // } else {
-          //   setUrl('save')
+          if (result.status === 'close') {
+            refOpenParams.current.saved = true
+            const params = { ...refOpenParams.current }
+            saveExpress(params)
+              .finally(() => {
+                setLoading(false)
+              })
+          } else {
+            setUrl('save')
+          }
+
+          // const params = { ...refOpenParams.current }
+          // refOpenParams.current.saved = true
+          // setLoading(true)
+          // saveExpress(params)
+          //   .then(d => {
+          //     if (d.code === 200) {
+          //       setUrl('save')
+          //     }
+          //   })
+          //   .finally(() => {
+          //     setLoading(false)
+          //   })
         }
       } else if (refNextUrl.current === 'pick') {
         if (refOpenParams.current && !refOpenParams.current.picked) {

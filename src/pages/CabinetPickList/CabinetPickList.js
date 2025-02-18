@@ -56,6 +56,7 @@ const CabinetPickList = ({
     <CabinetBody delay={90} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-pick-list'>
         <div className='pg-cabinet-pick-list_body'>
+          <img className='pg-cabinet-pick-list_banner' src='./assets/box.jpg' alt='box' />
           <p className='pg-cabinet-pick-list_title'>{`你有${list.length}个快递待取`}</p>
           <div className='pg-cabinet-pick-list_content'>
             {list.map((v, index) => {

@@ -52,6 +52,7 @@ const CabinetSave = ({ onUrl, userInfo, doorInfo, reOpen }) => {
     <CabinetBody delay={300} onUrl={onUrl} userInfo={userInfo}>
       <div className='pg-cabinet-save'>
         <div className='pg-cabinet-save_body'>
+          <img className='pg-cabinet-save_banner' src='./assets/box.jpg' alt='box' />
           <p className='pg-cabinet-save_title'>开箱存件</p>
           {status.title && (
             <div className='pg-cabinet-save_box'>{status.title}</div>

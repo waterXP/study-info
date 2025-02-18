@@ -23,6 +23,7 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
     >
       <div className='pg-cabinet-pick'>
         <div className='pg-cabinet-pick_body'>
+          <img className='pg-cabinet-pick_banner' src='./assets/box.jpg' alt='box' />
           {boxName && <div className='pg-cabinet-pick_box'>{boxName}</div>}
           <p className='pg-cabinet-pick_tip'>
             {status === 'open'

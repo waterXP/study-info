@@ -46,13 +46,15 @@ const App = () => {
   const [url, setUrl] = useState('')
   // 更新用户信息
   const updateUserInfo = useCallback(userInfo => {
-    const { action } = userInfo || {}
-    if (action === 'detect_face' || action === 'scanqrcode') {
-      setUserInfo(userInfo)
-      if (refNextUrl.current === 'save-query') {
-        setUrl('save-query')
-      } else if (refNextUrl.current === 'pick-list') {
-        setUrl('pick-list')
+    const { action, success } = userInfo || {}
+    if (success) {
+      if (action === 'detect_face' || action === 'scanqrcode') {
+        setUserInfo(userInfo)
+        if (refNextUrl.current === 'save-query') {
+          setUrl('save-query')
+        } else if (refNextUrl.current === 'pick-list') {
+          setUrl('pick-list')
+        }
       }
     } else {
       message.error((userInfo && userInfo.message) || '用户识别失败')
@@ -80,6 +82,7 @@ const App = () => {
         if (result.status === 'open') {
           waitLocker(refBoxInfo.current.boardNum)
         }
+        // if result.status === 'close' do fetch
         if (refOpenParams.current && !refOpenParams.current.saved) {
           const params = { ...refOpenParams.current }
           refOpenParams.current.saved = true

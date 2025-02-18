@@ -1,6 +1,7 @@
 import React, { memo, useMemo, useCallback } from 'react'
 import './CabinetPick.styl'
 import CabinetBody from '@/components/CabinetBody'
+import Icon from '@/components/Icon'
 
 const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
   const { boxName, status } = useMemo(() => doorInfo || {}, [doorInfo])
@@ -23,8 +24,20 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
     >
       <div className='pg-cabinet-pick'>
         <div className='pg-cabinet-pick_body'>
-          <img className='pg-cabinet-pick_banner' src='./assets/box.jpg' alt='box' />
-          {boxName && <div className='pg-cabinet-pick_box'>{boxName}</div>}
+          <img
+            className='pg-cabinet-pick_banner'
+            src='./assets/box.jpg'
+            alt='box'
+          />
+          {boxName && (
+            <div className='pg-cabinet-pick_box'>
+              <Icon
+                className='pg-cabinet-pick_box-icon'
+                type='icon-baoguofahuo'
+              />
+              <span className='pg-cabinet-pick_box-text'>{boxName}</span>
+            </div>
+          )}
           <p className='pg-cabinet-pick_tip'>
             {status === 'open'
               ? `${boxName}门已打开，完成取件后请关闭箱门。`

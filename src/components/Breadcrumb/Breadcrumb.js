@@ -13,18 +13,23 @@ const Breadcrumb = ({
   qa,
   ex,
   ls,
+  ai,
   hideDefault
 }) => {
   const dispatch = useDispatch()
-  const { showCn, showEx, showQa, showLs, displayType } = useSelector(
-    ({ displayType, showEx, showCn, showLs, showQa }) => ({
-      showLs,
-      showQa,
-      showCn,
-      showEx,
-      displayType
-    })
-  )
+  const { showCn, showEx, showQa, showLs, displayType, showNt, showAn, typeMode } =
+    useSelector(
+      ({ displayType, showEx, showCn, showLs, showQa, showNt, showAn, typeMode }) => ({
+        showLs,
+        showQa,
+        showCn,
+        showEx,
+        displayType,
+        showNt,
+        showAn,
+        typeMode
+      })
+    )
   const navigate = useNavigate()
   const onClick = useCallback(
     e => {
@@ -56,6 +61,18 @@ const Breadcrumb = ({
     e.stopPropagation()
     dispatch({ type: 'changeDisplayQa' })
   }, [])
+  const changeNt = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeShowNt' })
+  }, [])
+  const changeAn = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeShowAn' })
+  }, [])
+  const changeTypeMode = useCallback(e => {
+    e.stopPropagation()
+    dispatch({ type: 'changeTypeMode' })
+  }, [])
   const changeLs = useCallback(e => {
     e.stopPropagation()
     dispatch({ type: 'changeDisplayLs' })
@@ -78,6 +95,27 @@ const Breadcrumb = ({
         {title && <span>&nbsp;&nbsp;{title}</span>}
       </div>
       <div className='com-breadcrumb_right'>
+        {ai && (
+          <span
+            className={showAn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+            onClick={changeAn}
+          >
+            an
+          </span>
+        )}
+        {ai && (
+          <span
+            className={showNt ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+            onClick={changeNt}
+          >
+            nt
+          </span>
+        )}
+        {ai && (
+          <span className='com-breadcrumb_on' onClick={changeTypeMode}>
+            {typeMode}
+          </span>
+        )}
         {qa && (
           <span
             className={showQa ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}

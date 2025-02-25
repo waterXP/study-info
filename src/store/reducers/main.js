@@ -11,7 +11,11 @@ const initialStates = {
   showEx: false,
   showLs: false,
   showQa: true,
-  displayType: 'all' // all, kana, mana
+  displayType: 'all', // all, kana, mana
+  // ----------------- ai
+  showNt: false,
+  showAn: false,
+  typeMode: 'all'
 }
 
 export default function mainReducer(state = initialStates, action) {
@@ -91,6 +95,31 @@ export default function mainReducer(state = initialStates, action) {
         }
         setStorage('FAVORITE', nextFavorites)
         return { ...state, favorites: nextFavorites }
+      }
+    }
+    case 'changeTypeMode': {
+      return {
+        ...state,
+        typeMode:
+          state.typeMode === 'all'
+            ? 'chk'
+            : state.typeMode === 'chk'
+              ? 'sin'
+              : state.typeMode === 'sin'
+                ? 'mul'
+                : 'all'
+      }
+    }
+    case 'changeShowNt': {
+      return {
+        ...state,
+        showNt: !state.showNt
+      }
+    }
+    case 'changeShowAn': {
+      return {
+        ...state,
+        showAn: !state.showAn
       }
     }
     default:

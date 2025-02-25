@@ -1,0 +1,22 @@
+.pg-ai-test_body
+  padding 0 32px
+.pg-ai-test_process
+  fl(center)
+  margin-bottom 8px
+  width calc(100vw - 64px)
+.pg-ai-test_p
+  flex 1
+  height 8px
+  background-color #ccc
+  &:first-child
+    border-radius 4px 0 0 4px
+  &:last-child
+    border-radius 0 4px 4px 0
+  &.is-correct
+    background-color cs
+  &.is-error
+    background-color cd
+  &.is-current
+    outline 1px solid cp
+  + .pg-ai-test_p
+    margin-left 1px

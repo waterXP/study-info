@@ -1,0 +1,34 @@
+.com-ai-item
+  padding 8px 0
+  + .com-ai-item
+    border-top 1px solid rgba(0, 0, 0, .15)
+.com-ai-item_title
+  getFont(.85, 20, 30)
+.com-ai-item_note
+  getFont(.65, 16, 24)
+.com-ai-item_option
+  getFont(.65, 16, 24)
+  margin 8px 0
+  padding 4px 8px
+  border 1px solid rgba(0, 0, 0, .15)
+  border-radius 4px
+  &.is-checked
+    border-color cp
+    background-color cp
+    color #fff
+  &.is-error
+    border-color cd
+    background-color cd
+    color #fff
+  &.is-tst
+    border-color cs
+    background-color cs
+    color #fff
+  &.is-select-checked
+    border-color cs
+    background linear-gradient(90deg, cs, cp 5%)
+    color #fff
+  &.is-error-checked
+    border-color cs
+    background linear-gradient(90deg, cd, cp 5%)
+    color #fff

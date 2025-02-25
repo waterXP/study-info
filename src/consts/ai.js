@@ -547,6 +547,798 @@ export default [
     trainingDetailRep: null
   },
   {
+    id: 9587006,
+    type: 0,
+    title: '数据清洗是数据预处理中重要的任务。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162432,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162433,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587008,
+    type: 0,
+    title:
+      '数据清洗是指发现并纠正数据文件中可识别的错误，包括检查数据一致性、处理无效值和缺失值等异常的数据。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162430,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162431,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587009,
+    type: 0,
+    title:
+      '在语音数据标注过程中，通常需要对语音信号进行分割，以便对每个语音片段进行独立的标注。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161572,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161573,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587010,
+    type: 0,
+    title: '过拟合可以通过减少模型参数数量解决。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161834,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161835,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587011,
+    type: 0,
+    title: '在Python中，fillna()方法可以填充替换值为NaN和None的数据。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161804,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161805,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587013,
+    type: 0,
+    title:
+      '语音标注时，语音数据发音的时间轴与标注区域的音标需保持同步。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162380,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162381,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587014,
+    type: 0,
+    title:
+      '文本分类系统大致可分为基于知识工程的分类系统和基于机器学习的分类系统。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161602,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161603,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587015,
+    type: 0,
+    title: '规范性分析是最低级别的数据分析类型，仅用来确定当前状况。',
+    answer: '',
+    note: '业务数据处理流程设计：规范性分析实际上是最高级的数据分析类型，它会综合所有数据和模型，提出最优行动方案。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162154,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162155,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587016,
+    type: 0,
+    title:
+      '在机器学习模型的开发过程中，希望训练好的模型能在新的、未见过的数据上表现良好。为了模拟新的、未见过的数据，对可用数据进行数据分割，从而将其分割成2部分（有时称为训练&mdash;测试分割）。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162400,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162401,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587017,
+    type: 0,
+    title: '提高报告质量的过程中，定期审查流程是为了确保报告的格式统一。',
+    answer: '',
+    note: '测试报告与分析报告编写要点：定期审查流程不仅仅是为了确保报告的格式统一，更重要的是确保报告保持最新、准确且具有可操作性，以及确保报告在技术、业务和其他方面的准确性和完整性。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162186,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162187,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587019,
+    type: 0,
+    title: '监督学习和无监督学习可以结合使用以提高模型性能。',
+    answer: '',
+    note: '监督学习与无监督学习：监督学习和无监督学习并不是相互排斥的概念，在实际问题中它们可以结合使用，例如可以使用无监督学习方法进行特征提取，然后再使用监督学习方法进行分类或预测。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162160,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162161,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587020,
+    type: 0,
+    title: '标注的天气场景数据可以用于提高智能路灯系统的效能。',
+    answer: '',
+    note: '智慧交通图像数据标注规范：标注的天气场景数据可以用于培训智能路灯系统，使其能够根据不同的天气条件和能见度水平进行自适应调节，从而提高路灯的效能。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162178,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162179,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587021,
+    type: 0,
+    title:
+      '安全监控只需要关注模型服务是否受到外部攻击即可，内部数据滥用无需特别关注。',
+    answer: '',
+    note: '模型监控与部署：安全监控既要防止外部攻击，也要监测模型服务中的数据滥用情况，确保数据不被非法获取或滥用。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162168,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162169,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587022,
+    type: 0,
+    title: '业务数据审核不能通过手动方式进行。',
+    answer: '',
+    note: '业务数据审核流程设计：业务数据审核方法包括手动审核和自动审核。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162156,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162157,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588704,
+    type: 0,
+    title:
+      'Transformer架构中的自注意力机制能够使模型在处理序列时忽略序列中元素的顺序。',
+    answer: '',
+    note: '本题目来自《AI大模型基础介绍》，Transformer架构中的自注意力机制使模型能够在处理序列时同时考虑序列中的所有其他元素，包括元素的顺序，这对于理解复杂的语言结构至关重要。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162196,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162197,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588705,
+    type: 0,
+    title: '导航流程设计的目标之一是减少用户的认知负担。',
+    answer: '',
+    note: '人机交互流程设计概述：导航流程设计的目标之一是减少用户的认知负担。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162182,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162183,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588706,
+    type: 0,
+    title: '散点图不能在子图中绘制。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161690,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161691,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588707,
+    type: 0,
+    title: '不经授权，不允许私自泄露企业的任何非公开数据。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161764,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161765,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588708,
+    type: 0,
+    title:
+      '在深度学习进行训练时，预训练+微调法以及权共享方法都是为了节省训练开销。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162350,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162351,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588709,
+    type: 0,
+    title: '数据预处理过程中，异常值可以使用其它的值来替换。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161770,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161771,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588710,
+    type: 0,
+    title: '随机森林和GBDT都使用随机特征子集来生成许多单个的树。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161560,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161561,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588711,
+    type: 0,
+    title:
+      '图像分类是根据图像的语义信息对不同类别图像进行区分，是计算机视觉的核心，是物体检测、图像分割、物体跟踪、行为分析、人脸识别等其他高层次视觉任务的基础。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162422,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162423,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588712,
+    type: 0,
+    title: '预测性分析是规范性分析的基础。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161772,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161773,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588713,
+    type: 0,
+    title: '在神经网络中引入了非线性的是修正线性单元（ReLU）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161588,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161589,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588714,
+    type: 0,
+    title: '在Python中，ndarray对象的shape属性表示每个维度上数组的大小。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161810,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161811,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588716,
+    type: 0,
+    title: '在时间序列中，默认生成的时间戳是按天计算的。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162402,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162403,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588717,
+    type: 0,
+    title: '在进行文本数据标注时，实体标注和情感标注可以同时进行。',
+    answer: '',
+    note: '数据标注技能图谱：实体标注和情感标注是两种不同的文本数据标注方法，可以针对同一文本数据集同时进行，以便获取更丰富的信息。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162190,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162191,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588720,
+    type: 0,
+    title: 'IoU用于评估模型预测与真实标签之间的准确性。',
+    answer: '',
+    note: '图像实例分割：IoU（Intersection over Union）确实用于评估模型预测与真实标签之间的重叠程度，这与准确性评估相关。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162176,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162177,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588721,
+    type: 0,
+    title: '循环神经网络（RNN）能够捕捉序列中的长程依赖关系',
+    answer: '',
+    note: '数据拆解高阶方法：RNN的核心特点是具有循环结构，这使得网络能够保持一个内部状态（记忆）并在处理每个序列元素时更新这个状态，因此RNN能够捕捉序列中的长程依赖关系。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162180,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162181,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
     id: 9536442,
     type: 1,
     title: '下列不属于图像标注挑战的是？',
@@ -3289,6 +4081,2824 @@ export default [
     trainingDetailRep: null
   },
   {
+    id: 9587024,
+    type: 1,
+    title: '在Linux环境下,常用于管理代码的版本控制工具是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161510,
+        text: 'wget',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161511,
+        text: 'git',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161512,
+        text: 'get',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161513,
+        text: 'shell',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587025,
+    type: 1,
+    title: '下列选项中，布尔值不是False的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162808,
+        text: 'None',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162809,
+        text: '0',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162810,
+        text: '()',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162811,
+        text: '1',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587027,
+    type: 1,
+    title: '通过模型辅助进行文本分类，常用的模型是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162856,
+        text: '朴素贝叶斯',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162857,
+        text: '决策树(Decision Tree)',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162858,
+        text: '支持向量机',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162859,
+        text: '&lt;p&gt;以上都是&lt;/p&gt;',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587028,
+    type: 1,
+    title:
+      '在数据采集过程中，行业数据作为重要的数据来源，下列选项中不属于行业数据采集的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162492,
+        text: '行业发展数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162493,
+        text: '市场需求数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162494,
+        text: '目标客户数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162495,
+        text: '店铺运营数据',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587029,
+    type: 1,
+    title: '通用情况下，HTTP的默认端口是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161526,
+        text: '80',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161527,
+        text: '443',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161528,
+        text: '139',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161529,
+        text: '7777',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587030,
+    type: 1,
+    title:
+      '数据标注过程中，按标注活动的自动化程度划分，不属于数据标注的类别的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162556,
+        text: '手工标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162557,
+        text: '自动化标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162558,
+        text: '半自动化标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162559,
+        text: '半手工标注',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587031,
+    type: 1,
+    title: '使用Brat进行文本标注时，操作方法有误的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162564,
+        text: '选择文本进行标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162565,
+        text: '为标注的文本添加标签',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162566,
+        text: '删除错误的标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162567,
+        text: '&lt;p&gt;未保存的情况下关闭页面&lt;/p&gt;',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587032,
+    type: 1,
+    title: '下列有关文本标注的描述正确的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162584,
+        text: '标注的过程中可以随意更改原文',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162585,
+        text: '标注的过程中可以随意添加标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162586,
+        text: '标注的过程中可以随意删除标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162587,
+        text: '标注的过程中需要遵循一定的标注规范',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587033,
+    type: 1,
+    title: '下列数据预处理方法中，能够去除极值影响的方法是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162704,
+        text: '&lt;p&gt;标准化&lt;/p&gt;',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162705,
+        text: '&lt;p&gt;中心化&lt;/p&gt;',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162706,
+        text: '&lt;p&gt;最小化&lt;/p&gt;',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162707,
+        text: '&lt;p&gt;去极值&lt;/p&gt;',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587035,
+    type: 1,
+    title: '对于需要实时、精确的数据抽取场景，最适合的查询工具是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162222,
+        text: '直接查询',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162223,
+        text: 'NoSQL数据库',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162224,
+        text: '分布式数据库',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162225,
+        text: '时间序列数据库',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587036,
+    type: 1,
+    title: '下列不属于基于原型的聚类算法是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162676,
+        text: '模糊c均值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162677,
+        text: 'EM算法',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162678,
+        text: 'SOM',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162679,
+        text: 'CLIQUE',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587037,
+    type: 1,
+    title: '在自动驾驶领域中，数据标注的主要目的为？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162238,
+        text: '提供训练数据，帮助机器学习算法识别和理解道路上的各种对象和场景',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162239,
+        text: '收集用户反馈，改进自动驾驶系统的性能',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162240,
+        text: '保护用户隐私，确保个人数据不被滥用',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162241,
+        text: '降低自动驾驶系统的成本，提高商业竞争力',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587038,
+    type: 1,
+    title: '计算机中用来表示存储容量大小的基本单位是什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162290,
+        text: '字节',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162291,
+        text: '位',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162292,
+        text: '比特',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162293,
+        text: '字',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587039,
+    type: 1,
+    title: '标注数据的编码方式中常用于将分类数据转换为向量形式的是（）？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162342,
+        text: 'One-hot编码',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162343,
+        text: '二进制编码',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162344,
+        text: '哈希编码',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162345,
+        text: '序列编码',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587040,
+    type: 1,
+    title: '用户行为分析工具的功能不包括以下哪项？',
+    answer: '',
+    note: '人机交互流程设计工具：用户行为分析工具主要用于分析用户行为，不包括设计交互元素',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162012,
+        text: '页面浏览跟踪',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162013,
+        text: '事件追踪',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162014,
+        text: '热力图分析',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162015,
+        text: '交互元素设计',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587041,
+    type: 1,
+    title: '在常见的数据类型中，下列选项中不应作为数据格式的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162528,
+        text: '图片',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162529,
+        text: '声音',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162530,
+        text: '视频',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162531,
+        text: '光纤',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587043,
+    type: 1,
+    title: '数据模型通常由（）（）和（）三要素构成。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162708,
+        text: '网状模型、关系模型、面向对象模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162709,
+        text: '数据结构、网状模型、关系模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162710,
+        text: '数据结构、数据操纵、关系模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162711,
+        text: '数据结构、数据操纵、完整性约束',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587045,
+    type: 1,
+    title: '基于Pandas库在智能算法中应用的理解，下列对其描述正确的是?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161406,
+        text: 'Pandas的数据结构只有两种',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161407,
+        text: 'Pandas不支持读取文本数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161408,
+        text: 'Pandas是在NumPy基础上建立的新程序库',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161409,
+        text: 'Pandas可以解决智能算法中的一切问题',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587047,
+    type: 1,
+    title:
+      '结合人工智能算法的理解，在语音识别的应用过程中，其声学模型的训练应采用的算法是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161434,
+        text: '神经网络模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161435,
+        text: '逻辑回归模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161436,
+        text: '支持向量机模型',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161437,
+        text: '隐马尔可夫模型',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587048,
+    type: 1,
+    title:
+      '方向梯度直方图（HOG）使用边缘检测技术和一些统计学方法，可以表示出图像中物体的特征是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162880,
+        text: '颜色',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162881,
+        text: '大小',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162882,
+        text: '分类',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162883,
+        text: '轮廓',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587050,
+    type: 1,
+    title: '在一张照片里找出一只猫，可以更好地解决这个问题的操作是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162888,
+        text: '循环神经网络',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162889,
+        text: '多层感知机',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162890,
+        text: '感知机',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162891,
+        text: '卷积神经网络',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587051,
+    type: 1,
+    title:
+      '在关系数据库中，在一个关系中引用了另一个关系的主键作为自身属性的属性，指的是？\n',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161486,
+        text: '主键',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161487,
+        text: '外键',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161488,
+        text: '实体',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161489,
+        text: '模型',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587052,
+    type: 1,
+    title: '下列属于卷积网络类型分类的是（）？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162580,
+        text: '普通卷积',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162581,
+        text: '扩张卷积',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162582,
+        text: '转置卷积',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162583,
+        text: '&lt;p&gt;以上选项都正确&lt;/p&gt;',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587053,
+    type: 1,
+    title: '下列选项中，数据标注方法中最适合处理图像数据的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162724,
+        text: '角度',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162725,
+        text: '领域大小',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162726,
+        text: '坐标',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162727,
+        text: '距离',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587054,
+    type: 1,
+    title: '在python数据结构中，下列选项属于集合的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161490,
+        text: '{1，2，2}',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161491,
+        text: '（1，2，2）',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161492,
+        text: '{1，2}',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161493,
+        text: '（1，2）',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587055,
+    type: 1,
+    title: '数据标注中的众包数据标注是指什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162230,
+        text: '一种通过互联网平台将任务分发给大量志愿者完成的数据标注方法',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162231,
+        text: '一种通过人工智能算法自动完成数据标注的方法',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162232,
+        text: '一种通过专业团队进行数据标注的方法',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162233,
+        text: '一种通过机器学习模型进行数据标注的方法',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587056,
+    type: 1,
+    title: '在Linux中，Mysql的默认端口是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161470,
+        text: '443',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161471,
+        text: '3306',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161472,
+        text: '80',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161473,
+        text: '2215',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587057,
+    type: 1,
+    title: '采用电脑对文本集按照一定的标准进行自动分类标记的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162624,
+        text: '文本识别',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162625,
+        text: '机器翻译',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162626,
+        text: '问题系统',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162627,
+        text: '文本分类',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587058,
+    type: 1,
+    title: '下列图像运算中，属于点运算的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162820,
+        text: '图像加法运算',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162821,
+        text: '图像旋转',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162822,
+        text: '图像逻辑运算',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162823,
+        text: '图像幂次变换',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587061,
+    type: 1,
+    title: '在强化学习中，模型如何改进行为策略？',
+    answer: '',
+    note: '人工智能训练师知识图谱：强化学习中模型通过与环境交互并不断尝试，逐步学习最优行为策略。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162068,
+        text: '通过预先设定的行为规则',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162069,
+        text: '通过观察其他模型的行为',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162070,
+        text: '通过与环境互动并试错',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162071,
+        text: '通过分析历史数据中的模式',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587065,
+    type: 1,
+    title: '数据预处理和增强的主要目的是？',
+    answer: '',
+    note: '数据预处理和增强：数据预处理和增强是为了使数据适应模型的要求，提取有用的特征并去除噪声，从而提高模型的训练效果和泛化能力。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161936,
+        text: '提高模型的复杂度',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161937,
+        text: '提高模型的性能和泛化能力',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161938,
+        text: '减少模型的训练时间',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161939,
+        text: '降低模型的准确性',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587067,
+    type: 1,
+    title: '业务模块性能指标分析策略的目的是？',
+    answer: '',
+    note: '业务模块分析方法：业务模块性能指标分析策略的主要目的是为了提升用户体验。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161852,
+        text: '收集数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161853,
+        text: '流程映射',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161854,
+        text: '提升用户体验',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161855,
+        text: '性能指标分析',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587074,
+    type: 1,
+    title: '在计算机视觉中，目标检测算法主要用于？',
+    answer: '',
+    note: '人工智能训练师知识图谱：在计算机视觉中，目标检测算法可以应用于交通行人车辆目标检测。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162060,
+        text: '社交媒体情感分析',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162061,
+        text: '交通行人车辆目标检测',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162062,
+        text: '语音信号处理',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162063,
+        text: '数据库管理',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587075,
+    type: 1,
+    title: '关键信息提取的目的是？',
+    answer: '',
+    note: '知识萃取与经验总结技巧：关键信息提取的目的是为了从文本中提取出反映核心主题的信息，从而提高信息的实用性和针对性。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162016,
+        text: '增加文档的字数',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162017,
+        text: '提高文档的艺术性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162018,
+        text: '提取文档的核心主题',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162019,
+        text: '降低信息的实用性',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587078,
+    type: 1,
+    title: '数据清洗作为数据处理的重要手段，以下哪项不是数据清洗的常见任务？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162696,
+        text: '删除重复数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162697,
+        text: '填补缺失值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162698,
+        text: '标准化数据格式',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162699,
+        text: '增加噪声数据',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587079,
+    type: 1,
+    title: '餐饮位置数据清洗中，地址解析的主要挑战是？',
+    answer: '',
+    note: '餐饮行业文本数据清洗规范：地址解析的主要挑战是处理地址信息的多义性和歧义性。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161956,
+        text: '地址的格式不一致',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161957,
+        text: '地址信息的多义性和歧义性',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161958,
+        text: '地址信息的缺失',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161959,
+        text: '地理坐标的异常值',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587082,
+    type: 1,
+    title: '像素级标注为计算机视觉模型提供了哪种类型的训练数据？',
+    answer: '',
+    note: '图像分割标注方法：像素级标注为模型提供了高分辨率的训练数据。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161968,
+        text: '低分辨率',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161969,
+        text: '高分辨率',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161970,
+        text: '无分辨率要求',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161971,
+        text: '仅语义信息',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587084,
+    type: 1,
+    title: '文本分类的主要目的是？',
+    answer: '',
+    note: '文本分类：文本分类旨在将给定的文本数据分为不同的预定义类别或标签，这是自然语言处理中的一个常见任务。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161944,
+        text: '将文本数据分为不同的预定义类别或标签',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161945,
+        text: '将文本转换为数值特征',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161946,
+        text: '清洗和转换原始文本数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161947,
+        text: '训练神经网络模型',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587086,
+    type: 1,
+    title:
+      '在支持向量机算法中，给定一个d维特征的数据，构建的超平面是一个多少维的线性子空间？',
+    answer: '',
+    note: '监督学习与无监督学习：在支持向量机中，超平面是一个d-1维的线性子空间，其中d是数据的特征维度。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161896,
+        text: 'd维',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161897,
+        text: 'd-1维',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161898,
+        text: 'd+1维',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161899,
+        text: '1维',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587087,
+    type: 1,
+    title: '在无人超市中，以下哪项不属于自动识别系统对用户体验提升的方面？',
+    answer: '',
+    note: '无人超市自动识别业务模块效果优化：无人超市中的自动识别系统的用户体验提升有快速结算和个性化服务，快速结算能够减少用户等待时间。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161864,
+        text: '个性化推荐',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161865,
+        text: '减少用户等待时间',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161866,
+        text: '直播带货',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161867,
+        text: '优惠劵分发',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587088,
+    type: 1,
+    title: '视频类业务数据采集要求的核心能力不包括？',
+    answer: '',
+    note: '业务采集流程设计：视频类业务数据采集要求的核心能力包括驾驶员信息采集、路况信息采集和车载语音唤醒词采集等。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161872,
+        text: '驾驶员信息采集',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161873,
+        text: '路况信息采集',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161874,
+        text: '人体状况分析采集',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161875,
+        text: '车载语音唤醒词采集',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587089,
+    type: 1,
+    title: '在数据来源模块中，“埋点法”的作用是？',
+    answer: '',
+    note: '业务数据处理流程设计：“埋点法”是一种用户行为数据采集方案，用于收集用户在应用或网站中的行为数据。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161876,
+        text: '收集用户反馈',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161877,
+        text: '采集用户行为数据',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161878,
+        text: '分析用户趋势',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161879,
+        text: '优化用户体验',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587090,
+    type: 1,
+    title: '业务数据审核的目的是?',
+    answer: '',
+    note: '业务数据审核流程设计：业务数据审核的目的是提高数据可信度，为业务决策提供可靠的支持。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161880,
+        text: '增加数据复杂性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161881,
+        text: '减少数据分析时间',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161882,
+        text: '提高数据可信度',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161883,
+        text: '降低数据存储成本',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587091,
+    type: 1,
+    title: '根据数据驱动决策的基础概念，数据驱动的优势是？',
+    answer: '',
+    note: '业务模块优化方法：数据驱动决策优势在于能够减少主观因素的影响，提高决策的客观性和准确性。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161860,
+        text: '大量收集数据',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161861,
+        text: '基于事实做决策',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161862,
+        text: '分析统计结果',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161863,
+        text: '提高决策的准确性和客观性',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587092,
+    type: 1,
+    title: '人机交互流程设计的基础概念中，以下哪项不属于交互设计原则？',
+    answer: '',
+    note: '人机交互流程设计概述：交互设计原则包括一致性、可见性、反馈、个性化和有效性。复杂性不是交互设计原则的一部分。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162004,
+        text: '一致性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162005,
+        text: '可见性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162006,
+        text: '个性化',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162007,
+        text: '复杂性',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588724,
+    type: 1,
+    title: '在Linux环境中，常用于授权的命令是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161514,
+        text: 'chmod',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161515,
+        text: 'git',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161516,
+        text: 'socket',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161517,
+        text: 'namp',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588726,
+    type: 1,
+    title: '在Python函数中，可以为图表设置标签的是?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161462,
+        text: 'legend()',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161463,
+        text: 'xlabel()',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161464,
+        text: 'title()',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161465,
+        text: 'xlim()',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588729,
+    type: 1,
+    title: '下列关于计算机视觉的主要发展历程，描述正确的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162656,
+        text: '主动和目的视觉、马尔计算视觉、基于学习的视觉、多视几何与分层三维重建',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162657,
+        text: '多视几何与分层三维重建、基于学习的视觉、主动和目的视觉、马尔计算视觉',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162658,
+        text: '马尔计算视觉、基于学习的视觉、主动和目的视觉、多视几何与分层三维重建',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162659,
+        text: '马尔计算视觉、主动和目的视觉、多视几何与分层三维重建和基于学习的视觉',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588731,
+    type: 1,
+    title:
+      '老张交换名片后，小王打开手机中安装的灵云智能输入法 app，拍照老张的名片，很快得到名片文字信息并保存，在这过程中最主要应用的技术指的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162206,
+        text: '模式识别',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162207,
+        text: '文字合成',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162208,
+        text: '图像搜索',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162209,
+        text: '图像还原',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588732,
+    type: 1,
+    title: '下列属于基于深度学习的目标检测模型评价指标的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162668,
+        text: 'Precision：精确率，Recall：召回率',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162669,
+        text: 'AP: PR曲线下面积，mAP: mean Average Precision， 即各类别AP的平均值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162670,
+        text: 'FPS ：Frames per second，即每秒处理的图像帧数',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162671,
+        text: '以上均正确',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588734,
+    type: 1,
+    title: '下列数据库中，属于非关系型数据库的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161530,
+        text: 'Mysql',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161531,
+        text: 'Mongodb',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161532,
+        text: 'Oracel',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161533,
+        text: 'Access',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588737,
+    type: 1,
+    title: '对浮点类型的数据进行格式化，使用的符号是（）？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162322,
+        text: '语义分割',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162323,
+        text: '边界框标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162324,
+        text: '点标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162325,
+        text: '多边形标注',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588738,
+    type: 1,
+    title: '机器学习、深度学习、人工智能的代表英文缩写分别是什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162294,
+        text: 'ML、DL、AI',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162295,
+        text: 'DL、ML、AI',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162296,
+        text: 'AL、DL、AI',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162297,
+        text: 'DL、AL、AI',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588741,
+    type: 1,
+    title: '基于深度学习的图像识别过程中，卷积层的作用是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162664,
+        text: '把图片变为灰度',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162665,
+        text: '提高图片的分辨率',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162666,
+        text: '&lt;p&gt;降低图片的分辨效果&lt;/p&gt;',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162667,
+        text: '提取图片的特征',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588742,
+    type: 1,
+    title: '数据标注员在数据标注规则中承担什么角色？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162242,
+        text: '执行者',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162243,
+        text: '决定者',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162244,
+        text: '终结者',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162245,
+        text: '起始者',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588743,
+    type: 1,
+    title: '下列的图像类型中，不属于位图类型图像的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162636,
+        text: '灰度图像',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162637,
+        text: '真彩色图像',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162638,
+        text: '索引图象',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162639,
+        text: 'CAD图像',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588744,
+    type: 1,
+    title: '标注数据清洗过程中，下列不属于数据清洗常见问题的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162604,
+        text: '数据重复',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162605,
+        text: '数据缺失',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162606,
+        text: '数据异常值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162607,
+        text: '数据存储格式',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588745,
+    type: 1,
+    title:
+      '将待标注数据进行最小可标注颗粒度分割，然后经由平台分发给不同数据标注员进行数据标注的是什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162286,
+        text: '数据分割',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162287,
+        text: '数据治理',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162288,
+        text: '数据监控',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162289,
+        text: '数据清洗',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588746,
+    type: 1,
+    title: '关于数据分类与处理的方法中，下列选项中不包括？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162218,
+        text: '数据采集',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162219,
+        text: '数据清洗',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162220,
+        text: '数据计算',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162221,
+        text: '数据排序',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588748,
+    type: 1,
+    title: '下列符合对数据集进行数据标注时的标注规范是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162600,
+        text: '标注内容越多越好',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162601,
+        text: '&lt;p&gt;标注命名可随意&lt;/p&gt;',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162602,
+        text: '标注类别越多越好',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162603,
+        text: '标注框贴近目标',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588749,
+    type: 1,
+    title:
+      '假设一个二分类问题，现在采用一个大于0.5的阈值，那么关于模型的说法正确的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162652,
+        text: '召回率降低或不变',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162653,
+        text: '分类准确率降低',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162654,
+        text: '召回率升高',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162655,
+        text: '分类准确率升高或不变',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588752,
+    type: 1,
+    title:
+      '结合深度学习算法和标注技术在实际工作中的应用，下列算法中可用于标注技术的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161442,
+        text: '支持向量机',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161443,
+        text: '循环神经网络',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161444,
+        text: '随机森林',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161445,
+        text: '注意力机制',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588755,
+    type: 1,
+    title: '在对客户价值分析的数据进行处理时，包含的流程步骤有？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162520,
+        text: '数据处理、数据清洗、数据计算、数据分析与展示',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162521,
+        text: '数据清洗、数据计算、数据处理、数据分析与展示',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162522,
+        text: '数据计算、数据清洗、数据处理、数据分析与展示',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162523,
+        text: '数据清洗、数据处理、数据计算、数据分析与展示',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588756,
+    type: 1,
+    title: '数据标注中的“分词标注”属于什么大类？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162234,
+        text: '序列标注',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162235,
+        text: '分词标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162236,
+        text: '关系标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162237,
+        text: '属性标注',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588757,
+    type: 1,
+    title: '在进行数据清洗时，下列选项中哪种方法不适合处理缺失值？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162508,
+        text: '删除含有缺失值的记录',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162509,
+        text: '使用平均值填充缺失值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162510,
+        text: '使用最近邻值填充缺失值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162511,
+        text: '使用随机值填充缺失值',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588761,
+    type: 1,
+    title: '在企业效率的衡量标准里，以下哪项不是衡量的维度？',
+    answer: '',
+    note: '业务流程设计概述：企业效率通常以时间、成本、资源利用等多个维度来衡量。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161836,
+        text: '时间',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161837,
+        text: '员工',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161838,
+        text: '成本',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161839,
+        text: '资源利用',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588772,
+    type: 1,
+    title: '以下哪项不是图像数据标注在智慧交通领域的好处？',
+    answer: '',
+    note: '智慧交通图像数据标注规范：图像数据标注有助于提高交通管理效率、增强道路安全性和减少交通拥堵，但并不直接旨在降低车辆速度。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161980,
+        text: '提高交通管理效率',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161981,
+        text: '增强道路安全性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161982,
+        text: '减少交通拥堵',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161983,
+        text: '降低车辆速度',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588777,
+    type: 1,
+    title: '在大模型交互中，提示词的设计应该遵循哪些原则？',
+    answer: '',
+    note: '本题目来自《AI大模型实践与应用》，在大模型交互中，提示词的设计应该遵循明确性、相关性、简洁性和指导性等原则。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162092,
+        text: '明确性、相关性、复杂性、指导性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162093,
+        text: '模糊性、不相关、复杂性、随机性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162094,
+        text: '模糊性、相关性、简洁性、随机性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162095,
+        text: '明确性、相关性、简洁性、指导性',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588779,
+    type: 1,
+    title: 't-分布邻域嵌入（t-SNE）是一种什么方法？',
+    answer: '',
+    note: '数据拆解高阶方法：t-SNE是一种非线性降维方法，通过保留样本间的相对距离，将高维数据映射到低维空间。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161988,
+        text: '线性降维方法',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161989,
+        text: '非线性降维方法',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161990,
+        text: '特征选择方法',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161991,
+        text: '数据分割方法',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588783,
+    type: 1,
+    title: 'AI大模型的泛化能力意味着什么？',
+    answer: '',
+    note: '本题目来自《AI大模型基础介绍》，AI大模型的泛化能力意味着它们不仅能够在特定任务上表现出色，还能够适应和解决多种不同的问题。这种泛化能力使得AI大模型在多个领域都有广泛的应用。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162084,
+        text: '它只能在特定任务上表现出色',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162085,
+        text: '它能够适应和解决多种不同的问题',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162086,
+        text: '它需要大量的人工干预',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162087,
+        text: '它能够处理更多的输入',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588784,
+    type: 1,
+    title: '平均召回（Average Recall）如何评估模型性能？',
+    answer: '',
+    note: '图像实例分割：平均召回是通过计算不同类别的召回率并求平均来评估模型性能的指标。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161964,
+        text: '通过计算不同类别的精确度并求平均',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161965,
+        text: '通过计算不同类别的召回率并求平均',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161966,
+        text: '通过计算模型的总体准确度',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161967,
+        text: '通过计算模型的F1分数',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9588785,
+    type: 1,
+    title: '在深度学习中，损失函数的作用是？',
+    answer: '',
+    note: '深度学习基础：由深度学习的组成部分可知，损失函数的作用是衡量神经网络输出与真实标签之间的差异，用于评估模型的性能。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161888,
+        text: '接收原始数据作为输入',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161889,
+        text: '衡量神经网络输出与真实标签之间的差异',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161890,
+        text: '通过非线性变换将输入信号转换为输出',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161891,
+        text: '基于梯度下降的优化算法',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
     id: 9536512,
     type: 2,
     title: '为了确保您能持续刷题，本题请选择【选项1】',
@@ -3714,6 +7324,102 @@ export default [
         text: '出色的泛化能力',
         selected: 0,
         checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587099,
+    type: 2,
+    title: '智能系统的特征包括哪些方面？',
+    answer: '',
+    note: '智能解决方案设：智能系统的特征包括学习能力、推理和决策能力、感知与感知能力以及交互性。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162122,
+        text: '学习能力',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162123,
+        text: '推理和决策能力',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162124,
+        text: '感知与感知能力',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162125,
+        text: '数据分析能力',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162126,
+        text: '交互性',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9587100,
+    type: 2,
+    title: '模型监控包括哪些方面？',
+    answer: '',
+    note: '模型监控与部署：模型监控包括模型性能监控、数据监控、安全监控和系统监控，不包括动态监控、日志监控。',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162111,
+        text: '模型性能监控',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162112,
+        text: '数据监控',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162113,
+        text: '安全监控',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162114,
+        text: '系统监控',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162115,
+        text: '动态监控',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162116,
+        text: '日志监控',
+        selected: 0,
+        checked: 0
       }
     ],
     fileList: null,

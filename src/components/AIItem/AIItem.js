@@ -66,7 +66,7 @@ const AIItem = ({ item, select, onSelect, inTst }) => {
                   !showAn && !select && handleSelect(id)
                 }}
               >
-                {text.trim().replace('&lt;p&gt;', '').replace('&lt;/p&gt;', '')}
+                {text.trim().replace('&lt;p&gt;', '').replace('&lt;/p&gt;', '').replace('$mdash;', '—')}
               </div>
             )
           })}

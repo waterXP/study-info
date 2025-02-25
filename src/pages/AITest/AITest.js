@@ -67,7 +67,7 @@ const AITest = () => {
       <Header to='/' hideDefault />
       <Content>
         {dispList.map(v => (
-          <AIItem id={v.id} item={v} />
+          <AIItem key={v.id} item={v} />
         ))}
       </Content>
     </Page>

@@ -53,7 +53,8 @@ const AITest = () => {
     pageSize,
     current,
     totalPage,
-    listArr
+    listArr,
+    allList
   } = useMemo(() => {
     const { pageSize, pageNo } = filters
     const specMap = { chk: 0, sin: 1, mul: 2 }
@@ -67,6 +68,7 @@ const AITest = () => {
       nextPageNo: 0,
       prevPageNo: 0,
       totalPage,
+      allList,
       listArr: '1'
         .repeat(totalPage)
         .split('')
@@ -107,9 +109,9 @@ const AITest = () => {
   const title = useMemo(() => {
     const { pageSize } = filters
     return `${(current - 1) * pageSize + 1}-${current * pageSize}/${
-      list.length
+      allList.length
     }`
-  }, [list, filters, current])
+  }, [allList, filters, current])
   const onSelect = useCallback(
     (id, answer, type) => {
       if (!anMap[id]) {

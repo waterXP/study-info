@@ -50,6 +50,9 @@ const Main = () => {
   const gotoCabinet = useCallback(() => {
     navigate('/cabinet')
   }, [navigate])
+  const gotoAI = useCallback(() => {
+    navigate('/ai')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoDeprive}>
@@ -96,6 +99,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoCabinet}>
         Cabinet
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoAI}>
+        AI Test
       </div>
     </div>
   )

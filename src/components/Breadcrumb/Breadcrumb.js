@@ -5,7 +5,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import TextButton from '@com/Buttons/TextButton'
 
-const Breadcrumb = ({ to = '/', children, noTop, title, qa, ex, ls }) => {
+const Breadcrumb = ({
+  to = '/',
+  children,
+  noTop,
+  title,
+  qa,
+  ex,
+  ls,
+  hideDefault
+}) => {
   const dispatch = useDispatch()
   const { showCn, showEx, showQa, showLs, displayType } = useSelector(
     ({ displayType, showEx, showCn, showLs, showQa }) => ({
@@ -93,15 +102,19 @@ const Breadcrumb = ({ to = '/', children, noTop, title, qa, ex, ls }) => {
             ls
           </span>
         )}
-        <span
-          className={showCn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-          onClick={changeCn}
-        >
-          cn
-        </span>
-        <span className='com-breadcrumb_on' onClick={changeDisplayType}>
-          {displayType}
-        </span>
+        {!hideDefault && (
+          <>
+            <span
+              className={showCn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+              onClick={changeCn}
+            >
+              cn
+            </span>
+            <span className='com-breadcrumb_on' onClick={changeDisplayType}>
+              {displayType}
+            </span>
+          </>
+        )}
       </div>
     </div>
   )

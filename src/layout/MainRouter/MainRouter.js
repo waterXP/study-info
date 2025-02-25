@@ -51,6 +51,7 @@ import CabinetPickCode from '@/pages/CabinetPickCode'
 import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
+import AITest from '@/pages/AITest'
 
 const { PUBLIC_URL } = process.env
 
@@ -251,6 +252,10 @@ const router = createBrowserRouter(
     {
       path: 'cabinet-save-query',
       element: <CabinetSaveQuery />
+    },
+    {
+      path: 'ai',
+      element: <AITest />
     },
     {
       path: '*',

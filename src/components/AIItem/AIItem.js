@@ -17,8 +17,20 @@ const AIItem = ({ item, select, onSelect, inTst }) => {
     const { title, note, optionList, type } = item
     return (
       <div className='com-ai-item'>
-        <p className='com-ai-item_title'>{title.trim()}</p>
-        {showNt && <p className='com-ai-item_note'>{note.trim()}</p>}
+        <p className='com-ai-item_title'>
+          {title
+            .trim()
+            .replace(/&lt;.*?&gt;/g, '')
+            .replace('&mdash;', '—')}
+        </p>
+        {showNt && (
+          <p className='com-ai-item_note'>
+            {note
+              .trim()
+              .replace(/&lt;.*?&gt;/g, '')
+              .replace('&mdash;', '—')}
+          </p>
+        )}
         <div className='com-ai-item_options'>
           {optionList.map(({ id, text, checked }) => {
             let cName = 'com-ai-item_option'
@@ -66,7 +78,10 @@ const AIItem = ({ item, select, onSelect, inTst }) => {
                   !showAn && !select && handleSelect(id)
                 }}
               >
-                {text.trim().replace('&lt;p&gt;', '').replace('&lt;/p&gt;', '').replace('$mdash;', '—')}
+                {text
+                  .trim()
+                  .replace(/&lt;.*?&gt;/g, '')
+                  .replace('&mdash;', '—')}
               </div>
             )
           })}

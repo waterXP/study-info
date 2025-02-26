@@ -3034,6 +3034,280 @@ export default [
     trainingDetailRep: null
   },
   {
+    id: 9619898,
+    type: 0,
+    title: 'stack()方法可以将列索引转换为行索引。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161592,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161593,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619899,
+    type: 0,
+    title:
+      '通用的人工智能训练师工作流是【数据采集】→【数据分类处理（数据标注）】→【数据加工】→【建立知识库】→【系统运维（智能系统）】→【数据分析】→【智能系统产品】',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161604,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161605,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619900,
+    type: 0,
+    title: '数据分析可以通过计算机工具和数学知识处理数据。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161680,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161681,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619901,
+    type: 0,
+    title: '数据仓库属于数据湖的一种。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161788,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161789,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619903,
+    type: 0,
+    title:
+      '在图像中添加文字注释及作者信息等内容，用于解释说明图像当中标注的位置信息，使其他人可以直观明了的看到注释信息，便于相关工作人员的修改。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162476,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162477,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629146,
+    type: 0,
+    title: '关键词提取是指借用自然语言处理方法提取文章关键词。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161718,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161719,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629148,
+    type: 0,
+    title: '使用global保留字声明简单数据类型变量后，该变量作为全局变量使用。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161636,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161637,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629151,
+    type: 0,
+    title:
+      '数据处理包含五个部分：数据导入、数据形状变换、数据集划分、数据归一化处理和封装loaddata函数。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162464,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162465,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629153,
+    type: 0,
+    title:
+      '在智能系统模型训练流程中，模型训练的目标是找到最优的模型参数。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162346,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162347,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629154,
+    type: 0,
+    title: '在数据预处理的步骤中，特征提取应该放在第一位。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161622,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161623,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
     id: 9536442,
     type: 1,
     title: '下列不属于图像标注挑战的是？',
@@ -11915,6 +12189,201 @@ export default [
         text: 'ps',
         selected: 0,
         checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619927,
+    type: 1,
+    title: '标注数据的合规安全管理中，数据备份和恢复的目的是什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162334,
+        text: '防止数据丢失和损坏',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162335,
+        text: '保护数据的隐私和机密性',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162336,
+        text: '控制数据的访问和使用权限',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162337,
+        text: '所有选项都是正确的',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9619934,
+    type: 1,
+    title: '在对深度学习的描述中，下列选项中，不属于深度学习内容的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162496,
+        text: '深度置信网络',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162497,
+        text: '受限玻尔兹曼机',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162498,
+        text: '卷积神经网络',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162499,
+        text: '贝叶斯学习',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629170,
+    type: 1,
+    title: '基于Python函数的理解，下列选项中能够绘制直方图的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161478,
+        text: 'bar()',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161479,
+        text: 'hist()',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161480,
+        text: 'pie()',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161481,
+        text: 'scatter()',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629172,
+    type: 1,
+    title: '以下选项中，最适合使用语音标注的是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162640,
+        text: '语音情感分析',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162641,
+        text: '命名实体识别',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162642,
+        text: '关系抽取',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162643,
+        text: '图像识别',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 9629176,
+    type: 1,
+    title: '采取下列（）措施来防止神经网络中的过拟合问题。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162644,
+        text: '数据增强',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162645,
+        text: 'Dropout',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162646,
+        text: '提前停止',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162647,
+        text: '以上全部',
+        selected: 0,
+        checked: 1
       }
     ],
     fileList: null,

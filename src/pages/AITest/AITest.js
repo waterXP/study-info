@@ -172,7 +172,7 @@ const AITest = () => {
   return (
     <Page>
       <Header title={title} to='/' hideDefault ai>
-        {list && (
+        {allList && (
           <div className='pg-ai-test_process'>
             {listArr.map(v => {
               const cName = ['pg-ai-test_p']
@@ -183,7 +183,7 @@ const AITest = () => {
                 cName.push('on-click')
               }
               let hasError = false
-              const curList = list.slice((v - 1) * pageSize, v * pageSize)
+              const curList = allList.slice((v - 1) * pageSize, v * pageSize)
               const ful = curList.every(({ id, type, optionList }) => {
                 if (anMap[id]) {
                   if (type === 2) {

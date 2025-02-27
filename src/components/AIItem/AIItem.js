@@ -2,6 +2,15 @@ import React, { memo, useCallback } from 'react'
 import './AIItem.styl'
 import { useSelector } from 'react-redux'
 
+const txtFilter = txt =>
+  typeof txt === 'string'
+    ? txt
+      .trim()
+      .replace(/&lt;.*?&gt;/g, '')
+      .replace('&mdash;', '—')
+      .replace('&quot;', '"')
+    : txt
+
 const AIItem = ({ item, select, onSelect, inTst }) => {
   const { showNt, showAn } = useSelector(({ showNt, showAn }) => ({
     showNt,
@@ -18,17 +27,11 @@ const AIItem = ({ item, select, onSelect, inTst }) => {
     return (
       <div className='com-ai-item'>
         <p className='com-ai-item_title'>
-          {title
-            .trim()
-            .replace(/&lt;.*?&gt;/g, '')
-            .replace('&mdash;', '—')}
+          {txtFilter(title)}
         </p>
         {showNt && (
           <p className='com-ai-item_note'>
-            {note
-              .trim()
-              .replace(/&lt;.*?&gt;/g, '')
-              .replace('&mdash;', '—')}
+            {txtFilter(note)}
           </p>
         )}
         <div className='com-ai-item_options'>
@@ -78,10 +81,7 @@ const AIItem = ({ item, select, onSelect, inTst }) => {
                   !showAn && !select && handleSelect(id)
                 }}
               >
-                {text
-                  .trim()
-                  .replace(/&lt;.*?&gt;/g, '')
-                  .replace('&mdash;', '—')}
+                {txtFilter(text)}
               </div>
             )
           })}

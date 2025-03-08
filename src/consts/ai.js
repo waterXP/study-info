@@ -3308,6 +3308,1459 @@ export default [
     trainingDetailRep: null
   },
   {
+    id: 10356143,
+    type: 0,
+    title:
+      '在模型训练过程中，损失函数的作用是衡量模型预测结果与真实标签之间的差异，并通过优化算法来最小化损失函数。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162396,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162397,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356145,
+    type: 0,
+    title: '数据加工质量控制应遵循谁加工谁负责的原则进行。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162454,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162455,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356146,
+    type: 0,
+    title: '数据仓库属于关系型数据库。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161830,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161831,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356147,
+    type: 0,
+    title:
+      '通过date_range()函数创建DatetimeIndex对象时，可用来规范时间戳的参数是normalize\n。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161822,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161823,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356148,
+    type: 0,
+    title: '诊断性分析是对规范性分析的进一步理解。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161760,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161761,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356149,
+    type: 0,
+    title: '在编程语言中，return关键字一般用来表示返回值。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161742,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161743,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356150,
+    type: 0,
+    title:
+      'ASR语音转写常用于客服、教育培训机构、公安、司法、医疗、金融等领域。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162466,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162467,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356153,
+    type: 0,
+    title:
+      '数据清洗能够提升数据质量，避免对数据使用过程产生负面影响。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162434,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162435,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356545,
+    type: 0,
+    title: '线性分类器简单而且在很多情况下效果接近最优，所以应用比较广泛。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161826,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161827,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356546,
+    type: 0,
+    title:
+      '现今，机器人客服、语音输入法、语音助手、语音翻译、语音支付、智能家电等都使用了语音交互技术。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162388,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162389,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356548,
+    type: 0,
+    title: '数据标准化是为了转换数据，确保在数据能够收敛到一个小的特定区间。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161606,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161607,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356549,
+    type: 0,
+    title:
+      '图像分类是指根据各自在图像信息中所反映的不同特征，把不同类别的目标区分开来的图像处理方法。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162418,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162419,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356550,
+    type: 0,
+    title:
+      '未经标注处理过的原始数据多以非结构化数据为主，这些数据难以被机器识别和学习。只有经过标注处理后的结构化数据才能被算法模型训练使用。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162410,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162411,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356551,
+    type: 0,
+    title: 'TF-IDF模型是关键词提取的经典方法。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161716,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161717,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356844,
+    type: 0,
+    title:
+      '在数据标注中，人体关键点标注的基本原理是使用计算机视觉技术进行特征提取关键点。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161570,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161571,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356846,
+    type: 0,
+    title: '在标注数据中，id属性是用于描述标注结果的。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161546,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161547,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356847,
+    type: 0,
+    title: '语音标注就是一种将音频或语音转换为文本的过程。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162382,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162383,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356849,
+    type: 0,
+    title:
+      '正则化通过向损失函数增加惩罚项的方式对模型施加制约，以提高模型的泛化能力。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162448,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162449,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356850,
+    type: 0,
+    title: '在视频标注过程中，色彩变换方法是用于视频分类标注数据的扩充。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161576,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161577,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357043,
+    type: 0,
+    title: 'LSTM模型在音频识别标注中的应用主要依赖于自我修正能力。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161658,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161659,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357044,
+    type: 0,
+    title: '在大数据环境下，数据分析能够挖掘出更有价值的信息。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161682,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161683,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357045,
+    type: 0,
+    title:
+      '朴素贝叶斯算法的基本原理是基于统计学原理，计算文本属于每个类别的概率。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161648,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161649,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357046,
+    type: 0,
+    title:
+      '在透视表中，能够通过字段、项目和集-计算字段的方式，进行透视表运算。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162360,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162361,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357050,
+    type: 0,
+    title: '智能标注（iTAG）在计算机视觉领域有人脸识别、行人检测、物体跟踪等。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161550,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161551,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357051,
+    type: 0,
+    title: '时间序列移动是指沿着时间轴方向将数据进行前移或后移。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161660,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161661,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357644,
+    type: 0,
+    title:
+      '数据中台的平台能力包括：数据汇聚平台、数据治理平台、数据资源平台、开发平台、作业调度平台、共享交换平台、运营监控平台。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162428,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162429,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357649,
+    type: 0,
+    title:
+      'Clonezilla是一个用于Linux，Free-Net-OpenBSD，Mac OS X，Windows以及Minix的分区和磁盘克隆程序。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161614,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161615,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357650,
+    type: 0,
+    title: '数据清洗的方法不包括重复数据记录处理。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162436,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162437,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357651,
+    type: 0,
+    title: '在数据标注领域中，“众包标注”指的是使用大量人员进行标注。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161738,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161739,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357653,
+    type: 0,
+    title: '请求头中的User-Agent字段可以用来识别客户端IP。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161728,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161729,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357844,
+    type: 0,
+    title: '在Linux中，git clone可以从远程仓库中下载源代码。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161778,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161779,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357846,
+    type: 0,
+    title:
+      '数据仓库是以图的形式存储数据，其中节点表示实体，边表示实体之间的关系。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161558,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161559,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358363,
+    type: 0,
+    title:
+      '语音类型的数据验收：数据结果包含语音标签的时间位置和标签的具体内容（例如转写内容、说话人信息、噪声等）。标注文件的输出格式为JSON文件或其他通用输出格式。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162372,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162373,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358364,
+    type: 0,
+    title: '图像标注工具Labelbox的主要应用于机器学习。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161832,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161833,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358365,
+    type: 0,
+    title: '[1，2，2，3]在Python中属于列表数据类型。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161724,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161725,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358366,
+    type: 0,
+    title: 'Https协议传输的数据是经过加密的。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161752,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161753,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358368,
+    type: 0,
+    title:
+      'EXCEL实现描述统计时，置信度指总体参数值落在样本统计值某一区内的概率。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162354,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162355,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358371,
+    type: 0,
+    title:
+      '数据仓库中包含大量的综合数据，这些综合数据会随着时间的变化不断地进行重新综合。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161590,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161591,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358464,
+    type: 0,
+    title: '在数据集中，离群点可以是合法的数据对象或者值。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162484,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162485,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358465,
+    type: 0,
+    title: 'unstack()方法可以将行索引旋转为列索引。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161618,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161619,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358467,
+    type: 0,
+    title: 'Python编程中，查看Python版本的命令是python --version。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161538,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161539,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358468,
+    type: 0,
+    title:
+      '在数据清洗过程中，常使用回归法处理缺失值，具体过程为：基于完整的数据集，建立回归方程（模型），对于包含空值的对象，将已知属性值代入方程来估计未知属性值，以此估计值来进行填充。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162482,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162483,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358471,
+    type: 0,
+    title:
+      '在折线图中，当横坐标日期长度过长影响图表美观时，可以通过更改日期格式来使图表变得简洁。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162358,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162359,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358473,
+    type: 0,
+    title:
+      '为了观察测试Y与X之间的线性关系，当X是连续变量时，非常适合采用直方图。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161740,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161741,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10360199,
+    type: 0,
+    title: '在Linux中，tar -zxvf text.tar可以解压文件text.tar。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161780,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161781,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10360200,
+    type: 0,
+    title:
+      '序列标注包括分词、实体、关键字、韵律和意图理解标注等。以上描述是否正确?',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162386,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162387,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10360201,
+    type: 0,
+    title:
+      '数据分类与处理的客观性原则要求处理结果应该准确、可靠且客观，能如实反映企业运营现状。以上描述是否正确？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162440,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162441,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10360204,
+    type: 0,
+    title: '度量是具体的计算用的量化数值。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161664,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161665,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10371486,
+    type: 0,
+    title: '词袋模型可以应用于文档分类和检索，同时受到编码信息的限制。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161784,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161785,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10371489,
+    type: 0,
+    title: '折线图可以用作查看特征间的趋势关系。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161684,
+        text: '正确',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161685,
+        text: '错误',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10371492,
+    type: 0,
+    title: '哑变量的使用没有实际意义。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161706,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161707,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10371493,
+    type: 0,
+    title: 'LabelImg是一种常用的图像标注工具，其支持的标注格式是COCO。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161548,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161549,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10371495,
+    type: 0,
+    title: '越复杂的数据处理场景，决策树模型的效果越好',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161564,
+        text: '正确',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161565,
+        text: '错误',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
     id: 9536442,
     type: 1,
     title: '下列不属于图像标注挑战的是？',
@@ -12384,6 +13837,281 @@ export default [
         text: '以上全部',
         selected: 0,
         checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10356594,
+    type: 1,
+    title: '在数据处理过程中，下列可以用于处理缺失值的方法是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162812,
+        text: '删除包含缺失值的记录',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162813,
+        text: '用平均值或中位数填充缺失值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162814,
+        text: '使用回归模型预测缺失值',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162815,
+        text: '&lt;p&gt;所有选项&lt;/p&gt;',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357073,
+    type: 1,
+    title:
+      '使用标注工具的操作时，下列不属于图像标注工具Labelbox的功能的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162760,
+        text: '支持多人协作标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162761,
+        text: '支持自动标注',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162762,
+        text: '支持导出标注结果',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162763,
+        text: '支持图像的裁剪和旋转',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357089,
+    type: 1,
+    title: '在神经网络结构中，最复杂的算法模型是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 161482,
+        text: 'GRU',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161483,
+        text: '长短时记忆神经网络',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 161484,
+        text: '卷积神经网络',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 161485,
+        text: 'SVM',
+        selected: 0,
+        checked: 0
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357091,
+    type: 1,
+    title: '下列不属于图像标注技术的是（）。',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162844,
+        text: '目标检测',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162845,
+        text: '图像分类',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162846,
+        text: '图像分割',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162847,
+        text: '图像压缩',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357662,
+    type: 1,
+    title:
+      '时长为1分钟，分辨率为640*480的某段录像（30帧/秒，真色彩），未经压缩的数据是多少字节？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162784,
+        text: '15.4G',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162785,
+        text: '154M',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162786,
+        text: '1.54M',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162787,
+        text: '1.54G',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10357687,
+    type: 1,
+    title: '在数据标注过程中，对应标注员所需要的素质是什么？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162548,
+        text: '学习力',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162549,
+        text: '专注力',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162550,
+        text: '责任感',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162551,
+        text: '以上都是',
+        selected: 0,
+        checked: 1
+      }
+    ],
+    fileList: null,
+    correct: 0,
+    trainingId: null,
+    trainingDetailRep: null
+  },
+  {
+    id: 10358498,
+    type: 1,
+    title: '超声图像的信息是通过超声波雷达得到的，其数据的来源是？',
+    answer: '',
+    note: '',
+    score: 1,
+    markScore: 0,
+    optionList: [
+      {
+        id: 162326,
+        text: '超声波的反射',
+        selected: 0,
+        checked: 1
+      },
+      {
+        id: 162327,
+        text: '超声波的折射',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162328,
+        text: '超声波的透射',
+        selected: 0,
+        checked: 0
+      },
+      {
+        id: 162329,
+        text: '超声波的反射和透射',
+        selected: 0,
+        checked: 0
       }
     ],
     fileList: null,

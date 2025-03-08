@@ -7,8 +7,8 @@ const txtFilter = txt =>
     ? txt
       .trim()
       .replace(/&lt;.*?&gt;/g, '')
-      .replace('&mdash;', '—')
-      .replace('&quot;', '"')
+      .replace(/&mdash;/g, '—')
+      .replace(/&quot;/g, '"')
     : txt
 
 const AIItem = ({ item, select, onSelect, inTst }) => {

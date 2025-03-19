@@ -1,43 +1,48 @@
-import React, { memo, useState, useEffect, useCallback } from 'react'
+import React, { memo, useMemo, useCallback } from 'react'
 import './CabinetPick.styl'
-import { useNavigate } from 'react-router-dom'
 import CabinetBody from '@/components/CabinetBody'
+import Icon from '@/components/Icon'
 
-const CabinetPick = () => {
-  const [status, setStatus] = useState({
-    title: '',
-    tip: '数据处理中……'
-  })
-  useEffect(() => {
-    // do open
-    setStatus({
-      title: '08号箱门',
-      tip: '08号箱门已打开，完成取件后请关闭箱门。'
-    })
-  }, [])
-  const navigate = useNavigate()
-  const [hasOthers, setHasOthers] = useState(true)
-  useEffect(() => {
-    setHasOthers(Math.random() > 0.5)
-  }, [])
+const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
+  const { boxName, status } = useMemo(() => doorInfo || {}, [doorInfo])
   const handleReturn = useCallback(() => {
     if (hasOthers) {
-      navigate('/pick-list')
+      onUrl('pick-list')
     } else {
-      navigate('/')
+      onUrl('')
     }
-  }, [hasOthers, navigate])
+  }, [hasOthers, onUrl])
   const onOpen = useCallback(() => {
-    // open again
-  }, [])
+    reOpen('pick')
+  }, [reOpen])
   return (
-    <CabinetBody onReturn={handleReturn} delay={300}>
+    <CabinetBody
+      onReturn={handleReturn}
+      delay={300}
+      onUrl={onUrl}
+      userInfo={userInfo}
+    >
       <div className='pg-cabinet-pick'>
-        {status.title && (
-          <div className='pg-cabinet-pick_box'>{status.title}</div>
-        )}
-        <p className='pg-cabinet-pick_tip'>{status.tip}</p>
-        {status.title && (
+        <div className='pg-cabinet-pick_body'>
+          <img
+            className='pg-cabinet-pick_banner'
+            src='./assets/box.jpg'
+            alt='box'
+          />
+          {boxName && (
+            <div className='pg-cabinet-pick_box'>
+              <Icon
+                className='pg-cabinet-pick_box-icon'
+                type='icon-baoguofahuo'
+              />
+              <span className='pg-cabinet-pick_box-text'>{boxName}</span>
+            </div>
+          )}
+          <p className='pg-cabinet-pick_tip'>
+            {status === 'open'
+              ? `${boxName}门已打开，完成取件后请关闭箱门。`
+              : `${boxName}门已关闭`}
+          </p>
           <div className='pg-cabinet-pick_buttons'>
             <div className='pg-cabinet-pick_button on-click' onClick={onOpen}>
               再次开箱
@@ -49,7 +54,7 @@ const CabinetPick = () => {
               完成取件
             </div>
           </div>
-        )}
+        </div>
       </div>
     </CabinetBody>
   )

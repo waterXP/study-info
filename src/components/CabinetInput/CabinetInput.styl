@@ -3,6 +3,7 @@
   flex-direction column
 .com-cabinet-input_title
   f(ft85, 32, 48)
+  weight()
   flex none
   margin 32px 0 16px
 .com-cabinet-input_blocks
@@ -10,13 +11,14 @@
 .com-cabinet-input_block
   flf(none, center, center)
   box-sizing border-box
-  margin 16px
-  width 64px
+  margin 8px
+  width 80px
   height 64px
-  border 1px solid ftp
+  border 1px solid rgba(0, 0, 0, .15)
   border-radius 4px
   &.is-current
-    border-color cs
+    border-color cp
+    background-color rgba(66, 132, 244, .15)
 .com-cabinet-input_block-text
   f(ftp, 48)
   flex none
@@ -28,54 +30,62 @@
 .com-cabinet-input_button
   flf(none, center, center)
   box-sizing border-box
-  margin 12px 24px
-  width 72px
-  height 72px
-  border 1px solid ft65
+  margin 4px 16px
+  width 88px
+  height 88px
+  border 1px solid rgba(0, 0, 0, .15)
   border-radius 4px
 .com-cabinet-input_button-text
-  f(ft65, 24)
+  f(ft65, 48)
   flex none
 .com-cabinet-input_button-icon.iconfont
-  f(ft65, 24)
+  f(ft65, 32)
   flex none
 .com-cabinet-input_list
   box-sizing border-box
   margin 16px
-  padding 16px
   width 352px
-  border 1px solid ftp
   border-radius 16px
 .com-cabinet-input_list-topic
-  f(ft65, 18, 28)
+  f(ft65, 24, 36)
   padding-bottom 12px
 .com-cabinet-input_list-item
-  f(ftp, 16, 24)
+  f(ftp, 24, 36)
   position relative
   z-index 1
   padding 12px
-  border 1px solid ftp
+  border 1px solid rgba(0, 0, 0, .15)
+  &:first-child
+    border-top-left-radius 8px
+    border-top-right-radius 8px
+  &:last-child
+    border-bottom-right-radius 8px
+    border-bottom-left-radius 8px
   &.is-current
+    weight()
     z-index 2
-    border-color cs
-    color cs
+    background-color rgba(66, 132, 244, .15)
+    color cp
 .com-cabinet-input_list-body
   min-height 246px
+.com-cabinet-input_list-detail
+  min-height 286px
 .com-cabinet-input_list-item + .com-cabinet-input_list-item
   margin-top -1px
+  border-top-color transparent
 .com-cabinet-input_list-buttons
   fl(center)
   margin-top 32px
 .com-cabinet-input_list-button
-  f(ft85, 16, 24)
+  f(ft85, 24, 32)
   bs()
   flex 1
-  padding 12px 0
-  border 1px solid ft65
+  padding 16px 32px
+  border 1px solid rgba(0, 0, 0, .15)
   border-radius 4px
   text-align center
   &.is-disabled
-    cursor not-allowed
     opacity .25
+    cursor not-allowed
   + .com-cabinet-input_list-button
     margin-left 16px

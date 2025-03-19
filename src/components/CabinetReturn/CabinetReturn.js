@@ -1,25 +1,34 @@
-import React, { memo, useRef, useState, useEffect, useCallback } from 'react'
+import React, {
+  memo,
+  useMemo,
+  useRef,
+  useState,
+  useEffect,
+  useCallback
+} from 'react'
 import './CabinetReturn.styl'
-import { useNavigate } from 'react-router-dom'
 import Icon from '@com/Icon'
 
-const CabinetReturn = ({ delay, onClick }) => {
+const CabinetReturn = ({ delay, onClick, onUrl, userInfo }) => {
+  const userName = useMemo(
+    () => (userInfo && userInfo.personName) || '',
+    [userInfo]
+  )
   const refTm = useRef(null)
   const [time, setTime] = useState(delay)
-  const navigate = useNavigate()
   const gotoMain = useCallback(() => {
     if (onClick) {
       onClick()
     } else {
-      navigate('/')
+      onUrl('')
     }
-  }, [navigate, onClick])
+  }, [onClick, onUrl])
   const onTime = useCallback(
     time => {
       refTm.current = setTimeout(() => {
         refTm.current = null
         if (time === 0) {
-          navigate('/')
+          onUrl('')
         } else {
           const nextTime = time - 1
           setTime(nextTime)
@@ -27,7 +36,7 @@ const CabinetReturn = ({ delay, onClick }) => {
         }
       }, 1000)
     },
-    [navigate]
+    [onUrl]
   )
   useEffect(() => {
     onTime(delay)
@@ -47,7 +56,15 @@ const CabinetReturn = ({ delay, onClick }) => {
         <Icon className='com-cabinet-return_icon' type='icon-fanhui' />
         <span className='com-cabinet-return_text'>返回</span>
       </div>
-      <span className='com-cabinet-return_time'>{time}</span>
+      <div className='pg-cabinet-return_right'>
+        {userName && (
+          <>
+            <Icon className='pg-cabinet-return_user-icon' type='icon-customer-fill' />
+            <span className='pg-cabinet-return_name'>{`当前用户：${userName}`}</span>
+          </>
+        )}
+        <span className='com-cabinet-return_time'>{time}</span>
+      </div>
     </div>
   )
 }

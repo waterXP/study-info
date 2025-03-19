@@ -6,28 +6,11 @@ import './index.styl'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-const plusReady = () => {
-  // eslint-disable-next-line no-alert
-  window.alert(
-    window.plus.android.invoke(
-      'com.dcp.system.facade.SystemFacade',
-      'getDeviceCode'
-    )
-  )
-}
-
-if (window.plus) {
-  plusReady()
-} else {
-  document.addEventListener('plusready', plusReady, false)
-}
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>
 )
 
 // If you want to start measuring performance in your app, pass a function

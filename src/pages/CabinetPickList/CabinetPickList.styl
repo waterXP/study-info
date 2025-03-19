@@ -1,12 +1,22 @@
 .pg-cabinet-pick-list
-  flf(auto, center)
-  flex-direction column
+  flfc(auto, stretch)
+  overflow-y auto
+  padding 32px 64px
+.pg-cabinet-pick-list_body
+  bs()
+  flfc(auto, center)
+  padding 24px 0 48px
+  border-radius 20px
+  background-color #fff
+.pg-cabinet-pick-list_banner
+  flex none
+  margin -20px 0
+  width 192px
 .pg-cabinet-pick-list_title
   f(ft85, 32, 48)
-  padding 24px 0 48px
+  weight()
+  padding 0 0 24px
   text-align center
-.pg-cabinet-pick-list_body
-  flf(none, center, space-between)
 .pg-cabinet-pick-list_arrorw.iconfont
   f(ft65, 24, 32)
   flex none
@@ -17,6 +27,10 @@
   &.is-disabled
     opacity .25
     cursor not-allowed
+.pg-cabinet-pick-list_content
+  flf(none, center)
+  flex-wrap wrap
+  width 930px
 .pg-cabinet-pick-list_wrap
   flex none
   width 558px
@@ -25,13 +39,30 @@
 .pg-cabinet-pick-list_button-static-wrap
   flex none
 .pg-cabinet-pick-list_button
-  flf(none, center, center)
+  flfc(none, center, center)
   box-sizing border-box
-  margin 0 16px
+  margin 16px
   padding 24px 0
-  border 1px solid ft65
+  height 162px
   border-radius 4px
   text-align center
-  height 160px
+.pg-cabinet-pick-list_box-icon.iconfont
+  f(ft85, 36, 48)
+  margin-bottom 8px
 .pg-cabinet-pick-list_button-text
   f(ft65, 24, 32)
+  weight()
+.pg-cabinet-pick-list_pages
+  flf(none, center)
+  margin-top 24px
+.pg-cabinet-pick-list_page
+  f(ft65, 24, 32)
+  bs()
+  flex none
+  margin 0 24px
+  padding 16px 48px
+  border 1px solid rgba(0, 0, 0, .15)
+  border-radius 4px
+  &.is-disabled
+    opacity .25
+    cursor not-allowed

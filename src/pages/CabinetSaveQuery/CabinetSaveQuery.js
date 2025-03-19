@@ -5,23 +5,31 @@ import CabinetBody from '@/components/CabinetBody'
 import CabinetInput from '@/components/CabinetInput'
 import { getAvailableLockerBox, findUser } from '@/api/expressLocker'
 
-const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading }) => {
+const CabinetSaveQuery = ({
+  onUrl,
+  userInfo,
+  deviceCode,
+  handleOpen,
+  setLoading
+}) => {
   const [sizeList, setSizeList] = useState([])
   const [size, setSize] = useState(null)
   useEffect(() => {
     if (deviceCode) {
       setLoading(true)
-      getAvailableLockerBox({ deviceCode }).then(d => {
-        if (d.code === 200) {
-          const sizeList = (d.data || []).filter(
-            ({ lockerBoxes }) => lockerBoxes && lockerBoxes.length > 0
-          )
-          setSizeList(sizeList)
-          setSize(sizeList[0] ? sizeList[0].boxType : null)
-        }
-      }).finally(() => {
-        setLoading(false)
-      })
+      getAvailableLockerBox({ deviceCode })
+        .then(d => {
+          if (d.code === 200) {
+            const sizeList = (d.data || []).filter(
+              ({ lockerBoxes }) => lockerBoxes && lockerBoxes.length > 0
+            )
+            setSizeList(sizeList)
+            setSize(sizeList[0] ? sizeList[0].boxType : null)
+          }
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     }
   }, [])
   const [current, setCurrent] = useState(null)
@@ -31,23 +39,25 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading 
     setLoading(true)
     findUser({
       phoneSuffix: code
-    }).then(d => {
-      if (d.code === 200) {
-        const list = d.data
-        if (list && list.length > 0) {
-          if (list.length === 1) {
-            setCurrent(list[0].userId)
-          } else {
-            setCurrent(null)
-          }
-          setList(list)
-        } else {
-          message.error('未找到收件人')
-        }
-      }
-    }).finally(() => {
-      setLoading(false)
     })
+      .then(d => {
+        if (d.code === 200) {
+          const list = d.data
+          if (list && list.length > 0) {
+            if (list.length === 1) {
+              setCurrent(list[0].userId)
+            } else {
+              setCurrent(null)
+            }
+            setList(list)
+          } else {
+            message.error('未找到收件人')
+          }
+        }
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }, [])
   const onReturn = useCallback(() => {
     onUrl('')
@@ -62,8 +72,14 @@ const CabinetSaveQuery = ({ onUrl, userInfo, deviceCode, handleOpen, setLoading 
   const onOpen = useCallback(() => {
     const receiver = list.find(({ userId }) => userId === current)
     const targetType = sizeList.find(({ boxType }) => boxType === size)
+    const index =
+      targetType.lockerBoxes
+        ? Math.floor(Math.random() * targetType.lockerBoxes.length)
+        : 0
     const box =
-      targetType && targetType.lockerBoxes && targetType.lockerBoxes[0]
+      targetType &&
+      targetType.lockerBoxes &&
+      (targetType.lockerBoxes[index] || targetType.lockerBoxes[0])
     if (!receiver) {
       message.error('未找到收件人')
       return

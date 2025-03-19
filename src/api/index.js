@@ -36,8 +36,8 @@ const loginMockApi = '/user/login'
 
 // 默认请求格式
 const DefaultContentType = 'application/x-www-form-urlencoded;charset=UTF-8'
-const baseURL = getBaseUrl()
-window.alert(baseURL)
+const baseURL = `${getBaseUrl()}/api`
+// window.alert(baseURL)
 // const baseURL = 'http://221.12.170.114:30009/api' // 测试环境
 
 const instance = axios.create({

@@ -90,12 +90,17 @@ export const openScreenLight = () => {
 
 export const getBaseUrl = () => {
   if (window.plus) {
-    return window.plus.android.invoke(
+    const baseURL = window.plus.android.invoke(
       'com.dcp.system.facade.SystemFacade',
       'getBaseServerUrl'
-    ) || 'http://39.185.129.156:18006/prod-api/'
+    )
+    return baseURL && typeof baseURL === 'string'
+      ? baseURL[baseURL.length - 1] === '/'
+        ? baseURL.slice(0, baseURL.length - 1)
+        : baseURL
+      : 'http://39.185.129.156:18006/prod-api'
   }
-  return 'http://39.185.129.156:18006/prod-api/'
+  return 'http://39.185.129.156:18006/prod-api'
 }
 
 export default null

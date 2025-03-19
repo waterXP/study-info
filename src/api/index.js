@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { stringify } from 'qs'
 import CryptoJS from 'crypto-js'
+import { getBaseUrl } from './android'
 
 const getParamsStr = params => {
   const sortedKeys = Object.keys(params).sort()
@@ -35,7 +36,8 @@ const loginMockApi = '/user/login'
 
 // 默认请求格式
 const DefaultContentType = 'application/x-www-form-urlencoded;charset=UTF-8'
-const baseURL = 'http://221.12.170.114:30009/api'
+const baseURL = getBaseUrl()
+// const baseURL = 'http://221.12.170.114:30009/api' // 测试环境
 
 const instance = axios.create({
   baseURL,

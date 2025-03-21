@@ -54,7 +54,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ことり', mana: '小鳥', type: '名', cn: '小鸟，鸟儿' },
         {
@@ -288,7 +306,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'せきにんしゃ', mana: '責任者', type: '名', cn: '负责人' },
         { kana: 'どうりょう', mana: '同僚', type: '名', cn: '同事' },
@@ -411,7 +447,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'おてつだい', mana: 'お手伝い', type: '名', cn: '帮忙，帮助' },
         { kana: 'のりかえ', mana: '乗り換え', type: '名', cn: '换车，换乘' },
@@ -603,7 +657,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         {
           kana: 'しゃいんりょこう',

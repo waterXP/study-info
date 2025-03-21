@@ -53,7 +53,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ようふく', mana: '洋服', type: '名', cn: '西服' },
         { kana: 'セーター', mana: '', type: '名', cn: '毛衣' },
@@ -142,7 +160,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'おと', mana: '音', type: '名', cn: '声音，响声' },
         { kana: 'こえ', mana: '声', type: '名', cn: '声音' },
@@ -234,7 +270,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'しなもの', mana: '品物', type: '名', cn: '物品，商品' },
         { kana: 'おさら', mana: 'お皿', type: '名', cn: '盘子' },
@@ -327,7 +381,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'しゅみ', mana: '趣味', type: '名', cn: '爱好' },
         { kana: 'とくぎ', mana: '特技', type: '名', cn: '特长，拿手的技术' },

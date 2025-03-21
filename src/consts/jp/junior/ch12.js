@@ -57,7 +57,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'しょうしか', mana: '少子化', type: '名', cn: '孩子减少现象' },
         { kana: 'じんこう', mana: '人口', type: '名', cn: '人口' },
@@ -209,7 +227,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'けがわ', mana: '毛皮', type: '名', cn: '毛皮' },
         { kana: 'ほんもの', mana: '本物', type: '名', cn: '真货，真东西' },
@@ -354,7 +390,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'したみ', mana: '下見', type: '名', cn: '视察' },
         { kana: 'スタッフ', mana: '', type: '名', cn: '职员，同事' },
@@ -453,7 +507,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'みょうにち', mana: '明日', type: '名', cn: '明天' },
         { kana: 'あす', mana: '明日', type: '名', cn: '明天' },

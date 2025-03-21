@@ -51,7 +51,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'にもつ', mana: '荷物', type: '名', cn: '包裹' },
         { kana: 'はがき', mana: '', type: '名', cn: '明信片' },
@@ -156,7 +174,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ふなびん', mana: '船便', type: '名', cn: '海运' },
         { kana: 'しょるい', mana: '書類', type: '名', cn: '文件，文稿' },
@@ -265,7 +301,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ボート', mana: '', type: '名', cn: '小船，小艇' },
         { kana: 'ベンチ', mana: '', type: '名', cn: '长椅，长凳' },
@@ -360,7 +414,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'そうさ', mana: '操作', type: '名', cn: '操作，操纵' },
         { kana: 'きかい', mana: '機械', type: '名', cn: '机械，机器' },

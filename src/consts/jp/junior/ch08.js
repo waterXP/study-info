@@ -49,7 +49,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'しつもん', mana: '質問', type: '名', cn: '提问，问题' },
         { kana: 'ばあい', mana: '場合', type: '名', cn: '场合，情况' },
@@ -154,7 +172,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'たくはいびん', mana: '宅配便', type: '名', cn: '送货上门服务' },
         { kana: 'ほうこくしょ', mana: '報告書', type: '名', cn: '报告书' },
@@ -247,7 +283,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ボタン', mana: '', type: '名', cn: '按钮；纽扣' },
         { kana: 'ブローチ', mana: '', type: '名', cn: '胸针' },
@@ -341,7 +395,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'れっしゃ', mana: '列車', type: '名', cn: '火车，列车' },
         { kana: 'こうそくバス', mana: '高速バス', type: '名', cn: '走高速的公共汽车' },

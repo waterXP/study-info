@@ -49,7 +49,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'りょうり', mana: '料理', type: '名', cn: '菜肴，饭菜' },
         { kana: 'しせんりょうり', mana: '四川料理', type: '名', cn: '四川菜' },
@@ -178,7 +196,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'もみじ', mana: '紅葉', type: '名', cn: '红叶' },
         { kana: 'こきょう', mana: '故郷', type: '名', cn: '故乡' },
@@ -287,7 +323,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'うた', mana: '歌', type: '名', cn: '歌，歌曲' },
         { kana: 'カラオケ', mana: '', type: '名', cn: '卡拉OK' },
@@ -397,7 +451,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'きせつ', mana: '季節', type: '名', cn: '季节' },
         { kana: 'ふゆ', mana: '冬', type: '名', cn: '冬天，冬季' },

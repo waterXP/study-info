@@ -58,7 +58,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'いま', mana: '今', type: '名', cn: '现在' },
         { kana: 'せんしゅう', mana: '先週', type: '名', cn: '上个星期' },
@@ -178,7 +196,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'らいげつ', mana: '来月', type: '名', cn: '下个月' },
         { kana: 'せんげつ', mana: '先月', type: '名', cn: '上个月' },
@@ -296,7 +332,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'コーヒー', mana: '', type: '名', cn: '咖啡' },
         { kana: 'コーラ', mana: '', type: '名', cn: '可乐' },
@@ -417,7 +471,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'プレゼント', mana: '', type: '名', cn: '礼物' },
         { kana: 'チケット', mana: '', type: '名', cn: '票' },

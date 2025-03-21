@@ -58,7 +58,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'すうがく', mana: '数学', type: '名', cn: '数学' },
         { kana: 'せんもん', mana: '専門', type: '名', cn: '专门' },
@@ -146,7 +164,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'おおあめ', mana: '大雨', type: '名', cn: '大雨' },
         { kana: 'さくら', mana: '桜', type: '名', cn: '樱花' },
@@ -242,7 +278,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'けいざい', mana: '経済', type: '名', cn: '经济' },
         { kana: 'こくさいかんけいがく', mana: '国際関係学', type: '名', cn: '国际关系学' },
@@ -348,7 +402,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'マフラー', mana: '', type: '名', cn: '围巾' },
         { kana: 'ネックレス', mana: '', type: '名', cn: '项链' },

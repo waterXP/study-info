@@ -49,7 +49,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ことば', mana: '言葉', type: '名', cn: '语言' },
         { kana: 'メールアドレス', mana: '', type: '名', cn: '邮件地址' },
@@ -133,7 +151,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'スキーじょう', mana: 'スキー場', type: '名', cn: '滑雪场' },
         { kana: 'そうべつかい', mana: '送別会', type: '名', cn: '欢送会' },
@@ -218,7 +254,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'しゅうまつ', mana: '週末', type: '名', cn: '周末' },
         { kana: 'スケート', mana: '', type: '名', cn: '滑冰，溜冰' },
@@ -293,7 +347,25 @@ export default {
           ]
         ]
       },
-      grammar: {},
+      grammar: {
+        base: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ],
+        explain: [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
       word: [
         { kana: 'ハイキング', mana: '', type: '名', cn: '郊游，远足' },
         { kana: 'おわかれ', mana: 'お別れ', type: '名', cn: '分别，分手' },

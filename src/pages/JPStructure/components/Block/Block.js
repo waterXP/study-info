@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { Fragment, memo } from 'react'
 import './Block.styl'
 import Trans from '@com/Trans'
 
@@ -22,7 +22,7 @@ const Block = ({ title, content }) => (
           if (flag === 't') {
             const rows = text.split('@').map(v => v.split(':'))
             return (
-              <>
+              <Fragment key={i}>
                 {rows.map((row, i) => (
                   <div key={i} className='pg-jp-structure--block_row'>
                     {row.map((v, i) => (
@@ -34,7 +34,7 @@ const Block = ({ title, content }) => (
                     ))}
                   </div>
                 ))}
-              </>
+              </Fragment>
             )
           }
           return (

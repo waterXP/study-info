@@ -14,6 +14,7 @@ import CabinetPickCode from '@/pages/CabinetPickCode'
 import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
+import CabinetCodeResult from '@/pages/CabinetCodeResult'
 import {
   initAndroid,
   checkFace,
@@ -30,7 +31,8 @@ const ComMap = {
   'pick-code': CabinetPickCode,
   'pick-list': CabinetPickList,
   save: CabinetSave,
-  'save-query': CabinetSaveQuery
+  'save-query': CabinetSaveQuery,
+  'code-result': CabinetCodeResult
 }
 
 const App = () => {
@@ -44,6 +46,7 @@ const App = () => {
   const [deviceCode, setDeviceCode] = useState('34049E63C6F7')
   const [doorInfo, setDoorInfo] = useState(null)
   const [url, setUrl] = useState('')
+  const [codePick, updateCodePick] = useState(null)
   // 更新用户信息
   const updateUserInfo = useCallback(userInfo => {
     const { action, success } = userInfo || {}
@@ -119,6 +122,24 @@ const App = () => {
             .then(d => {
               if (d.code === 200) {
                 setUrl('pick')
+              }
+              // setUrl('pick')
+            })
+            .finally(() => {
+              setLoading(false)
+            })
+          // } else {
+          //   setUrl('pick')
+        }
+      } else if (refNextUrl.current === 'code-pick') {
+        if (refOpenParams.current && !refOpenParams.current.picked) {
+          const params = { ...refOpenParams.current }
+          refOpenParams.current.picked = true
+          setLoading(true)
+          takeExpress(params)
+            .then(d => {
+              if (d.code === 200) {
+                setUrl('code-result')
               }
               // setUrl('pick')
             })
@@ -207,6 +228,22 @@ const App = () => {
             status: 'open'
           })
         }
+      } else if (keyword === 'code-pick') {
+        const { boardNum, boxNum, expressCode } = box
+        // setHasOthers(hasOthers)
+        refNextUrl.current = keyword
+        refOpenParams.current = {
+          expressCode
+        }
+        if (window.plus) {
+          openLocker(boardNum, boxNum)
+        } else {
+          afterDoorOperate({
+            boardNum,
+            boxNum,
+            status: 'open'
+          })
+        }
       }
     },
     [userInfo, deviceCode]
@@ -252,6 +289,8 @@ const App = () => {
             reOpen={reOpen}
             hasOthers={hasOthers}
             setLoading={setLoading}
+            codePick={codePick}
+            updateCodePick={updateCodePick}
           />
         )}
       </div>

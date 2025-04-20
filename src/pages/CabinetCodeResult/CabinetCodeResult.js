@@ -1,10 +1,10 @@
 import React, { memo, useMemo, useCallback } from 'react'
-import './CabinetPick.styl'
+import './CabinetCodeResult.styl'
 import CabinetBody from '@/components/CabinetBody'
 import Icon from '@/components/Icon'
 
-const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen }) => {
-// const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
+const CabinetCodeResult = ({ onUrl, userInfo, doorInfo, reOpen }) => {
+// const CabinetCodeResult = ({ onUrl, userInfo, doorInfo, reOpen, hasOthers }) => {
   const { boxName, status } = useMemo(() => doorInfo || {}, [doorInfo])
   const handleReturn = useCallback(() => {
     onUrl('')
@@ -16,10 +16,10 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen }) => {
   // }, [hasOthers, onUrl])
   }, [onUrl])
   const handlePick = useCallback(() => {
-    onUrl('pick-list')
+    onUrl('pick-code')
   }, [onUrl])
   const onOpen = useCallback(() => {
-    reOpen('pick')
+    reOpen('pick-code')
   }, [reOpen])
   return (
     <CabinetBody
@@ -28,34 +28,34 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen }) => {
       onUrl={onUrl}
       userInfo={userInfo}
     >
-      <div className='pg-cabinet-pick'>
-        <div className='pg-cabinet-pick_body'>
+      <div className='pg-cabinet-code-result'>
+        <div className='pg-cabinet-code-result_body'>
           <img
-            className='pg-cabinet-pick_banner'
+            className='pg-cabinet-code-result_banner'
             src='./assets/box.jpg'
             alt='box'
           />
           {boxName && (
-            <div className='pg-cabinet-pick_box'>
+            <div className='pg-cabinet-code-result_box'>
               <Icon
-                className='pg-cabinet-pick_box-icon'
+                className='pg-cabinet-code-result_box-icon'
                 type='icon-baoguofahuo'
               />
-              <span className='pg-cabinet-pick_box-text'>{boxName}</span>
+              <span className='pg-cabinet-code-result_box-text'>{boxName}</span>
             </div>
           )}
-          <p className='pg-cabinet-pick_tip'>
+          <p className='pg-cabinet-code-result_tip'>
             {status === 'open'
               ? `${boxName}门已打开，完成取件后请关闭箱门。`
               : `${boxName}门已关闭`}
           </p>
-          <div className='pg-cabinet-pick_buttons'>
-            <div className='pg-cabinet-pick_button on-click' onClick={onOpen}>
+          <div className='pg-cabinet-code-result_buttons'>
+            <div className='pg-cabinet-code-result_button on-click' onClick={onOpen}>
               再次开箱
             </div>
-            <div className='pg-cabinet-pick_button on-click' onClick={handlePick}>继续取件</div>
+            <div className='pg-cabinet-code-result_button on-click' onClick={handlePick}>继续取件</div>
             <div
-              className='pg-cabinet-pick_button on-click'
+              className='pg-cabinet-code-result_button on-click'
               onClick={handleReturn}
             >
               完成取件
@@ -67,4 +67,4 @@ const CabinetPick = ({ onUrl, userInfo, doorInfo, reOpen }) => {
   )
 }
 
-export default memo(CabinetPick)
+export default memo(CabinetCodeResult)

@@ -10,4 +10,6 @@ export const findWaitTakeList = p => api.get('/expressLocker/findWaitTakeList', 
 
 export const takeExpress = p => api.get('/expressLocker/takeExpress', p)
 
+export const takeExpressFromCode = p => api.get('/expressLocker/takeExpressByTakeCode', p)
+
 export default null

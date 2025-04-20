@@ -88,6 +88,11 @@ export const openScreenLight = () => {
   }
 }
 
+const urls = {
+  tst: 'http://221.12.170.114:30009',
+  pro: 'http://39.185.129.156:18006/prod-api'
+}
+
 export const getBaseUrl = () => {
   if (window.plus) {
     const baseURL = window.plus.android.invoke(
@@ -98,9 +103,9 @@ export const getBaseUrl = () => {
       ? baseURL[baseURL.length - 1] === '/'
         ? baseURL.slice(0, baseURL.length - 1)
         : baseURL
-      : 'http://39.185.129.156:18006/prod-api'
+      : urls.pro
   }
-  return 'http://39.185.129.156:18006/prod-api'
+  return urls.pro
 }
 
 export default null

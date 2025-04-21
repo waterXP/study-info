@@ -54,7 +54,7 @@ const instance = axios.create({
 // 添加一个请求拦截器
 instance.interceptors.request.use(
   config => {
-    config.baseURL = `${getBaseUrl()}/api`
+    // config.baseURL = `${getBaseUrl()}/api`
     // 配置 rap2 模拟数据, 配置请求参数
     if (config.method === 'post') {
       if (config.data) {

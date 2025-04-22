@@ -27,6 +27,10 @@ import {
 import { updateInstance } from '@/api'
 import { saveExpress, takeExpress } from '@/api/expressLocker'
 
+message.config({
+  top: 100, duration: 500000
+})
+
 const ComMap = {
   default: Cabinet,
   pick: CabinetPick,

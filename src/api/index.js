@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { message } from 'antd'
 import { stringify } from 'qs'
 import CryptoJS from 'crypto-js'
 import { getBaseUrl } from './android'
@@ -50,6 +51,10 @@ const instance = axios.create({
     return status >= 200 && status < 300 // default
   }
 })
+
+export const updateInstance = url => {
+  instance.defaults.baseURL = `${url}/api`
+}
 
 // 添加一个请求拦截器
 instance.interceptors.request.use(
@@ -148,11 +153,13 @@ api.request = function (...args) {
         if (res.data) {
           res.data.code === 200 ? resolve(res.data) : reject(res.data)
         } else {
-          reject(res)
+          message.error((res && (res.msg || res.message)) || '请求失败')
+          // reject(res)
         }
       })
       .catch(err => {
-        reject(err)
+        message.error((err && (err.msg || err.message)) || '请求失败')
+        // reject(err)
       })
   })
 }

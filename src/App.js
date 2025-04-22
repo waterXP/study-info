@@ -21,8 +21,10 @@ import {
   openLocker,
   waitLocker,
   closeScreenLight,
-  openScreenLight
+  openScreenLight,
+  getBaseUrl
 } from '@/api/android'
+import { updateInstance } from '@/api'
 import { saveExpress, takeExpress } from '@/api/expressLocker'
 
 const ComMap = {
@@ -92,10 +94,9 @@ const App = () => {
           if (result.status === 'close') {
             refOpenParams.current.saved = true
             const params = { ...refOpenParams.current }
-            saveExpress(params)
-              .finally(() => {
-                setLoading(false)
-              })
+            saveExpress(params).finally(() => {
+              setLoading(false)
+            })
           } else {
             setUrl('save')
           }
@@ -154,7 +155,14 @@ const App = () => {
   }, [])
   // 初始化页面回调
   useEffect(() => {
-    initAndroid(setDeviceCode, updateUserInfo, afterDoorOperate)
+    initAndroid(
+      deviceCode => {
+        setDeviceCode(deviceCode)
+        updateInstance(getBaseUrl())
+      },
+      updateUserInfo,
+      afterDoorOperate
+    )
   }, [])
   // 根据url获取内容
   const Comp = useMemo(() => ComMap[url] || ComMap.default, [url])

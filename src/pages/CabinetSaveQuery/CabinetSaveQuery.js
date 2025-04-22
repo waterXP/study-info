@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useEffect, useState } from 'react'
+import React, { memo, useCallback, useEffect, useRef, useState } from 'react'
 import './CabinetSaveQuery.styl'
 import { message } from 'antd'
 import CabinetBody from '@/components/CabinetBody'
@@ -12,6 +12,7 @@ const CabinetSaveQuery = ({
   handleOpen,
   setLoading
 }) => {
+  const refTm = useRef(0)
   const [sizeList, setSizeList] = useState([])
   const [size, setSize] = useState(null)
   useEffect(() => {
@@ -30,6 +31,12 @@ const CabinetSaveQuery = ({
         .finally(() => {
           setLoading(false)
         })
+    }
+    return () => {
+      if (refTm.current) {
+        clearTimeout(refTm.current)
+        refTm.current = 0
+      }
     }
   }, [])
   const [current, setCurrent] = useState(null)
@@ -69,13 +76,20 @@ const CabinetSaveQuery = ({
     setCurrent(null)
     setList([])
   }, [])
+  const refBusy = useRef(false)
   const onOpen = useCallback(() => {
+    if (refBusy.current) {
+      return
+    }
+    refBusy.current = true
+    refTm.current = setTimeout(() => {
+      refBusy.current = false
+    }, 500)
     const receiver = list.find(({ userId }) => userId === current)
     const targetType = sizeList.find(({ boxType }) => boxType === size)
-    const index =
-      targetType.lockerBoxes
-        ? Math.floor(Math.random() * targetType.lockerBoxes.length)
-        : 0
+    const index = targetType.lockerBoxes
+      ? Math.floor(Math.random() * targetType.lockerBoxes.length)
+      : 0
     const box =
       targetType &&
       targetType.lockerBoxes &&

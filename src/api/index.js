@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { message } from 'antd'
+// import { message } from 'antd'
 import { stringify } from 'qs'
 import CryptoJS from 'crypto-js'
 import { getBaseUrl } from './android'
@@ -147,19 +147,32 @@ api.request = function (...args) {
   config[isPost ? 'data' : 'params'] = buildData(data)
 
   return new Promise((resolve, reject) => {
+  // return new Promise((resolve, reject) => {
     instance
       .request(config)
       .then(res => {
         if (res.data) {
-          res.data.code === 200 ? resolve(res.data) : reject(res.data)
+          if (res.data.code === 200) {
+            resolve(res.data)
+          } else {
+            // message.error(
+            //   (res &&
+            //     (res.data.msg ||
+            //       res.data.messsage ||
+            //       res.msg ||
+            //       res.message)) ||
+            //     '请求失败'
+            // )
+            reject(res.data)
+          }
         } else {
-          message.error((res && (res.msg || res.message)) || '请求失败')
-          // reject(res)
+          // message.error((res && (res.msg || res.message)) || '请求失败')
+          reject(res)
         }
       })
       .catch(err => {
-        message.error((err && (err.msg || err.message)) || '请求失败')
-        // reject(err)
+        // message.error((err && (err.msg || err.message)) || '请求失败')
+        reject(err)
       })
   })
 }

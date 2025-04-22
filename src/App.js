@@ -96,6 +96,8 @@ const App = () => {
             const params = { ...refOpenParams.current }
             saveExpress(params).finally(() => {
               setLoading(false)
+            }).catch(e => {
+              message.error(e.msg || e.message || '存件失败')
             })
           } else {
             setUrl('save')

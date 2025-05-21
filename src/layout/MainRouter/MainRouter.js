@@ -34,6 +34,7 @@ import JPN2 from '@/pages/JPN2'
 import JPN2Words from '@/pages/JPN2Words'
 import JPN2Word from '@/pages/JPN2Word'
 import JPN2Study from '@/pages/JPN2Study'
+import JLPT from '@/pages/JLPT'
 import Deprive from '@/pages/Deprive'
 import Deprive2 from '@/pages/Deprive2'
 import Deprive3 from '@/pages/Deprive3'
@@ -217,6 +218,7 @@ const router = createBrowserRouter(
       path: 'jp-n2-study',
       element: <JPN2Study />
     },
+    { path: 'jlpt', element: <JLPT /> },
     {
       path: 'deprive',
       element: <Deprive />

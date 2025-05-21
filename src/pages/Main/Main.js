@@ -8,44 +8,8 @@ const Main = () => {
   const gotoMenu = useCallback(() => {
     navigate('/menu')
   }, [navigate])
-  const gotoJapanese = useCallback(() => {
-    navigate('/jp')
-  }, [navigate])
-  const gotoTables = useCallback(() => {
-    navigate('/jp-tables')
-  }, [navigate])
-  const gotoNotes = useCallback(() => {
-    navigate('/jp-notes')
-  }, [navigate])
-  const gotoPpt = useCallback(() => {
-    navigate('/jp-ppts')
-  }, [navigate])
-  const gotoN2 = useCallback(() => {
-    navigate('/jp-n2s')
-  }, [navigate])
-  const gotoN2Words = useCallback(() => {
-    navigate('/jp-n2-words')
-  }, [navigate])
-  const gotoN2Exec = useCallback(() => {
-    navigate('/jp-exec')
-  }, [navigate])
-  const gotoDeprive = useCallback(() => {
-    navigate('/deprive')
-  }, [navigate])
-  const gotoDeprive2 = useCallback(() => {
-    navigate('/deprive2')
-  }, [navigate])
-  const gotoDeprive3 = useCallback(() => {
-    navigate('/deprive3')
-  }, [navigate])
-  const gotoN2Listens = useCallback(() => {
-    navigate('/jp-listens')
-  }, [navigate])
-  const gotoN2Grammars = useCallback(() => {
-    navigate('/jp-grammars')
-  }, [navigate])
-  const gotoN2GrammarsExec = useCallback(() => {
-    navigate('/jp-grammars-exec')
+  const gotoJLPT = useCallback(() => {
+    navigate('/jlpt')
   }, [navigate])
   const gotoCabinet = useCallback(() => {
     navigate('/cabinet')
@@ -53,55 +17,25 @@ const Main = () => {
   const gotoAI = useCallback(() => {
     navigate('/ai')
   }, [navigate])
+  const gotoDeprive3 = useCallback(() => {
+    navigate('/deprive3')
+  }, [navigate])
   return (
     <div className='pg-main'>
-      <div className='pg-main_link on-click' onClick={gotoDeprive}>
-        Deprive
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoDeprive2}>
-        Deprive2
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoDeprive3}>
-        Deprive3
-      </div>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
         软考
       </div>
-      <div className='pg-main_link on-click' onClick={gotoJapanese}>
-        日语
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoTables}>
-        背颂
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoNotes}>
-        语法
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoPpt}>
-        PPT
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2}>
-        N2
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2Words}>
-        N2 Words
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2Exec}>
-        N2 Exec
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2Listens}>
-        N2 Listens
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2Grammars}>
-        N2 Grammars
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoN2GrammarsExec}>
-        N2 Grammars Exec
+      <div className='pg-main_link on-click' onClick={gotoJLPT}>
+        JLPT
       </div>
       <div className='pg-main_link on-click' onClick={gotoCabinet}>
         Cabinet
       </div>
       <div className='pg-main_link on-click' onClick={gotoAI}>
         AI Test
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoDeprive3}>
+        i18n
       </div>
     </div>
   )

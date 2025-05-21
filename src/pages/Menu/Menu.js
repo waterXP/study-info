@@ -65,7 +65,7 @@ const Menu = () => {
   )
   const openOthersPage = useCallback(
     () => {
-      navigate('/others?id=security')
+      navigate('/others?id=community2025')
     }, [navigate]
   )
   const openPerformancePage = useCallback(

@@ -10,9 +10,6 @@ const JLPT = () => {
   const gotoDeprive2 = useCallback(() => {
     navigate('/deprive2')
   }, [navigate])
-  const gotoDeprive3 = useCallback(() => {
-    navigate('/deprive3')
-  }, [navigate])
   const gotoJapanese = useCallback(() => {
     navigate('/jp')
   }, [navigate])
@@ -51,9 +48,6 @@ const JLPT = () => {
         </div>
         <div className='pg-jlpt_item on-click' onClick={gotoDeprive2}>
           Deprive2
-        </div>
-        <div className='pg-jlpt_item on-click' onClick={gotoDeprive3}>
-          Deprive3
         </div>
         <div className='pg-jlpt_item on-click' onClick={gotoJapanese}>
           日语

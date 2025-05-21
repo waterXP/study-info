@@ -1,6 +1,6 @@
 const community2025 = {
-  id: '信息系统项目的沟通管理--2025',
-  title: '',
+  id: 'community2025',
+  title: '信息系统项目的沟通管理--2025',
   sample: [
     {
       title: '>>概述<<',
@@ -67,8 +67,8 @@ const community2025 = {
 }
 
 const rish2025 = {
-  id: '信息系统项目的不确定性绩效域--2025',
-  title: '',
+  id: 'rish2025',
+  title: '信息系统项目的不确定性绩效域--2025',
   sample: [
     {
       title: '>>概述<<',
@@ -149,8 +149,8 @@ const rish2025 = {
 }
 
 const range2025 = {
-  id: '信息系统项目的范围管理--2025',
-  title: '',
+  id: 'range2025',
+  title: '信息系统项目的范围管理--2025',
   sample: [
     {
       title: '>>概述<<',
@@ -232,8 +232,8 @@ const range2025 = {
 }
 
 const range2025St = {
-  id: '信息系统项目的范围管理--2025',
-  title: '',
+  id: 'range2025St',
+  title: '信息系统项目的范围管理--2025',
   sample: [
     {
       title: '>>概述<<',

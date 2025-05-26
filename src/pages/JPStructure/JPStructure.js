@@ -96,7 +96,7 @@ const JPStructure = () => {
   )
   return (
     <Page>
-      <Header to='/jp' title={title} />
+      <Header to='/jp' title={title} type='jp' />
       <Content hasFooter>
         {base && <Block title='语法解释' content={base} />}
         {explain && <Block title='表达及词语讲解' content={explain} />}

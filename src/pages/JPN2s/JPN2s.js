@@ -37,7 +37,7 @@ const JPN2s = () => {
     <div className='pg-jp-n2s hide-scroll'>
       <div className='pg-jp-n2s_content'>
         <div className='pg-jp-n2s_header'>
-          <Breadcrumb to='/' noTop ex>
+          <Breadcrumb to='/' noTop ex type='jp'>
             返回
           </Breadcrumb>
         </div>

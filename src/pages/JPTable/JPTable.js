@@ -37,7 +37,7 @@ const JPTable = () => {
   }, [columns])
   return (
     <Page>
-      <Header to='/' />
+      <Header to='/' type='jp' />
       <Content>
         <p className='pg-jp-table_title'>{name}</p>
         {desc && <p className='pg-jp-table_desc'>{desc}</p>}

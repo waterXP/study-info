@@ -16,7 +16,7 @@ const JPGrammars = () => {
   )
   return (
     <Page>
-      <Header to='/' />
+      <Header to='/' type='jp' />
       <Content>
         {grammar.map(({ title, id }) => (
           <p

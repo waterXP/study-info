@@ -43,7 +43,7 @@ const JP = () => {
   }, [navigate])
   return (
     <Page>
-      <Header to='/' />
+      <Header to='/' type='jp' />
       <Content>
         {favoriteCount > 0 && (
           <p

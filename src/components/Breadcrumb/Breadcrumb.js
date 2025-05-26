@@ -14,22 +14,40 @@ const Breadcrumb = ({
   ex,
   ls,
   ai,
-  hideDefault
+  hideDefault,
+  type
 }) => {
   const dispatch = useDispatch()
-  const { showCn, showEx, showQa, showLs, displayType, showNt, showAn, typeMode } =
-    useSelector(
-      ({ displayType, showEx, showCn, showLs, showQa, showNt, showAn, typeMode }) => ({
-        showLs,
-        showQa,
-        showCn,
-        showEx,
-        displayType,
-        showNt,
-        showAn,
-        typeMode
-      })
-    )
+  const {
+    showCn,
+    showEx,
+    showQa,
+    showLs,
+    displayType,
+    showNt,
+    showAn,
+    typeMode
+  } = useSelector(
+    ({
+      displayType,
+      showEx,
+      showCn,
+      showLs,
+      showQa,
+      showNt,
+      showAn,
+      typeMode
+    }) => ({
+      showLs,
+      showQa,
+      showCn,
+      showEx,
+      displayType,
+      showNt,
+      showAn,
+      typeMode
+    })
+  )
   const navigate = useNavigate()
   const onClick = useCallback(
     e => {
@@ -95,62 +113,68 @@ const Breadcrumb = ({
         {title && <span>&nbsp;&nbsp;{title}</span>}
       </div>
       <div className='com-breadcrumb_right'>
-        {ai && (
-          <span
-            className={showAn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-            onClick={changeAn}
-          >
-            an
-          </span>
-        )}
-        {ai && (
-          <span
-            className={showNt ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-            onClick={changeNt}
-          >
-            nt
-          </span>
-        )}
-        {ai && (
-          <span className='com-breadcrumb_on' onClick={changeTypeMode}>
-            {typeMode}
-          </span>
-        )}
-        {qa && (
-          <span
-            className={showQa ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-            onClick={changeQa}
-          >
-            qa
-          </span>
-        )}
-        {ex && (
-          <span
-            className={showEx ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-            onClick={changeEx}
-          >
-            ex
-          </span>
-        )}
-        {ls && (
-          <span
-            className={showLs ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-            onClick={changeLs}
-          >
-            ls
-          </span>
-        )}
-        {!hideDefault && (
+        {type === 'jp' && (
           <>
-            <span
-              className={showCn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
-              onClick={changeCn}
-            >
-              cn
-            </span>
-            <span className='com-breadcrumb_on' onClick={changeDisplayType}>
-              {displayType}
-            </span>
+            {ai && (
+              <span
+                className={showAn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+                onClick={changeAn}
+              >
+                an
+              </span>
+            )}
+            {ai && (
+              <span
+                className={showNt ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+                onClick={changeNt}
+              >
+                nt
+              </span>
+            )}
+            {ai && (
+              <span className='com-breadcrumb_on' onClick={changeTypeMode}>
+                {typeMode}
+              </span>
+            )}
+            {qa && (
+              <span
+                className={showQa ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+                onClick={changeQa}
+              >
+                qa
+              </span>
+            )}
+            {ex && (
+              <span
+                className={showEx ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+                onClick={changeEx}
+              >
+                ex
+              </span>
+            )}
+            {ls && (
+              <span
+                className={showLs ? 'com-breadcrumb_on' : 'com-breadcrumb_off'}
+                onClick={changeLs}
+              >
+                ls
+              </span>
+            )}
+            {!hideDefault && (
+              <>
+                <span
+                  className={
+                    showCn ? 'com-breadcrumb_on' : 'com-breadcrumb_off'
+                  }
+                  onClick={changeCn}
+                >
+                  cn
+                </span>
+                <span className='com-breadcrumb_on' onClick={changeDisplayType}>
+                  {displayType}
+                </span>
+              </>
+            )}
           </>
         )}
       </div>

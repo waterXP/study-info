@@ -24,7 +24,7 @@ const JPPpts = () => {
   return (
     <div ref={ref} className='pg-jp-ppts hide-scroll'>
       <div className='pg-jp-ppts_header'>
-        <Breadcrumb to='/' noTop>
+        <Breadcrumb to='/' noTop type='jp'>
           返回
         </Breadcrumb>
       </div>

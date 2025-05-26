@@ -271,7 +271,7 @@ const JPN2Study = () => {
   return (
     <div className='pg-jp-words hide-scroll'>
       <div className='pg-jp-words_content'>
-        <Breadcrumb to={onBreadcrumb} noTop title={<JPText content={title} />}>
+        <Breadcrumb to={onBreadcrumb} noTop title={<JPText content={title} type='jp' />}>
           返回
         </Breadcrumb>
         <div className='pg-jp-words_process' onClick={onProcess}>

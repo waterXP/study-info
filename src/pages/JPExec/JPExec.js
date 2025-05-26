@@ -7,7 +7,7 @@ import sort from '@/consts/jp/exec/sort'
 
 const JPExec = () => (
   <Page>
-    <Header to='/' ex />
+    <Header to='/' ex type='jp' />
     <Content>
       {sort.map((v, i) => (
         <Fragment key={i}>

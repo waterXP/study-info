@@ -38,6 +38,7 @@ import JLPT from '@/pages/JLPT'
 import Deprive from '@/pages/Deprive'
 import Deprive2 from '@/pages/Deprive2'
 import Deprive3 from '@/pages/Deprive3'
+import Deprive4 from '@/pages/Deprive4'
 import JPExec from '@/pages/JPExec'
 import JPListens from '@/pages/JPListens'
 import JPListen from '@/pages/JPListen'
@@ -230,6 +231,10 @@ const router = createBrowserRouter(
     {
       path: 'deprive3',
       element: <Deprive3 />
+    },
+    {
+      path: 'deprive4',
+      element: <Deprive4 />
     },
     {
       path: 'cabinet',

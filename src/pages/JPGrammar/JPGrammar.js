@@ -80,7 +80,7 @@ const JPGrammar = () => {
   const hasMulti = useMemo(() => Boolean(list && list.length > 1), [list])
   return (
     <Page>
-      <Header to={re} title={title} />
+      <Header to={re} title={title} type='jp' />
       <Content hasFooter>
         {list.map(({ t, l, i, e, u }, index) => (
           <div key={index} className='pg-jp-grammar_item'>

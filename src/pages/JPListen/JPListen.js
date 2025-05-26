@@ -98,7 +98,7 @@ const JPListen = () => {
   }, [info, cur])
   return (
     <Page>
-      <Header to='/jp-listens' ls />
+      <Header to='/jp-listens' ls type='jp' />
       <Content hasFooter>
         {info && (
           <div className='pg-jp-listen_body'>

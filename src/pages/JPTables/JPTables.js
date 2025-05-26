@@ -16,7 +16,7 @@ const JPTables = () => {
   )
   return (
     <Page>
-      <Header to='/' />
+      <Header to='/' type='jp' />
       <Content>
         {tables.map(({ id: pId, title, desc, list }) => (
           <div key={pId} className='pg-jp-tables_content'>

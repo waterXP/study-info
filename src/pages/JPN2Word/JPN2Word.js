@@ -38,7 +38,7 @@ const JPN2Word = () => {
     <div className='pg-jp-n-2-word hide-scroll'>
       <div className='pg-jp-n2-word_content'>
         <div className='pg-jp-n2-word_top'>
-          <Breadcrumb to='/jp-n2-words' noTop>
+          <Breadcrumb to='/jp-n2-words' noTop type='jp'>
             返回
           </Breadcrumb>
           {info && (

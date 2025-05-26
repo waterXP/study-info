@@ -288,7 +288,7 @@ const JPWords = () => {
   }, [list, index])
   return (
     <Page>
-      <Header to={link} title={<JPText content={title} />}>
+      <Header to={link} title={<JPText content={title} type='jp' />}>
         <div className='pg-jp-words_process' onClick={onProcess}>
           <div className='pg-jp-words_point' style={pointStyle} />
         </div>

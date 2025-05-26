@@ -15,7 +15,7 @@ const JPNotes = () => {
   )
   return (
     <Box>
-      <Breadcrumb to='/' noTop>
+      <Breadcrumb to='/' noTop type='jp'>
         返回
       </Breadcrumb>
       {note.map(({ id: pId, title, desc, list }) => (

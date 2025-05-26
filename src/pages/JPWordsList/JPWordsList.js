@@ -125,7 +125,7 @@ const JPWordsList = () => {
   }, [title])
   return (
     <Page>
-      <Header to='/jp' title={dispTitle} />
+      <Header to='/jp' title={dispTitle} type='jp' />
       <Content hasFooter>
         <div className='pg-jp-words-list_body' ref={refBody}>
           {list.map((v, i) => (

@@ -147,7 +147,7 @@ const JPGrammar = () => {
   }, [tar, cur, an])
   return (
     <Page>
-      <Header to='/jp-grammars-exec' qa>
+      <Header to='/jp-grammars-exec' qa type='jp'>
         {list && (
           <div className='pg-jp-grammar-exec_process'>
             {list.map((v, i) => {

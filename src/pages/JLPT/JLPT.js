@@ -40,6 +40,9 @@ const JLPT = () => {
   const gotoN2GrammarsExec = useCallback(() => {
     navigate('/jp-grammars-exec')
   }, [navigate])
+  const gotoDeprive4 = useCallback(() => {
+    navigate('/deprive4')
+  }, [navigate])
   return (
     <div className='pg-jlpt'>
       <div className='pg-jlpt_content'>
@@ -78,6 +81,10 @@ const JLPT = () => {
         </div>
         <div className='pg-jlpt_item on-click' onClick={gotoN2GrammarsExec}>
           N2 Grammars Exec
+        </div>
+        <div className='pg-jlpt_item on-click' onClick={gotoDeprive4}>
+          {/* https://www.hujiang.com/jpdict/news15271/ */}
+          From hujiang
         </div>
       </div>
     </div>

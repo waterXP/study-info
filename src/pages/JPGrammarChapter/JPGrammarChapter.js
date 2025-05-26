@@ -42,7 +42,7 @@ const JPGrammarChapter = () => {
   )
   return (
     <Page>
-      <Header to='/jp-grammars' title={title} />
+      <Header to='/jp-grammars' title={title} type='jp' />
       <Content hasFooter>
         {content.map(({ id, topic }) => (
           <p

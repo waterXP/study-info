@@ -16,7 +16,7 @@ const JPListens = () => {
   )
   return (
     <Page>
-      <Header to='/' />
+      <Header to='/' type='jp' />
       <Content>
         {listen.map((v, i) => (
           <p

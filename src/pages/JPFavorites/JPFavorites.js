@@ -221,7 +221,7 @@ const JPFavorites = () => {
   return (
     <div className='pg-jp-words hide-scroll'>
       <div className='pg-jp-words_content'>
-        <Breadcrumb to={-1} noTop>
+        <Breadcrumb to={-1} noTop type='jp'>
           返回
         </Breadcrumb>
         <div className='pg-jp-words_process' onClick={onProcess}>

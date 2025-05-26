@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import './Header.styl'
 import Breadcrumb from '@com/Breadcrumb'
 
-const Header = ({ ai, to, ex, ls, qa, title, hideDefault, children }) => (
+const Header = ({ ai, to, ex, ls, qa, title, type, hideDefault, children }) => (
   <div className='com-page-header'>
     <Breadcrumb
       to={to}
@@ -13,6 +13,7 @@ const Header = ({ ai, to, ex, ls, qa, title, hideDefault, children }) => (
       title={title}
       hideDefault={hideDefault}
       ai={ai}
+      type={type}
     >
       返回
     </Breadcrumb>

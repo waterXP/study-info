@@ -7,6 +7,7 @@
 // b>>> 提示
 // r>>> 文本右对齐
 // https://jp.hujiang.com/
+// https://jp.tingroom.com/2278/24184.html
 
 export const printLesson = txt => {
   const a = txt

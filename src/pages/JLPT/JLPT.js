@@ -83,7 +83,6 @@ const JLPT = () => {
           N2 Grammars Exec
         </div>
         <div className='pg-jlpt_item on-click' onClick={gotoDeprive4}>
-          {/* https://jp.hujiang.com/ */}
           From hujiang
         </div>
       </div>

@@ -21,6 +21,9 @@ export const printLesson = txt => {
 
 export const printDocs = txt => {
   const a = txt
+    .replace(/…/g, '〜')
+    .replace(/【/g, '[')
+    .replace(/】/g, ']')
     .replace(/\n\n/g, '\n')
     .split('\n')
     .map(v => v.trim())
@@ -56,7 +59,7 @@ export const printDocs = txt => {
       word.push(
         `{kana:'${r.kana}',mana:'${r.mana}',type:'${r.type}',cn:'${r.cn}'}`
       )
-    } else {
+    } else if (txt) {
       const r = {
         kana: '',
         mana: '',

@@ -54,6 +54,7 @@ import CabinetPickList from '@/pages/CabinetPickList'
 import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
 import AITest from '@/pages/AITest'
+import CardGame from '@/pages/CardGame'
 
 const { PUBLIC_URL } = process.env
 
@@ -62,6 +63,10 @@ const router = createBrowserRouter(
     {
       path: '/',
       element: <Main />
+    },
+    {
+      path: '/card-game',
+      element: <CardGame />
     },
     {
       path: 'overview',

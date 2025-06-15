@@ -12,6 +12,8 @@ https://www.pixiv.net/artworks/84137014
 https://www.pixiv.net/users/2064022/artworks/%E4%BB%95%E4%BA%8B%E7%B5%B5
 フュージョンファイト
 
+https://www.zhihu.com/question/306953606/answer/1678231286
+
 放映日期	话数	该集名称
 （括号中为日语原名）	登场怪獣、宇宙人、客串奥特曼
 （括号中为日语原名）	制作人员

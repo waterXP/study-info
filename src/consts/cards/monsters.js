@@ -99,7 +99,7 @@ const b4 = {
   point: 4
 }
 const b2 = {
-  name: '艾斯杀手',
+  name: '泰莱斯通',
   count: 2,
   damage: 5,
   health: 5,
@@ -123,7 +123,7 @@ const b5 = {
   point: 4
 }
 const c3 = {
-  name: '贝蒙斯坦',
+  name: '贝蒙斯坦', ---
   count: 1,
   damage: 7,
   health: 6,
@@ -147,7 +147,7 @@ const c1 = {
   point: 7
 }
 const c4 = {
-  name: '艾雷王',
+  name: '艾雷王', -- 
   count: 1,
   damage: 6,
   health: 10,
@@ -155,7 +155,7 @@ const c4 = {
   point: 8
 }
 const c5 = {
-  name: '哥尔赞',
+  name: '哥尔赞', --
   count: 1,
   damage: 6,
   health: 8,
@@ -306,6 +306,13 @@ const special4 = {
   name: '增援',
   count: 3,
   help: 1,
+  point: 2,
+  type: 'use'
+}
+const search = {
+  name: '索敌',
+  count: 3,
+  search: 3,
   point: 2,
   type: 'use'
 }

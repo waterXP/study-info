@@ -1,3 +1,17 @@
+https://zh.wikipedia.org/wiki/%E8%B6%85%E4%BA%BA%E5%8A%9B%E9%9C%B8%E7%8E%8B
+https://dic.pixiv.net/search?query=%E3%83%90%E3%83%AB%E3%82%BF%E3%83%B3%E6%98%9F%E4%BA%BA
+https://www.pixiv.net/artworks/78391275
+https://www.pixiv.net/artworks/78391438
+https://www.pixiv.net/artworks/78358694
+https://www.pixiv.net/artworks/78370403
+https://www.pixiv.net/artworks/78370446
+https://www.pixiv.net/artworks/78358612
+https://www.pixiv.net/artworks/78358543
+https://www.pixiv.net/artworks/78344178
+https://www.pixiv.net/artworks/84137014
+https://www.pixiv.net/users/2064022/artworks/%E4%BB%95%E4%BA%8B%E7%B5%B5
+フュージョンファイト
+
 放映日期	话数	该集名称
 （括号中为日语原名）	登场怪獣、宇宙人、客串奥特曼
 （括号中为日语原名）	制作人员

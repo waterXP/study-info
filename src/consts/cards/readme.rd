@@ -11,20 +11,22 @@ https://www.pixiv.net/artworks/78344178
 https://www.pixiv.net/artworks/84137014
 https://www.pixiv.net/users/2064022/artworks/%E4%BB%95%E4%BA%8B%E7%B5%B5
 フュージョンファイト
+https://www.pixiv.net/artworks/63477101
 
 https://www.zhihu.com/question/306953606/answer/1678231286
 https://www.pinterest.com/search/pins/?q=%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%9E%E3%83%B3&rs=typed
 https://www.pinterest.com/pin/34340015904482576/
 https://www.pinterest.com/pin/33425222226325201/
+https://www.battlespirits.com/product/booster/booster_collabo-ultraman.php
 
-
-
+https://www.pixiv.net/artworks/57890323
 神级：奥特曼诺亚
-
+https://www.pixiv.net/artworks/97664415
+https://www.pixiv.net/users/3216780/artworks
 S+：佐菲
 
 S：杰顿，奥特曼
-
+https://dic.pixiv.net/a/%E5%88%9D%E4%BB%A3%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%9E%E3%83%B3
 A：哥莫拉，安特拉，布尔顿，梅菲拉斯星人1
 
 B：雷德王1 & 2，巴尔坦星人2，杰罗尼蒙，基拉，全副武装的三枝博史（第37集后）
@@ -108,11 +110,11 @@ E：皮古蒙，苏夫兰，木乃伊人，人类大小的巴尔坦星人，苏�
 （ミイラの叫び）	木乃伊怪兽德东哥
 （ミイラ怪獣ドドンゴ）
 木乃伊怪人木乃伊人
-（ミイラ怪人ミイラ人間）	监督・特技导演-圆谷一
+（ミイラ怪人ミイラ人間）	监督·特技导演-圆谷一
 剧本-藤川桂介
 1966/10/9	13	石油SOS
 （オイルSOS）	油兽佩斯塔
-（油獣ペスター）	导演・特技导演-圆谷一
+（油獣ペスター）	导演·特技导演-圆谷一
 剧本-金城哲夫
 1966/10/16	14	珍珠贝防卫指令
 （真珠貝防衛指令）	喷潮怪兽蟾蜍鲸
@@ -191,7 +193,7 @@ E：皮古蒙，苏夫兰，木乃伊人，人类大小的巴尔坦星人，苏�
 （怪獣殿下後編）	古代怪兽哥莫拉
 （古代怪獣ゴモラ）
 1967/1/22	28	人类标本5、6
-（人間標本5・6）	三面怪人达达
+（人間標本5·6）	三面怪人达达
 （三面怪人ダダ）	导演-野长瀬三摩地
 特技导演-高野宏一
 剧本-山田正弘

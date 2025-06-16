@@ -1,3 +1,6 @@
+https://dic.pixiv.net/a/%E5%88%9D%E4%BB%A3%E3%83%9E%E3%83%B3%E6%80%AA%E7%8D%A3
+
+
 https://zh.wikipedia.org/wiki/%E8%B6%85%E4%BA%BA%E5%8A%9B%E9%9C%B8%E7%8E%8B
 https://dic.pixiv.net/search?query=%E3%83%90%E3%83%AB%E3%82%BF%E3%83%B3%E6%98%9F%E4%BA%BA
 https://www.pixiv.net/artworks/78391275
@@ -23,6 +26,7 @@ https://www.pixiv.net/artworks/57890323
 神级：奥特曼诺亚
 https://www.pixiv.net/artworks/97664415
 https://www.pixiv.net/users/3216780/artworks
+https://www.pixiv.net/users/58597/artworks
 S+：佐菲
 
 S：杰顿，奥特曼

@@ -28,7 +28,7 @@ https://www.pixiv.net/artworks/97664415
 https://www.pixiv.net/users/58597/artworks
 https://www.pixiv.net/users/149776/artworks
 
-
+https://w.atwiki.jp/fusion_fight/pages/58.html#id_d1c32d5e
 
 https://www.pixiv.net/users/3216780/artworks
 
@@ -278,3 +278,9 @@ E：皮古蒙，苏夫兰，木乃伊人，人类大小的巴尔坦星人，苏�
 （ゾフィー）	导演-圆谷一
 特技导演-高野宏一
 剧本-金城哲夫
+
+
+https://dic.pixiv.net/a/%E5%88%9D%E4%BB%A3%E3%83%9E%E3%83%B3%E6%80%AA%E7%8D%A3
+
+
+

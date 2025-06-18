@@ -28,9 +28,14 @@ https://www.pixiv.net/artworks/97664415
 https://www.pixiv.net/users/58597/artworks
 https://www.pixiv.net/users/149776/artworks
 
+https://www.pixiv.net/users/18482384/artworks
 https://w.atwiki.jp/fusion_fight/pages/58.html#id_d1c32d5e
 
 https://www.pixiv.net/users/3216780/artworks
+https://www.pixiv.net/users/9050947/artworks
+https://www.pixiv.net/users/8334/artworks
+https://www.pixiv.net/users/18076822/artworks
+https://www.pixiv.net/users/20582368/artworks
 
 https://www.pixiv.net/tags/%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%9E%E3%83%B3%E3%83%95%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A1%E3%82%A4%E3%83%88!/illustrations?p=4
 S+：佐菲
@@ -283,4 +288,5 @@ https://dic.pixiv.net/a/%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E6%80%AA%E7%8D%A3
 https://dic.pixiv.net/a/%E5%88%9D%E4%BB%A3%E3%83%9E%E3%83%B3%E6%80%AA%E7%8D%A3
 https://www.pixiv.net/users/1353124/artworks
 
+https://kamigame.jp/puzzle-dragons/%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC/%E3%82%AC%E3%83%9C%E3%83%A9%EF%BC%88%E3%82%B7%E3%83%B3%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%9E%E3%83%B3%EF%BC%89.html
 

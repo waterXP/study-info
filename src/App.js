@@ -89,7 +89,7 @@ const App = () => {
       // } else
       if (refNextUrl.current === 'save') {
         if (result.status === 'open') {
-          waitLocker(refBoxInfo.current.boardNum)
+          waitLocker(refBoxInfo.current.boardNum, refBoxInfo.current.boxNum)
           // if (refOpenParams.current && refOpenParams.current.saved) {
           //   fetch pick packget
           // }

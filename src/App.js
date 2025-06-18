@@ -82,17 +82,9 @@ const App = () => {
       setDoorInfo(doorInfo)
     }
     if (result) {
-      // if (refNextUrl.current === 're-open-save') {
-      //   if (result.status === 'open') {
-      //     waitLocker(refBoxInfo.current.boardNum)
-      //   }
-      // } else
       if (refNextUrl.current === 'save') {
         if (result.status === 'open') {
           waitLocker(refBoxInfo.current.boardNum, refBoxInfo.current.boxNum)
-          // if (refOpenParams.current && refOpenParams.current.saved) {
-          //   fetch pick packget
-          // }
         }
         if (refOpenParams.current && !refOpenParams.current.saved) {
           if (result.status === 'close') {
@@ -106,19 +98,6 @@ const App = () => {
           } else {
             setUrl('save')
           }
-
-          // const params = { ...refOpenParams.current }
-          // refOpenParams.current.saved = true
-          // setLoading(true)
-          // saveExpress(params)
-          //   .then(d => {
-          //     if (d.code === 200) {
-          //       setUrl('save')
-          //     }
-          //   })
-          //   .finally(() => {
-          //     setLoading(false)
-          //   })
         }
       } else if (refNextUrl.current === 'pick') {
         if (refOpenParams.current && !refOpenParams.current.picked) {
@@ -130,13 +109,10 @@ const App = () => {
               if (d.code === 200) {
                 setUrl('pick')
               }
-              // setUrl('pick')
             })
             .finally(() => {
               setLoading(false)
             })
-          // } else {
-          //   setUrl('pick')
         }
       } else if (refNextUrl.current === 'code-pick') {
         if (refOpenParams.current && !refOpenParams.current.picked) {
@@ -148,13 +124,10 @@ const App = () => {
               if (d.code === 200) {
                 setUrl('code-result')
               }
-              // setUrl('pick')
             })
             .finally(() => {
               setLoading(false)
             })
-          // } else {
-          //   setUrl('pick')
         }
       }
     }
@@ -244,7 +217,6 @@ const App = () => {
         }
       } else if (keyword === 'code-pick') {
         const { boardNum, boxNum, expressCode } = box
-        // setHasOthers(hasOthers)
         refNextUrl.current = keyword
         refOpenParams.current = {
           expressCode

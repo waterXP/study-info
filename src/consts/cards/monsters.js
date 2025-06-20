@@ -123,7 +123,7 @@ const b5 = {
   point: 4
 }
 const c3 = {
-  name: '贝蒙斯坦', ---
+  name: '贝蒙斯坦',
   count: 1,
   damage: 7,
   health: 6,
@@ -147,7 +147,7 @@ const c1 = {
   point: 7
 }
 const c4 = {
-  name: '艾雷王', -- 
+  name: '艾雷王',
   count: 1,
   damage: 6,
   health: 10,
@@ -155,7 +155,7 @@ const c4 = {
   point: 8
 }
 const c5 = {
-  name: '哥尔赞', --
+  name: '哥尔赞',
   count: 1,
   damage: 6,
   health: 8,
@@ -241,6 +241,9 @@ const fight7 = {
   cost: 2,
   type: 'combat'
 }
+
+
+
 const equip1 = {
   name: '能量',
   count: 1,
@@ -281,6 +284,8 @@ const equip6 = {
   point: 5,
   type: 'equip'
 }
+
+
 const special1 = {
   name: '奥特充能',
   count: 3,

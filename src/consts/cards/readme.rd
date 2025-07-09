@@ -301,6 +301,8 @@ https://www.pixiv.net/artworks/83312762
 https://www.pixiv.net/artworks/57836102
 https://www.pixiv.net/artworks/64979990
 https://www.pixiv.net/artworks/130996657
+https://www.pixiv.net/users/18887040/artworks
 
 https://dic.pixiv.net/a/%E3%82%BE%E3%83%95%E3%82%A3%E3%83%BC
 https://dic.pixiv.net/a/%E5%88%9D%E4%BB%A3%E3%82%A6%E3%83%AB%E3%83%88%E3%83%A9%E3%83%9E%E3%83%B3
+https://www.pixiv.net/users/2933965/artworks

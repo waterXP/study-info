@@ -23,6 +23,9 @@ const Main = () => {
   const gotoCardTest = useCallback(() => {
     navigate('/card-game')
   }, [navigate])
+  const gotoPixel = useCallback(() => {
+    navigate('/pixel')
+  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -42,6 +45,9 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoCardTest}>
         Card Test
+      </div>
+      <div className='pg-main_link on-click' onClick={gotoPixel}>
+        Pixel
       </div>
     </div>
   )

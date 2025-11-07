@@ -55,6 +55,7 @@ import CabinetSave from '@/pages/CabinetSave'
 import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
 import AITest from '@/pages/AITest'
 import CardGame from '@/pages/CardGame'
+import Pixel from '@/pages/Pixel'
 
 const { PUBLIC_URL } = process.env
 
@@ -268,6 +269,10 @@ const router = createBrowserRouter(
     {
       path: 'ai',
       element: <AITest />
+    },
+    {
+      path: 'pixel',
+      element: <Pixel />
     },
     {
       path: '*',

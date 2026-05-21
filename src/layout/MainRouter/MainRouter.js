@@ -35,10 +35,6 @@ import JPN2Words from '@/pages/JPN2Words'
 import JPN2Word from '@/pages/JPN2Word'
 import JPN2Study from '@/pages/JPN2Study'
 import JLPT from '@/pages/JLPT'
-import Deprive from '@/pages/Deprive'
-import Deprive2 from '@/pages/Deprive2'
-import Deprive3 from '@/pages/Deprive3'
-import Deprive4 from '@/pages/Deprive4'
 import JPExec from '@/pages/JPExec'
 import JPListens from '@/pages/JPListens'
 import JPListen from '@/pages/JPListen'
@@ -47,15 +43,6 @@ import JPGrammarChapter from '@/pages/JPGrammarChapter'
 import JPGrammar from '@/pages/JPGrammar'
 import JPGrammarsExec from '@/pages/JPGrammarsExec'
 import JPGrammarExec from '@/pages/JPGrammarExec'
-import Cabinet from '@/pages/Cabinet'
-import CabinetPick from '@/pages/CabinetPick'
-import CabinetPickCode from '@/pages/CabinetPickCode'
-import CabinetPickList from '@/pages/CabinetPickList'
-import CabinetSave from '@/pages/CabinetSave'
-import CabinetSaveQuery from '@/pages/CabinetSaveQuery'
-import AITest from '@/pages/AITest'
-import CardGame from '@/pages/CardGame'
-import Pixel from '@/pages/Pixel'
 
 const { PUBLIC_URL } = process.env
 
@@ -64,10 +51,6 @@ const router = createBrowserRouter(
     {
       path: '/',
       element: <Main />
-    },
-    {
-      path: '/card-game',
-      element: <CardGame />
     },
     {
       path: 'overview',
@@ -226,54 +209,6 @@ const router = createBrowserRouter(
       element: <JPN2Study />
     },
     { path: 'jlpt', element: <JLPT /> },
-    {
-      path: 'deprive',
-      element: <Deprive />
-    },
-    {
-      path: 'deprive2',
-      element: <Deprive2 />
-    },
-    {
-      path: 'deprive3',
-      element: <Deprive3 />
-    },
-    {
-      path: 'deprive4',
-      element: <Deprive4 />
-    },
-    {
-      path: 'cabinet',
-      element: <Cabinet />
-    },
-    {
-      path: 'cabinet-pick',
-      element: <CabinetPick />
-    },
-    {
-      path: 'cabinet-pick-code',
-      element: <CabinetPickCode />
-    },
-    {
-      path: 'cabinet-pick-list',
-      element: <CabinetPickList />
-    },
-    {
-      path: 'cabinet-save',
-      element: <CabinetSave />
-    },
-    {
-      path: 'cabinet-save-query',
-      element: <CabinetSaveQuery />
-    },
-    {
-      path: 'ai',
-      element: <AITest />
-    },
-    {
-      path: 'pixel',
-      element: <Pixel />
-    },
     {
       path: '*',
       element: <Navigate to='/' replace />

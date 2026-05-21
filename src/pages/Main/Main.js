@@ -11,21 +11,6 @@ const Main = () => {
   const gotoJLPT = useCallback(() => {
     navigate('/jlpt')
   }, [navigate])
-  const gotoCabinet = useCallback(() => {
-    navigate('/cabinet')
-  }, [navigate])
-  const gotoAI = useCallback(() => {
-    navigate('/ai')
-  }, [navigate])
-  const gotoDeprive3 = useCallback(() => {
-    navigate('/deprive3')
-  }, [navigate])
-  const gotoCardTest = useCallback(() => {
-    navigate('/card-game')
-  }, [navigate])
-  const gotoPixel = useCallback(() => {
-    navigate('/pixel')
-  }, [navigate])
   return (
     <div className='pg-main'>
       <div className='pg-main_link on-click' onClick={gotoMenu}>
@@ -33,21 +18,6 @@ const Main = () => {
       </div>
       <div className='pg-main_link on-click' onClick={gotoJLPT}>
         JLPT
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoCabinet}>
-        Cabinet
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoAI}>
-        AI Test
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoDeprive3}>
-        i18n
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoCardTest}>
-        Card Test
-      </div>
-      <div className='pg-main_link on-click' onClick={gotoPixel}>
-        Pixel
       </div>
     </div>
   )

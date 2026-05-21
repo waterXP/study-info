@@ -4,12 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 const JLPT = () => {
   const navigate = useNavigate()
-  const gotoDeprive = useCallback(() => {
-    navigate('/deprive')
-  }, [navigate])
-  const gotoDeprive2 = useCallback(() => {
-    navigate('/deprive2')
-  }, [navigate])
   const gotoJapanese = useCallback(() => {
     navigate('/jp')
   }, [navigate])
@@ -40,18 +34,9 @@ const JLPT = () => {
   const gotoN2GrammarsExec = useCallback(() => {
     navigate('/jp-grammars-exec')
   }, [navigate])
-  const gotoDeprive4 = useCallback(() => {
-    navigate('/deprive4')
-  }, [navigate])
   return (
     <div className='pg-jlpt'>
       <div className='pg-jlpt_content'>
-        <div className='pg-jlpt_item on-click' onClick={gotoDeprive}>
-          Deprive
-        </div>
-        <div className='pg-jlpt_item on-click' onClick={gotoDeprive2}>
-          Deprive2
-        </div>
         <div className='pg-jlpt_item on-click' onClick={gotoJapanese}>
           日语
         </div>
@@ -81,9 +66,6 @@ const JLPT = () => {
         </div>
         <div className='pg-jlpt_item on-click' onClick={gotoN2GrammarsExec}>
           N2 Grammars Exec
-        </div>
-        <div className='pg-jlpt_item on-click' onClick={gotoDeprive4}>
-          From hujiang
         </div>
       </div>
     </div>

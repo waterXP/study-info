@@ -14,7 +14,7 @@ import junior from '@/consts/jp/junior'
 import { words } from '@/consts/jp'
 
 const JP = () => {
-  const { favorites } = useSelector(({ favorites }) => ({ favorites }))
+  const favorites = useSelector(({ favorites }) => favorites)
   const navigate = useNavigate()
   const gotoCourse = useCallback(
     (id, no) => {

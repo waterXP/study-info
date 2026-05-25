@@ -14,9 +14,8 @@ import { dataSource } from '@/consts/overall'
 
 const ITTO = () => {
   const navigate = useNavigate()
-  const { viewMode, showDetail } = useSelector(
-    ({ viewMode, showDetail }) => ({ viewMode, showDetail })
-  )
+  const viewMode = useSelector(({ viewMode }) => viewMode)
+  const showDetail = useSelector(({ showDetail }) => showDetail)
   const [searchParams] = useSearchParams()
   const [data, setData] = useState(null)
   const [flag, setFlag] = useState(0)

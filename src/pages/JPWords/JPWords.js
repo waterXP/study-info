@@ -120,6 +120,9 @@ const JPWords = () => {
     }
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(msg)
+    if (window.speechSynthesis.resume) {
+      window.speechSynthesis.resume()
+    }
   }, [showVoice, speechText])
   const onPrevClick = useCallback(() => {
     setShowResult(false)

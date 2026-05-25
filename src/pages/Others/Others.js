@@ -11,7 +11,7 @@ import others, { otherList } from '@/consts/others'
 const Others = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const { shortTip } = useSelector(({ shortTip }) => ({ shortTip }))
+  const shortTip = useSelector(({ shortTip }) => shortTip)
   const toggleShort = useCallback(
     e => {
       e.stopPropagation()

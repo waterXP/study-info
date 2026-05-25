@@ -11,9 +11,7 @@ import { getColumns, dataSource } from '@/consts/overall'
 const scroll = { x: 772, y: 'calc(100vh - 215px)' }
 
 const Overview = () => {
-  const { shortTip } = useSelector(
-    ({ shortTip }) => ({ shortTip })
-  )
+  const shortTip = useSelector(({ shortTip }) => shortTip)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const onRow = useCallback(

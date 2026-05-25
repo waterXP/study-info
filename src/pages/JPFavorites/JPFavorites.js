@@ -17,7 +17,7 @@ import Switch from './components/Switch'
 import Word from './components/Word'
 
 const JPFavorites = () => {
-  const { favorites } = useSelector(({ favorites }) => ({ favorites }))
+  const favorites = useSelector(({ favorites }) => favorites)
   const list = useMemo(
     () => words.filter(({ id }) => favorites[id]),
     [favorites]

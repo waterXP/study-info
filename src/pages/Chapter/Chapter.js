@@ -13,9 +13,8 @@ import nouns from '@/consts/nouns'
 
 const Chapter = () => {
   const navigate = useNavigate()
-  const { shortTip, viewMode } = useSelector(
-    ({ viewMode, shortTip }) => ({ shortTip, viewMode })
-  )
+  const shortTip = useSelector(({ shortTip }) => shortTip)
+  const viewMode = useSelector(({ viewMode }) => viewMode)
   const dispatch = useDispatch()
   const [flag, setFlag] = useState(0)
   const [searchParams] = useSearchParams()

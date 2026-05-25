@@ -16,7 +16,7 @@ const columns = [
 const Performance = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  const { shortTip } = useSelector(({ shortTip }) => ({ shortTip }))
+  const shortTip = useSelector(({ shortTip }) => shortTip)
   const toggleShort = useCallback(e => {
     e.stopPropagation()
     dispatch({ type: 'changeShortTip' })

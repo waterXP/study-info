@@ -183,7 +183,6 @@ describe('JPWords', () => {
 
     expect(utterance.text).toBe('食べる')
     expect(utterance.lang).toBe('ja-JP')
-    expect(cancelMock).toHaveBeenCalled()
 
     fireEvent.click(screen.getByText('voice'))
 

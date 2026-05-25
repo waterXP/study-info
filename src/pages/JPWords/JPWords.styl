@@ -18,7 +18,7 @@
   flex none
   justify-content space-between
   align-items center
-  margin-top 8px
+  margin 8px 0
 .pg-jp-words_options-block
   display flex
   flex none
@@ -45,6 +45,15 @@
   left 0
   height 100%
   background-color cw
+.pg-jp-words_center-wrap
+  position relative
+  display flex
+  flex auto
+  flex-direction column
+  justify-content center
+  overflow hidden
+  box-sizing border-box
+  height 100%
 .pg-jp-words_center
   display flex
   flex auto
@@ -53,9 +62,15 @@
   overflow hidden
   box-sizing border-box
   height 100%
+.pg-jp-words_voice
+  top -16px
+  right -36px
+  z-index 2
 .pg-jp-words_body
+  position relative
   justify-content center
-  overflow auto
+  overflow-x hidden
+  overflow-y auto
   &.is-hide
     opacity 0
 .pg-jp-words_line
@@ -104,6 +119,7 @@
   text-align center
   font-size 24px
 .pg-jp-words_modal-title
+  margin-right 48px
   font-size 24px
 .pg-jp-words_modal-body
   padding-top 32px
@@ -134,9 +150,19 @@
   position absolute
   top 16px
   right 16px
+.pg-jp-words_modal-voice
+  position absolute
+  top 18px
+  right 16px
+  &.is-with-favorite
+    right 56px
 .pg-jp-words_favorite-icon.iconfont
   getFont(.45, 32)
   width 32px
   text-align center
   &.is-favorite
     color cw
+.pg-jp-words_modal-voice-icon.iconfont
+  getFont(.45, 32)
+  width 32px
+  text-align center

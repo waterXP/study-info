@@ -20,15 +20,19 @@ import jpWords from '@/consts/jp'
 import Switch from '@/components/Word/Switch'
 import Word from '@/components/Word/Word'
 
+let lastAutoVoiceKey = ''
+let lastAutoVoiceTime = 0
+
 const JPWords = () => {
-  const { favorites } = useSelector(({ favorites }) => ({ favorites }))
+  const favorites = useSelector(({ favorites }) => favorites)
   const dispatch = useDispatch()
   const [showResult, setShowResult] = useState(false)
   const [switches, setSwitches] = useState({
     kana: false,
     mana: false,
     type: false,
-    cn: false
+    cn: false,
+    voice: true
   })
   const navigate = useNavigate()
   const allList = useMemo(
@@ -81,6 +85,42 @@ const JPWords = () => {
     return { title: '', list: [], link: -1 }
   }, [detail, id])
   const course = useMemo(() => (list && list[index]) || null, [list, index])
+  const speechText = useMemo(
+    () => (course ? course.mana || course.kana || '' : ''),
+    [course]
+  )
+  const supportSpeech = useMemo(() => {
+    if (
+      typeof window !== 'undefined' &&
+      window.SpeechSynthesisUtterance &&
+      window.speechSynthesis
+    ) {
+      return true
+    }
+    return false
+  }, [])
+  const showVoice = useMemo(
+    () => supportSpeech && !!speechText,
+    [supportSpeech, speechText]
+  )
+  const onVoice = useCallback(() => {
+    if (!showVoice) {
+      return
+    }
+    const msg = new window.SpeechSynthesisUtterance(speechText)
+    msg.lang = 'ja-JP'
+    const voices = window.speechSynthesis.getVoices
+      ? window.speechSynthesis.getVoices()
+      : []
+    const voice = voices.find(
+      v => v.lang && v.lang.toLowerCase().startsWith('ja')
+    )
+    if (voice) {
+      msg.voice = voice
+    }
+    window.speechSynthesis.cancel()
+    window.speechSynthesis.speak(msg)
+  }, [showVoice, speechText])
   const onPrevClick = useCallback(() => {
     setShowResult(false)
     setIndex(index => {
@@ -185,7 +225,29 @@ const JPWords = () => {
       [type]: !switches[type]
     }))
   }, [])
+  useEffect(() => {
+    if (!showVoice || !switches.voice) {
+      return
+    }
+    const now = Date.now()
+    const voiceKey = `${id}-${detail?.no}-${index}-${speechText}`
+    if (lastAutoVoiceKey === voiceKey && now - lastAutoVoiceTime < 500) {
+      return
+    }
+    lastAutoVoiceKey = voiceKey
+    lastAutoVoiceTime = now
+    onVoice()
+  }, [showVoice, switches.voice, id, detail, index, speechText, onVoice])
+  useEffect(
+    () => () => {
+      if (supportSpeech && window.speechSynthesis) {
+        window.speechSynthesis.cancel()
+      }
+    },
+    [supportSpeech]
+  )
   const refInput = useRef(null)
+  const composingRef = useRef(false)
   const [input, setInput] = useState('')
   const [open, setOpen] = useState(false)
   const [showAnswer, setShowAnswer] = useState(true)
@@ -221,6 +283,20 @@ const JPWords = () => {
       }
     }
   }, [course, toggleShwoResult])
+  const onInputPressEnter = useCallback(
+    e => {
+      const composing =
+        composingRef.current ||
+        (e &&
+          e.nativeEvent &&
+          (e.nativeEvent.isComposing || e.nativeEvent.keyCode === 229))
+      if (composing) {
+        return
+      }
+      onCheck()
+    },
+    [onCheck]
+  )
   const showModal = useCallback(() => {
     setShowAnswer(false)
     setInput('')
@@ -326,6 +402,16 @@ const JPWords = () => {
             >
               意
             </Switch>
+            {showVoice && (
+              <Switch
+                checked={switches.voice}
+                onClick={() => {
+                  onSwtichsChange('voice')
+                }}
+              >
+                听
+              </Switch>
+            )}
             {course && (
               <Switch checked={favorites[course.id]} onClick={onFavorite}>
                 藏
@@ -349,15 +435,32 @@ const JPWords = () => {
         </div>
       </Header>
       <Content>
-        <div className='pg-jp-words_center' onClick={toggleShwoResult}>
-          <div
-            className={open ? 'pg-jp-words_body is-hide' : 'pg-jp-words_body'}
-          >
-            {course ? (
-              <Word word={course} showResult={showResult} switches={switches} />
-            ) : (
-              <p className='pg-jp-words_line'>未找到单词</p>
+        <div className='pg-jp-words_center-wrap'>
+          <div className='pg-jp-words_center' onClick={toggleShwoResult}>
+            {showVoice && (
+              <div
+                className='com-voice is-absolute on-click pg-jp-words_voice'
+                onClick={e => {
+                  e.stopPropagation()
+                  onVoice()
+                }}
+              >
+                voice
+              </div>
             )}
+            <div
+              className={open ? 'pg-jp-words_body is-hide' : 'pg-jp-words_body'}
+            >
+              {course ? (
+                <Word
+                  word={course}
+                  showResult={showResult}
+                  switches={switches}
+                />
+              ) : (
+                <p className='pg-jp-words_line'>未找到单词</p>
+              )}
+            </div>
           </div>
         </div>
       </Content>
@@ -378,7 +481,13 @@ const JPWords = () => {
           <Input
             ref={refInput}
             className='pg-jp-words_input'
-            onPressEnter={onCheck}
+            onPressEnter={onInputPressEnter}
+            onCompositionStart={() => {
+              composingRef.current = true
+            }}
+            onCompositionEnd={() => {
+              composingRef.current = false
+            }}
             value={input}
             onChange={onInputChange}
             placeholder='入力してください'
@@ -392,6 +501,21 @@ const JPWords = () => {
             </p>
           )}
         </div>
+        {showVoice && (
+          <div
+            className={
+              course
+                ? 'pg-jp-words_modal-voice is-with-favorite on-click'
+                : 'pg-jp-words_modal-voice on-click'
+            }
+            onClick={onVoice}
+          >
+            <Icon
+              className='pg-jp-words_modal-voice-icon'
+              type='icon-31shengbo'
+            />
+          </div>
+        )}
         {course && (
           <div className='pg-jp-words_favorite on-click' onClick={onFavorite}>
             {favorites[course.id] ? (

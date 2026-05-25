@@ -310,6 +310,8 @@ const JPWords = () => {
   }, [])
   const onModalPrev = useCallback(() => {
     setShowResult(false)
+    setShowAnswer(false)
+    setInput('')
     const prevIndex = index - 1
     if (list[prevIndex]) {
       setIndex(prevIndex)
@@ -319,6 +321,8 @@ const JPWords = () => {
   }, [list, index, gotoPrevChapter])
   const onModalNext = useCallback(() => {
     setShowResult(false)
+    setShowAnswer(false)
+    setInput('')
     const nextIndex = index + 1
     if (list[nextIndex]) {
       setIndex(nextIndex)

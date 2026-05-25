@@ -89,7 +89,14 @@ jest.mock('antd', () => {
   const React = require('react')
 
   return {
-    Modal: ({ children, open }) => (open ? <div>{children}</div> : null),
+    Modal: ({ children, footer, open }) => (
+      open ? (
+        <div>
+          {children}
+          {footer}
+        </div>
+      ) : null
+    ),
     Input: React.forwardRef(({ onPressEnter, onKeyDown, ...props }, ref) => {
       const inputRef = React.useRef(null)
 
@@ -224,6 +231,27 @@ describe('JPWords', () => {
     })
 
     expect(screen.getByText('食べる')).toBeInTheDocument()
+  })
+
+  it('clears recite hint and input when switching modal items', async () => {
+    const { container } = renderPage()
+
+    fireEvent.click(screen.getByText('默写'))
+
+    const input = container.querySelector('.pg-jp-words_input')
+
+    expect(input).not.toBeNull()
+
+    fireEvent.change(input, { target: { value: 'たべ' } })
+    fireEvent.click(screen.getByText('检查'))
+
+    expect(container.querySelector('.pg-jp-words_input-tip')).not.toBeNull()
+    expect(screen.getByDisplayValue('たべ')).toBeInTheDocument()
+
+    fireEvent.click(screen.getByText('下一个'))
+
+    expect(container.querySelector('.pg-jp-words_input-tip')).toBeNull()
+    expect(screen.getByDisplayValue('')).toBeInTheDocument()
   })
 
   it('hides voice controls and skips auto speech when current content has no readable text', async () => {

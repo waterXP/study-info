@@ -77,7 +77,12 @@ const JPN2 = () => {
   }, [])
   return (
     <div className='pg-jp-n2'>
-      <Breadcrumb to={`/jp-n2s?index=${index}`} noTop type='jp'>
+      <Breadcrumb
+        to={`/jp-n2s?index=${index}`}
+        noTop
+        type='jp'
+        wrap
+      >
         返回
       </Breadcrumb>
       {unit && (

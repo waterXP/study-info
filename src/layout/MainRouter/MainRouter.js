@@ -7,7 +7,7 @@ import Overview from '@/pages/Overview'
 import Chapter from '@/pages/Chapter'
 import ITTO from '@/pages/ITTO'
 import Noun from '@/pages/Noun'
-import Menu from '@/pages/Menu'
+import Gaoxiang from '@/pages/Gaoxiang'
 import Point from '@/pages/Point'
 import Cases from '@/pages/Cases'
 import Case from '@/pages/Case'
@@ -73,8 +73,8 @@ const router = createBrowserRouter(
       element: <Noun />
     },
     {
-      path: 'menu',
-      element: <Menu />
+      path: 'gaoxiang',
+      element: <Gaoxiang />
     },
     {
       path: 'point',

@@ -7,6 +7,7 @@ const Header = ({ ai, to, ex, ls, qa, title, type, hideDefault, children }) => (
     <Breadcrumb
       to={to}
       noTop
+      wrap
       qa={qa}
       ex={ex}
       ls={ls}

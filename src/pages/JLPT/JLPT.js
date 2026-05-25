@@ -1,6 +1,7 @@
 import React, { memo, useCallback } from 'react'
 import './JLPT.styl'
 import { useNavigate } from 'react-router-dom'
+import Breadcrumb from '@com/Breadcrumb'
 
 const JLPT = () => {
   const navigate = useNavigate()
@@ -36,7 +37,10 @@ const JLPT = () => {
   }, [navigate])
   return (
     <div className='pg-jlpt'>
-      <div className='pg-jlpt_content'>
+      <Breadcrumb to='/' noTop wrap>
+        返回首页
+      </Breadcrumb>
+      <div className='pg-jlpt_content hide-scroll'>
         <div className='pg-jlpt_item on-click' onClick={gotoJapanese}>
           日语
         </div>

@@ -1,7 +1,8 @@
 import React, { memo, useCallback } from 'react'
 // import PropTypes from 'prop-types'
-import './Menu.styl'
+import './Gaoxiang.styl'
 import { useNavigate } from 'react-router-dom'
+import Breadcrumb from '@com/Breadcrumb'
 import nouns from '@/consts/points'
 
 const menus = [
@@ -28,7 +29,7 @@ const menus = [
   'searn'
 ]
 
-const Menu = () => {
+const Gaoxiang = () => {
   const navigate = useNavigate()
 
   const openMainPage = useCallback(() => {
@@ -57,12 +58,6 @@ const Menu = () => {
     },
     [navigate]
   )
-  const gotoMenu = useCallback(
-    () => {
-      navigate('/')
-    },
-    [navigate]
-  )
   const openOthersPage = useCallback(
     () => {
       navigate('/others?id=community2025')
@@ -75,18 +70,13 @@ const Menu = () => {
   )
 
   return (
-    <div className='pg-menu'>
-      <div className='pg-menu_content'>
+    <div className='pg-gaoxiang'>
+      <Breadcrumb to='/' noTop wrap>
+        返回首页
+      </Breadcrumb>
+      <div className='pg-gaoxiang_content hide-scroll'>
         <p
-          className='pg-menu_item on-click'
-          onClick={() => {
-            gotoMenu()
-          }}
-        >
-          目录
-        </p>
-        <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openOthersPage()
           }}
@@ -94,7 +84,7 @@ const Menu = () => {
           论文
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openPerformancePage()
           }}
@@ -102,7 +92,7 @@ const Menu = () => {
           八大绩效域
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openWashPage()
           }}
@@ -110,7 +100,7 @@ const Menu = () => {
           洗脑
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openMainPage()
           }}
@@ -118,7 +108,7 @@ const Menu = () => {
           五组十域表
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openITTOPage()
           }}
@@ -126,7 +116,7 @@ const Menu = () => {
           ITTO
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openCasePage()
           }}
@@ -134,7 +124,7 @@ const Menu = () => {
           案例分析
         </p>
         <p
-          className='pg-menu_item on-click'
+          className='pg-gaoxiang_item on-click'
           onClick={() => {
             openPaperPage()
           }}
@@ -144,7 +134,7 @@ const Menu = () => {
         {menus.map(v => (
           <p
             key={v}
-            className='pg-menu_item on-click'
+            className='pg-gaoxiang_item on-click'
             onClick={() => {
               openPage(v)
             }}
@@ -156,6 +146,5 @@ const Menu = () => {
     </div>
   )
 }
-Menu.propTypes = {}
 
-export default memo(Menu)
+export default memo(Gaoxiang)

@@ -71,7 +71,7 @@ const JPPpt = () => {
   }, [])
   return (
     <div className='pg-jp-ppt'>
-      <Breadcrumb to='/jp-ppts' noTop type='jp'>
+      <Breadcrumb to='/jp-ppts' noTop type='jp' wrap>
         返回
       </Breadcrumb>
       {unit && (

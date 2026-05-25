@@ -30,10 +30,10 @@ const Overview = () => {
       dispatch({ type: 'changeShortTip' })
     }, []
   )
-  const gotoMenu = useCallback(
+  const gotoGaoxiang = useCallback(
     e => {
       e.stopPropagation()
-      navigate('/menu')
+      navigate('/gaoxiang')
     }, []
   )
   const columns = useMemo(
@@ -93,7 +93,7 @@ const Overview = () => {
       }
       <div
         className='pg-overview_mode on-click'
-        onClick={gotoMenu}
+        onClick={gotoGaoxiang}
       >
         菜单
       </div>

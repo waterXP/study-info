@@ -257,7 +257,5 @@ const Chapter = () => {
     <p>加载中</p>
   </div>
 }
-Chapter.propTypes = {
-}
 
 export default memo(Chapter)

@@ -18,7 +18,9 @@ const JPNote = () => {
   }, [searchParams])
   return (
     <div className='pg-jp-note'>
-      <Breadcrumb to='/jp-notes' noTop type='jp'>返回</Breadcrumb>
+      <Breadcrumb to='/jp-notes' noTop type='jp' wrap>
+        返回
+      </Breadcrumb>
       <div className='pg-jp-note_content hide-scroll'>
         {
           list.map(

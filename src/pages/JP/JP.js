@@ -1,4 +1,4 @@
-import React, { memo, useMemo, useCallback } from 'react'
+import React, { memo, useMemo, useCallback, useEffect, useRef } from 'react'
 import './JP.styl'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -13,38 +13,94 @@ import intermediate from '@/consts/jp/intermediate'
 import junior from '@/consts/jp/junior'
 import { words } from '@/consts/jp'
 
+const JP_SCROLL_TOP_KEY = 'JP_SCROLL_TOP'
+
 const JP = () => {
   const favorites = useSelector(({ favorites }) => favorites)
   const navigate = useNavigate()
+  const refContent = useRef(null)
+  const getScrollContainer = useCallback(() => {
+    if (!refContent.current) {
+      return null
+    }
+    return refContent.current.closest('.com-content')
+  }, [])
+  useEffect(() => {
+    const savedScrollTop =
+      typeof window !== 'undefined'
+        ? window.sessionStorage.getItem(JP_SCROLL_TOP_KEY)
+        : ''
+    const container = getScrollContainer()
+    if (savedScrollTop && container) {
+      const top = +savedScrollTop
+      window.sessionStorage.removeItem(JP_SCROLL_TOP_KEY)
+      window.requestAnimationFrame(() => {
+        container.scrollTop = top
+      })
+    }
+  }, [getScrollContainer])
+  const saveScrollTop = useCallback(() => {
+    const container = getScrollContainer()
+    if (typeof window !== 'undefined' && container) {
+      window.sessionStorage.setItem(
+        JP_SCROLL_TOP_KEY,
+        `${container.scrollTop || 0}`
+      )
+    }
+  }, [getScrollContainer])
+  const navigateWithScrollTop = useCallback(
+    to => {
+      saveScrollTop()
+      navigate(to)
+    },
+    [navigate, saveScrollTop]
+  )
   const gotoCourse = useCallback(
     (id, no) => {
-      navigate(`/jp-course?id=${id}&no=${no}`)
+      navigateWithScrollTop(`/jp-course?id=${id}&no=${no}`)
     },
-    [navigate]
+    [navigateWithScrollTop]
   )
   const gotoStructure = useCallback(
     (id, no) => {
-      navigate(`/jp-structure?id=${id}&no=${no}`)
+      navigateWithScrollTop(`/jp-structure?id=${id}&no=${no}`)
     },
-    [navigate]
+    [navigateWithScrollTop]
   )
   const gotoWords = useCallback(
     (id, no) => {
-      navigate(`/jp-words-list?id=${id}&no=${no}`)
+      navigateWithScrollTop(`/jp-words-list?id=${id}&no=${no}`)
     },
-    [navigate]
+    [navigateWithScrollTop]
   )
+  const gotoLessonFavorites = useCallback(
+    (id, no) => {
+      navigateWithScrollTop(`/jp-favorites?id=${id}&no=${no}`)
+    },
+    [navigateWithScrollTop]
+  )
+  const lessonFavoriteCountMap = useMemo(() => {
+    const countMap = {}
+    ;[...junior, ...intermediate].forEach(({ id, lesson = [] }) => {
+      lesson.forEach(({ no, word = [], phrase = [] }) => {
+        const count = [...word, ...phrase].filter(({ id }) => favorites[id]).length
+        countMap[`${id}-${no}`] = count
+      })
+    })
+    return countMap
+  }, [favorites])
   const favoriteCount = useMemo(
     () => words.filter(({ id }) => favorites[id]).length,
     [favorites]
   )
   const gotoFavorites = useCallback(() => {
-    navigate('/jp-favorites')
-  }, [navigate])
+    navigateWithScrollTop('/jp-favorites')
+  }, [navigateWithScrollTop])
   return (
     <Page>
       <Header to='/' type='jp' />
       <Content>
+        <div ref={refContent}>
         {favoriteCount > 0 && (
           <p
             className='pg-jp_topic on-click'
@@ -63,7 +119,13 @@ const JP = () => {
                       gotoCourse(id, no)
                     }}
                   >
-                    <JPText content={`第${no}課 ${topic}`} />
+                    <JPText
+                      content={`第${no}課 ${topic}${
+                        lessonFavoriteCountMap[`${id}-${no}`]
+                          ? `（${lessonFavoriteCountMap[`${id}-${no}`]}）`
+                          : ''
+                      }`}
+                    />
                   </Item>
                   <div className='pg-jp_options'>
                     <div
@@ -90,6 +152,14 @@ const JP = () => {
                     >
                       語
                     </div>
+                    <div
+                      className='pg-jp_option on-click'
+                      onClick={() => {
+                        gotoLessonFavorites(id, no)
+                      }}
+                    >
+                      習
+                    </div>
                   </div>
                 </div>
               ))}
@@ -108,7 +178,13 @@ const JP = () => {
                       gotoWords(id, no)
                     }}
                   >
-                    <JPText content={`第${no}課 ${topic}`} />
+                    <JPText
+                      content={`第${no}課 ${topic}${
+                        lessonFavoriteCountMap[`${id}-${no}`]
+                          ? `（${lessonFavoriteCountMap[`${id}-${no}`]}）`
+                          : ''
+                      }`}
+                    />
                   </Item>
                   <div className='pg-jp_options'>
                     <div
@@ -135,11 +211,20 @@ const JP = () => {
                     >
                       語
                     </div>
+                    <div
+                      className='pg-jp_option on-click'
+                      onClick={() => {
+                        gotoLessonFavorites(id, no)
+                      }}
+                    >
+                      習
+                    </div>
                   </div>
                 </div>
               ))}
             </List>
           ))}
+        </div>
         </div>
       </Content>
     </Page>

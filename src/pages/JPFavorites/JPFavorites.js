@@ -8,19 +8,35 @@ import React, {
 } from 'react'
 import './JPFavorites.styl'
 import { useSelector, useDispatch } from 'react-redux'
+import { useSearchParams } from 'react-router-dom'
 import { Modal, Input, message } from 'antd'
 import Breadcrumb from '@com/Breadcrumb'
 import Icon from '@com/Icon'
-import { words } from '@/consts/jp'
+import jpWords, { words } from '@/consts/jp'
 import JPText from '@/components/JPText'
 import Switch from './components/Switch'
 import Word from './components/Word'
 
 const JPFavorites = () => {
   const favorites = useSelector(({ favorites }) => favorites)
+  const [searchParams] = useSearchParams()
+  const lessonId = +searchParams.get('id')
+  const lessonNo = +searchParams.get('no')
+  const lessonWords = useMemo(() => {
+    if (!lessonId || !lessonNo) {
+      return null
+    }
+    const chapter = jpWords.find(v => v.id === lessonId)
+    const lesson = chapter && chapter.lesson.find(v => v.no === lessonNo)
+    if (!lesson) {
+      return []
+    }
+    return [...(lesson.word || []), ...(lesson.phrase || [])]
+  }, [lessonId, lessonNo])
   const list = useMemo(
-    () => words.filter(({ id }) => favorites[id]),
-    [favorites]
+    () =>
+      (lessonWords || words).filter(({ id }) => favorites[id]),
+    [favorites, lessonWords]
   )
   const dispatch = useDispatch()
   const [showResult, setShowResult] = useState(false)
@@ -149,13 +165,17 @@ const JPFavorites = () => {
     }
   }, [course, toggleShwoResult])
   const showModal = useCallback(() => {
+    if (!course) {
+      message.error('当前没单词')
+      return
+    }
     setShowAnswer(false)
     setInput('')
     setTimeout(() => {
       refInput.current && refInput.current.focus()
     }, 0)
     setOpen(true)
-  }, [])
+  }, [course])
   const hideModal = useCallback(() => {
     setOpen(false)
   }, [])
@@ -275,7 +295,9 @@ const JPFavorites = () => {
             {course ? (
               <Word word={course} showResult={showResult} switches={switches} />
             ) : (
-              <p className='pg-jp-words_line'>未找到单词</p>
+              <p className='pg-jp-words_line'>
+                {lessonWords ? '本课还没有收藏单词' : '未找到单词'}
+              </p>
             )}
           </div>
         </div>

@@ -32,7 +32,7 @@ const JPWords = () => {
     mana: false,
     type: false,
     cn: false,
-    voice: true
+    voice: false
   })
   const navigate = useNavigate()
   const allList = useMemo(

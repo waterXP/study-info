@@ -1,4 +1,10 @@
-import React, { memo, useState, useEffect, useMemo, useCallback } from 'react'
+import React, {
+  memo,
+  useState,
+  useEffect,
+  useMemo,
+  useCallback
+} from 'react'
 import './JPStructure.styl'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import JPText from '@com/JPText'
@@ -20,6 +26,12 @@ const JPStructure = () => {
   const [detail, setDetail] = useState(null)
   const [id, setId] = useState(1)
   useEffect(() => {
+    const resetScrollTop = () => {
+      const container = document.querySelector('.com-content')
+      if (container) {
+        container.scrollTop = 0
+      }
+    }
     const id = +searchParams.get('id')
     const no = +searchParams.get('no')
     if (id && no) {
@@ -29,6 +41,7 @@ const JPStructure = () => {
         if (tarNo) {
           setId(id)
           setDetail(tarNo)
+          resetScrollTop()
           return
         }
       }
@@ -36,6 +49,7 @@ const JPStructure = () => {
     const tar = jpWords[0].lesson[0]
     setId(1)
     setDetail(tar)
+    resetScrollTop()
   }, [searchParams])
 
   const { base, explain, title } = useMemo(() => {
